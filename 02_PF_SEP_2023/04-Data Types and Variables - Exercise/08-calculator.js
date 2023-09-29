@@ -18,3 +18,4 @@ function calculator(num1, op, num2) {
 calculator(5,
     '+',
     10);
+    

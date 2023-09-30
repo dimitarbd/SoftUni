@@ -23,7 +23,7 @@ function gladiatorExpenses(lostFights, helmetPrice, swordPrice, shieldPrice, arm
     // }
 
     helmet = Math.floor(lostFights/2);
-    sword = Math.floor(lostFights/3);;
+    sword = Math.floor(lostFights/3);
     shield = Math.floor(lostFights/6);
     armor = Math.floor(lostFights/12);
     

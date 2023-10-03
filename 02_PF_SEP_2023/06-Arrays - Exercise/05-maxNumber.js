@@ -11,7 +11,6 @@ function maxNumber(arr) {
             }
         }
     }
-
     console.log(arrNew.join(' '));
 }
 maxNumber([1, 4, 3, 2]);

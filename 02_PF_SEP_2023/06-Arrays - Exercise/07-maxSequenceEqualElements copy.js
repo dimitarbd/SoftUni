@@ -1,29 +1,27 @@
 function maxSequenceEqualElements(arr) {
     let maxSequence = [];
-    
+
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] == arr[i + 1] || arr[i] == arr[i - 1]) {
-            maxSequence += arr[i];
-        }
-    }
-    
-    for (let i = 0; i < maxSequence.length; i++) {
-        let maxTemp = [];
-        let counter = 0;
-        
-        for (let j = 0; j < maxSequence.length; j++) {
-            if (maxSequence[i] == maxSequence[j]) {
-                maxTemp += maxSequence[j];
-                counter++;
+        let maxTemp = arr[i];
+        let current = [maxTemp]
+
+        for (let j = i + 1; j < arr.length; j++) {
+            let next = arr[j];
+            
+            if (maxTemp == next) {
+                current.push(next);
+            } else {
+                break;
             }
         }
-        console.log(maxTemp);
-        console.log(counter);
+        if (current.length > maxSequence) {
+            maxSequence = current;
+        }
     }
-
+    console.log(maxSequence.join(' '));
     // console.log(maxSequence);
 }
 maxSequenceEqualElements([2, 1, 1, 2, 3, 3, 2, 2, 2, 1]);
-// maxSequenceEqualElements([1, 1, 1, 2, 3, 1, 3, 3]);
-// maxSequenceEqualElements([4, 4, 4, 4]);
-// maxSequenceEqualElements([0, 1, 1, 5, 2, 2, 6, 3, 3]);
+maxSequenceEqualElements([1, 1, 1, 2, 3, 1, 3, 3]);
+maxSequenceEqualElements([4, 4, 4, 4]);
+maxSequenceEqualElements([0, 1, 1, 5, 2, 2, 6, 3, 3]);

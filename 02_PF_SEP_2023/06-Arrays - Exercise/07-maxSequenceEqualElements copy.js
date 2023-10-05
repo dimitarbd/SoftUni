@@ -14,12 +14,11 @@ function maxSequenceEqualElements(arr) {
                 break;
             }
         }
-        if (current.length > maxSequence) {
+        if (current.length > maxSequence.length) {
             maxSequence = current;
         }
     }
     console.log(maxSequence.join(' '));
-    // console.log(maxSequence);
 }
 maxSequenceEqualElements([2, 1, 1, 2, 3, 3, 2, 2, 2, 1]);
 maxSequenceEqualElements([1, 1, 1, 2, 3, 1, 3, 3]);

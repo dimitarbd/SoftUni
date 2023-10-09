@@ -47,10 +47,6 @@ function passwordValidator(pass) {
             return true;
         }
     }
-
-    
-
-    
 }
 passwordValidator('logIn');
 passwordValidator('MyPass123');

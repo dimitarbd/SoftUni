@@ -16,7 +16,6 @@ function loadingBar(n) {
         console.log(`${n}% [${str}]`);
         console.log('Still loading...');
     }
-
 }
 loadingBar(30);
 loadingBar(50);

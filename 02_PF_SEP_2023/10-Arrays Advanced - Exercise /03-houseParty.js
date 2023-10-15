@@ -9,16 +9,18 @@ function houseParty(arr) {
             } else {
                 console.log(`${currentStr[0]} is already in the list!`);
             }
-    } else {
-        if (list.includes(currentStr[0])) {
-            let index = list.indexOf(currentStr[0]);
-            list.splice(index,1)
         } else {
-            console.log(`${currentStr[0]} is not in the list!`);
-        }
+            if (list.includes(currentStr[0])) {
+                let index = list.indexOf(currentStr[0]);
+                list.splice(index, 1)
+            } else {
+                console.log(`${currentStr[0]} is not in the list!`);
+            }
         }
     }
+
     console.log(list.join('\n'));
+    
 }
 houseParty(['Allie is going!',
     'George is going!',

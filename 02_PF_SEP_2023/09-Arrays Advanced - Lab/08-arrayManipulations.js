@@ -14,11 +14,6 @@ function arrayManipulations(commands) {
             case 'Insert': arr.splice(secondNum, 0, firstNum); break;
         }
         
-        // if (currentArr[0] == 'Add') {
-        //     arr.push(currentArr[1]);
-        // } else if (currentArr[0] == 'Remove') {
-        //     let index = arr.filter(x => x == currentArr[1]);
-        // }
     }
     console.log(arr.join(' '));
 }

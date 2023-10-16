@@ -5,7 +5,7 @@ function bombNumbers(arr, bomb) {
     
     while (arr.includes(bombNum)) {
         let bombIndex = arr.indexOf(bombNum);
-        arr.splice(bombIndex - power, power * 2 + 1, 0);
+        arr.splice(Math.max(0, bombIndex - power), power * 2 + 1, 0);
     }
 
     for (let num of arr) {

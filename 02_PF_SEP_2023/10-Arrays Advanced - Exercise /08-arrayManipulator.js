@@ -28,7 +28,7 @@ function numsayManipulator(nums, commands) {
         } else if (action == 'shift') {
             let rotations = Number(tokens[1]);
 
-            for (let i = 0; i < rotations; i++) {
+            for (let i = 1; i <= rotations; i++) {
                 let firstNum = nums.shift();
                 nums.push(firstNum);
             }
@@ -36,22 +36,23 @@ function numsayManipulator(nums, commands) {
             let pairedArr = [];
 
             for (let i = 0; i < nums.length; i += 2) {
-                if (i+1 < nums.length) {
-                    pairedArr.push(nums[i] + nums[i+1]);
+                if (i + 1 < nums.length) {
+                    pairedArr.push(nums[i] + nums[i + 1]);
                 } else {
                     pairedArr.push(nums[i]);
                 }
-                nums = pairedArr;
             }
+            nums = pairedArr;
         } else if (action == 'print') {
-            console.log(`[${nums.join(', ')}]`);
+            console.log(`[ ${nums.join(', ')} ]`);
         }
 
-        }
     }
+}
 
-
-    // numsayManipulator([1, 2, 4, 5, 6, 7],
-    //     ['add 1 8', 'contains 1', 'contains 3', 'print']);
-    numsayManipulator([1, 2, 3, 4, 5],
-        ['addMany 5 9 8 7 6 5', 'contains 15', 'remove 3', 'shift 1', 'print']);
+// numsayManipulator([1, 2, 4, 5, 6, 7],
+//     ['add 1 8', 'contains 1', 'contains 3', 'print']);
+// numsayManipulator([1, 2, 3, 4, 5],
+//     ['addMany 5 9 8 7 6 5', 'contains 15', 'remove 3', 'shift 1', 'print']);
+numsayManipulator([2, 2, 4, 2, 4],
+    ["add 1 4", "sumPairs", "print"]);

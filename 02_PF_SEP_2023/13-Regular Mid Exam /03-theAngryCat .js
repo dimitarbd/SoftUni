@@ -1,5 +1,4 @@
 function theAngryCat(priceRating, entryPoint, type) {
-
     let left = priceRating.splice(0, entryPoint);
     let entryPrice = priceRating.shift() 
     let right = priceRating;

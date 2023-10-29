@@ -14,8 +14,7 @@ function movies (arr) {
             if (movie) {
                 movie.director = directorName;
             }
-            // let movieObj = {director: movieName};
-            // movies.push(movieObj);
+
         } else if(command.includes('onDate')) {
             let [movieName, date] = command.split(' onDate ');
             let movie = movies.find(movie => movie.name == movieName);
@@ -25,6 +24,7 @@ function movies (arr) {
             }
         }
         }
+
        for (let movie of movies) {
         if (movie.name && movie.director && movie.date) {
             console.log(JSON.stringify(movie));

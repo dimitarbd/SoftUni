@@ -26,17 +26,3 @@ makeDictionary([
 //     '{"Music":"Vocal or instrumental sounds (or both) combined in such a way as to produce beauty of form, harmony, and expression of emotion."} ',
 //     '{"Art":"The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, producing works to be appreciated primarily for their beauty or emotional power."} '
 //     ]);
-// function makeDictionary(arr) {
-//     let dictionary = {};
-
-//     for (let curr of arr) {
-//         let parsed = JSON.parse(curr);
-//         let terms = Object.keys(parsed).shift();
-//         dictionary[terms] = Object.values(parsed).shift();
-//     }
-
-//     Object.keys(dictionary).sort((a, b) => a.localeCompare(b)).forEach((key) => {
-//         console.log(`Term: ${key} => Definition: ${dictionary[key]}`);
-//     });
-
-// }

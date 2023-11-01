@@ -1,0 +1,27 @@
+function catalogue(arr) {
+    let catalogue = {};
+    let products = arr.sort();
+    
+    for (let el of products) {
+        let [name, price] = el.split(' : ');
+        catalogue[name] = price;
+    }
+    Object.keys(catalogue).forEach((key) => { 
+        console.log(`${key[0]}`);
+        console.log(`  ${key}: ${catalogue[key]}`);})
+}
+catalogue([
+    'Appricot : 20.4',
+    'Fridge : 1500',
+    'TV : 1499',
+    'Deodorant : 10',
+    'Boiler : 300',
+    'Apple : 1.25',
+    'Anti-Bug Spray : 15',
+    'T-Shirt : 10'
+    ]);
+// catalogue([
+//     'Omlet : 5.4',
+//     'Shirt : 15',
+//     'Cake : 59'
+//     ]);

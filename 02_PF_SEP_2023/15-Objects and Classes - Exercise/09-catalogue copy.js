@@ -1,8 +1,10 @@
 function catalogue(arr) {
-    let catalogue = {};
+    let catalogue = {
+        
+    };
     let products = arr.sort();
     
-    for (let el of products) {
+    for (let i = 0; i < products.length; i++) {
         let [name, price] = el.split(' : ');
         catalogue[name] = price;
     }

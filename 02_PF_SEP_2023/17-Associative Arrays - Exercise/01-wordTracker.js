@@ -5,7 +5,6 @@ function wordTracker(arr) {
     for (let word of searchedWords) {
         words[word] = 0;
     }
-
     for (let word of arr) {
         if (word in words) {
             words[word]++;

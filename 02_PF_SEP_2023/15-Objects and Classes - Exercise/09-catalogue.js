@@ -4,12 +4,19 @@ function catalogue(arr) {
     
     for (let el of products) {
         let [name, price] = el.split(' : ');
-        catalogue[name] = price;
+        let letter = name[0];
+        if (catalogue.hasOwnProperty(letter)) {
+            catalogue[letter].push(`${name}: ${Number(price)}`);
+        } else {
+            catalogue[letter] = [];
+            catalogue[letter].push(`${name}: ${Number(price)}`);
+        }
     }
-    console.log(catalogue);
-    Object.keys(catalogue).forEach((key) => { 
+    
+    Object.entries(catalogue).forEach((key) => { 
         console.log(`${key[0]}`);
-        console.log(`  ${key}: ${catalogue[key]}`);})
+        key[1].forEach(price => console.log(`  ${price}`));
+    });
 }
 catalogue([
     'Appricot : 20.4',
@@ -21,8 +28,9 @@ catalogue([
     'Anti-Bug Spray : 15',
     'T-Shirt : 10'
     ]);
-// catalogue([
-//     'Omlet : 5.4',
-//     'Shirt : 15',
-//     'Cake : 59'
-//     ]);
+console.log('---------------');
+catalogue([
+    'Omlet : 5.4',
+    'Shirt : 15',
+    'Cake : 59'
+    ]);

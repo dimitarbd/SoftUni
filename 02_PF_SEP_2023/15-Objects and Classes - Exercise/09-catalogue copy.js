@@ -1,17 +1,34 @@
 function catalogue(arr) {
-    let catalogue = {
-        
-    };
+    let catalogue = {};
     let products = arr.sort();
     
-    for (let i = 0; i < products.length; i++) {
+    for (let el of products) {
         let [name, price] = el.split(' : ');
         catalogue[name] = price;
     }
-    console.log(catalogue);
-    Object.keys(catalogue).forEach((key) => { 
-        console.log(`${key[0]}`);
-        console.log(`  ${key}: ${catalogue[key]}`);})
+    let entries = Object.entries(catalogue);
+
+    
+    for (let i = 1; i< entries.length; i++) {
+        let [key, entry] = entries[i];
+        let [key1, entry1] = entries[i-1];
+        if (i == 1) {
+            console.log(`${key1[0]}`);
+            console.log(`  ${key1}: ${entry1}`);
+            if (key[0] !== key1[0]){
+                console.log(`${key[0]}`);
+                console.log(`  ${key}: ${entry}`);
+            } else {
+                console.log(`  ${key}: ${entry}`);
+            }
+        } else if (key[0] == key1[0]) {
+            console.log(`  ${key}: ${entry}`);
+        } else {
+            console.log(`${key[0]}`);
+            console.log(`  ${key}: ${entry}`);
+        }
+        
+    }
 }
 catalogue([
     'Appricot : 20.4',

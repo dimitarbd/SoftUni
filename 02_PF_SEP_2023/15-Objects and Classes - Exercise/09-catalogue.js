@@ -1,6 +1,6 @@
 function catalogue(arr) {
     let catalogue = {};
-    let products = arr.sort();
+    let products = arr.sort((a, b) => a.localeCompare(b));
     
     for (let el of products) {
         let [name, price] = el.split(' : ');
@@ -18,19 +18,21 @@ function catalogue(arr) {
         key[1].forEach(price => console.log(`  ${price}`));
     });
 }
-catalogue([
-    'Appricot : 20.4',
-    'Fridge : 1500',
-    'TV : 1499',
-    'Deodorant : 10',
-    'Boiler : 300',
-    'Apple : 1.25',
-    'Anti-Bug Spray : 15',
-    'T-Shirt : 10'
-    ]);
-console.log('---------------');
-catalogue([
-    'Omlet : 5.4',
-    'Shirt : 15',
-    'Cake : 59'
-    ]);
+// catalogue([
+//     'Appricot : 20.4',
+//     'Fridge : 1500',
+//     'TV : 1499',
+//     'Deodorant : 10',
+//     'Boiler : 300',
+//     'Apple : 1.25',
+//     'Anti-Bug Spray : 15',
+//     'T-Shirt : 10'
+//     ]);
+// console.log('---------------');
+// catalogue([
+//     'Omlet : 5.4',
+//     'Shirt : 15',
+//     'Cake : 59'
+//     ]);
+console.log('--------------');
+catalogue(["Az : 2", "Aa : 1", "AV : 9"]);

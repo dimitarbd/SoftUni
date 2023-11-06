@@ -1,41 +1,41 @@
 function partyTime(arr) {
     let partyList = {};
-
+    let guestList = [];
     let command;
 
-
-    while (command !== 'PARTY') {
+    while (guestList !== 'PARTY') {
         command = arr.shift();
         if (command == 'PARTY') {
             break;
         }
-        partyList[command] = command;
+        guestList.push(command);
     }
-    
-    
-    for (guest of arr) {
+    let setGuestList = new Set(guestList);
+    for (let guest of setGuestList) {
+        partyList[guest] = guest;
+    }
+    for (let guest of arr) {
         delete partyList[guest];
     }
 
     console.log(`${Object.keys(partyList).length}`);
-    Object.keys(partyList).forEach((key) => {
-        console.log(`${key}`);
+    Object.entries(partyList).sort((a, b) => a[0] - b[0]).forEach((key) => {
+        console.log(`${key[0]}`);
     })
 
 }
-partyTime(['7IK9Yo0h',
-'9NoBUajQ',
-'Ce8vwPmE',
-'Ce8vwPmE',
-'Ce8vwPmE',
-'SVQXQCbc',
-'tSzE5t0p',
-'PARTY',
-'9NoBUajQ',
-'Ce8vwPmE',
-'SVQXQCbc'
-]);
-console.log('==============');
+// partyTime(['7IK9Yo0h',
+//     '9NoBUajQ',
+//     'Ce8vwPmE',
+//     'SVQXQCbc',
+//     'SVQXQCbc',
+//     'tSzE5t0p',
+//     'PARTY',
+//     '9NoBUajQ',
+//     'Ce8vwPmE',
+//     'SVQXQCbc'
+// ]);
+// console.log('==============');
 partyTime(['m8rfQBvl',
     'fc1oZCE0',
     'UgffRkOn',

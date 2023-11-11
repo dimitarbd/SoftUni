@@ -1,10 +1,12 @@
 function stringSubstring(word, text) {
-    text.toLowerCase().split(' ').forEach(element => {
-       if (element == word) {
-            console.log(word);
+    let newText = text.toLowerCase().split(' ');
+    
+    for (let item of newText) {
+        if (item == word) {
+            console.log(item);
             return;
-        }
-    });;
+        } 
+    }
 
     console.log(`${word} not found!`);
 }

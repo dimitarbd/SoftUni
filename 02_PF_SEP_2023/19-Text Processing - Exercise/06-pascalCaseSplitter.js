@@ -10,8 +10,8 @@ function pascalCaseSplitter(str) {
         splitter.push(temp.join(''));
         temp = [];
     }
-    console.log(splitUpperCase);
-    console.log(splitLowerCase);
+    // console.log(splitUpperCase);
+    // console.log(splitLowerCase);
     console.log(splitter.join(', '));
 
 }

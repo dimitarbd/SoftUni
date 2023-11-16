@@ -3,8 +3,6 @@ function lettersChangeNumbers(str) {
     str = str.split(' ').filter(x => x.length > 0).forEach(x => {
         let number = Number(x.split(/[A-Za-z]/).filter(x => x.length > 0));
         let [l1, l2] = x.split(/[0-9]/).filter(x => x.length > 0);
-        // let firstOp = letter1.charCodeAt(0);
-        // let secOp = letter2.charCodeAt(0);
         
         if (l1.charCodeAt(0) >= 65 && l1.charCodeAt(0) <= 90) {
             sum += number / (l1.charCodeAt(0) - 64);
@@ -17,7 +15,7 @@ function lettersChangeNumbers(str) {
         } else if (l2.charCodeAt(0) >= 97 && l2.charCodeAt(0) <= 122) {
             sum += l2.charCodeAt(0) - 96;
         }
-       
+          
     });;
 
    console.log(sum.toFixed(2));

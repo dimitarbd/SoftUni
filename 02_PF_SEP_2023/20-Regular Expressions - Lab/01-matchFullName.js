@@ -4,5 +4,6 @@ function matchFullName(input) {
     let result = input.match(pattern);
 
     console.log(result.join(' '));
+
 }
 matchFullName("Ivan Ivanov, Ivan ivanov, ivan Ivanov, IVan Ivanov, Test Testov, Ivan	Ivanov");

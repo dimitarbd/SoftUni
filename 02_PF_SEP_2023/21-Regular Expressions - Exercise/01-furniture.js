@@ -26,7 +26,6 @@ function furniture(arr) {
         console.log(items.join('\n'));
     }
     console.log(`Total money spend: ${totalPrice.toFixed(2)}`);
-
 }
 furniture(['>>Sofa<<312.23!3',
 '>>TV<<300!5',

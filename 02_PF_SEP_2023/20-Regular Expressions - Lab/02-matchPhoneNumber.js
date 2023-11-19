@@ -1,6 +1,5 @@
 function matchPhoneNumber([input]) {
     let pattern = /\+359([ -])2\1\d{3}\1\d{4}/g;
-    // input = input.join(' ');
 
     let result = input.match(pattern);
 

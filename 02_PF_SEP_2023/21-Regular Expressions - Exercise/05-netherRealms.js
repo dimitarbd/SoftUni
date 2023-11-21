@@ -15,8 +15,8 @@ function netherRealms(input) {
     demons.sort((a, b) => a[0].localeCompare(b[0]))
         .forEach(demon => console.log(`${demon[0]} - ${demon[1].health} health, ${demon[1].damage.toFixed(2)} damage`))
 }
-netherRealms("M3ph-0.5s-0.5t0.0**");
-// console.log('================');
-// netherRealms(M3ph1st0**, Azazel);
-// console.log('================');
-// netherRealms(Gos/ho);
+netherRealms('M3ph-0.5s-0.5t0.0**');
+console.log('================');
+netherRealms('M3ph1st0**, Azazel');
+console.log('================');
+netherRealms('Gos/ho');

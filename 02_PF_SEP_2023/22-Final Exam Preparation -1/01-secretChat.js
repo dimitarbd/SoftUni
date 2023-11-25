@@ -1,6 +1,6 @@
 function secretChat(input) {
     let concealedMessage = input.shift();
-
+    let counter = 0;
     let command = input.shift();
 
     while (command != 'Reveal') {
@@ -8,16 +8,28 @@ function secretChat(input) {
 
         switch (action) {
             case 'InsertSpace':
-
                 let message = concealedMessage.split('')
                 message.splice(index1, 0, ' ')
-                concealedMessage = message.join('');
-                
+                concealedMessage = message.join(''); 
                 break;
             case 'Reverse':
-
+                if (counter == 0) {
+                    if (concealedMessage.includes(index1)){
+                        let newTxt = index1.split('').reverse().join('');
+                        let replTxt = concealedMessage.replace(index1, newTxt);
+                        concealedMessage = replTxt;
+                    }
+                } else {
+                    console.log("error");
+                    command = input.shift();
+                    continue;
+                }
+                counter++;
                 break;
             case 'ChangeAll':
+                while (concealedMessage.includes(index1)) {
+                    concealedMessage = concealedMessage.replace(index1, index2);
+                }
 
                 break;
         }
@@ -29,14 +41,14 @@ function secretChat(input) {
 
     console.log(`You have a new text message: ${concealedMessage}`);
 }
-secretChat([
-    'heVVodar!gniV',
-    // 'ChangeAll:|:V:|:l',
-    // 'Reverse:|:!gnil',
-    'InsertSpace:|:5',
-    'Reveal'
-]);
-console.log('==============');
+// secretChat([
+//     'heVVodar!gniV',
+//     'ChangeAll:|:V:|:l',
+//     'Reverse:|:!gnil',
+//     'InsertSpace:|:5',
+//     'Reveal'
+// ]);
+// console.log('==============');
 secretChat([
     'Hiware?uiy',
     'ChangeAll:|:i:|:o',

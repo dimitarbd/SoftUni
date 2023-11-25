@@ -1,6 +1,6 @@
 function secretChat(input) {
     let concealedMessage = input.shift();
-    let counter = 0;
+    // let counter = 0;
     let command = input.shift();
 
     while (command != 'Reveal') {
@@ -13,19 +13,19 @@ function secretChat(input) {
                 concealedMessage = message.join(''); 
                 break;
             case 'Reverse':
-                if (counter == 0) {
-                    if (concealedMessage.includes(index1)){
-                        let newTxt = index1.split('').reverse().join('');
-                        let replTxt = concealedMessage.replace(index1, newTxt);
-                        concealedMessage = replTxt;
-                    }
-                } else {
-                    console.log("error");
+                let firstIndex = concealedMessage.indexOf(index1);
+                if (firstIndex == -1) {
+                    console.log('error');
                     command = input.shift();
                     continue;
                 }
-                counter++;
+                let leftHalf = concealedMessage.slice(0, firstIndex);
+                let rigthHalf = concealedMessage.slice(firstIndex + index1.length);
+                
+                concealedMessage = leftHalf + rigthHalf + index1.split('').reverse().join('');
+                
                 break;
+                
             case 'ChangeAll':
                 while (concealedMessage.includes(index1)) {
                     concealedMessage = concealedMessage.replace(index1, index2);
@@ -41,14 +41,14 @@ function secretChat(input) {
 
     console.log(`You have a new text message: ${concealedMessage}`);
 }
-// secretChat([
-//     'heVVodar!gniV',
-//     'ChangeAll:|:V:|:l',
-//     'Reverse:|:!gnil',
-//     'InsertSpace:|:5',
-//     'Reveal'
-// ]);
-// console.log('==============');
+secretChat([
+    'heVVodar!gniV',
+    'ChangeAll:|:V:|:l',
+    'Reverse:|:!gnil',
+    'InsertSpace:|:5',
+    'Reveal'
+]);
+console.log('==============');
 secretChat([
     'Hiware?uiy',
     'ChangeAll:|:i:|:o',

@@ -1,31 +1,26 @@
 function adAstra(arr) {
-    let code = arr.shift();
+    let str = arr.shift();
 
     let pattern = /([#|])(?<name>[A-Za-z\s]+)\1(?<date>\d{2}\/\d{2}\/\d{2})\1(?<cal>\d+)\1/g;
 
-    let match = pattern.exec(code);
-
-    let list = {};
     let totalCalories = 0;
+    let products = [];
 
-    while (match) {
+    let matches = str.matchAll(pattern);
+
+    for (let match of matches) {
         let { name, date, cal } = match.groups;
-        cal = Number(cal);
-        totalCalories += cal;
-        let product = { date, cal };
 
-        list[name] = product;
-        match = pattern.exec(code);
+        totalCalories += Number(cal);
+        products.push({ name, date, cal });
+
     }
 
-let days = Math.floor(totalCalories / 2000);
+    let days = Math.floor(totalCalories / 2000);
 
-console.log(`You have food to last you for: ${days} days!`);
+    console.log(`You have food to last you for: ${days} days!`);
 
-for (let name in list) {
-    let food = list[name];
-    console.log(`Item: ${name}, Best before: ${food.date}, Nutrition: ${food.cal}`);
-}
+    products.forEach(product => console.log(`Item: ${product.name}, Best before: ${product.date}, Nutrition: ${product.cal}`));
 
 }
 adAstra([

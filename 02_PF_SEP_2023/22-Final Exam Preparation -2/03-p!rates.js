@@ -44,8 +44,7 @@ function pirates(arr) {
         }
         tokens = arr.shift().split('=>');
     }
-    // let counter = 0;
-    // Object.entries(pirates).forEach((x) => counter++);
+
     let settlements = Object.entries(pirates);
     
     if(settlements.length == 0) {

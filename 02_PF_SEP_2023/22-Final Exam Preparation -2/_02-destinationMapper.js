@@ -5,7 +5,6 @@ function destinationMapper(str) {
     let places = [];
 
     let matches = str.matchAll(pattern);
-    let count = 0;
 
     for (let match of matches) {
             places.push(match[2]);

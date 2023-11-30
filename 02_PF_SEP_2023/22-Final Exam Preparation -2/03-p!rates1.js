@@ -5,7 +5,7 @@ function pirates(arr) {
     while (command != 'Sail') {
         let [city, population, gold] = command.split('||');
         population = Number(population);
-        gold = Number(gold)
+        gold = Number(gold);
 
         if (city in targets) {
             targets[city].population += population;

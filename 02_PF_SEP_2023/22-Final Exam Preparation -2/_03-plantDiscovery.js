@@ -36,6 +36,7 @@ function plantDiscovery(arr) {
                 case 'Reset':
                     let plantR = tokens.shift();
                     plantList[plantR].rating = 0;
+                    plantList[plantR].counter = 0;
                     break;
             }
         } else {
@@ -48,7 +49,7 @@ function plantDiscovery(arr) {
 
     console.log('Plants for the exhibition:');
     entries.forEach(([plant, stats]) => {
-        let avgRating = Number(stats.rating) / Number(stats.counter) || 0;
+        let avgRating = Number(stats.rating) / Number(stats.counter);
         console.log(`- ${plant}; Rarity: ${stats.rarity}; Rating: ${avgRating.toFixed(2)}`)
     });
 

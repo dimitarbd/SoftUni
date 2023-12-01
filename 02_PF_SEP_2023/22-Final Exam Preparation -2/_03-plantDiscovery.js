@@ -49,7 +49,7 @@ function plantDiscovery(arr) {
 
     console.log('Plants for the exhibition:');
     entries.forEach(([plant, stats]) => {
-        let avgRating = Number(stats.rating) / Number(stats.counter);
+        let avgRating = Number(stats.rating) / Number(stats.counter) || 0;
         console.log(`- ${plant}; Rarity: ${stats.rarity}; Rating: ${avgRating.toFixed(2)}`)
     });
 

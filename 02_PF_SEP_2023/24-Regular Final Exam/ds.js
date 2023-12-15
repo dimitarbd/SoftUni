@@ -19,5 +19,5 @@
 // let c = a > b ? a : b;
 // console.log(c);
 
-let greet = 'Hello World';
-console.log(greet.substring(3, 5));
+// let greet = 'Hello World';
+// console.log(greet.substring(3, 5));

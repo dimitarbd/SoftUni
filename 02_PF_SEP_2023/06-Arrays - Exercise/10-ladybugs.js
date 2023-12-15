@@ -7,8 +7,9 @@ function ladybugs(arr) {
         newArray.push(0);
     }
 
-    for (let i = 0; i < initInd.length; i++) {
-        newArray.splice(initInd[i], 1, 1)
+    for (let idx of initInd) {
+        idx = Number(idx)
+        newArray.splice(idx, 1, 1)
     }
 
     arr.forEach(el => {

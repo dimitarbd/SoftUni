@@ -18,10 +18,14 @@ function ladybugs(arr) {
         flyLength = Number(flyLength)
         if (dir == "right") {
             if (newArray[startPoint] == 1) {
+                newArray[startPoint] = 0;
                 if (newArray[startPoint + flyLength] == 1) {
-                    newArray[startPoint] = 0;
-                    if ((startPoint + flyLength + 1) < newArray.length) {
-                        newArray[startPoint + flyLength + 1] = 1;
+                    for (let i = startPoint + flyLength; i < newArray.length; i++) {
+                        if (newArray[i] == 0) {
+                            flyLength = i;
+                            newArray[flyLength] = 1;
+                            break;
+                        }
                     }
                 } else {
                     newArray[startPoint] = 0;
@@ -34,8 +38,12 @@ function ladybugs(arr) {
             if (newArray[startPoint] == 1) {
                 if (newArray[startPoint - flyLength] == 1) {
                     newArray[startPoint] = 0;
-                    if ((startPoint - flyLength - 1) < newArray.length) {
-                        newArray[startPoint - flyLength - 1] = 1;
+                    for (let i = startPoint - flyLength; i < newArray.length; i--) {
+                        if (newArray[i] == 0) {
+                            flyLength = i;
+                            newArray[flyLength] = 1;
+                            break;
+                        }
                     }
                 } else {
                     newArray[startPoint] = 0;
@@ -50,15 +58,15 @@ function ladybugs(arr) {
     let result = newArray.join(' ');
     console.log(result);
 }
-ladybugs([3, '0 1',
+ladybugs([5, '0 1 2',
     '0 right 1',
     '2 right 1']);
-console.log('==============');
-ladybugs([ 3, '0 1 2',
-'0 right 1',
-'1 right 1',
-'2 right 1']);
-console.log('==============');
-ladybugs([ 5, '3',
-'3 left 2',
-'1 left -2']);
+// console.log('==============');
+// ladybugs([ 3, '0 1 2',
+// '0 right 1',
+// '1 right 1',
+// '2 right 1']);
+// console.log('==============');
+// ladybugs([ 5, '3',
+// '3 left 2',
+// '1 left -2']);

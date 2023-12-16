@@ -17,45 +17,60 @@ function ladybugs(arr) {
         startIdx = Number(startIdx);
         endIdx = Number(endIdx);
 
-        if ((startIdx >= 0 && startIdx < newArray.length) && (endIdx >= 0 && endIdx < newArray.length)) {
+        if ((startIdx >= 0 && startIdx < newArray.length)) {
             switch (direction) {
                 case 'right':
                     if (newArray[startIdx] == 1) {
-                        if (newArray[endIdx] == 0) {
+                        if (newArray[startIdx + endIdx] == 0) {
                             newArray.splice(startIdx, 1, 0);
-                            newArray.splice(endIdx, 1, 1);
+                            if (startIdx + endIdx < newArray.length) {
+                                newArray.splice(startIdx + endIdx, 1, 1);
+                            }
                         } else {
+                            for (let i = startIdx + endIdx; i < newArray.length; i++) {
+                                if (newArray[i] == 0) {
+                                    endIdx = i;
+                                    newArray.splice(endIdx, 1, 1);
+                                    break;
+                                }
+                            }
                             newArray.splice(startIdx, 1, 0);
-                            newArray.splice(endIdx + 1, 1, 1);
                         }
                     }
                     break;
                 case 'left':
                     if (newArray[startIdx] == 1) {
-                        if (newArray[endIdx] == 0) {
+                        if (newArray[startIdx - endIdx] == 0) {
                             newArray.splice(startIdx, 1, 0);
                             newArray.splice(startIdx - endIdx, 1, 1);
                         } else {
+                            for (let i = endIdx; i >= 0; i--) {
+                                if (newArray[i] == 0) {
+                                    endIdx = i;
+                                    break;
+                                }
+                            }
                             newArray.splice(startIdx, 1, 0);
-                            newArray.splice(startIdx - endIdx - 1, 1, 1);
+                            newArray.splice(startIdx - endIdx, 1, 1);
                         }
                         break;
                     }
             }
         }
-
-        let result = newArray.join(' ');
-        console.log(result);
     }
-    ladybugs([3, '0 1',
-        '0 right 1',
-        '2 right 1']);
-    console.log('==============');
-    ladybugs([3, '0 1 2',
-        '0 right 1',
-        '1 right 1',
-        '2 right 1']);
-    console.log('==============');
-    ladybugs([5, '3',
-        '3 left 2',
-        '1 left -2']);
+
+    let result = newArray.join(' ');
+    console.log(result);
+}
+ladybugs([3, '0 1 ',
+    '0 right 1',
+    '2 right 1']);
+console.log('==============');
+ladybugs([3, '0 1 2',
+    '0 right 1',
+    '1 right 1',
+    '2 right 1']);
+console.log('==============');
+ladybugs([5, '3',
+    '3 left 2',
+    '1 left -2']);

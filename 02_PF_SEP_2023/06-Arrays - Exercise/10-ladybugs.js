@@ -8,8 +8,10 @@ function ladybugs(arr) {
     }
 
     for (let idx of initInd) {
-        idx = Number(idx)
-        newArray.splice(idx, 1, 1)
+        idx = Number(idx);
+        if (idx >=0 && idx < newArray.length) {
+            newArray.splice(idx, 1, 1)
+        }
     }
 
     arr.forEach(el => {
@@ -29,7 +31,7 @@ function ladybugs(arr) {
                     }
                 } else {
                     newArray[startPoint] = 0;
-                    if ((startPoint + flyLength) < newArray.length) {
+                    if (((startPoint + flyLength) >= 0) && ((startPoint + flyLength) < newArray.length)) {
                         newArray[startPoint + flyLength] = 1;
                     }
                 }
@@ -38,7 +40,7 @@ function ladybugs(arr) {
             if (newArray[startPoint] == 1) {
                 if (newArray[startPoint - flyLength] == 1) {
                     newArray[startPoint] = 0;
-                    for (let i = startPoint - flyLength; i < newArray.length; i--) {
+                    for (let i = startPoint - flyLength; i >= 0; i--) {
                         if (newArray[i] == 0) {
                             flyLength = i;
                             newArray[flyLength] = 1;
@@ -47,7 +49,7 @@ function ladybugs(arr) {
                     }
                 } else {
                     newArray[startPoint] = 0;
-                    if ((startPoint - flyLength) < newArray.length) {
+                    if (((startPoint - flyLength) >= 0) && ((startPoint - flyLength) < newArray.length)) {
                         newArray[startPoint - flyLength] = 1;
                     }
                 }
@@ -58,15 +60,19 @@ function ladybugs(arr) {
     let result = newArray.join(' ');
     console.log(result);
 }
-ladybugs([5, '0 1 2',
+ladybugs([2, '0 1 2',
     '0 right 1',
     '2 right 1']);
-// console.log('==============');
-// ladybugs([ 3, '0 1 2',
-// '0 right 1',
-// '1 right 1',
-// '2 right 1']);
-// console.log('==============');
-// ladybugs([ 5, '3',
-// '3 left 2',
-// '1 left -2']);
+console.log('==============');
+ladybugs([ 3, '0 1 2',
+'0 right 1',
+'1 right 1',
+'2 right 1']);
+console.log('==============');
+ladybugs([13, '0 1 2 3 4',
+    '2 left 4',
+    '3 right -7',
+    '3 left 2',
+    '7 right 1',
+    '1 left -2',
+    '2 left 1']);

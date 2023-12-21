@@ -9,7 +9,7 @@ function ladybugs(arr) {
 
     for (let idx of initInd) {
         idx = Number(idx);
-        if (idx >=0 && idx < newArray.length) {
+        if (idx >= 0 && idx < newArray.length) {
             newArray.splice(idx, 1, 1)
         }
     }
@@ -29,12 +29,7 @@ function ladybugs(arr) {
                             break;
                         }
                     }
-                } else {
-                    newArray[startPoint] = 0;
-                    if (((startPoint + flyLength) >= 0) && ((startPoint + flyLength) < newArray.length)) {
-                        newArray[startPoint + flyLength] = 1;
-                    }
-                }
+                } 
             }
         } else {
             if (newArray[startPoint] == 1) {
@@ -47,12 +42,7 @@ function ladybugs(arr) {
                             break;
                         }
                     }
-                } else {
-                    newArray[startPoint] = 0;
-                    if (((startPoint - flyLength) >= 0) && ((startPoint - flyLength) < newArray.length)) {
-                        newArray[startPoint - flyLength] = 1;
-                    }
-                }
+                } 
             }
         }
     });
@@ -64,10 +54,10 @@ ladybugs([2, '0 1 2',
     '0 right 1',
     '2 right 1']);
 console.log('==============');
-ladybugs([ 3, '0 1 2',
-'0 right 1',
-'1 right 1',
-'2 right 1']);
+ladybugs([3, '0 1 2',
+    '0 right 1',
+    '1 right 1',
+    '2 right 1']);
 console.log('==============');
 ladybugs([13, '0 1 2 3 4',
     '2 left 4',

@@ -21,38 +21,34 @@ function ladybugs(arr) {
         if (dir == "right") {
             if (newArray[startPoint] == 1) {
                 newArray[startPoint] = 0;
-                if (newArray[startPoint + flyLength] == 1) {
-                    for (let i = startPoint + flyLength; i < newArray.length; i++) {
+                let newIdx = startPoint + flyLength;
+                if (newIdx < newArray.length && newArray[newIdx] == 1) {
+                    for (let i = newIdx; i < newArray.length; i += flyLength) {
                         if (newArray[i] == 0) {
-                            flyLength = i;
-                            newArray[flyLength] = 1;
+                            newIdx = i;
+                            newArray[newIdx] = 1;
                             break;
                         }
                     }
-                } else {
-                    newArray[startPoint] = 0;
-                    if (((startPoint + flyLength) >= 0) && ((startPoint + flyLength) < newArray.length)) {
-                        newArray[startPoint + flyLength] = 1;
-                    }
+                } else if (newIdx < newArray.length) {
+                    newArray[newIdx] = 1;
                 }
             }
         } else {
             if (newArray[startPoint] == 1) {
-                if (newArray[startPoint - flyLength] == 1) {
-                    newArray[startPoint] = 0;
-                    for (let i = startPoint - flyLength; i >= 0; i--) {
+                newArray[startPoint] = 0;
+                let newIdx = startPoint - flyLength;
+                if (newIdx >= 0 && newArray[newIdx] == 1) {
+                    for (let i = newIdx; i >= 0; i -= flyLength) {
                         if (newArray[i] == 0) {
-                            flyLength = i;
-                            newArray[flyLength] = 1;
+                            newArray[i] = 1;
                             break;
                         }
                     }
-                } else {
-                    newArray[startPoint] = 0;
-                    if (((startPoint - flyLength) >= 0) && ((startPoint - flyLength) < newArray.length)) {
-                        newArray[startPoint - flyLength] = 1;
-                    }
+                } else if (newIdx >= 0) {
+                    newArray[newIdx] = 1;
                 }
+
             }
         }
     });
@@ -60,7 +56,7 @@ function ladybugs(arr) {
     let result = newArray.join(' ');
     console.log(result);
 }
-ladybugs([2, '0 1 2',
+ladybugs([3, '0 1',
     '0 right 1',
     '2 right 1']);
 console.log('==============');
@@ -69,10 +65,6 @@ ladybugs([3, '0 1 2',
     '1 right 1',
     '2 right 1']);
 console.log('==============');
-ladybugs([13, '0 1 2 3 4',
-    '2 left 4',
-    '3 right -7',
+ladybugs([5, '3',
     '3 left 2',
-    '7 right 1',
-    '1 left -2',
-    '2 left 1']);
+    '1 left -2']);

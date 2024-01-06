@@ -9,7 +9,7 @@ function gladiatorInventory(arr) {
                 if (inventory.indexOf(stuff) == -1) {
                     inventory.push(stuff);
                 }
-                    break;
+                break;
             case "Trash":
                 let indexT = inventory.indexOf(stuff);
                 if (indexT > - 1) {
@@ -28,7 +28,7 @@ function gladiatorInventory(arr) {
                 let indexU = inventory.indexOf(equipment);
                 let upgradeCommand = `${equipment}:${upgr}`
                 if (indexU > - 1) {
-                    inventory.splice(indexU+1, 0, upgradeCommand);
+                    inventory.splice(indexU + 1, 0, upgradeCommand);
                 }
                 break;
         }

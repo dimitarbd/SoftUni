@@ -17,6 +17,6 @@ function cookingByNumbers(numAsString, ...op) {
         console.log(num);
     }
 }
-// cookingByNumbers('32', 'chop', 'chop', 'chop', 'chop', 'chop');
-// console.log('=================');
+cookingByNumbers('32', 'chop', 'chop', 'chop', 'chop', 'chop');
+console.log('=================');
 cookingByNumbers('9', 'dice', 'spice', 'chop', 'bake', 'fillet');

@@ -13,8 +13,6 @@ function cookingByNumbers(numAsString, ...op) {
         num = operationEnum[el](num);
         console.log(num);
     })
-
-
 }
 cookingByNumbers('32', 'chop', 'chop', 'chop', 'chop', 'chop');
 console.log('=================');

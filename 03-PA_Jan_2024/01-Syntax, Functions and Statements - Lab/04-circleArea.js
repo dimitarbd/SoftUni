@@ -7,8 +7,6 @@ function circleArea(input) {
     } else {
         console.log(`We can not calculate the circle area, because we receive a ${typeOfArgument}.`);
     }
-
-
 }
 circleArea(5);
 console.log('===========');

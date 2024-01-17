@@ -3,7 +3,7 @@ function printNElement(arr, n) {
     for (let i = 0; i < arr.length; i += n) {
         newArr.push(arr[i])
     }
-    console.log(newArr);
+    return newArr;
 }
 printNElement(['5',
     '20',
@@ -18,9 +18,9 @@ printNElement(['dsa',
     'tset'],
     2);
 console.log('=============');
-printNElement(['1', 
-'2',
-'3', 
-'4', 
-'5'], 
-6);
+printNElement(['1',
+    '2',
+    '3',
+    '4',
+    '5'],
+    6);

@@ -1,15 +1,18 @@
 function sortingNumbers(arr) {
     arr.sort((a, b) => a - b);
     let sortedArr = [];
+    let i = 0;
 
     while (arr.length > 0) {
-        let smallest = arr.shift();
-        sortedArr.push(smallest);
-        let biggest = arr.pop();
-        sortedArr.push(biggest)
+        if (i % 2 == 0) {
+            sortedArr.push(arr.shift());
+        } else {
+            sortedArr.push(arr.pop());
+        }
+        i++;
     }
 
-    console.log(sortedArr);
+    return sortedArr;
 }
 sortingNumbers([1, 65, 3, 52, 48, 63, 31, -3, 18, 56]);
 console.log('=================');

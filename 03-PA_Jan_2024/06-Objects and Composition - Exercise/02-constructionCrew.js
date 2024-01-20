@@ -4,7 +4,7 @@ function constructionCrew(obj) {
         obj.levelOfHydrated += 0.1 * obj.weight * obj.experience;
         obj.dizziness = false;
    }
-   console.log(obj);
+   return obj;
 }
 constructionCrew({ weight: 80,
     experience: 1,

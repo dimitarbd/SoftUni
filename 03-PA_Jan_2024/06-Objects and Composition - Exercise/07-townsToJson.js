@@ -15,7 +15,7 @@ function townsToJson(arr) {
         // console.log(str);
         towns.push(str);
     }
-    console.log("[" + towns.join(", ") + "]");
+    console.log("[" + towns.join(",") + "]");
 }
 townsToJson(['| Town | Latitude | Longitude |',
     '| Sofia | 42.696552 | 23.32601 |',

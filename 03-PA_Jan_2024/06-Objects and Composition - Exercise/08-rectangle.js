@@ -5,8 +5,8 @@ function rectangle(width, height, color) {
         width,
         height,
         color,
-        calcArea: () => {
-            return width * height
+        calcArea: function () {
+            return this.width * this.height
         }
 
     }

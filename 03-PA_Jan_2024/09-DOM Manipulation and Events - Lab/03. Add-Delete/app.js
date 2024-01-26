@@ -10,18 +10,17 @@ function addItem() {
     let deleteBtn = document.createElement('a');
     deleteBtn.textContent = "[Delete]";
     deleteBtn.href = '#';
+    deleteBtn.addEventListener('click', onDelete);
     liElement.appendChild(deleteBtn);
-    deleteBtn.addEventListener('click', onDelete)
 
-    let list = document.getElementById("items");
+    let list = document.getElementById('items');
     list.appendChild(liElement);
 
     input.value = "";
-
-}
-
-function onDelete(event) {
-    let deleteBtn = event.target;
-    let liElement = deleteBtn.parentElement;
-    liElement.remove();
+    
+    function onDelete(event) {
+        let deleteBtn = event.target;
+        let liElement = deleteBtn.parentElement;
+        liElement.remove();
+    }
 }

@@ -22,6 +22,7 @@ article{
     width: 90%;
     text-align: left;
     color: white;
+    font: bold;
 }
 
 #searchText{

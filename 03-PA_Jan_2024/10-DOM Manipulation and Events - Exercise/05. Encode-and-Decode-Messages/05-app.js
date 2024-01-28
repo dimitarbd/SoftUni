@@ -12,7 +12,7 @@ function encodeAndDecodeMessages() {
 
         
         for (let letter of originalArr) {
-            let ascii = Number(letter.charCodeAt())+1;
+            let ascii = Number(letter.charCodeAt())+5;
             let encoded  = String.fromCharCode(ascii);
             encodedArr.push(encoded);
         }
@@ -27,7 +27,7 @@ function encodeAndDecodeMessages() {
         let decodedNewArr = [];
         
         for (let letter of decodedArr) {
-            let ascii = Number(letter.charCodeAt())-1;
+            let ascii = Number(letter.charCodeAt())-5;
             let encoded  = String.fromCharCode(ascii);
             decodedNewArr.push(encoded);
         }

@@ -63,8 +63,8 @@ function solve() {
    }
 
    function getArticleTemp(name, desc, date) {
-    return `<h3> ${name}</h3>` + 
-    `<p>Description: ${desc}</>`+ 
+    return `<h3>${name}</h3>` + 
+    `<p>Description: ${desc}</p>`+ 
     `<p>Due Date: ${date}</p>` +
     getBtnPartial({classes: "green", text: "Start"}, {classes: "red", text: "Delete"});
    }
@@ -73,7 +73,7 @@ function solve() {
     return `<div class="flex">` + 
             `<button class=${btn1.classes}>${btn1.text}</button>` +
             `<button class=${btn2.classes}>${btn2.text}</button>`+
-            `<div>`
+            `</div>`
    }
 
    function removeBtn (target) {

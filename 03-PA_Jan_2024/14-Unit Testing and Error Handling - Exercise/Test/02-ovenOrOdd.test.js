@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { isOddOrEven } from "../ 02-Even Or Odd/ 02-ovenOrOdd.js"
+import { isOddOrEven } from "../02-Even Or Odd/ 02-ovenOrOdd.js"
 
 describe("isOddOrEven", () => {
     it("test with non string value", () => {

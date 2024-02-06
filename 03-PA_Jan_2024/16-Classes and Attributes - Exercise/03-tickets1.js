@@ -7,6 +7,12 @@ function ticketsStat(arr, sortCriteria) {
             this.price = Number(price),
             this.status = status
         }
+        static sort (arrNew, criteria) {
+            return arrNew.sort ((a, b) => {
+                return criteria == "price" ?
+                a[criteria] - b[criteria] :
+                a[criteria].localeCompare(b[criteria])})
+        }
     }
     for (let el of arr) {
         let [destination, price, status] = el.split('|');
@@ -14,14 +20,8 @@ function ticketsStat(arr, sortCriteria) {
         result.push(myTicket);
     }
     
-    return sortTicket(result, sortCriteria)
+    return Ticket.sort(result, sortCriteria);
 
-    function sortTicket(ticketArr, criteria) {
-        return ticketArr.sort ((a, b) => {
-            return criteria == "price" ?
-            a[criteria] - b[criteria] :
-            a[criteria].localeCompare(b[criteria])})
-    }
 }
 
 let res = ticketsStat(['Philadelphia|94.20|available',

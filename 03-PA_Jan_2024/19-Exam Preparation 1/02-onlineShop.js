@@ -24,7 +24,6 @@ class OnlineShop {
         minimalQuantity = Number(minimalQuantity);
         let data = this.products.filter(p => p.product == product)
         if (data.length == 0) {
-            debugger
             throw new Error(`There is no ${product} in the warehouse.`)
         } 
         

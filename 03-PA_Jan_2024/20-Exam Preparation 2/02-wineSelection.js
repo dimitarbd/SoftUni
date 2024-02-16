@@ -57,7 +57,7 @@ class WineSelection {
         let buff = `You have space for ${this.space - this.wines.length} bottles more.\n`;
         buff += `You paid ${this.bill}$ for the wine.\n`
         this.wines.sort((a, b) => a.wineName.localeCompare(b.wineName)).forEach(x => {
-            buff += `${x.wineName} > ${x.wineType} -${x.paid ? "Has Paid" : "Not Paid"}.\n`
+            buff += `${x.wineName} > ${x.wineType} - ${x.paid ? "Has Paid" : "Not Paid"}.\n`
         })
         return buff.trim();
     }

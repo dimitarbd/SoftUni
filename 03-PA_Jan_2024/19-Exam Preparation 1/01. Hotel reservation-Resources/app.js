@@ -99,35 +99,35 @@ function solve() {
 
     }
 
-    // function createConfirmation(firstName, lastName, dateIn, dateOut, peopleCount) {
-    //     let element = createInfo(firstName, lastName, dateIn, dateOut, peopleCount);
+    function createConfirmation(firstName, lastName, dateIn, dateOut, peopleCount) {
+        let element = createInfo(firstName, lastName, dateIn, dateOut, peopleCount);
 
-    //     let confirmBtn = e('button', 'Confirm');
-    //     confirmBtn.className = 'confirm-btn';
-    //     confirmBtn.addEventListener('click', () => onFinishClick(true));
+        let confirmBtn = e('button', 'Confirm');
+        confirmBtn.className = 'confirm-btn';
+        confirmBtn.addEventListener('click', () => onFinishClick(true));
 
-    //     let cancelBtn = e('button', 'Cancel');
-    //     cancelBtn.className = 'cancel-btn';
-    //     cancelBtn.addEventListener('click', () => onFinishClick(false));
+        let cancelBtn = e('button', 'Cancel');
+        cancelBtn.className = 'cancel-btn';
+        cancelBtn.addEventListener('click', () => onFinishClick(false));
 
-    //     element.appendChild(confirmBtn);
-    //     element.appendChild(cancelBtn);
+        element.appendChild(confirmBtn);
+        element.appendChild(cancelBtn);
 
-    //     return element;
+        return element;
 
-    // }
+    }
 
-    // function onFinishClick(confirmed) {
-    //     let className = confirmed ? 'reservation-confirmed' : 'reservation-cancelled';
-    //     let text = confirmed ? 'Confirmed.' : 'Cancelled.';
+    function onFinishClick(confirmed) {
+        let className = confirmed ? 'reservation-confirmed' : 'reservation-cancelled';
+        let text = confirmed ? 'Confirmed.' : 'Cancelled.';
 
-    //     output.className = className;
-    //     output.textContent = text;
+        output.className = className;
+        output.textContent = text;
 
-    //     confirmList.textContent = '';
+        confirmList.textContent = '';
 
-    //     nextBtn.disabled = false;
-    // }
+        nextBtn.disabled = false;
+    }
 
     function e(type, content) {
         let element = document.createElement(type);

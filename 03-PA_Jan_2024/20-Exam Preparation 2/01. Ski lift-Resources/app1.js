@@ -10,6 +10,7 @@ let peopleCountRef = document.getElementById("people-count");
 let formDateRef = document.getElementById("from-date");
 let daysCountRef = document.getElementById("days-count");
 
+let infoTicket = document.querySelector(".ticket-info-list");
 
 
 function onSubmit(e) {
@@ -19,23 +20,28 @@ function onSubmit(e) {
     let peopleCount = peopleCountRef.value;
     let formDate = formDateRef.value;
     let daysCount = daysCountRef.value;
+    
 
-   if (!firstNameRef || !lastNameRef || !peopleCountRef || !formDateRef || !daysCountRef) {
+
+   if (!firstName || !lastName || !peopleCount|| !formDateRef || !daysCount) {
     return
    }
 
-   let ticket = createTicket();
+   let ticket = createTicket(firstName, lastName, peopleCount, daysCount);
 
+   infoTicket.appendChild(ticket);
 
-   function createTicket(firstNameRef, lastNameRef, peopleCountRef, daysCountRef) {
+   function createTicket(firstName, lastName, peopleCount, daysCount) {
     let li = document.createElement("li");
     li.classList.add("ticket");
     li.innerHTML += "<article>";
     li.innerHTML += `<h3>Name: ${firstName} ${lastName}</h3>`;
-    li.innerHTML += `<p>Form adte: ${formDate}</p>`;
+    li.innerHTML += `<p>Form date: ${formDate}</p>`;
     li.innerHTML += `<p>For ${daysCount} days</p>`;
     li.innerHTML += `<p>For ${peopleCount} people</p>`
-
+    li.innerHTML += "</article>";
+    
+    return li;
    }
 
 }

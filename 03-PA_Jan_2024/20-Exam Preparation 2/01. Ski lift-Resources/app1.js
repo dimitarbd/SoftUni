@@ -9,7 +9,7 @@ function solve() {
     let peopleCountRef = document.getElementById("people-count");
     let fromDateRef = document.getElementById("from-date");
     let daysCountRef = document.getElementById("days-count");
-    let infoTicketUl = document.getElementById("info-ticket")
+    let infoTicketUl = document.querySelector("#info-ticket ul")
     let nextBtnRef = document.getElementById("next-btn")
 
     let infoTicket = document.querySelector(".ticket-info-list");
@@ -39,15 +39,21 @@ function solve() {
     function createTicket(firstName, lastName, peopleCount, fromDate, daysCount) {
         let li = document.createElement("li");
         li.classList.add("ticket");
-        li.innerHTML += "<article>";
-        li.innerHTML += `<h3>Name: ${firstName} ${lastName}</h3>`;
-        li.innerHTML += `<p>Form date: ${fromDate}</p>`;
-        li.innerHTML += `<p>For ${daysCount} days</p>`;
-        li.innerHTML += `<p>For ${peopleCount} people</p>`
-        li.innerHTML += "</article>";
+        let innerHTMLContent = "<article>";
+        innerHTMLContent += `<h3>Name: ${firstName} ${lastName}</h3>`;
+        innerHTMLContent += `<p>Form date: ${fromDate}</p>`;
+        innerHTMLContent += `<p>For ${daysCount} days</p>`;
+        innerHTMLContent += `<p>For ${peopleCount} people</p>`
+        innerHTMLContent += "</article>";
+
+        li.innerHTML = innerHTMLContent;
+
 
         let editBtn = createBtn("edit-btn", "Edit");
         let continueBtn = createBtn("continue-btn", "Continue");
+        editBtn.addEventListener('click', onEdit);
+        continueBtn.addEventListener('click', onContinue);
+
         li.appendChild(editBtn);
         li.appendChild(continueBtn);
 
@@ -55,8 +61,15 @@ function solve() {
     }
 
     function toggleBtnNext() {
-
         nextBtnRef.disabled = !nextBtnRef.disabled;
+    }
+
+    function onEdit(e) {
+
+    }
+
+    function onContinue(e) {
+
     }
 
     function createBtn(classes, text) {

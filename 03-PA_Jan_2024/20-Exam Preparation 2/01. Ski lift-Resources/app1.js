@@ -11,8 +11,9 @@ function solve() {
     let daysCountRef = document.getElementById("days-count");
     let infoTicketUl = document.querySelector("#info-ticket ul")
     let nextBtnRef = document.getElementById("next-btn")
-
-    let infoTicket = document.querySelector(".ticket-info-list");
+    let confirmTicketUl = document.querySelector("#confirm-ticket-section ul");
+    let body = document.getElementById("body");
+    let main;
 
 
     function onSubmit(e) {
@@ -65,22 +66,86 @@ function solve() {
     }
 
     function onEdit(e) {
+        let articleChildren = e.currentTarget.parentElement.querySelector("article").children;
+        let nameData = articleChildren[0].textContent.split(" ");
+        let dataTokens = articleChildren[1].textContent.split(" ");
+        let daysCountToken = articleChildren[2].textContent.split(" ");
+        let peopleCountToken = articleChildren[3].textContent.split(" ");
+
+
+        let firstName = nameData[1];
+        let lastName = nameData[2];
+        let fromDate = dataTokens[2];
+        let daysCount = daysCountToken[1];
+        let peopleCount = peopleCountToken[1];
+
+        firstNameRef.value = firstName;
+        lastNameRef.value = lastName;
+        fromDateRef.value = fromDate;
+        daysCountRef.value = daysCount;
+        peopleCountRef.value = peopleCount;
+
+        toggleBtnNext();
+        infoTicketUl.innerHTML = '';
 
     }
 
+
     function onContinue(e) {
+        let li = e.currentTarget.parentElement;
+        let btns = li.querySelectorAll("button");
+        btns[0].remove();
+        btns[1].remove();
+
+        let confirmBtn = createBtn("confirm-btn", "Confirm");
+        confirmBtn.addEventListener('click', onConfirm);
+
+        let cancelBtn = createBtn("cancel-btn", "Cancel");
+        cancelBtn.addEventListener("click", onCancel)
+
+        li.appendChild(confirmBtn);
+        li.appendChild(cancelBtn);
+        confirmTicketUl.appendChild(li);
 
     }
 
     function createBtn(classes, text) {
         let btn = document.createElement("button");
-        btn.classList.add(classes);
+        classes && btn.classList.add(classes);
         btn.textContent = text;
         return btn;
     }
 
+    function onCancel(e) {
+        onDelete(e.target.parentElement);
+        toggleBtnNext();
+    }
 
+    function onConfirm(e) {
+        onDelete(e.target.parentElement)
+        main = document.getElementById("main");
+        body.innerHTML = "";
+        let h1 = document.createElement("h1");
+        h1.textContent = "Thank you, have a nice day!";
+        h1.id = "thank-you";
+        let btn = createBtn("", "Back");
+        btn.id = "back-btn";
+        btn.addEventListener('click', onReset);
+        body.appendChild(h1);
+        body.appendChild(btn);
 
+    }
+
+    function onReset() {
+        body.innerHTML = "";
+        body.appendChild(main);
+        toggleBtnNext();
+        
+    }
+
+    function onDelete(elRef) {
+        elRef.remove();
+    }
 
 }
 

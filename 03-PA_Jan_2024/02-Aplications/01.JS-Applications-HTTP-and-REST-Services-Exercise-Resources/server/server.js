@@ -5,7 +5,7 @@
 }(this, (function (http, fs, crypto) { 'use strict';
 
     function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
+    
     var http__default = /*#__PURE__*/_interopDefaultLegacy(http);
     var fs__default = /*#__PURE__*/_interopDefaultLegacy(fs);
     var crypto__default = /*#__PURE__*/_interopDefaultLegacy(crypto);

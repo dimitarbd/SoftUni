@@ -26,7 +26,7 @@ function displayCommits(data) {
 }
 
 function onError(error) {
-    console.log(error);
+    list.innerHTML=`<li>Error: Not Found</li>`
 }
 
 function createListItem({ commit: { author: { name }, message } }) {

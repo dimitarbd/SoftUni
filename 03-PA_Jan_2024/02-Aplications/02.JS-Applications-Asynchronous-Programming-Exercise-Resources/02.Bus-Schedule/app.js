@@ -5,7 +5,7 @@ function solve() {
     let arriveBtnRef = document.getElementById("arrive");
     let stop = {
         currentStop: "",
-        next: "depot"
+        nextStop: "depot"
 
     }
     
@@ -13,15 +13,27 @@ function solve() {
 
 
     async function depart() {
-        const response = await fetch(url + "depot");
-        const data = await response.json();
-        infoSpanRef.textContent = `Next stop ${data.name}`;
-        departBtnRef.disabled = true;
-        arriveBtnRef.disabled = false;
+        try {
+            const response = await fetch(url + stop.nextStop);
+            const data = await response.json();
+    
+            stop.currentStop = data.name;
+            stop.nextStop= data.next;
+    
+            infoSpanRef.textContent = `Next stop ${data.name}`;
+            departBtnRef.disabled = true;
+            arriveBtnRef.disabled = false;
+        } catch {
+            infoSpanRef.textContent = "Error";
+            departBtnRef.disabled = true;
+            arriveBtnRef.disabled = true;
+        }
     }
 
     function arrive() {
-        infoSpanRef.textContent = `Arriving at ${stopName}`
+        infoSpanRef.textContent = `Arriving at ${stop.currentStop}`;
+        departBtnRef.disabled = false;
+        arriveBtnRef.disabled = true;
     }
 
     return {

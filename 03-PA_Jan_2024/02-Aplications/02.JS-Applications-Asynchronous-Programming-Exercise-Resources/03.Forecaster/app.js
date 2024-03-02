@@ -11,13 +11,17 @@ function attachEvents() {
 
 
     async function getWeather(e) {
-        let userInput = locationInputRef.value;
-        forecastSectionRef.style.display = "block";
-        let locationResponse = await fetch(baseLocationURL);
-        let locationData = await locationResponse.json();
-        let currentLocationData = locationData.find(x => x.name == userInput)
-        await fillTodayData(currentLocationData.code);
-        await fillUpcomingData(currentLocationData.code);
+        try {
+            let userInput = locationInputRef.value;
+            forecastSectionRef.style.display = "block";
+            let locationResponse = await fetch(baseLocationURL);
+            let locationData = await locationResponse.json();
+            let currentLocationData = locationData.find(x => x.name == userInput)
+            await fillTodayData(currentLocationData.code);
+            await fillUpcomingData(currentLocationData.code);
+        } catch (error) {
+            forecastSectionRef.textContent = "Error"
+        }
 
     }
 
@@ -39,9 +43,9 @@ function attachEvents() {
     function createForecastUpcomingSection(data) {
         let container = document.createElement("div");
         container.classList.add("forecast-info");
-        let upcoming1 = generateSpan("upcoming", data.name, data.forecast[0]);
-        let upcoming2 = generateSpan("upcoming", data.name, data.forecast[1]);
-        let upcoming3 = generateSpan("upcoming", data.name, data.forecast[2]);
+        let upcoming1 = generateSpan("upcoming", "symbol", data.name, data.forecast[0]);
+        let upcoming2 = generateSpan("upcoming", "symbol", data.name, data.forecast[1]);
+        let upcoming3 = generateSpan("upcoming", "symbol", data.name, data.forecast[2]);
 
         container.appendChild(upcoming1);
         container.appendChild(upcoming2);
@@ -49,17 +53,17 @@ function attachEvents() {
         return container;
     }
 
-    function generateSpan(classes, name, data) {
+    function generateSpan(classContainer, classSpan, name, data) {
         let spanContainer = document.createElement("span");
-        spanContainer.classList.add(classes);
+        spanContainer.classList.add(classContainer);
 
         let spanName = document.createElement("span");
-        spanName.classList.add("forecast-data");
-        spanName.textContent = data.name;
+        spanName.classList.add(classSpan);
+        classSpan == "symbol" ? spanName.innerHTML = findSymbol(data.condition) : spanName.textContent = name;
 
         let degree = document.createElement("span");
         degree.classList.add("forecast-data");
-        degree.innerHTML = `${data.low + findSymbol("Degrees")}\\${data.high + findSymbol("Degrees")}`;
+        degree.innerHTML = `${data.low + findSymbol("Degrees")}/${data.high + findSymbol("Degrees")}`;
 
         let condition = document.createElement("span");
         condition.classList.add("forecast-data");
@@ -81,7 +85,7 @@ function attachEvents() {
         conditionSpan.innerHTML = findSymbol(data.forecast.condition);
 
         container.appendChild(conditionSpan);
-        let spanContainer = generateSpan("condition", data.name, data.forecast)
+        let spanContainer = generateSpan("condition", "forecast-data", data.name, data.forecast)
 
         container.appendChild(spanContainer);
         return container;
@@ -90,10 +94,10 @@ function attachEvents() {
     function findSymbol(condition) {
         switch (condition) {
             case "Sunny": return "&#x2600";
-            case "Partly": return "&#x26C5";
+            case "Partly sunny": return "&#x26C5";
             case "Overcast": return "&#x2601";
             case "Rain": return "&#x2614";
-            case "Degrees": return "&#176"
+            case "Degrees": return "&#176";
 
         }
     }

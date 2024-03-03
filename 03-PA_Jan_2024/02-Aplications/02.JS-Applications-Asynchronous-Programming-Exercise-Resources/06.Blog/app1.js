@@ -1,6 +1,7 @@
 function attachEvents() {
     document.getElementById("btnLoadPosts").addEventListener("click", loadPost);
     document.getElementById("btnViewPost").addEventListener("click", viewPost);
+    
     const selectRef = document.getElementById("posts");
     const postTitleRef = document.getElementById("post-title");
     const postBodyRef = document.getElementById("post-body");

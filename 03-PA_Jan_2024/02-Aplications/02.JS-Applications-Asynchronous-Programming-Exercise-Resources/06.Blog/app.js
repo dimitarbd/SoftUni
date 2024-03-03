@@ -1,54 +1,53 @@
 function attachEvents() {
-    document.getElementById("btnLoadPosts").addEventListener("click", loadPost);
-    document.getElementById("btnViewPost").addEventListener("click", viewPost);
-    const selectRef = document.getElementById("posts");
-    const postTitleRef = document.getElementById("post-title");
-    const postBodyRef = document.getElementById("post-body");
-    const postComments = document.getElementById("post-comments");
+    document.getElementById("btnLoadPosts").addEventListener("click", getPosts);
+    document.getElementById("btnViewPost").addEventListener("click", getComments);
+}
 
-    const endPoits = {
-        allPost: "http://localhost:3030/jsonstore/blog/posts",
-        allComments: "http://localhost:3030/jsonstore/blog/comments"
-    };
+async function getPosts() {
+    const selectOp = document.getElementById("posts");
+    const url = "http://localhost:3030/jsonstore/blog/posts";
+    selectOp.innerHTML = "";
+    const response = await fetch(url);
+    const data = await response.json();
 
-    async function loadPost(e) {
-        const response = await fetch(endPoits.allPost);
-        const data = await response.json();
-        selectRef.innerHTML = "";
+    Object.values(data).forEach(post => {
+        const op = document.createElement("option");
+        op.value = post.id;
+        op.textContent = post.title;
+        selectOp.appendChild(op);
+    })
+}
 
-        Object.values(data).forEach(post => {
-            selectRef.innerHTML += createOptionElement(post);
-        })
-    }
+async function getComments() {
+    const postsUrl = "http://localhost:3030/jsonstore/blog/posts";
+    const commentsUrl = "http://localhost:3030/jsonstore/blog/comments";
 
-    function createOptionElement(data) {
-        return `<option value=${data.id}>${data.title}</option>`
-    }
+    const selectedOp = document.getElementById("posts").selectedOptions[0].value;
+    const titleElement = document.getElementById("post-title");
+    const postBodyElement = document.getElementById("post-body");
+    const postUlElement = document.getElementById("post-comments");
 
-    async function viewPost(e) {
-        const currentPostId= selectRef.selectedOptions[0].value;
-        const responseSinglePost = await fetch(endPoits.allPost + "/" + currentPostId);
-        const dataSinglePost = await responseSinglePost.json();
+    postUlElement.innerHTML = "";
 
-        const currentPost = Object.values(dataSinglePost).find(x => x.id == currentPostId);
+    const postResponse = await fetch(postsUrl);
+    const postData = await postResponse.json();
 
-        const responseComments = await fetch(endPoits.allComments);
-        const dataComments = await responseComments.json();
+    const commentsResponse = await fetch(commentsUrl);
+    const commentsData = await commentsResponse.json();
 
-        const filteredComments = Object.values(dataComments).filter(x => x.postId == currentPostId);
-        postTitleRef.textContent = currentPost.title;
-        postBodyRef.textContent = currentPost.body;
+    const selectedPost = Object.values(postData).find(post => post.id == selectedOp);
+    titleElement.textContent = selectedPost.title;
+    postBodyElement.textContent = selectedPost.body;
 
-        postComments.innerHTML = "";
-        filteredComments.forEach(c => {
-            const li = document.createElement("li");
-            li.id = c.id;
-            li.textContent = c.text;
-            postComments.appendChild(li)
-        })
-        
-    }
+    const comments = Object.values(commentsData).filter(c => c.postId == selectedOp);
+
+    comments.forEach(c => {
+        const li = document.createElement("li");
+        li.textContent = c.text;
+        postUlElement.appendChild(li);
+    })
 
 }
+
 
 attachEvents();

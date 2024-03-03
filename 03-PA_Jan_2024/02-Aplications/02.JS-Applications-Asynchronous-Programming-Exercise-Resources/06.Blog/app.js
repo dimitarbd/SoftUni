@@ -39,7 +39,7 @@ async function getComments() {
     titleElement.textContent = selectedPost.title;
     postBodyElement.textContent = selectedPost.body;
 
-    const comments = Object.values(commentsData).filter(c => c.postId == selectedOp);
+    const comments = Object.values(commentsData).filter(c => c.postId === selectedOp);
 
     comments.forEach(c => {
         const li = document.createElement("li");

@@ -28,7 +28,7 @@ function attachEvents() {
 
     async function viewPost(e) {
         const currentPostId= selectRef.selectedOptions[0].value;
-        const responseSinglePost = await fetch(endPoits.allPost + "/" + currentPostId);
+        const responseSinglePost = await fetch(endPoits.allPost);
         const dataSinglePost = await responseSinglePost.json();
 
         const currentPost = Object.values(dataSinglePost).find(x => x.id == currentPostId);

@@ -41,7 +41,6 @@ function attachEvents() {
     function createAndAppendLi(data) {
         let li = document.createElement("li");
         li.textContent = `${data.person}: ${data.phone}`;
-
         let btn = document.createElement("button");
         btn.textContent = "Delete";
         btn.dataset.id = data._id;

@@ -4,14 +4,35 @@ function attachEvents() {
     document.getElementById("btnLoad").addEventListener("click", onLoadAllRecords);
     document.getElementById("btnCreate").addEventListener("click", onCreateRecord);
 
-    async function onCreateRecord (e) {
+    async function onCreateRecord(e) {
         let personRef = document.getElementById("person");
-        
+        let phoneRef = document.getElementById("phone");
+
+        let person = personRef.value;
+        let phone = phoneRef.value;
+
+        if (!person || !phone) {
+            return
+        }
+
+        let data = {
+            method: "POST",
+            headers: {
+                "Content-type": "aplication/json"
+            },
+            body: JSON.stringify({ person, phone })
+        }
+        await fetch(url, data);
+        personRef.value = "";
+        phoneRef.value = "";
+        onLoadAllRecords();
+
     }
 
     async function onLoadAllRecords(e) {
         let response = await fetch(url);
         let data = await response.json();
+        ulRef.innerHTML= "";
         Object.values(data).forEach(rec => {
             createAndAppendLi(rec);
         })

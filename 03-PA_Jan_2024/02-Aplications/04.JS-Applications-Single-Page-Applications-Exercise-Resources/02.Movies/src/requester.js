@@ -1,14 +1,16 @@
+import { getUserToken } from "./userHelper.js";
+
 async function request(method, url, data) {
     const option = {
         method
     };
-    const userData = JSON.parse(sessionStorage.getItem("userData"));
+    const userToken = getUserToken;
     const headers = {
         "Content-type": "application/json"
     }
 
-    if (userData) {
-        headers["X-Authorization"] = userData.accesToken;
+    if (userToken) {
+        headers["X-Authorization"] = userToken;
     }
 
     option[headers] = headers;

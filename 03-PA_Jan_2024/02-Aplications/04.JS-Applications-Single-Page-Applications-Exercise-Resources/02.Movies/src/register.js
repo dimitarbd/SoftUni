@@ -1,4 +1,6 @@
+import { updateNav } from "./app.js";
 import { showHome } from "./home.js";
+import { setUserData } from "./userHelper.js";
 import { register } from "./userService.js"
 document.getElementById("register-form").addEventListener("submit", onRegister);
 
@@ -21,6 +23,8 @@ async function onRegister(e) {
 
     const data = await register({ email, password });
 
+    setUserData(data);
+    updateNav();
     showHome();
 
 }

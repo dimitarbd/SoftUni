@@ -3,17 +3,17 @@ function setUserData(userData) {
 }
 
 function getUserData() {
-    return JSON.parse(sessionStorage.getItem(userData));
+    return JSON.parse(sessionStorage.getItem("userData"));
 }
 
 function getUserToken() {
     const userData = getUserData();
-    return userData.accessToken
+    return userData?.accessToken
 }
 
 function getUserId() {
     const userData = getUserData();
-    return userData._id;
+    return userData?._id;
 }
 
 export {

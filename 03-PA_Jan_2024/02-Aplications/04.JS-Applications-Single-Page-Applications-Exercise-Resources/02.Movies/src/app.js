@@ -1,5 +1,6 @@
 import {showRegisterView} from "./register.js"
 import {showHome} from "./home.js"
+import { getUserData } from "./userHelper.js";
 
 
 document.querySelectorAll("section").forEach(section => section.style.display="none");
@@ -7,7 +8,7 @@ let userNav = document.querySelectorAll("li.user");
 let guestNav = document.querySelectorAll("li.guest");
 document.querySelector("nav").addEventListener("click", onNavigate);
 
-let userData = JSON.parse(sessionStorage.getItem("userData"));
+
 
 const routes = {
     "/register": showRegisterView,
@@ -24,7 +25,8 @@ function onNavigate (e) {
     routes[path]();
 }
 
-function updateNav() {
+export function updateNav() {
+    const userData = getUserData();
     if (userData) {
         userNav.forEach(li =>{
             li.style.display = "block"

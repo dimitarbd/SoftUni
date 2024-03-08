@@ -1,4 +1,6 @@
 import {showRegisterView} from "./register.js"
+import {showHome} from "./home.js"
+
 
 document.querySelectorAll("section").forEach(section => section.style.display="none");
 let userNav = document.querySelectorAll("li.user");
@@ -7,13 +9,19 @@ document.querySelector("nav").addEventListener("click", onNavigate);
 
 let userData = JSON.parse(sessionStorage.getItem("userData"));
 
+const routes = {
+    "/register": showRegisterView,
+    "/home": showHome
+}
+
 function onNavigate (e) {
-    if (e.target.tagName !== "A" || e.target.href) {
+    if (e.target.tagName !== "A" || !e.target.href) {
         return
     }
+    e.preventDefault();
     let url = new URL(e.target.href);
     let path = url.pathname;
-
+    routes[path]();
 }
 
 function updateNav() {

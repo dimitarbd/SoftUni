@@ -1,11 +1,11 @@
-import {showRegisterView} from "./register.js"
-import {showHome} from "./home.js"
+import { showRegisterView } from "./register.js"
+import { showHome } from "./home.js"
 import { getUserData } from "./userHelper.js";
 import { showLogin } from "./login.js";
 import { showLogout } from "./loguot.js";
 
 
-document.querySelectorAll("section").forEach(section => section.style.display="none");
+document.querySelectorAll("section").forEach(section => section.style.display = "none");
 document.querySelector("nav").addEventListener("click", onNavigate);
 
 let userMSG = document.getElementById("welcome-msg");
@@ -13,17 +13,19 @@ let userNav = document.querySelectorAll("li.user");
 let guestNav = document.querySelectorAll("li.guest");
 
 
-
 const routes = {
-    "/register": showRegisterView,
+    "/": showHome,
     "/home": showHome,
+    "/register": showRegisterView,
     "/login": showLogin,
-    "/logout": showLogout
+    "/logout": showLogout,
+    "/addMovie": () => console.log("add"),
+    "/details/:id": () => console.log("add"),
 }
 
-function onNavigate (e) {
+export function onNavigate(e) {
     if (e.target.tagName !== "A" || !e.target.href) {
-        return
+        return;
     }
     e.preventDefault();
     let url = new URL(e.target.href);
@@ -34,21 +36,21 @@ function onNavigate (e) {
 export function updateNav() {
     const userData = getUserData();
     if (userData) {
-        userNav.forEach(li =>{
+        userNav.forEach(li => {
             li.style.display = "block"
         })
-
-        guestNav.forEach(li =>{
+        
+        guestNav.forEach(li => {
             li.style.display = "none"
         })
         userMSG.textContent = `Welcome, ${userData.email}`
         
     } else {
-        userNav.forEach(li =>{
+        userNav.forEach(li => {
             li.style.display = "none"
         })
-
-        guestNav.forEach(li =>{
+        
+        guestNav.forEach(li => {
             li.style.display = "block"
         })
         userMSG.textContent = "";
@@ -56,3 +58,4 @@ export function updateNav() {
 }
 
 updateNav();
+showHome();

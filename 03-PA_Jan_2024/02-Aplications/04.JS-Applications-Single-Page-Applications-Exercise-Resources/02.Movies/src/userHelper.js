@@ -24,5 +24,6 @@ export {
     setUserData,
     getUserData,
     getUserToken,
-    getUserId    
+    getUserId,
+    clearUserData    
 }

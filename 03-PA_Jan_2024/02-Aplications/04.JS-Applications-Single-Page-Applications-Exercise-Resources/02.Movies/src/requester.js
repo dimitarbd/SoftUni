@@ -4,7 +4,7 @@ async function request(method, url, data) {
     const option = {
         method
     };
-    const userToken = getUserToken;
+    const userToken = getUserToken();
     const headers = {
         "Content-type": "application/json"
     }
@@ -18,10 +18,17 @@ async function request(method, url, data) {
     if (data) {
         option.body = JSON.stringify(data);
     }
+    try {
+        const response = await fetch(url, option);
+        if(response.status === 204) {
+            return response;
+        }
+        const responseData = await response.json();
+        return responseData;
+    } catch {
+        return alert(error);
+    }
 
-    const response = await fetch(url, option);
-    const responseData = await response.json();
-    return responseData;
 }
 
 const get = (url) => {
@@ -39,8 +46,8 @@ const del = (url) => {
 }
 
 export {
-    get, 
-    post, 
-    update, 
+    get,
+    post,
+    update,
     del
 }

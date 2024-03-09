@@ -17,8 +17,8 @@ async function onRegister(e) {
     const rePass= formData.get("repeatPassword");
 
     if(!email || !password || password.length < 6 || password !== rePass) {
-        alert("Error from register");
-        return
+        return alert("Error from register");
+        
     }
 
     const data = await register({ email, password });

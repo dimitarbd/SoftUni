@@ -2,19 +2,23 @@ import {showRegisterView} from "./register.js"
 import {showHome} from "./home.js"
 import { getUserData } from "./userHelper.js";
 import { showLogin } from "./login.js";
+import { showLogout } from "./loguot.js";
 
 
 document.querySelectorAll("section").forEach(section => section.style.display="none");
+document.querySelector("nav").addEventListener("click", onNavigate);
+
+let userMSG = document.getElementById("welcome-msg");
 let userNav = document.querySelectorAll("li.user");
 let guestNav = document.querySelectorAll("li.guest");
-document.querySelector("nav").addEventListener("click", onNavigate);
 
 
 
 const routes = {
     "/register": showRegisterView,
     "/home": showHome,
-    "/login": showLogin
+    "/login": showLogin,
+    "/logout": showLogout
 }
 
 function onNavigate (e) {
@@ -37,6 +41,7 @@ export function updateNav() {
         guestNav.forEach(li =>{
             li.style.display = "none"
         })
+        userMSG.textContent = `Welcome, ${userData.email}`
         
     } else {
         userNav.forEach(li =>{
@@ -46,6 +51,7 @@ export function updateNav() {
         guestNav.forEach(li =>{
             li.style.display = "block"
         })
+        userMSG.textContent = "";
     }
 }
 

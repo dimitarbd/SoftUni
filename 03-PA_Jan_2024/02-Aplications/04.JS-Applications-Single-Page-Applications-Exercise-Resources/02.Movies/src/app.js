@@ -1,6 +1,7 @@
 import {showRegisterView} from "./register.js"
 import {showHome} from "./home.js"
 import { getUserData } from "./userHelper.js";
+import { showLogin } from "./login.js";
 
 
 document.querySelectorAll("section").forEach(section => section.style.display="none");
@@ -12,7 +13,8 @@ document.querySelector("nav").addEventListener("click", onNavigate);
 
 const routes = {
     "/register": showRegisterView,
-    "/home": showHome
+    "/home": showHome,
+    "/login": showLogin
 }
 
 function onNavigate (e) {

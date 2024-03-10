@@ -2,6 +2,10 @@ function getUser() {
     return JSON.parse(sessionStorage.getItem("userData"));
 }
 
+function setUser(data) {
+    sessionStorage.setItem("userData", JSON.stringify(data))
+};
+
 function hasUser() {
     return !!getUser();
 }
@@ -13,5 +17,6 @@ function removeUser() {
 export {
     getUser,
     hasUser,
-    removeUser
+    removeUser,
+    setUser
 }

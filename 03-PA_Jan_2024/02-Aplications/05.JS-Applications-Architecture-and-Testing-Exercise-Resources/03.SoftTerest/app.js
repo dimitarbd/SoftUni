@@ -1,4 +1,6 @@
-import { hasUser } from "./src/utils/userUtils.js";
+import { logout } from "./src/api/userService.js";
+import { hasUser, removeUser } from "./src/utils/userUtils.js";
+import { showLoginView } from "./src/views/loginView.js";
 import { showRegisterView } from "./src/views/registerView.js";
 
 document.querySelectorAll("div[data-selection='section']").forEach(div => div.remove());
@@ -13,10 +15,15 @@ const routes = {
     "/home": () => console.error("home"),
     "/dashboard": () => console.error("dashboard"),
     "/create": () => console.error("create"),
-    "/login": () => console.error("login"),
+    "/login": showLoginView,
     "/register": showRegisterView,
     "/details": () => console.error("details"),
-    "/logout": () => console.error("logout"),
+    "/logout": async () =>{
+        await logout();
+        updateNav();
+        removeUser();
+        goTo("/");
+    } ,
     "*": () => console.error("404 Page not found"),
 }
 
@@ -54,7 +61,9 @@ function onNavigate(e) {
 }
 
 let ctx = {
-    render: renderer
+    render: renderer,
+    goTo,
+    updateNav
 };
 
 function goTo(name) {

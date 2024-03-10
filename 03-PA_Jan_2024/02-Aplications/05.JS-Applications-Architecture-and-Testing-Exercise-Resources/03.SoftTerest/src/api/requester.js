@@ -2,8 +2,8 @@ import { getUser, removeUser } from "../utils/userUtils.js";
 
 const BASE_URL = "http://localhost:3030/"
 
-async function requester(method, url, data) {
-    const url = BASE_URL + url;
+async function requester(method, endPoint, data) {
+    const url = BASE_URL + endPoint;
     const userData = getUser();
 
     const option = {

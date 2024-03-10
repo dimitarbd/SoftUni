@@ -15,7 +15,7 @@ function removeUser() {
 };
 
 function hasOwner() {
-    return getUser._id == id;
+    return getUser()?._id == id;
 }
 
 export {

@@ -77,3 +77,5 @@ if (typeof(handler) !== "function") {
 }
     handler(ctx, params);
 }
+
+goTo("/")

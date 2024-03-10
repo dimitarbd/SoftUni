@@ -3,7 +3,9 @@ import { hasOwner } from "../utils/userUtils.js";
 
 const view = document.querySelector("div[data-view-name='details']");
 
+let context = null;
 export async function showDetaiView(ctx, data) {
+    context = ctx;
     view.innerHTML = "";
     ctx.render(view);
     const id = data[0];
@@ -11,6 +13,14 @@ export async function showDetaiView(ctx, data) {
     const idea = await dataService.getIdea(id);
     const isOwner = hasOwner(idea._ownerId);
     view.innerHTML = createIdeaTemp(idea, isOwner)
+    view.querySelector("a")?.addEventListener("click", onDelete)
+}
+
+async function onDelete(e) {
+    e.preventDefault();
+    const id= e.target.dataset.id;
+    await dataService.removeIdea(id);
+    context.goTo("/dashboard")
 }
 
 function createIdeaTemp(data, isOwner) {
@@ -22,7 +32,7 @@ function createIdeaTemp(data, isOwner) {
             <p class="idea-description">${data.description}</p>
             </div>
             <div class="text-center">
-                ${isOwner ? '<a class="btn detb" href="">Delete</a>' : ""}
+                ${isOwner ? `<a class="btn detb" data-id=${data._id} href="">Delete</a>` : ""}
             </div>
     `
 }

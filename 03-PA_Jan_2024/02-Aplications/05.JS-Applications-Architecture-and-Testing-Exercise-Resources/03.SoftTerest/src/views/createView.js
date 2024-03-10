@@ -1,7 +1,7 @@
 import { dataService } from "../api/dataService.js";
 
 const view = document.querySelector("div[data-view-name='create']");
-const form = document.querySelector("form");
+const form = view.querySelector("form");
 form.addEventListener("submit", onSubmit)
 
 let context = null;
@@ -20,7 +20,7 @@ async function onSubmit(e) {
         return alert("Error create")
     }
 
-   await dataService.create({title, description, imageURL});
+   await dataService.createIdea({title, description, imageURL});
    context.goTo("/dasboard");
    form.reset();
 }

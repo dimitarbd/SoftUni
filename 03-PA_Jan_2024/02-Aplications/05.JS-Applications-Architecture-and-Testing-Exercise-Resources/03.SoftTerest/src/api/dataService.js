@@ -1,4 +1,4 @@
-import { update } from "./requester"
+import { del, get, post } from "./requester.js"
 
 const endpoints = {
     getAllIdeas: "data/ideas?select=_id%2Ctitle%2Cimg&sortBy=_createdOn%20desc",
@@ -13,7 +13,7 @@ async function getIdea(id) {
     return await get(endpoints.singleIde + id)
 }
 
-async function create(data) {
+async function createIdea(data) {
     return await post(endpoints.singleIde, data)
 }
 
@@ -24,6 +24,6 @@ async function removeIdea(id) {
 export const dataService = {
     getAllIdes,
     getIdea,
-    create,
+    createIdea,
     removeIdea
 }

@@ -1,7 +1,6 @@
 import { register } from "../api/userService.js";
 import { setUser } from "../utils/userUtils.js"
 
-
 const registerSection = document.querySelector("div[data-view-name='register']");
 const form = registerSection.querySelector("form").addEventListener("submit", onsubmit);
 
@@ -25,5 +24,5 @@ async function onSubmit(e) {
     setUser(userData);
     context.goTo("/home");
     context.updateNav();
-    form.clear();
+    form.reset();
 }

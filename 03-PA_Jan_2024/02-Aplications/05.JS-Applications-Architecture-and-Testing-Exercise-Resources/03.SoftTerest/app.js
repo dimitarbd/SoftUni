@@ -1,5 +1,9 @@
 import { logout } from "./src/api/userService.js";
 import { hasUser, removeUser } from "./src/utils/userUtils.js";
+import { showCreateView } from "./src/views/createView.js";
+import { showDashboardView } from "./src/views/dashboardView.js";
+import { showDetaiView } from "./src/views/detailsView.js";
+import { showHomeView } from "./src/views/homeView.js";
 import { showLoginView } from "./src/views/loginView.js";
 import { showRegisterView } from "./src/views/registerView.js";
 
@@ -11,19 +15,19 @@ nav.addEventListener("click", onNavigate);
 updateNav();
 
 const routes = {
-    "/": () => console.error("home"),
-    "/home": () => console.error("home"),
-    "/dashboard": () => console.error("dashboard"),
-    "/create": () => console.error("create"),
+    "/": showHomeView,
+    "/home": showHomeView,
+    "/dashboard": showDashboardView,
+    "/create": showCreateView,
     "/login": showLoginView,
     "/register": showRegisterView,
-    "/details": () => console.error("details"),
+    "/details": showDetaiView,
     "/logout": async () =>{
         await logout();
-        updateNav();
         removeUser();
+        updateNav();
         goTo("/");
-    } ,
+    },
     "*": () => console.error("404 Page not found"),
 }
 
@@ -66,10 +70,10 @@ let ctx = {
     updateNav
 };
 
-function goTo(name) {
+function goTo(name, ...params) {
 const handler = routes[name];
 if (typeof(handler) !== "function") {
     return routes["*"]();
 }
-    handler(ctx);
+    handler(ctx, params);
 }

@@ -15,11 +15,11 @@ function update(match) {
 }
 
 function ulTemplate(towns, match)  {
-   return html `<ul>${towns.map(town => createTemplate(town, match?.includes(town)))}</ul>`
+   return html `<ul>${towns.map((town, i) => createTemplate(town, match?.includes(town), i))}</ul>`
 };
 
-function createTemplate (town, isActive) {
-   return html`<li class=${isActive ? "active" : ""}>${town}</li>`
+function createTemplate (town, isActive, id) {
+   return html`<li id=${id} class=${isActive ? "active" : ""}>${town}</li>`
 };
 
 function search() {

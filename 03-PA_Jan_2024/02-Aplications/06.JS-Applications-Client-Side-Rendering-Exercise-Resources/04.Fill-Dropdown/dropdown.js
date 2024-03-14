@@ -23,5 +23,22 @@ function update(data) {
 
 function addItem(e) {
     e.preventDefault();
-    let text = document.getElementById("itemText").value;
+    let inputRef = document.getElementById("itemText");
+
+    let text = inputRef.value;
+    inputRef.value = ""
+
+    addItemInDb({text})
 }
+
+async function addItemInDb(data) {
+    const response = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    onLoad();
+}
+

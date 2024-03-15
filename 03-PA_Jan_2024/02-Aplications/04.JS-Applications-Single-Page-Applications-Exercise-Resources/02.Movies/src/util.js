@@ -2,10 +2,10 @@ export function saveUserData(data) {
     localStorage.setItem('user', JSON.stringify(data));
 }
 
-export function getUserData(data) {
-    return JSON.parse(localStorage.setItem('user'));
+export function getUserData() {
+    return JSON.parse(localStorage.getItem('user'));
 }
 
-export function clearUserData(data) {
+export function clearUserData() {
     localStorage.removeItem('user');
 }

@@ -1,4 +1,6 @@
-import { getMovies } from "./data/movies.js";
+import { page } from './lib.js';
+import { showHome } from './views/home.js';
 
+page('/', showHome);
 
-window.getMovies = getMovies;
+page.start();

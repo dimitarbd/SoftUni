@@ -1,4 +1,4 @@
-import { getMovies } from '../data/movies.js'
+import { getMovies } from '../data/movie_s.js'
 import { html, render } from "../lib.js";
 import { loading } from "./partials.js";
 
@@ -28,27 +28,29 @@ const homeTemplate = (movies) => html`
 </section>
     <section id="movie">
     <div class="mt-3">
+    <div class="row d-flex d-wrap">
+              <ul id="movies-list" class="card-deck d-flex justify-content-center">
+                <!-- list item example -->
         ${movies.map(movieTemplate)}
+    </div>   
+        </ul>
         </div>
       </section>
     </section>
 `;
 
 const movieTemplate = (movie) => html`
-            <div class="row d-flex d-wrap">
-              <ul id="movies-list" class="card-deck d-flex justify-content-center">
-                <!-- list item example -->
-                <li class="card mb-4">
-                  <img class="card-img-top"  src="${movie.img}" alt="Card image cap" width="400"/>
-                  <div class="card-body">
-                    <h4 class="card-title">${movie.title}</h4>
-                    <a href="#">
-                    </a>
-                  </div>
-                  <div class="card-footer">
-                  <button type="button" class="btn btn-info">Details</button>
-                  </div>
-                </li>
+    <li class="card mb-4">
+        <img class="card-img-top"  src="${movie.img}" alt="Card image cap" width="400"/>
+            <div class="card-body">
+                <h4 class="card-title">${movie.title}</h4>
+                <a href="#">
+                </a>
+            </div>
+            <div class="card-footer">
+                <a href="/catalog/${movie._id}" type="button" class="btn btn-info">Details</a>
+            </div>
+    </li>
               </ul>
             </div>    
 `;
@@ -59,4 +61,4 @@ export async function showHome(ctx) {
     const movies = await getMovies();
 
     render(homeTemplate(movies));
-}
+} 

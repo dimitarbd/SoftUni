@@ -1,4 +1,4 @@
-import { api } from "../requester.js"
+import { api } from "../utility/requester.js"
 
 let BASE_URL = "http://localhost:3030/data";
 
@@ -27,11 +27,15 @@ async function getMyFurniture(userId) {
     return await api.get(BASE_URL+endpoints.myFurniture(userId));
 }
 
+async function updateFurniture(id, data) {
+    return await api.put(BASE_URL+endpoints.furniture + `/${id}`, data)
+}
+
 export let dataService = {
     createFurniture,
     getAllFurniture,
     delFurniture,
     getFurnitureDetails,
-    getMyFurniture
-
+    getMyFurniture,
+    updateFurniture
 }

@@ -1,11 +1,21 @@
+import { userHelper } from "./userHelper.js";
+
+import (userHelper)
 
 async function requester(method, url, data) {
     let option = {
-        method
+        method,
+        headers: {}
+    }
+
+    let accessToken = userHelper.getUserToken();
+
+    if(accessToken) {
+        option.headers["X-authorization"] = accessToken;
     }
 
     if(data) {
-        option["Content-Type"] = "application/json";
+        option.headers["Content-Type"] = "application/json";
         option.body =JSON.stringify(data);
     }
 

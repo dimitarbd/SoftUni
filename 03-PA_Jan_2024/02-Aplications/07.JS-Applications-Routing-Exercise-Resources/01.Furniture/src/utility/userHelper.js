@@ -12,5 +12,24 @@ function clearUserData() {
 
 function getUserToken() {
     let userData = getUserData();
-    
+    return userData.accessToken;
+}
+
+function getUserId() {
+    let userData = getUserData();
+    return userData._id;
+}
+
+function hasOwner(ownerId) {
+    let id = getUserId();
+    return ownerId == id;
+}
+
+export let userHelper = {
+    setUserData, 
+    getUserData,
+    clearUserData,
+    getUserToken,
+    getUserId,
+    hasOwner
 }

@@ -1,4 +1,4 @@
-import { api } from "../requester";
+import { api } from "../utility/requester";
 
 import (api)
 

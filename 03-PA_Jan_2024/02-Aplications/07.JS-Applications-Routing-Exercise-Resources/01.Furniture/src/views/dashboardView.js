@@ -1,8 +1,6 @@
-import { html, render } from "../../node_modules/lit-html/lit-html.js";
+import { html } from "../../node_modules/lit-html/lit-html.js";
 
-let root = document.querySelector("div[data-id='root']");
-
-let dashboardTemplate = () => html `
+let dashboardTemplate = (data) => html `
      <div class="row space-top">
             <div class="col-md-12">
                 <h1>Welcome to Furniture System</h1>
@@ -10,35 +8,12 @@ let dashboardTemplate = () => html `
             </div>
         </div>
         <div class="row space-top">
-            <div class="col-md-4">
-                <div class="card text-white bg-primary">
-                    <div class="card-body">
-                            <img src="./images/table.png" />
-                            <p>Description here</p>
-                            <footer>
-                                <p>Price: <span>235 $</span></p>
-                            </footer>
-                            <div>
-                                <a href="#" class="btn btn-info">Details</a>
-                            </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-white bg-primary">
-                    <div class="card-body">
-                            <img src="./images/sofa.jpg" />
-                            <p>Description here</p>
-                            <footer>
-                                <p>Price: <span>1200 $</span></p>
-                            </footer>
-                            <div>
-                                <a href="#" class="btn btn-info">Details</a>
-                            </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
+            
+        </div>
+`;
+
+let cardTemplate = (item) => html `
+    <div class="col-md-4">
                 <div class="card text-white bg-primary">
                     <div class="card-body">
                             <img src="./images/chair.jpg" />
@@ -52,9 +27,9 @@ let dashboardTemplate = () => html `
                     </div>
                 </div>
             </div>
-        </div>
 `;
 
-export function showDashboardView() {
-    render(dashboardTemplate(), root);
+export async function showDashboardView(ctx) {
+    let data = await dataService.getAllFurniture();
+    ctx.render(dashboardTemplate(data));
 }

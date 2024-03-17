@@ -7,6 +7,9 @@ import { showLoginView } from "./views/loginView.js";
 import { showLogoutView } from "./views/logoutView.js";
 import { showDeatailsView } from "./views/detailsView.js";
 import { showCreateView } from "./views/createView.js";
+import { showMyFurnitureView } from "./views/myFurniture.js";
+import { deleteItem } from "./views/deleteView.js";
+import { showEditView } from "./views/editView.js";
 
 
 let root = document.querySelector("div[data-id='root']");
@@ -18,8 +21,9 @@ page("/", showDashboardView);
 page("/dashboard", showDashboardView);
 page("/create", showCreateView);
 page("/details/:id", showDeatailsView);
-page("/edit/:id", () => console.error("edit"));
-page("/myFurniture", () => console.error("myFurniture"));
+page("/edit/:id", showEditView);
+page("/delete/:id", deleteItem);
+page("/myFurniture", showMyFurnitureView);
 page("/login", showLoginView);
 page("/register", showRegisterView);
 page("/logout", showLogoutView);

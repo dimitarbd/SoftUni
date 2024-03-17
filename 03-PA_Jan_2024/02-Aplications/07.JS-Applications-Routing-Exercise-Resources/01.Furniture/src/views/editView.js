@@ -1,10 +1,10 @@
 import { html } from "../../node_modules/lit-html/lit-html.js";
 import { dataService } from "../service/dataService.js";
 
-let createViewTemp = (error) => html`
- <div class="row space-top">
+let editTemp = (item, error) => html`
+<div class="row space-top">
             <div class="col-md-12">
-                <h1>Create New Furniture</h1>
+                <h1>Edit Furniture</h1>
                 <p>Please fill all fields.</p>
             </div>
         </div>
@@ -13,48 +13,51 @@ let createViewTemp = (error) => html`
                 <div class="col-md-4">
                     <div class="form-group">
                         <label class="form-control-label" for="new-make">Make</label>
-                        <input class="form-control ${!!error ? error?.make ? "is-invalid" : "is-valid" : ""}" id="new-make" type="text" name="make">
+                        <input class="form-control" ${!!error ? error?.make ? "is-invalid" : "is-valid" : ""} id="new-make" type="text" name="make" value=${item.make}>
                     </div>
                     <div class="form-group has-success">
                         <label class="form-control-label" for="new-model">Model</label>
-                        <input class="form-control ${!!error ? error?.model ? "is-invalid" : "is-valid" : ""}" id="new-model" type="text" name="model">
+                        <input class="form-control is-valid" ${!!error ? error?.model ? "is-invalid" : "is-valid" : ""} id="new-model" type="text" name="model" value=${item.model}>
                     </div>
                     <div class="form-group has-danger">
                         <label class="form-control-label" for="new-year">Year</label>
-                        <input class="form-control ${!!error ? error?.year ? "is-invalid" : "is-valid" : ""}" id="new-year" type="number" name="year">
+                        <input class="form-control is-invalid" ${!!error ? error?.year ? "is-invalid" : "is-valid" : ""} id="new-year" type="number" name="year" value=${item.year}>
                     </div>
                     <div class="form-group">
                         <label class="form-control-label" for="new-description">Description</label>
-                        <input class="form-control ${!!error ? error?.description ? "is-invalid" : "is-valid" : ""}" id="new-description" type="text" name="description">
+                        <input class="form-control" ${!!error ? error?.description ? "is-invalid" : "is-valid" : ""} id="new-description" type="text" name="description" value=${item.description}>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label class="form-control-label" for="new-price">Price</label>
-                        <input class="form-control ${!!error ? error?.price ? "is-invalid" : "is-valid" : ""}" id="new-price" type="number" name="price">
+                        <input class="form-control" ${!!error ? error?.price ? "is-invalid" : "is-valid" : ""} id="new-price" type="number" name="price" value=${item.price}>
                     </div>
                     <div class="form-group">
                         <label class="form-control-label" for="new-image">Image</label>
-                        <input class="form-control ${!!error ? error?.img ? "is-invalid" : "is-valid" : ""}" id="new-image" type="text" name="img">
+                        <input class="form-control" ${!!error ? error?.img ? "is-invalid" : "is-valid" : ""} id="new-image" type="text" name="img" value=${item.img}>
                     </div>
                     <div class="form-group">
                         <label class="form-control-label" for="new-material">Material (optional)</label>
-                        <input class="form-control " id="new-material" type="text" name="material">
+                        <input class="form-control" ${!!error ? error?.material ? "is-invalid" : "is-valid" : ""} id="new-material" type="text" name="material" value=${item.material}>
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Create" />
+                    <input type="submit" class="btn btn-info" value="Edit" />
                 </div>
             </div>
         </form>
 `;
 
 let context = null;
+let id = null;
 
-export function showCreateView(ctx) {
+export async function showEditView(ctx) {
     context = ctx;
-    context.render(createViewTemp(null));
+    id = context.params.id;
+    let item = await dataService.getFurnitureDetails(id)
+    context.render(editTemp(item));
 }
 
-async function onSubmit(e) {
+async function onSubmit (e) {
     e.preventDefault();
     let formData = new FormData(e.target)
     let { make, model, year, description, price, img, material } = Object.fromEntries(formData);
@@ -88,12 +91,14 @@ async function onSubmit(e) {
         error.img = true;
         hasError = true;
     }
+    
+    let item = { make, model, year, description, price, img, material }
+
     if (hasError) {
-        return context.render(createViewTemp(error))
+        return context.render(editTemp(item, error))
     }
 
-    price = Number(price);
-
-    await dataService.createFurniture({ make, model, year, description, price, img, material });
-    context.goTo("/")
+    await dataService.updateFurniture(id, item) 
+    context.goTo("/");
 }
+

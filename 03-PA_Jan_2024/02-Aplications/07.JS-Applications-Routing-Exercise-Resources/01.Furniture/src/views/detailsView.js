@@ -32,8 +32,8 @@ let detailsTemp = (item, isOwner) => html `
 function getButtons(id) {
     return html `
                 <div>
-                    <a href=”/edit/${id}” class="btn btn-info">Edit</a>
-                    <a href=”/delete/${id}” class="btn btn-red">Delete</a>
+                    <a href=/edit/${id} class="btn btn-info">Edit</a>
+                    <a href=/delete/${id} class="btn btn-red">Delete</a>
                 </div>
     `
 } 

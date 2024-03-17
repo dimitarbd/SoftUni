@@ -1,5 +1,5 @@
 import { html} from "../../node_modules/lit-html/lit-html.js";
-import { dataService } from "./service/dataService.js";
+import { dataService } from "../service/dataService.js";
 
 let dashboardTemplate = (items) => html `
      <div class="row space-top">

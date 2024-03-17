@@ -1,4 +1,4 @@
-import { userHelper} from "./userHelper.js";
+import { userHelper } from "./userHelper.js";
 
 
 async function requester(method, url, data) {
@@ -9,30 +9,31 @@ async function requester(method, url, data) {
 
     let accessToken = userHelper.getUserToken();
 
-    if(accessToken) {
+    if (accessToken) {
         option.headers["x-authorization"] = accessToken;
     }
 
-    if(data) {
+    if (data) {
         option.headers["Content-Type"] = "application/json";
-        option.body =JSON.stringify(data);
+        option.body = JSON.stringify(data);
     }
 
     try {
         let response = await (fetch(url, option));
-        if(!response.ok) {
+        if (!response.ok) {
             let error = await response.json();
             throw new Error(error.message);
         }
-        if(!response.status == 204) {
+        if (!response.status == 204) {
             return response
         }
 
         return await response.json();
 
-    } catch(error) {
-        alert (error)
-};
+    } catch (error) {
+        alert(error);
+        throw new Error(error);
+    };
 }
 
 async function get(url) {

@@ -1,15 +1,15 @@
-import { html } from "../../node_modules/lit-html/lit-html.js";
+import { html, render } from "../../node_modules/lit-html/lit-html.js";
+import { userService } from "../service/userService.js";
 import { userHelper } from "../utility/userHelper.js";
-import { userService } from "../service/userService.js"
 
-let registerTemp = () => html `
+let loginTemp = () => html `
 <div class="row space-top">
             <div class="col-md-12">
-                <h1>Register New User</h1>
+                <h1>Login User</h1>
                 <p>Please fill all fields.</p>
             </div>
         </div>
-        <form @submit=${onRegister}>
+        <form @submit=${onLogin}>
             <div class="row space-top">
                 <div class="col-md-4">
                     <div class="form-group">
@@ -20,33 +20,28 @@ let registerTemp = () => html `
                         <label class="form-control-label" for="password">Password</label>
                         <input class="form-control" id="password" type="password" name="password">
                     </div>
-                    <div class="form-group">
-                        <label class="form-control-label" for="rePass">Repeat</label>
-                        <input class="form-control" id="rePass" type="password" name="rePass">
-                    </div>
-                    <input type="submit" class="btn btn-primary" value="Register" />
+                    <input type="submit" class="btn btn-primary" value="Login" />
                 </div>
             </div>
         </form>
 `;
 
-let context = null;
-export function showRegisterView(ctx) {
+let context  = null;
+export function showLoginView(ctx) {
     context = ctx;
-    ctx.render(registerTemp());
+    context.render(loginTemp());
 }
 
-async function onRegister(e) {
+async function onLogin(e) {
     e.preventDefault();
     let formData = new FormData(e.target);
-    let { email, password, rePass } = Object.fromEntries(formData);
+    let { email, password } = Object.fromEntries(formData);
 
-    if(!email || !password || password != rePass) {
-       return alert("Error register")
+    if (!email || !password) {
+        return alert("Erroro login");
     }
-
-    let userData = await userService.register({email, password});
+    let userData = await userService.login({ email, password });
     userHelper.setUserData(userData);
     context.updateNav();
-    context.goTo("/");
+    context.goTo("/")
 }

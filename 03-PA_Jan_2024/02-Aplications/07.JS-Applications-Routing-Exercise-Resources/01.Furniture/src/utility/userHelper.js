@@ -22,7 +22,7 @@ function getUserId() {
 
 function hasOwner(ownerId) {
     let id = getUserId();
-    return ownerId == id;
+    return ownerId === id;
 }
 
 export let userHelper = {

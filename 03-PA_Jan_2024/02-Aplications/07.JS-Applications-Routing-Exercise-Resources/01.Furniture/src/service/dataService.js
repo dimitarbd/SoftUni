@@ -20,15 +20,15 @@ async function getFurnitureDetails(id) {
 }
 
 async function delFurniture(id) {
-    return await api.del(BASE_URL+endpoints.furniture + `/${id}`);
+    return await api.del(BASE_URL + endpoints.furniture + `/${id}`);
 }
 
 async function getMyFurniture(userId) {
-    return await api.get(BASE_URL+endpoints.myFurniture(userId));
+    return await api.get(BASE_URL + endpoints.myFurniture(userId));
 }
 
 async function updateFurniture(id, data) {
-    return await api.put(BASE_URL+endpoints.furniture + `/${id}`, data)
+    return await api.put(BASE_URL + endpoints.furniture + `/${id}`, data)
 }
 
 export let dataService = {

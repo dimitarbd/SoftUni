@@ -19,7 +19,7 @@ async function request(method, url, data) {
     }
 
     try {
-        let res = await fetch(host + url, options);
+        let res = await fetch (host + url, options);
 
         if(!res.ok) {
             if (res.status == 403) {
@@ -29,7 +29,7 @@ async function request(method, url, data) {
             let err = await res.json();
             throw new Error(err.message);
         };
-        return res.json()
+        return res.json();
     } catch (err) {
         alert(err.message);
         throw err;

@@ -1,20 +1,41 @@
-import { render, html } from "../../node_modules/lit-html/lit-html.js";
+import { render, html, page } from "../lib.js";
 import { getRecipes } from "../data/recipes.js";
+import { parseQuery, createSubmitHandler } from "../util.js";
+import { escape } from "mysql";
 
 let loader = () => html `<p>Loading &hellip;</p>`;
 
-let catalogTemplate = (recipes) => html `
+let catalogTemplate = (recipes, search, onSearch) => html `
 <h1> Recipes Catalog</h1>
+<form @submit=${onSearch}>
+    <label> Search:<input type="text" name="search" .value=${search}></label>
+</form>
 <ul>
-    <li>R1</li>
-    <li>R2</li>
+   ${recipes.map(recipeTemplate)}
 </ul>
 `;
 
+let recipeTemplate = (recipe) => html `
+<li>
+    <p>${recipe.name}</p>
+</li>
+`;
+
 export async function showCatalog(ctx) {
+    let query = parseQuery(ctx.querystring);
+    
+
     render(loader());
 
-    let recipes = await getRecipes();
+    let recipes = await getRecipes(query.search);
 
-    render(catalogTemplate(recipes));
+    render(catalogTemplate(recipes, query.search, createSubmitHandler(onSearch)));
+}
+
+function onSearch({ search }) {
+    if(!search) {
+        page.redirect('/');
+    } else {
+        page.redirect(`?search=${search}`);
+    }
 }

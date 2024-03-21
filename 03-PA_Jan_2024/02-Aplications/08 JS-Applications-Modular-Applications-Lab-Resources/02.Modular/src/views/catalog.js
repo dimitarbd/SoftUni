@@ -1,7 +1,7 @@
 import { render, html, page } from "../lib.js";
 import { getRecipes } from "../data/recipes.js";
 import { parseQuery, createSubmitHandler } from "../util.js";
-import { escape } from "mysql";
+
 
 let loader = () => html `<p>Loading &hellip;</p>`;
 

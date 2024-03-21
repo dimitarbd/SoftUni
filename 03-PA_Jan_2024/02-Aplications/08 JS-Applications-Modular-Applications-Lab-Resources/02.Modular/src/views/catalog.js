@@ -5,7 +5,7 @@ import { parseQuery, createSubmitHandler } from "../util.js";
 
 let loader = () => html `<p>Loading &hellip;</p>`;
 
-let catalogTemplate = (recipes, search, onSearch) => html `
+let catalogTemplate = (recipes, search="", onSearch) => html `
 <h1> Recipes Catalog</h1>
 <form @submit=${onSearch}>
     <label> Search:<input type="text" name="search" .value=${search}></label>
@@ -27,7 +27,7 @@ export async function showCatalog(ctx) {
 
     render(loader());
 
-    let recipes = await getRecipes(query.search);
+    let recipes = await getRecipes(query.search, Number(query.page));
 
     render(catalogTemplate(recipes, query.search, createSubmitHandler(onSearch)));
 }

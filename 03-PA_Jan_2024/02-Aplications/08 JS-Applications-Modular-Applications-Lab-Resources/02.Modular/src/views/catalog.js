@@ -1,15 +1,17 @@
 import { render, html, page } from "../lib.js";
 import { getRecipes } from "../data/recipes.js";
 import { parseQuery, createSubmitHandler } from "../util.js";
+import { paginator } from "./paginator.js";
 
 
 let loader = () => html `<p>Loading &hellip;</p>`;
 
-let catalogTemplate = (recipes, search="", onSearch) => html `
+let catalogTemplate = (recipes, page, pages, search = '', onSearch) => html `
 <h1> Recipes Catalog</h1>
 <form @submit=${onSearch}>
     <label> Search:<input type="text" name="search" .value=${search}></label>
 </form>
+${paginator(page, pages)}
 <ul>
    ${recipes.map(recipeTemplate)}
 </ul>
@@ -27,9 +29,10 @@ export async function showCatalog(ctx) {
 
     render(loader());
 
-    let recipes = await getRecipes(query.search, Number(query.page));
+    let page = Number(query.page) || 1;
+    let {recipes, pages} = await getRecipes(query.search, Number(query.page));
 
-    render(catalogTemplate(recipes, query.search, createSubmitHandler(onSearch)));
+    render(catalogTemplate(recipes, page, pages, query.search, createSubmitHandler(onSearch)));
 }
 
 function onSearch({ search }) {

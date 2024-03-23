@@ -1,6 +1,8 @@
 import { html } from "../../node_modules/lit-html/lit-html.js";
+import { dataService } from "../api/dataService.js";
 import { renderer } from "../common/render.js";
 import { userHelper } from "../common/userHelper.js";
+
 
 let browseTeamTemp = (hasUser, data) => html`
 <section id="browse">
@@ -11,71 +13,29 @@ let browseTeamTemp = (hasUser, data) => html`
 
 ${hasUser && html`
 <article class="layout narrow">
-    <div class="pad-small"><a href="#" class="action cta">Create Team</a></div>
+    <div class="pad-small"><a href="/create" class="action cta">Create Team</a></div>
 </article>
 `}
 
-<article class="layout">
-    <img src="./assets/atat.png" class="team-logo left-col">
-    <div class="tm-preview">
-        <h2>Storm Troopers</h2>
-        <p>These ARE the droids we're looking for</p>
-        <span class="details">5000 Members</span>
-        <div><a href="#" class="action">See details</a></div>
-    </div>
-</article>
-
-<article class="layout">
-    <img src="./assets/rocket.png" class="team-logo left-col">
-    <div class="tm-preview">
-        <h2>Team Rocket</h2>
-        <p>Gotta catch 'em all!</p>
-        <span class="details">3 Members</span>
-        <div><a href="#" class="action">See details</a></div>
-    </div>
-</article>
-
-<article class="layout">
-    <img src="./assets/hydrant.png" class="team-logo left-col">
-    <div class="tm-preview">
-        <h2>Minions</h2>
-        <p>Friendly neighbourhood jelly beans, helping evil-doers succeed.</p>
-        <span class="details">150 Members</span>
-        <div><a href="#" class="action">See details</a></div>
-    </div>
-</article>
-
-</section>
-
-<section id="my-teams">
-
-<article class="pad-med">
-    <h1>My Teams</h1>
-</article>
-
-<article class="layout narrow">
-    <div class="pad-med">
-        <p>You are not a member of any team yet.</p>
-        <p><a href="#">Browse all teams</a> to join one, or use the button bellow to cerate your own
-            team.</p>
-    </div>
-    <div class=""><a href="#" class="action cta">Create Team</a></div>
-</article>
-
-<article class="layout">
-    <img src="./assets/rocket.png" class="team-logo left-col">
-    <div class="tm-preview">
-        <h2>Team Rocket</h2>
-        <p>Gotta catch 'em all!</p>
-        <span class="details">3 Members</span>
-        <div><a href="#" class="action">See details</a></div>
-    </div>
-</article>
+${data.map(cardTemp)}
 
 </section>
 `;
 
-export function showBrowseTeamView() {
+export async function showBrowseTeamView() {
     let hasUser = userHelper.getUserData();
-    renderer(browseTeamTemp(hasUser));
+    let data = await dataService.getAllTeams();
+    renderer(browseTeamTemp(hasUser, data));
 }
+
+let cardTemp = (item) => html`
+<article class="layout">
+    <img src="../..${item.logoUrl}" class="team-logo left-col">
+    <div class="tm-preview">
+        <h2>${item.name}</h2>
+        <p>${item.description}</p>
+        <span class="details">5000 Members</span>
+        <div><a href="/details/${item._id}" class="action">See details</a></div>
+    </div>
+</article>
+`;

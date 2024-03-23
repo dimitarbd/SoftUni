@@ -11,6 +11,21 @@ async function getAllTeams() {
     return await api.get(BASE_URL + endpoints.teams)
 }
 
+async function createNewTeam() {
+    return api.post(BASE_URL + endpoints.teams, data);
+}
+
+async function getSingleTeam(id) {
+    return await api.get(BASE_URL + endpoints.teams)
+}
+
+async function editTeam(data, id) {
+    return api.put(`${BASE_URL}${endpoints.teams}/${id}`, data)
+}
+
 export let dataService = {
-    getAllTeams
+    getAllTeams,
+    createNewTeam, 
+    getSingleTeam,
+    editTeam
 }

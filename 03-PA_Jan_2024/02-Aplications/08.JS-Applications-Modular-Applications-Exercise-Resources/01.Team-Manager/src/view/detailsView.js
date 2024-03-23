@@ -10,7 +10,7 @@ let detailsTemp = (hasUser, team, hasOwner, pending, members, memberCount, isPen
         <img src="../..${team.logoUrl}" class="team-logo left-col">
         ${hasUser ? userActionTemp(team, memberCount, hasOwner, isPending, isMember): ""}
         ${memberTemp(hasOwner, isMember, members)}
-        ${hasOwner ? ownerMemberAction(pending) : ''}
+        ${hasOwner ? ownerMemberAction(pending, team) : ''}
     </article>
 </section>
 `;
@@ -47,12 +47,12 @@ let memberTemp = (hasOwner, isMember, members) => html`
         </div>
 `;
 
-let ownerMemberAction = (pending) => html`
+let ownerMemberAction = (pending, team) => html`
         <div class="pad-large">
             <h3>Membership Requests</h3>
             <ul class="tm-members">
                 ${pending.map(x=> html`
-                <li>${x.user.username}<a data-user-id=${x.user._id} @click=${onApproveUser} href="#" class="tm-control action">Approve</a><a href="#"
+                <li>${x.user.username}<a data-user-id=${x.user._id} data-team-id=${x.team._id} @click=${onApproveUser}  href="#" class="tm-control action">Approve</a><a href="#"
                         class="tm-control action">Decline</a></li>
                 `)}
             </ul>
@@ -83,6 +83,14 @@ async function onJoinTeam(e) {
 async function onApproveUser(e) {
     e.prevendtDefault();
     let userId = e.target.dataset.userId;
-    let data = await dataService.approveRequest(userId);
+    let teamId = e.target.dataset.teamId;
+    let teamMember = await dataService.getListMember(teamId);
+    let currentUser = teamMember.find(x=>x.user._id == userId);
 
+ let data = {
+    teamId,
+    status: "member"
+}
+
+    await dataService.approveRequest(currentUser._id, data);
 }

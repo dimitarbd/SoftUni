@@ -31,8 +31,8 @@ async function requestToJoin(teamId) {
     return await api.post(`${BASE_URL}${endpoints.members}`, { teamId })
 }
 
-async function approveRequest(id) {
-    let currentUser = await api.get(`${BASE_URL}${endpoints.members}/${id}`)
+async function approveRequest(id, data) {
+    return await api.put(`${BASE_URL}${endpoints.members}/${id}`, data)
 }
 
 export let dataService = {
@@ -41,5 +41,6 @@ export let dataService = {
     getSingleTeam,
     editTeam,
     getListMember,
-    requestToJoin
+    requestToJoin,
+    approveRequest
 }

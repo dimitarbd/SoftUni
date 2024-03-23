@@ -14,9 +14,14 @@ function getToken() {
     return getUserData()?.accessToken
 }
 
+function clearUserData() {
+    sessionStorage.removeItem("userData")
+}
+
 export let userHelper = {
     setUserData,
     getUserData,
     getUserId,
-    getToken
+    getToken,
+    clearUserData
 }

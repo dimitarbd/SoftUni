@@ -2,6 +2,7 @@ import { html } from "../../node_modules/lit-html/lit-html.js";
 import { renderer } from "../common/render.js";
 import { userService } from "../api/userSrevice.js";
 import { userHelper } from "../common/userHelper.js";
+import { goTo } from "../common/goTo.js";
 
 let registerTemp = (hasErr) => html`
 <section id="register">
@@ -43,4 +44,5 @@ async function onsubmit(e) {
 
     let userData = await userService.register({ username, email, password });
     userHelper.setUserData(userData);
+    goTo("/my-team")
 }

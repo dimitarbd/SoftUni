@@ -2,12 +2,11 @@ import { userHelper } from "../common/userHelper.js";
 
 async function requester(method, url, data) {
     let option = {
-        method
+        method,
+        headers: {}
     }
     if (data) {
-        option.headers = {
-            "Content-Type": "appliction/json"
-        }
+        option.headers ["Content-Type"="application/json"]
         option.body = JSON.stringify(data);
     };
 
@@ -26,7 +25,7 @@ async function requester(method, url, data) {
         if (response.status == 204) {
             return response;
         }
-        
+
         return await response.json();
 
     } catch (error) {

@@ -4,22 +4,22 @@ import { userHelper } from "../common/userHelper.js";
 import { getParametersId } from "../common/goTo.js";
 import { dataService } from "../api/dataService.js";
 
-let detailsTemp = (hasUser, team, hasOwner) => html`
+let detailsTemp = (hasUser, team, hasOwner, pending, members, memberCount) => html`
 <section id="team-home">
     <article class="layout">
         <img src="../..${team.logoUrl}" class="team-logo left-col">
-        ${userActionTemp(team)}
-        ${memberTemp()}
+        ${hasUser ? userActionTemp(team, memberCount): ""}
+        ${memberTemp(hasOwner)}
         ${hasOwner ? ownerMemberAction() : ''}
     </article>
 </section>
 `;
 
-let userActionTemp = (team) => html`
+let userActionTemp = (team, memberCount) => html`
 <div class="tm-preview">
             <h2>${team.name}</h2>
             <p>${team.description}</p>
-            <span class="details">3 Members</span>
+            <span class="details">${memberCount} Members</span>
             <div>
                 <a href="#" class="action">Edit team</a>
                 <a href="#" class="action">Join team</a>
@@ -29,13 +29,13 @@ let userActionTemp = (team) => html`
         </div>
 `;
 
-let memberTemp = () => html`
+let memberTemp = (hasOwner) => html`
         <div class="pad-large">
             <h3>Members</h3>
             <ul class="tm-members">
                 <li>My Username</li>
-                <li>James<a href="#" class="tm-control action">Remove from team</a></li>
-                <li>Meowth<a href="#" class="tm-control action">Remove from team</a></li>
+                <li>James ${hasOwner && html`<a href="#" class="tm-control action">Remove from team</a>`}</li>
+                <li>Meowth ${hasOwner && html`<a href="#" class="tm-control action">Remove from team</a>`}</li>
             </ul>
         </div>
 `;
@@ -58,6 +58,9 @@ export async function showDetailsView(ctx) {
     let team = await dataService.getSingleTeam(id);
     let hasOwner = userHelper.hasOwner(team._ownerId);
     let teamMember = await dataService.getListMember(team._id);
+    let pending = teamMember.filter(x => x.status == "pending");
+    let members = teamMember.filter(x => x.status == "member");
+    let memberCount = members.length;
 
-    renderer(detailsTemp(!!userData, team, hasOwner));
+    renderer(detailsTemp(!!userData, team, hasOwner, pending, members, memberCount));
 }

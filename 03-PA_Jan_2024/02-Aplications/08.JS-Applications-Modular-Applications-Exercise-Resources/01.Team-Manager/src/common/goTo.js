@@ -4,3 +4,7 @@ export function goTo(path) {
     page.redirect(path);
 }
  
+
+export function getParametersId() {
+    debugger
+}

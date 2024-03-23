@@ -7,7 +7,7 @@ function getUserData(data) {
 }
 
 function getUserId() {
-    return getUserData()._id
+    return getUserData()?._id
 }
 
 function getToken() {
@@ -18,10 +18,15 @@ function clearUserData() {
     sessionStorage.removeItem("userData")
 }
 
+function hasOwner(itemOwnerId) {
+    return getUserId() === itemOwnerId;
+}
+
 export let userHelper = {
     setUserData,
     getUserData,
     getUserId,
     getToken,
-    clearUserData
+    clearUserData,
+    hasOwner
 }

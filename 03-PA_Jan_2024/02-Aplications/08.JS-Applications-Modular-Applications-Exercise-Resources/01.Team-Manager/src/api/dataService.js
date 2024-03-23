@@ -23,9 +23,14 @@ async function editTeam(data, id) {
     return api.put(`${BASE_URL}${endpoints.teams}/${id}`, data)
 }
 
+async function getListMember(teamId) {
+    return await api.get(`${BASE_URL}/data/members?where=teamId%3D%22${teamId}%22&load=user%3D_ownerId%3Ausers}`)
+}
+
 export let dataService = {
     getAllTeams,
     createNewTeam, 
     getSingleTeam,
-    editTeam
+    editTeam,
+    getListMember
 }

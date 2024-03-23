@@ -1,4 +1,4 @@
-import {} from "./requester.js"
+import { api } from "./requester.js"
 
 let BASE_URL = "http://localhost:3030/";
 let endpoints = {

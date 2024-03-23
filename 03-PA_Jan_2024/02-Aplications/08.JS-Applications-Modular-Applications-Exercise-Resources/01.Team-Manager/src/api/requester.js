@@ -1,3 +1,5 @@
+import { userHelper } from "../common/userHelper.js";
+
 async function requester(method, url, data) {
     let option = {
         method
@@ -8,6 +10,12 @@ async function requester(method, url, data) {
         }
         option.body = JSON.stringify(data);
     };
+
+    let accessToken = userHelper.getToken();
+    if(accessToken) {
+        option.headers["X-Authorization"] = accessToken;
+    }
+
     try {
         let response = await fetch(url, option);
         if (!response) {
@@ -18,7 +26,8 @@ async function requester(method, url, data) {
         if (response.status == 204) {
             return response;
         }
-        let responseData = await response.json();
+        
+        return await response.json();
 
     } catch (error) {
         return alert(error);

@@ -16,7 +16,7 @@ async function createNewTeam() {
 }
 
 async function getSingleTeam(id) {
-    return await api.get(BASE_URL + endpoints.teams)
+    return await api.get(`${BASE_URL}${endpoints.teams}/${id}`)
 }
 
 async function editTeam(data, id) {

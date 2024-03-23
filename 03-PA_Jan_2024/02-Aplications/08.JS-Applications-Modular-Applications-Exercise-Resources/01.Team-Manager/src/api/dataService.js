@@ -31,6 +31,10 @@ async function requestToJoin(teamId) {
     return await api.post(`${BASE_URL}${endpoints.members}`, { teamId })
 }
 
+async function approveRequest(id) {
+    let currentUser = await api.get(`${BASE_URL}${endpoints.members}/${id}`)
+}
+
 export let dataService = {
     getAllTeams,
     createNewTeam, 

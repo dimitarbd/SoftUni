@@ -10,7 +10,7 @@ let detailsTemp = (hasUser, team, hasOwner, pending, members, memberCount, isPen
         <img src="../..${team.logoUrl}" class="team-logo left-col">
         ${hasUser ? userActionTemp(team, memberCount, hasOwner, isPending, isMember): ""}
         ${memberTemp(hasOwner, isMember, members)}
-        ${hasOwner ? ownerMemberAction() : ''}
+        ${hasOwner ? ownerMemberAction(pending) : ''}
     </article>
 </section>
 `;
@@ -36,7 +36,7 @@ let memberTemp = (hasOwner, isMember, members) => html`
                 ${isMember ? html`<li>My Username</li>`:""}
                 ${members.map(member => {
                     if (hasOwner) {
-                       return html`<li>${member.user.name}
+                       return html`<li>${member.user.username}
                        ${hasOwner ? html`<a href="#" class="tm-control action">Remove from team</a>` : ""}
                        </li>`
                     }
@@ -47,14 +47,14 @@ let memberTemp = (hasOwner, isMember, members) => html`
         </div>
 `;
 
-let ownerMemberAction = () => html`
+let ownerMemberAction = (pending) => html`
         <div class="pad-large">
             <h3>Membership Requests</h3>
             <ul class="tm-members">
-                <li>John<a href="#" class="tm-control action">Approve</a><a href="#"
+                ${pending.map(x=> html`
+                <li>${x.user.username}<a data-user-id=${x.user._id} @click=${onApproveUser} href="#" class="tm-control action">Approve</a><a href="#"
                         class="tm-control action">Decline</a></li>
-                <li>Preya<a href="#" class="tm-control action">Approve</a><a href="#"
-                        class="tm-control action">Decline</a></li>
+                `)}
             </ul>
         </div>
 `;
@@ -78,4 +78,11 @@ async function onJoinTeam(e) {
     let teamId = e.target.dataset.teamId;
     await dataService.requestToJoin(teamId);
     goTo(`/details/${teamId}`)
+}
+
+async function onApproveUser(e) {
+    e.prevendtDefault();
+    let userId = e.target.dataset.userId;
+    let data = await dataService.approveRequest(userId);
+
 }

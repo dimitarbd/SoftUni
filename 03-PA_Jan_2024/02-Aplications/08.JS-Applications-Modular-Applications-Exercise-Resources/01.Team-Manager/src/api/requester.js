@@ -6,12 +6,12 @@ async function requester(method, url, data) {
         headers: {}
     }
     if (data) {
-        option.headers ["Content-Type"="application/json"]
+        option.headers ["Content-Type"] = "application/json";
         option.body = JSON.stringify(data);
     };
 
     let accessToken = userHelper.getToken();
-    if(accessToken) {
+    if(accessToken) { 
         option.headers["X-Authorization"] = accessToken;
     }
 

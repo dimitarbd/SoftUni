@@ -10,9 +10,10 @@ export function clearUserData() {
     localStorage.removeItem('user');
 }
 
+// TODO Add custom validation
 export function createSubmitHandler(callback) {
     return function(event) {
-        event.preventDefault;
+        event.preventDefault();
 
         let formData = new FormData(event.target);
         let data = [... formData.entries()].map(([k, v]) => [k, v.trim()]);

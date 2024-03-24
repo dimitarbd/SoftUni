@@ -1,13 +1,13 @@
 import { page } from './lib.js';
-import { showExample } from './views/example.js';
-// TODO Remove these imports after testing
-import * as api from './data/events.js';
-import * as userApi from './data/users.js';
+import { showCatalog } from './views/catalog.js';
+import { showHome } from './views/home.js';
+import { showLogin } from './views/login.js';
 
-page('/', showExample);
+
+page('/', showHome);
+page('/catalog', showCatalog);
+page('/login', showLogin);
+
 
 page.start();
 
-// TODO Remove these properties after testing
-window.api = api;
-window.userApi = userApi;

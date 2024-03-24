@@ -1,9 +1,9 @@
-import { get, post } from './request.js';
+import { del, get, post, put } from './request.js';
 
 let endpoints = {
     dashboard: '/data/events?sortBy=_createdOn%20desc',
     events: '/data/events',
-    details: '/data/events/'
+    eventById: '/data/events/'
 };
 
 export async function getAllEvents() {
@@ -22,4 +22,12 @@ export async function createEvent(name, imageUrl, category, description, date) {
         description,
         date
     });
+}
+
+export async function updateEvent(id, data) {
+    return put(endpoints.eventById + id, data);
+}
+
+export async function deleteEvent(id) {
+    return del(endpoints.eventById + id);
 }

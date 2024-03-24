@@ -10,19 +10,20 @@ Implement exam solution:
 [x] Examine project files
 [x] Install dependencies
 [x] Examine project HTML
-[x] Prepare HTML templates
+[x] Prepare HTML templates and change anchor href`s
 [x] Adapt User API module
 [ ] Create Collection API module (Events in this case)
     [x] Read All
     [x] Read Details
-    [ ] Craate 
-    [ ] Edit
-    [ ] Delete
+    [x] Craate 
+    [x] Edit
+    [x] Delete
 [ ] Implement views
-    [ ] Home page
-    [ ] Catalog
+    [x] Home page
+    [x] Catalog
     [ ] Login
     [ ] Register
+    [ ] Logout
     [ ] Navigation
     [ ] Create Form
     [ ] Details

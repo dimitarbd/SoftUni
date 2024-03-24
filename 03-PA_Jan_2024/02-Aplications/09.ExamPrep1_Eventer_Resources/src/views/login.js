@@ -28,7 +28,7 @@ export function showLogin(ctx) {
 }
 
 async function onLogin({ email, password }, form) {
-    if (!email || password ) {
+    if (!email || !password ) {
         return;
     }
 

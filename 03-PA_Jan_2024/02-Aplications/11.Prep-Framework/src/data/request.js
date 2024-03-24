@@ -1,4 +1,4 @@
-import { clearUserData, getUserData } from "../util.js";
+import { clearUserData, getUserData } from '../util.js';
 
 let host = 'http://localhost:3030';
 
@@ -44,7 +44,7 @@ async function request(method, url, data) {
     }
 }
 
-export let get = (url) => request("GET", url);
-export let post = (url, data) => request("POST", url, data);
-export let put = (url, data) => request("PUT", url, data);
-export let del = (url) => request("DELETE", url);
+export let get = (url) => request('GET', url);
+export let post = (url, data) => request('POST', url, data);
+export let put = (url, data) => request('PUT', url, data);
+export let del = (url) => request('DELETE', url);

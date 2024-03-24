@@ -1,5 +1,5 @@
-import { setUserData } from "../util.js";
-import { post } from "./request.js";
+import { clearUserData, setUserData } from "../util.js";
+import { post, get } from "./request.js";
 
 // TODO Adapt user profile to exam requirement (identity, extra properties, etc.)
 let endpoints = {
@@ -13,7 +13,14 @@ export async function login(email, password) {
     setUserData(result);
 }
 
-export async function login(email, password) {
+export async function register(email, password) {
     let result = await post(endpoints.register, { email, password });
     setUserData(result);
+}
+
+export async function logout() {
+    let promise = get(endpoints.logout);
+    clearUserData();
+
+    await promise;
 }

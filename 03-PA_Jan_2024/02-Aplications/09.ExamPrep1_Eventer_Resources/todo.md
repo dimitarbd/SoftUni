@@ -21,11 +21,11 @@ Implement exam solution:
 [ ] Implement views
     [x] Home page
     [x] Catalog
-    [ ] Login
-    [ ] Register
+    [x] Login
+    [x] Register
     [ ] Logout
     [ ] Navigation
     [ ] Create Form
     [ ] Details
-    [ ] Form
+    [ ] Edit Form
     [ ] BONUS

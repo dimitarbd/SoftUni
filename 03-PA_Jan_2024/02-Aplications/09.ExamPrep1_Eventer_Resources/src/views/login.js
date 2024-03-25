@@ -1,6 +1,6 @@
 import { login } from '../data/users.js';
 import { html, page, render } from '../lib.js';
-import { createSubmitHandler } from '../util.js';
+import { createSubmitHandler, updateNav } from '../util.js';
 
 let loginTemplate = (onLogin) => html`
         <section id="login">
@@ -33,5 +33,6 @@ async function onLogin({ email, password }, form) {
     }
 
     await login(email, password);
+    updateNav();
     page.redirect('/');
 }

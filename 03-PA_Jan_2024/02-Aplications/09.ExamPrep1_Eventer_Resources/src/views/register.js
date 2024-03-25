@@ -1,6 +1,6 @@
 import { login, register } from '../data/users.js';
 import { html, page, render } from '../lib.js';
-import { createSubmitHandler } from '../util.js';
+import { createSubmitHandler, updateNav } from '../util.js';
 
 let registreTemplate = (onRegister) => html`
         <section id="register">
@@ -48,5 +48,6 @@ async function onRegister( data, form) {
 
 
     await register(data['email'], data['password']);
+    updateNav();
     page.redirect('/');
 }

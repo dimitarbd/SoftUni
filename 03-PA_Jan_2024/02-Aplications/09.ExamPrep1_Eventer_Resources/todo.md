@@ -23,8 +23,8 @@ Implement exam solution:
     [x] Catalog
     [x] Login
     [x] Register
-    [ ] Logout
-    [ ] Navigation
+    [x] Logout
+    [x] Navigation
     [ ] Create Form
     [ ] Details
     [ ] Edit Form

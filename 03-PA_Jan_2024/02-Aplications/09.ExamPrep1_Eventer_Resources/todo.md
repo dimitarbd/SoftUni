@@ -25,7 +25,7 @@ Implement exam solution:
     [x] Register
     [x] Logout
     [x] Navigation
-    [ ] Create Form
+    [x] Create Form
     [ ] Details
     [ ] Edit Form
     [ ] BONUS

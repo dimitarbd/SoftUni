@@ -1,3 +1,4 @@
+import { logout } from './data/users.js';
 import { page } from './lib.js';
 import { showCatalog } from './views/catalog.js';
 import { showHome } from './views/home.js';
@@ -13,3 +14,7 @@ page('/register', showRegister);
 
 page.start();
 
+document.getElementById('logoutBtn').addEventListener('click', async () => {
+    logout();
+    page.redirect('/');
+});

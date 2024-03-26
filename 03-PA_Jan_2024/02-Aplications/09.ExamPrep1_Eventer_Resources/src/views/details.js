@@ -40,7 +40,7 @@ export async function showDetailsView(ctx) {
 
     let user = getUserData();
     let hasUser = !!user;
-    let isOwner = hasUser && user._ownerId == event._ownerId;
+    let isOwner = hasUser && user._id == event._ownerId;
 
     render(detailTemplate(event, hasUser, isOwner));
 }

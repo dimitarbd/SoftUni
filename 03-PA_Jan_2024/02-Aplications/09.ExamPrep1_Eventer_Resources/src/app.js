@@ -7,6 +7,7 @@ import { showDetailsView } from './views/details.js';
 import { showHome } from './views/home.js';
 import { showLogin } from './views/login.js';
 import { showRegister } from './views/register.js';
+import { showEditView } from './views/edit.js';
 
 updateNav();
 
@@ -16,6 +17,8 @@ page('/login', showLogin);
 page('/register', showRegister);
 page('/create', showCreateView);
 page('/catalog/:id', showDetailsView);
+page('/edit/:id', showEditView);
+
 
 
 page.start();

@@ -26,6 +26,6 @@ Implement exam solution:
     [x] Logout
     [x] Navigation
     [x] Create Form
-    [ ] Details
+    [x] Details
     [ ] Edit Form
     [ ] BONUS

@@ -2,7 +2,7 @@ import { getEventById } from '../data/events.js';
 import { html, render } from '../lib.js';
 import { getUserData } from '../util.js';
 
-let detailTemplate = (data) => html`
+let detailTemplate = (data, hasUser, isOwner) => html`
         <section id="details">
           <div id="details-wrapper">
             <img id="details-img" src=${data.imageUrl} alt="example1" />
@@ -23,13 +23,13 @@ let detailTemplate = (data) => html`
             <h3>Going: <span id="go">0</span> times.</h3>
 
             <!--Edit and Delete are only for creator-->
-            <div id="action-buttons">
-              <a href="" id="edit-btn">Edit</a>
-              <a href="" id="delete-btn">Delete</a>
-
-              <!--Bonus - Only for logged-in users ( not authors )-->
-              <a href="" id="go-btn">Going</a>
-            </div>
+            ${hasUser ? html`
+                <div id="action-buttons">
+                  ${ isOwner ? html`
+                  <a href="/edit/${data._id}" id="edit-btn">Edit</a>
+                  <a href="javascript:void(0)" id="delete-btn">Delete</a>` : html`
+                  <a href="javascript:void(0)" id="go-btn">Going</a> `}
+                </div>` : null }
           </div>
         </section>
 `;
@@ -40,7 +40,7 @@ export async function showDetailsView(ctx) {
 
     let user = getUserData();
     let hasUser = !!user;
-    let isOwner = hasUser && user._ownerId == event._ownerId
+    let isOwner = hasUser && user._ownerId == event._ownerId;
 
-    render(detailTemplate(event));
+    render(detailTemplate(event, hasUser, isOwner));
 }

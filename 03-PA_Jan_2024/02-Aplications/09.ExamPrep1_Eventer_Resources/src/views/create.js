@@ -1,6 +1,6 @@
 import { createEvent } from '../data/events.js';
 import { html, page, render } from '../lib.js';
-import { createSubmitHandler} from '../util.js';
+import { createSubmitHandler } from '../util.js';
 
 let createTemplate = (onCreate) => html`
         <section id="create">
@@ -54,15 +54,15 @@ export function showCreateView(ctx) {
 
 async function onCreate({
     name,
-    imageUrl, 
-    category, 
-    description, 
+    imageUrl,
+    category,
+    description,
     date
 }, form) {
-    if(!name || !imageUrl || !category || !description || !date) {
+    if (!name || !imageUrl || !category || !description || !date) {
         return alert('All fields are required!');
     }
 
-    await createEvent(name,imageUrl, category, description, date);
+    await createEvent(name, imageUrl, category, description, date);
     page.redirect('/catalog');
 }

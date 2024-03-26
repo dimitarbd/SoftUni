@@ -1,5 +1,6 @@
 import { getEventById } from '../data/events.js';
-import { html, page, render } from '../lib.js';
+import { html, render } from '../lib.js';
+import { getUserData } from '../util.js';
 
 let detailTemplate = (data) => html`
         <section id="details">
@@ -36,5 +37,10 @@ let detailTemplate = (data) => html`
 export async function showDetailsView(ctx) {
     let id = ctx.params.id;
     let event = await getEventById(id);
+
+    let user = getUserData();
+    let hasUser = !!user;
+    let isOwner = hasUser && user._ownerId == event._ownerId
+
     render(detailTemplate(event));
 }

@@ -11,7 +11,7 @@ export async function getAllEvents() {
 }
 
 export async function getEventById(id) {
-    return get(endpoints.details + id);
+    return get(endpoints.eventById + id);
 }
 
 export async function createEvent(name, imageUrl, category, description, date) {

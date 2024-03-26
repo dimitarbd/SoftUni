@@ -1,6 +1,6 @@
-import { logout } from './data/users.js';
 import { page } from './lib.js';
-import { getUserData, updateNav } from './util.js';
+import { updateNav } from './util.js';
+import { logout } from './data/users.js';
 import { showCatalog } from './views/catalog.js';
 import { showCreateView } from './views/create.js';
 import { showDetailsView } from './views/details.js';

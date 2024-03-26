@@ -48,6 +48,6 @@ async function onRegister( data, form) {
 
 
     await register(data['email'], data['password']);
-    updateNav();
+    updateNav(); 
     page.redirect('/');
 }

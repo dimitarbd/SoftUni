@@ -1,8 +1,8 @@
-import { getEventById } from '../data/events.js';
-import { html, render } from '../lib.js';
+import { deleteEvent, getEventById } from '../data/events.js';
+import { html, page, render } from '../lib.js';
 import { getUserData } from '../util.js';
 
-let detailTemplate = (data, hasUser, isOwner) => html`
+let detailTemplate = (data, hasUser, isOwner, onDelete) => html`
         <section id="details">
           <div id="details-wrapper">
             <img id="details-img" src=${data.imageUrl} alt="example1" />
@@ -27,7 +27,7 @@ let detailTemplate = (data, hasUser, isOwner) => html`
                 <div id="action-buttons">
                   ${ isOwner ? html`
                   <a href="/edit/${data._id}" id="edit-btn">Edit</a>
-                  <a href="javascript:void(0)" id="delete-btn">Delete</a>` : html`
+                  <a href="javascript:void(0)" id="delete-btn" @click=${onDelete}>Delete</a>` : html`
                   <a href="javascript:void(0)" id="go-btn">Going</a> `}
                 </div>` : null }
           </div>
@@ -42,5 +42,15 @@ export async function showDetailsView(ctx) {
     let hasUser = !!user;
     let isOwner = hasUser && user._id == event._ownerId;
 
-    render(detailTemplate(event, hasUser, isOwner));
+    render(detailTemplate(event, hasUser, isOwner, onDelete));
+
+    async function onDelete() {
+        let choice = confirm('Are you sure?');
+
+        if (choice) {
+            await deleteEvent(id);
+            page.redirect('/catalog');
+
+        }
+    }
 }

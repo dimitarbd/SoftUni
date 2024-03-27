@@ -27,6 +27,6 @@ Implement exam solution:
     [x] Navigation
     [x] Create Form
     [x] Details
-    [ ] Edit Form
-    [ ] Delete
+    [x] Edit Form
+    [x] Delete
     [ ] BONUS

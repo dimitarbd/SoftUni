@@ -58,19 +58,19 @@ export async function showEditView(ctx) {
     let id = ctx.params.id;
     let event = await getEventById(id);
     render(editTemplate(event, createSubmitHandler(onEdit)));
-}
-
-async function onEdit({
-    name,
-    imageUrl,
-    category,
-    description,
-    date
-}, form) {
-    // if (!name || !imageUrl || !category || !description || !date) {
-    //     return alert('All fields are required!');
-    // }
-
-    // await createEvent(name, imageUrl, category, description, date);
-    // page.redirect('/catalog');
+    
+    async function onEdit({
+        name,
+        imageUrl,
+        category,
+        description,
+        date
+    }, form) {
+        if (!name || !imageUrl || !category || !description || !date) {
+            return alert('All fields are required!');
+        }
+      
+        await updateEvent(id, {name, imageUrl, category, description, date});
+        page.redirect('/catalog/' + id);
+    }
 }

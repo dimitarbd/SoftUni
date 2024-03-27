@@ -9,6 +9,7 @@ import { showLogin } from './views/login.js';
 import { showRegister } from './views/register.js';
 import { showEditView } from './views/edit.js';
 
+
 updateNav();
 
 page('/', showHome);

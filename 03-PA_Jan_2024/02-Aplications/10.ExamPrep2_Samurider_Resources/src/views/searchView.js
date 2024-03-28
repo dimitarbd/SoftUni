@@ -16,7 +16,7 @@ let searchTemplate = (handler, result) => html`
             </form>
             </div>
             <h4 id="result-heading">Results:</h4>
-            ${showResultTemplate(result)}
+            ${result ? showResultTemplate(result) : ''}
             
         </section>
 `;
@@ -24,7 +24,7 @@ let searchTemplate = (handler, result) => html`
 let showResultTemplate = (result) => html`
     <div class="search-result">
 
-    ${result ? result.map( x => html`
+    ${result.length ? result.map( x => html`
         <div class="motorcycle">
             <img src="${x.imageUrl}" alt="example1" />
             <h3 class="model">${x.model}</h3>
@@ -41,6 +41,9 @@ export function showSearchView() {
 
 async function onSearch(data, form) {
     let {search} = data;
+    if(!search) {
+        return alert('Please enter keyword!');
+    }
     let result = await searchByQuery(search);
     let handler = createSubmitHandler(onSearch);
     render(searchTemplate(handler, result));

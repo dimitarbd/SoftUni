@@ -16,7 +16,7 @@ let searchTemplate = (handler, result) => html`
             </form>
             </div>
             <h4 id="result-heading">Results:</h4>
-            ${result ? showResultTemplate(result) : ''}
+            ${showResultTemplate(result)}
             
         </section>
 `;
@@ -26,8 +26,8 @@ let showResultTemplate = (result) => html`
 
     ${result ? result.map( x => html`
         <div class="motorcycle">
-        <img src="${x.imageUrl}" alt="example1" />
-        <h3 class="model">${x.model}</h3>
+            <img src="${x.imageUrl}" alt="example1" />
+            <h3 class="model">${x.model}</h3>
             <a class="details-btn" href="/details/${x._id}">More Info</a>
         </div>`) : html`<h2 class="no-avaliable">No result.</h2>`}
 

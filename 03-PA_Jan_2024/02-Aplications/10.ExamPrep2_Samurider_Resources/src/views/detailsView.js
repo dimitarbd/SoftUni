@@ -7,7 +7,7 @@ let detailsTemp = (item, hasOwner) => html`
     <section id="details">
           <div id="details-wrapper">
             <img id="details-img" src="../../${item.imageUrl}" alt="example1" />
-            <p id="details-title">${item.name}</p>
+            <p id="details-title">${item.model}</p>
             <div id="info-wrapper">
               <div id="details-description">
                 <p class="year">Year: ${item.year}</p>

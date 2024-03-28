@@ -3,7 +3,7 @@ import { html, page, render } from '../lib.js';
 
 let dashboardTemplate = (data) => html`
 <h2>Available Motorcycles</h2>
-        ${data  ? dashboardDataTemplate(data) : html`<h2 class="no-avaliable">No avaliable motorcycles yet.</h2>` }
+        ${data.length  ? dashboardDataTemplate(data) : html`<h2 class="no-avaliable">No avaliable motorcycles yet.</h2>` }
          <!-- Display an h2 if there are no posts -->
 `;
 

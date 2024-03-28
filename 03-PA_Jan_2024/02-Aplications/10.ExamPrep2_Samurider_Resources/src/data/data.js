@@ -1,4 +1,4 @@
-import { del, get, post } from './request.js';
+import { del, get, post, put } from './request.js';
 
 let endpoints = {
     allMotorcycles: '/data/motorcycles?sortBy=_createdOn%20desc',
@@ -19,4 +19,8 @@ export async function getMotorcycleById(id) {
 
 export async function deleteMotorcycleById(id) {
     return await del(`${endpoints.motorcycle}/${id}`);
+}
+
+export async function updateMotorcycle(id, data) {
+    return await put(`${endpoints.motorcycle}/${id}`, data);
 }

@@ -29,3 +29,7 @@ export function updateNav() {
     document.querySelector('nav .user').style.display = userData ? 'block' : 'none';
 
 }
+
+export function isOwner(itemOwnerId) {
+    return getUserData()?._id === itemOwnerId;
+}

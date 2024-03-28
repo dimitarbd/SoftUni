@@ -24,3 +24,7 @@ export async function deleteMotorcycleById(id) {
 export async function updateMotorcycle(id, data) {
     return await put(`${endpoints.motorcycle}/${id}`, data);
 }
+
+export async function searchByQuery(query) {
+    return await get(`/data/motorcycles?where=model%20LIKE%20%22${query}%22`);
+}

@@ -21,3 +21,11 @@ export function createSubmitHandler(callback) {
         callback(Object.fromEntries(data), event.target);
     };
 }
+
+export function updateNav() {
+    let userData = getUserData();
+    
+    document.querySelector('nav .guest').style.display = userData ? 'none' : 'block';
+    document.querySelector('nav .user').style.display = userData ? 'block' : 'none';
+
+}

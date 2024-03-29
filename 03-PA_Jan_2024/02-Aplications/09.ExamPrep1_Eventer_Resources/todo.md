@@ -29,4 +29,4 @@ Implement exam solution:
     [x] Details
     [x] Edit Form
     [x] Delete
-    [ ] BONUS
+    [x] BONUS

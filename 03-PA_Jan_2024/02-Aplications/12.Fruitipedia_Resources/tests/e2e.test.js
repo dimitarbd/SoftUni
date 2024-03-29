@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable quotes */
 /* eslint-disable indent */
 const { chromium } = require("playwright-chromium");
 const { expect } = require("chai");

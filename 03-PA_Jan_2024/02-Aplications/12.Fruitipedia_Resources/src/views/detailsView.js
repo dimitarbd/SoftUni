@@ -10,13 +10,9 @@ let detailsTemp = (item, hasOwner) => html`
             <p id="details-title">${item.name}</p>
             <div id="info-wrapper">
               <div id="details-description">
-                <p>
-                ${item.description}
-                  </p>
+                <p> ${item.description} </p>
                     <p id="nutrition">Nutrition</p>
-                   <p id = "details-nutrition">
-                   ${item.nutrition}
-                        </p>
+                   <p id = "details-nutrition"> ${item.nutrition} </p>
               </div>
                <!--Edit and Delete are only for creator-->
         ${hasOwner ? html`

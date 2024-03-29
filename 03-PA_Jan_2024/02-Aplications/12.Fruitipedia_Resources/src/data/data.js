@@ -26,5 +26,5 @@ export async function updateFruits(id, data) {
 }
 
 export async function searchByQuery(query) {
-    return await get(`/data/fruitss?where=model%20LIKE%20%22${query}%22`);
+    return await get(`/data/fruits?where=name%20LIKE%20%22${query}%22`);
 }

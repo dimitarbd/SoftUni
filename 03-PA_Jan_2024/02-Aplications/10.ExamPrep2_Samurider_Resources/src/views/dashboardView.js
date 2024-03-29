@@ -28,6 +28,6 @@ let cardTemplate = (item) => html`
 
 export async function showDashboardView() {
     let data = await getAllMotorcycles();
-
+    //debugger;
     render(dashboardTemplate(data));
 }

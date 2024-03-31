@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable indent */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined'
     ? (module.exports = factory(
@@ -776,8 +778,7 @@
     context.canAccess(existing);
 
     try {
-      return kur;
-      responseData = context.storage.delete(
+        responseData = context.storage.delete(
         context.params.collection,
         tokens[0]
       );

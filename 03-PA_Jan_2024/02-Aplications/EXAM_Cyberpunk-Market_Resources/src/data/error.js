@@ -10,10 +10,3 @@ export function showError (str) {
         errorBox.style.display = 'none';
     }, 3000);
 }
-
-
-/* <section id="notifications">
-<div id="errorBox" class="notification">
-  <span class="msg">MESSAGE</span>
-</div>
-</section> */

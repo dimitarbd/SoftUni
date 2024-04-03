@@ -8,9 +8,9 @@
             "DOM.Iterable"
         ],
         "paths": {
-            "@src/":["./src/"],
-            "@page/":["./node_modules/page/"],
-            "@lit-htnl/":["./node_modules/lit-html/"]
+            "@src/*":["./src/*"],
+            "@page/*":["./node_modules/page/*"],
+            "@lit-html/*":["./node_modules/lit-html/*"]
         }
     },
     "include": [

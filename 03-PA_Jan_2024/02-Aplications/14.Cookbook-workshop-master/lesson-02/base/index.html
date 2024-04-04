@@ -7,13 +7,22 @@
     <link rel="stylesheet" href="static/site.css">
     <link rel="stylesheet" href="static/recipe.css">
     <link rel="stylesheet" href="static/form.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "@src/": "./src/",
+                "@page/": "./node_modules/page/",
+                "@lit-html/": "./node_modules/lit-html/"
+            }
+        }
+    </script>
     <script src="/src/app.js" type="module"></script>
 </head>
 
 <body>
 
     <header>
-        <h1><a href="/"><img src="assets/logo.png">My Cookbook</a></h1>
+        <h1>My Cookbook</h1>
         <nav>
             <a id="catalogLink" href="index.html" class="active">Catalog</a>
             <div id="user">

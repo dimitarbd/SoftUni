@@ -5,48 +5,107 @@
     <meta charset="UTF-8">
     <title>My Cookbook</title>
     <link rel="stylesheet" href="static/site.css">
+    <link rel="stylesheet" href="static/recipe.css">
+    <link rel="stylesheet" href="static/form.css">
+    <script src="/src/app.js" type="module"></script>
 </head>
 
 <body>
+
     <header>
-        <h1>My Cookbook</h1>
+        <h1><a href="/"><img src="assets/logo.png">My Cookbook</a></h1>
+        <nav>
+            <a id="catalogLink" href="index.html" class="active">Catalog</a>
+            <div id="user">
+                <a id="createLink" href="create.html">Create Recipe</a>
+                <a id="logoutBtn" href="javascript:void(0)">Logout</a>
+            </div>
+            <div id="guest">
+                <a id="loginLink" href="login.html">Login</a>
+                <a id="registerLink" href="register.html">Register</a>
+            </div>
+        </nav>
     </header>
+
     <main>
-        <article class="preview">
-            <div class="title">
-                <h2>Title</h2>
-            </div>
-            <div class="small">
-                <img src="assets/lasagna.jpg">
-            </div>
-        </article>
-        
-        <article>
-            <h2>Title</h2>
-            <div class="band">
-                <div class="thumb">
-                    <img src="assets/lasagna.jpg">
-                </div>
-                <div class="ingredients">
-                    <h3>Ingredients:</h3>
-                    <ul>
-                        <li>Ingredient 1</li>
-                        <li>Ingredient 2</li>
-                        <li>Ingredient 3</li>
-                        <li>Ingredient 4</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="description">
-                <h3>Preparation:</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, quaerat.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur officia ipsam nulla vitae nobis
-                    reprehenderit pariatur aut dolor exercitationem impedit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolorem odit officiis numquam
-                    corrupti? Quam.</p>
-            </div>
-        </article>
+
     </main>
+
+
+    <div id="views">
+        <section id="home">
+            <div class="hero">
+                <h2>Welcome to My Cookbook</h2>
+            </div>
+            <header class="section-title">Recently added recipes</header>
+            <div class="recent-recipes"></div>
+            <footer class="section-title">
+                <p>Browse all recipes in the <a href="/catalog">Catalog</a></p>
+            </footer>
+        </section>
+
+        <section id="catalog">
+            <p style="color: white">Loading...</p>
+        </section>
+
+        <section id="login">
+            <article>
+                <h2>Login</h2>
+                <form>
+                    <label>E-mail: <input type="text" name="email"></label>
+                    <label>Password: <input type="password" name="password"></label>
+                    <input type="submit" value="Login">
+                </form>
+            </article>
+        </section>
+
+        <section id="register">
+            <article>
+                <h2>Register</h2>
+                <form>
+                    <label>E-mail: <input type="text" name="email"></label>
+                    <label>Password: <input type="password" name="password"></label>
+                    <label>Repeat: <input type="password" name="rePass"></label>
+                    <input type="submit" value="Register">
+                </form>
+            </article>
+        </section>
+
+        <section id="create">
+            <article>
+                <h2>New Recipe</h2>
+                <form>
+                    <label>Name: <input type="text" name="name" placeholder="Recipe name"></label>
+                    <label>Image: <input type="text" name="img" placeholder="Image URL"></label>
+                    <label class="ml">Ingredients: <textarea name="ingredients"
+                            placeholder="Enter ingredients on separate lines"></textarea></label>
+                    <label class="ml">Preparation: <textarea name="steps"
+                            placeholder="Enter preparation steps on separate lines"></textarea></label>
+                    <input type="submit" value="Create Recipe">
+                </form>
+            </article>
+        </section>
+
+        <section id="details">
+            <p style="color: white">Loading...</p>
+        </section>
+
+        <section id="edit">
+            <article>
+                <h2>Edit Recipe</h2>
+                <form>
+                    <label>Name: <input type="text" name="name" placeholder="Recipe name"></label>
+                    <label>Image: <input type="text" name="img" placeholder="Image URL"></label>
+                    <label class="ml">Ingredients: <textarea name="ingredients"
+                            placeholder="Enter ingredients on separate lines"></textarea></label>
+                    <label class="ml">Preparation: <textarea name="steps"
+                            placeholder="Enter preparation steps on separate lines"></textarea></label>
+                    <input type="submit" value="Update Recipe">
+                </form>
+            </article>
+        </section>
+    </div>
+
 </body>
 
 </html>

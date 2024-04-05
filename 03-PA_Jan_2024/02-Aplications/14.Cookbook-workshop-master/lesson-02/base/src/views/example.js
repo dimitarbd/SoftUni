@@ -1,1 +1,4 @@
-export function
+
+export function showExample(ctx) {
+    console.log('routing works!');
+}

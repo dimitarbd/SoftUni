@@ -1,6 +1,7 @@
 import { html, render} from '@lit-html/lit-html.js';
+import { createSubmitHandler } from './util.js';
  
-const createTemp = (handler) => html `
+const registerTemp = (handler) => html `
         <section id="register">
             <article>
                 <h2>Register</h2>
@@ -15,5 +16,9 @@ const createTemp = (handler) => html `
 `;
 
 export function showRegister(ctx) {
+    ctx.render(registerTemp(createSubmitHandler(onRegister)));
+}   
 
+function onRegister(data, form) {
+    
 }

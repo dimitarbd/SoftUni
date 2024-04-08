@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { html, render} from '@lit-html/lit-html.js';
 import { createSubmitHandler } from './util.js';
  
@@ -15,10 +16,15 @@ const registerTemp = (handler) => html `
         </section>
 `;
 
+/**
+ * 
+ * @param {import {"@src/types"}.PageContext} ctx 
+ */
+
 export function showRegister(ctx) {
     ctx.render(registerTemp(createSubmitHandler(onRegister)));
 }   
 
 function onRegister(data, form) {
-    
+    console.error(data);
 }

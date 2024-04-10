@@ -16,6 +16,8 @@ const loginTemp = (handler) => html`
         </section>
 `;
 
+let pageContent = null;
+
 /**
  * @param {import ("@src/types").PageContent} ctx
  */
@@ -33,6 +35,7 @@ async function onLogin(data, form) {
 
     login(email, password);
     form.reset();
+    pageContent.updateUserNav();
     goTo('/');
 
 }

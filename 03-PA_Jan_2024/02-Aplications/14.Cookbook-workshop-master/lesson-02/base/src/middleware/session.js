@@ -1,3 +1,4 @@
+import { goTo } from '@src/app';
 import { logout } from '@src/data/users';
 import { getUserData } from '@src/util.js';
 

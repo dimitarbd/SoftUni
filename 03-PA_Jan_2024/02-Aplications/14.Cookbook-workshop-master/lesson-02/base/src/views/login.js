@@ -18,7 +18,7 @@ const loginTemp = (handler) => html`
 
 
 /**
- * @param {import ("@src/types").PageContent} ctx
+ * @param {import ("@src/types").PageContext} ctx
  */
 
 export function showLogin(ctx) {
@@ -34,7 +34,7 @@ async function onLogin(data, form) {
 
     login(email, password);
     form.reset();
-    pageContent.updateUserNav();
+    pageContext.updateUserNav();
     goTo('/');
 
 }

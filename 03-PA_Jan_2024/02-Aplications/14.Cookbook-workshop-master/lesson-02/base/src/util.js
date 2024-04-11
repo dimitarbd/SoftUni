@@ -12,7 +12,7 @@ export function clearUserData() {
     updateUserNav();
 }
 
-function updateUserNav(ctx) {
+export function updateUserNav(ctx) {
     const guestNav = document.getElementById('guest');
     const userNav = document.getElementById('user');
     const user = getUserData();

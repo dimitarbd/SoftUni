@@ -1,5 +1,6 @@
 export function setUserData(data) {
     localStorage.setItem('user', JSON.stringify(data));
+    updateUserNav();
 }
 
 export function getUserData(data) {
@@ -8,6 +9,11 @@ export function getUserData(data) {
 
 export function clearUserData() {
     localStorage.removeItem('user');
+    updateUserNav();
+}
+
+function updateUserNav() {
+
 }
 
 // TODO Add custom validation

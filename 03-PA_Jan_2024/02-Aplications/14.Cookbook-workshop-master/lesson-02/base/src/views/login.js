@@ -16,7 +16,6 @@ const loginTemp = (handler) => html`
         </section>
 `;
 
-let pageContent = null;
 
 /**
  * @param {import ("@src/types").PageContent} ctx

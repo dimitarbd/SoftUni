@@ -12,8 +12,17 @@ export function clearUserData() {
     updateUserNav();
 }
 
-function updateUserNav() {
-
+function updateUserNav(ctx) {
+    const guestNav = document.getElementById('guest');
+    const userNav = document.getElementById('user');
+    const user = getUserData();
+    if (user) {
+        guestNav.style.display = 'none';
+        userNav.style.display = 'inline-block';
+    } else {
+        guestNav.style.display = 'inline-block';
+        userNav.style.display = 'none';
+    }
 }
 
 // TODO Add custom validation

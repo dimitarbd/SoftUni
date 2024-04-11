@@ -6,6 +6,7 @@ import { showRegister } from './register.js';
 
 import * as api from '@src/data/users.js';
 import { renderer } from './middleware/render.js';
+import { showLogin } from './views/login.js';
 window['api'] = api;
 
 page(session());

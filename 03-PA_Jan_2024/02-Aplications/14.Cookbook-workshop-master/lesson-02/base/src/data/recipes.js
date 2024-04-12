@@ -22,4 +22,9 @@ export async function createRecipe(data) {
     post(endpoints.recipes, data);
 }
 
-
+function createPointer(userID, className) {
+    const owner = {
+        '__type'  : 'Pointer',
+        'className' : 'User',
+    };
+}

@@ -1,4 +1,5 @@
 import { html } from '@lit-html/lit-html.js';
+import { createSubmitHandler } from '@src/util';
 
 const createTemp = (handler) => html`
     <section id="create">
@@ -17,3 +18,16 @@ const createTemp = (handler) => html`
         </section>
 `;
 
+let userData = null;
+/**
+ * @param {import("@src/types").PageContext} ctx
+ */
+export function showCreate(ctx) {
+    ctx.render(createTemp(createSubmitHandler(onCreate))
+    userData = ctx.user;
+)
+}
+
+function onCreate(data, form) {
+    
+}

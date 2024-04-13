@@ -1,5 +1,5 @@
 import { html } from '@lit-html/lit-html.js';
-import { createSubmitHandler } from '@src/util';
+import { createSubmitHandler } from '@src/util.js';
 
 const createTemp = (handler) => html`
     <section id="create">
@@ -23,11 +23,14 @@ let userData = null;
  * @param {import("@src/types").PageContext} ctx
  */
 export function showCreate(ctx) {
-    ctx.render(createTemp(createSubmitHandler(onCreate))
+    ctx.render(createTemp(createSubmitHandler(onCreate)));
     userData = ctx.user;
-)
 }
-
+/**
+ * 
+ * @param {import("@src/data/recipes").RecipeModel} data 
+ * @param {Object} form 
+ */
 function onCreate(data, form) {
-    
+
 }

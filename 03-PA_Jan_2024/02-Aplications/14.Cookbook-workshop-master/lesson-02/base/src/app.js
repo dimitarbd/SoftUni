@@ -9,6 +9,7 @@ import { renderer } from './middleware/render.js';
 import { showLogin } from './views/login.js';
 import { updateUserNav } from './util.js';
 import { showCreate } from './views/create.js';
+import { showDetails } from './views/details.js';
 window['api'] = api;
 
 page(session());
@@ -17,7 +18,7 @@ page('/', loading(), preload('recipes'), showCatalog);
 page('/register', showRegister);
 page('/login', showLogin);
 page('/create', showCreate);
-page('/details', showDetails);
+page('/details/:id', showDetails);
 
 
 page.start();

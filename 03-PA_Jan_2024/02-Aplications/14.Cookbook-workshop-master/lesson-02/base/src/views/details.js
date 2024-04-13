@@ -1,5 +1,9 @@
 import { html, render } from '@lit-html/lit-html.js';
 
+/**
+ * @param {import("@src/data/recipes").RecipeModel} item
+ * @returns {Object}
+ */
 
 const detailsTemp = () => html`
     <section id="details">

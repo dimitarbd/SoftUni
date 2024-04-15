@@ -10,4 +10,8 @@ class MyButton extends HTMLElement {
     disconnectedCallback() {
         console.error("onDestroy");
     }
+
+    attributeChangedCallback() {
+        console.error("attr change");
+    }
 }

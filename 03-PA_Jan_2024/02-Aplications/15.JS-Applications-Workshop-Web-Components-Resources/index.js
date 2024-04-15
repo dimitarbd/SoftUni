@@ -4,6 +4,10 @@ class MyButton extends HTMLElement {
         super();
     }
     connectedCallback() {
-        
+        this.createTemplate();
+    }
+
+    disconnectedCallback() {
+        console.error("onDestroy");
     }
 }

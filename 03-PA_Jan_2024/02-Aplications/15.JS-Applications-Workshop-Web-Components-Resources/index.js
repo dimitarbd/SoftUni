@@ -14,4 +14,7 @@ class MyButton extends HTMLElement {
     attributeChangedCallback() {
         console.error("attr change");
     }
+    fuckCallback(shit) {
+        console.error('Fuck day!');        
+    }
 }

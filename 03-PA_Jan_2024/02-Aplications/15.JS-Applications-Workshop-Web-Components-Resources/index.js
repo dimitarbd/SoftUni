@@ -1,3 +1,4 @@
+import {} from './node_modules/lit-html.js'
 
 class MyButton extends HTMLElement {
     constructor(text) {

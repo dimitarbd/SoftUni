@@ -1,3 +1,4 @@
+import { render } from 'lit-html';
 import {} from './node_modules/lit-html.js'
 
 class MyButton extends HTMLElement {
@@ -13,7 +14,11 @@ class MyButton extends HTMLElement {
     }
 
     attributeChangedCallback() {
-        console.error("attr change");
+        this.text = oldValue;
+        if(newValue) {
+            this.text = newValue
+        }
+        render(this.template(), this._root, {host: this})
     }
     
 }

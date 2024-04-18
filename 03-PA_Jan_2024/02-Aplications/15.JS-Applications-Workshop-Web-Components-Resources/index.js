@@ -13,7 +13,7 @@ class MyButton extends HTMLElement {
         console.error("onDestroy");
     }
 
-    attributeChangedCallback() {
+    attributeChangedCallback(name, oldValue, newValue) {
         this.text = oldValue;
         if(newValue) {
             this.text = newValue

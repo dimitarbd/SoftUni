@@ -11,4 +11,4 @@ function start() {
 
 start();
 
-console.log('global scope', num);
+// console.log('global scope', num);

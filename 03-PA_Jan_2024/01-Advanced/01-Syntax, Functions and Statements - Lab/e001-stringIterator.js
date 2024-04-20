@@ -3,4 +3,4 @@ function stringIterator(str) {
         console.log(i);
     }
 }
-stringIterator("Monday");
+stringIterator('Monday');

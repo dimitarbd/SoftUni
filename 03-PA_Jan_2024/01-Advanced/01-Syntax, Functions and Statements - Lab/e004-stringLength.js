@@ -9,3 +9,4 @@ function stringLength(a, b, c) {
 stringLength('chocolate', 'ice cream', 'cake');
 console.log('=================');
 stringLength('pasta', '5', '22.3');
+

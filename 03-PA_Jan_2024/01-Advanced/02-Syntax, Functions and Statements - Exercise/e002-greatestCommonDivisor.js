@@ -11,4 +11,4 @@ function greatestCommonDivisor(a, b) {
 
 }
 
-greatestCommonDivisor(15, 5);
+greatestCommonDivisor(2154, 458);

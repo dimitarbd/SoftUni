@@ -9,7 +9,7 @@ function sameNumbers(num) {
                 isSame = false;
             }
             return sum +=Number(x);
-        })
+        });
         console.log(isSame);
         console.log(sum);
 }

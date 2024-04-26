@@ -1,6 +1,6 @@
 function previousDay() {
-
-    console.log(new Date);
+    let date = new Date(2024,0,1);
+    console.log(date);
 
 }
 previousDay();

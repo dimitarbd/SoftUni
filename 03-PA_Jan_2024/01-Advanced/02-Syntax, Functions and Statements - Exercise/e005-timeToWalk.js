@@ -10,7 +10,7 @@ function timeToWalk(steps, footprint, speed) {
     let hours = Math.floor(min / 60);
     min -= hours * 60;
 
-    let hoursToPrint = sec < 10 ? `0${hours}` : `${hours}`;
+    let hoursToPrint = hours < 10 ? `0${hours}` : `${hours}`;
     let minToPrint = min < 10 ? `0${min}` : `${min}`;
     let secToPrint = sec < 10 ? `0${sec}` : `${sec}`;
 

@@ -1,9 +1,9 @@
 function cookingByNumbers(numAsString, ...op) {
     let operationEnum = {
-        chop: (num) => num /2,
+        chop: (num) => num / 2,
         dice: (num) => Math.sqrt(num),
-        spice: (num) => num +1,
-        bake: (num) => num +3,
+        spice: (num) => num + 1,
+        bake: (num) => num * 3,
         fillet: (num) => num * 0.80
     };
 

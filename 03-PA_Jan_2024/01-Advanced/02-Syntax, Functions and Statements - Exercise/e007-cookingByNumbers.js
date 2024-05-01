@@ -10,7 +10,11 @@ function cookingByNumbers(numAsString, op1, op2, op3, op4, op5) {
             case 'bake': num *= 3; break;
             case 'fillet': num *= 0.80; break;
         }
-        
+        console.log(num);
     }
 
 }
+
+cookingByNumbers('32', 'chop', 'chop', 'chop', 'chop', 'chop');
+console.log('================');
+cookingByNumbers('9', 'dice', 'spice', 'chop', 'bake', 'fillet');

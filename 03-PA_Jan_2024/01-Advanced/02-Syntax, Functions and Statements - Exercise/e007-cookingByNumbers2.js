@@ -1,4 +1,4 @@
-function cookingByNumbers(numAsString, op1, op2, op3, op4, op5) {
+function cookingByNumbers(numAsString, ...op) {
     let operationEnum = {
         chop: (num) => num /2,
         dice: (num) => Math.sqrt(num),
@@ -8,7 +8,6 @@ function cookingByNumbers(numAsString, op1, op2, op3, op4, op5) {
     };
 
     let num = Number(numAsString);
-    let op = [op1, op2, op3, op4, op5];
 
     op.forEach(el => {
         num = operationEnum[el](num);

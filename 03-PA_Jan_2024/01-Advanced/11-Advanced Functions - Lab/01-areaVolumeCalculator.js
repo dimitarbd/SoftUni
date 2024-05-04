@@ -3,7 +3,7 @@ function areaVolumeCalculator(area, vol, input) {
     let result = data.map(fig => ({
         area: area.call(fig),
         volume: vol.call(fig)
-    }))
+    }));
     return result;
 }
 
@@ -19,7 +19,7 @@ let data2 = `[
         {"x":"55","y":"8","z":"0"},
         {"x":"100","y":"100","z":"100"},
         {"x":"55","y":"80","z":"250"}
-        ]`
+        ]`;
 
 function area() {
     return Math.abs(this.x * this.y);

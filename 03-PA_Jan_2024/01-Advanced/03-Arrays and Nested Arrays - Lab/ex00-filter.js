@@ -1,13 +1,8 @@
 function solve(arr) {
-    arr.filter((c, i) => i % 2).map(e => e * 2);
-    console.log(doubled);
-    doubled.reverse();
-    console.log(doubled);
-    const result = doubled.join(' ');
-    console.log(result);
+    return arr.filter((c, i) => i % 2).map(e => e * 2).reverse().join(' ');
 
 }
 
-solve([10, 15, 20, 25]);
+console.log(solve([10, 15, 20, 25]));
 console.log('===============');
-solve([3, 0, 10, 4, 7, 3]);
+console.log(solve([3, 0, 10, 4, 7, 3]));

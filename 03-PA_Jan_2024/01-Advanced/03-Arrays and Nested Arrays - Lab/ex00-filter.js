@@ -1,7 +1,5 @@
 function solve(arr) {
-    const filtered = arr.filter((c, i) => i % 2);
-    console.log(filtered);
-    const doubled =filtered.map(e => e * 2);
+    arr.filter((c, i) => i % 2).map(e => e * 2);
     console.log(doubled);
     doubled.reverse();
     console.log(doubled);

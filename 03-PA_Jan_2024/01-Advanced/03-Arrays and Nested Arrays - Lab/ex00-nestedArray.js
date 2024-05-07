@@ -6,3 +6,9 @@ const matrix = [
     [-2, 0, -3]     
 ];
 console.log(matrix);
+
+for (let rowIndex = 0; rowIndex < 5; rowIndex++) {
+    for (let colIndex = 0; colIndex < 3; colIndex++) {
+        console.log(matrix[rowIndex][colIndex]);
+    }
+}

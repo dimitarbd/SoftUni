@@ -1,11 +1,10 @@
-const { log } = require('console');
 const { createServer } = require('http');
 
 const html = `
 <form method="POST">
-    <h1>Send data to the server</h1>
+    <h1>Send data to server</h1>
     <input name="data">
-    <input type="submit>
+    <input type="submit">
 </form>
 `;
 
@@ -14,8 +13,11 @@ createServer ((req, res) => {
         res.write(html);
         res.end();
     } else if (req.method == 'POST') {
-        console.log('Receiving data');
-        console.log(req.on);
+        console.log('POST request');
+
+        req.on('data', (chunk) => {
+            console.log('Receiving data', chunk.toString());
+        });
 
         res.statusCode = 204;
         res.end();

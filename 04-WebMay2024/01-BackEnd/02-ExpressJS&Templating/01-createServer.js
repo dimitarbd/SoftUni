@@ -13,10 +13,17 @@ createServer ((req, res) => {
         res.write(html);
         res.end();
     } else if (req.method == 'POST') {
+        req.highWaterMark = 3;
         console.log('POST request');
 
+        let body = '';
+
         req.on('data', (chunk) => {
+            body += chunk.toString();
             console.log('Receiving data', chunk.toString());
+        });
+        req.on('end', () => {
+            console.log('Stream ended');
         });
 
         res.statusCode = 204;

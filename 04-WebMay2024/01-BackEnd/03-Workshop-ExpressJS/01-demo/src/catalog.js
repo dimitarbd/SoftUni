@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const { countMiddleware } = require('./middleware/counter');
 
 const catalogHtml= `
 <h1>Catalog Page</h1>
@@ -12,7 +13,7 @@ catalogRouter.get('/', (req, res) => {
     res.send(catalogHtml);
 });
 
-catalogRouter.get('/:category/:productId', (req, res) => {
+catalogRouter.get('/:category/:productId', countMiddleware, (req, res) => {
     res.send(catalogHtml + `<h2>${req.params.category}</h2>` + `<p>Item ID ${req.params.productId}</p> `);
 });
 

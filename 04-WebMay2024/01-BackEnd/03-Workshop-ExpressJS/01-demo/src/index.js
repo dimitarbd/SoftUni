@@ -1,6 +1,7 @@
 const express = require('express');
 const { catalogRouter } = require('./catalog.js');
 const { countMiddleware } = require('./middleware/counter.js');
+const { dataControler } = require('./data.js');
 
 const app = express();
 
@@ -14,15 +15,9 @@ app.get('/', (req, res) => {
     res.send(homeHtml);
 });
 
-app.use('/catalog', catalogRouter);
+app.use('/catalog', countMiddleware, catalogRouter);
 
-app.get('/data', countMiddleware, (req, res) => {
-    res.json ({
-        message: 'hello',
-        value: 5,
-        count: req.count
-    });
-});
+app.get('/data', countMiddleware, dataControler);
 
 app.get('*', (req, res) => {
     res.status(404);

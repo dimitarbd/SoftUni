@@ -1,4 +1,5 @@
 const express = require('express');
+const { catalogRouter } = require('../catalog');
 
 const app = express();
 
@@ -8,24 +9,11 @@ const homeHtml= `
 <a href="/catalog">Catalog</a>
 `;
 
-const catalogHtml= `
-<h1>Catalog Page</h1>
-<a href="/">Home</a>
-<a href="/catalog">Catalog</a>
-`;
-
 app.get('/', (req, res) => {
     res.send(homeHtml);
 });
 
-app.get('/catalog', (req, res) => {
-    res.send(catalogHtml);
-});
-
-app.get('/catalog/:productId', (req, res) => {
-    console.log(req.params.productId);
-    res.send(catalogHtml + `<p>Item ID ${req.params.productId}</p>`);
-});
+app.use('/catalog', catalogRouter);
 
 app.get('*', (req, res) => {
     res.status(404);

@@ -6,3 +6,5 @@ function countMiddleware(req, res, next) {
 
     next();
 }
+
+module.exports = { countMiddleware };

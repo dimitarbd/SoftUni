@@ -1,4 +1,4 @@
-const handlebars = require('exparess-handlebars');
+const handlebars = require('express-handlebars');
 
 function configHbs(app) {
     const hbs = handlebars.create({

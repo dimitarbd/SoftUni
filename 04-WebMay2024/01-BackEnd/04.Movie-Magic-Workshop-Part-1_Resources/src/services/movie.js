@@ -41,5 +41,10 @@ async function getMovieById(id) {
 
     const movie = movies.find(m => m.id == id);
 
-    return 
+    return movie ? toMovieModel(movie) : movie;
 }
+
+module.exports = {
+    getAllMovies,
+    getMovieById
+};

@@ -2,11 +2,13 @@ const express = require('express');
 const { configHbs } = require('./config/hbs');
 const { configExpress } = require('./config/express');
 const { router } = require('./config/routes');
+const { configDatabase } = require('./config/database');
 
 const PORT = process.env.PORT || 3000; 
 
 const app = express();
 
+configDatabase();
 configHbs(app);
 configExpress(app);
 app.use(router);

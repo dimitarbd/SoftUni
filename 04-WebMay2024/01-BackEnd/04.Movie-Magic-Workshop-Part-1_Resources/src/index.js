@@ -6,11 +6,18 @@ const { configDatabase } = require('./config/database');
 
 const PORT = process.env.PORT || 3000; 
 
-const app = express();
+async function start() {
+    const app = express();
+    
+    await configDatabase();
+    configHbs(app);
+    configExpress(app);
+    app.use(router);
+    
+    app.listen(PORT, () => {
+        console.log(`Application running on port ${PORT}`);
+    });
 
-configDatabase();
-configHbs(app);
-configExpress(app);
-app.use(router);
+}
 
-app.listen(PORT);
+start();

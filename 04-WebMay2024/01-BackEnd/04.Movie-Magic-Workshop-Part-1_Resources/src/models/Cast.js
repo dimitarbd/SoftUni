@@ -29,3 +29,7 @@ const castSchema = new Schema({
     }
 
 });
+
+const Cast = model('Cast', castSchema);
+
+module.exports = { Cast };

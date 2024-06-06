@@ -32,11 +32,13 @@ const movieSchema = new Schema ({
     },
     imageURL: {
         type: String,
-        required: true
+        required: true,
+        regexp: /^http?\/\/.+/
     },
-    imageURL: {
+    cast: {
         type: [Types.ObjectId],
-        ref: 'Cast'
+        ref: 'Cast',
+        default: []
     }
 });
 

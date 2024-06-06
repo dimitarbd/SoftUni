@@ -22,6 +22,6 @@ module.exports = {
 
         const result = await createMovie(req.body);
 
-        res.redirect('/');
+        res.redirect('/details/' + result._id);
     }
 };

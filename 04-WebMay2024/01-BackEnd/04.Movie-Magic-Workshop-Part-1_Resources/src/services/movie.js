@@ -3,7 +3,7 @@ const { Movie } = require('../models/Movie');
 
 
 async function getAllMovies() {
-    const movies = await Movie.find();
+    const movies = await Movie.find().lean();
     return movies;
 }
 

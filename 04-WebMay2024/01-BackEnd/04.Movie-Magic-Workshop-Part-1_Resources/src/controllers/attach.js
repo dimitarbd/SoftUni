@@ -1,4 +1,4 @@
-const { getMovieById } = require("../services/movie");
+const { getMovieById } = require('../services/movie');
 const { getAllCast } = require('../services/cast');
 
 
@@ -20,4 +20,4 @@ module.exports = {
     attachPost: async (req, res) => {
 
     },
-}
+};

@@ -1,9 +1,16 @@
 const { getAllMovies, getMovieById } = require('../services/movie');
 
+const jwt = require('jsonwebtoken');
+
 module.exports = {
     home: async (req, res) => {
+        const token = req.cookies.token;
+        const data = jwt.verify(token, 'wohoo');
+        console.log(token);
+
         const movies = await getAllMovies();
-        res.render('home', { movies: movies });
+
+        res.render('home', { movies });
     },
     details: async (req, res) => {
         const id = req.params.id;

@@ -6,9 +6,11 @@ module.exports = {
         const { email, password, repass } = req.body;
         
         try {
-
-        } catch {
-            
+            if (!email || !password) {
+                throw new Error ('Passwords don\'t match');
+            }
+        } catch(err) {
+            res.render('register', { error: err.message });
         }
 
         res.redirect('/register');

@@ -1,12 +1,7 @@
 const { getAllMovies, getMovieById } = require('../services/movie');
 
-const jwt = require('jsonwebtoken');
-
 module.exports = {
     home: async (req, res) => {
-        const token = req.cookies.token;
-        const data = jwt.verify(token, 'wohoo');
-        console.log(token);
 
         const movies = await getAllMovies();
 

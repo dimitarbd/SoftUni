@@ -6,6 +6,10 @@ module.exports = {
         
         const movies = await getAllMovies();
 
+        for (const movie of movies) {
+            movie.isAuthor = req.user && req.user._id == movie.author.toString();
+        }
+
         res.render('home', { movies });
     },
     details: async (req, res) => {
@@ -16,6 +20,9 @@ module.exports = {
             res.render('404');
             return;
         }
+
+        const isAuthor = req.user && req.user._id == movie.author.toString();
+        console.log(isAuthor);
 
         movie.starRating = '&#x2605;'.repeat(movie.rating);
 

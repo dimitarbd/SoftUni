@@ -14,7 +14,7 @@ async function getMovieById(id) {
     return movie;
 }
 
-async function createMovie(movieData) {
+async function createMovie(movieData, authorId) {
        const movie = new Movie ({
         title: movieData.title,
         genre: movieData.genre, 
@@ -22,7 +22,8 @@ async function createMovie(movieData) {
         year: Number (movieData.year), 
         rating: Number (movieData.rating),
         description: movieData.description,
-        imageURL: movieData.imageURL
+        imageURL: movieData.imageURL, 
+        author: authorId
     });
     
     await movie.save();

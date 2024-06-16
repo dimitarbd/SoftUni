@@ -1,21 +1,19 @@
 const { Schema, model, Types } = require('mongoose');
 
-//TODO add/change properties depending on exam description
+//TODO replace with data model from exam description
 
-const userSchema = new Schema({
-    email: {
+const dataSchema = new Schema({
+    prop: {
         type: String,
         required: true,
-        unique: true
+        
     },
-    password: {
-        type: String,
-        required: true
+    author: {
+        type: Types.ObjectId,
+        ref: 'User'
     }
 });
 
-const User = model('User', userSchema);
+const Data = model('Data', dataSchema);
 
-module.exports = { User };
-
-//TODO replace with data model from exam description
+module.exports = { Data };

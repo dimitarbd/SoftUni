@@ -11,7 +11,13 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true
-    }
+        }
+    }, {
+        collation: {
+            locale: 'en',
+            strength: 2
+        } 
+
 });
 
 const User = model('User', userSchema);

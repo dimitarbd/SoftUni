@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
 require('../models/User');
-require('../models/Data'); //TODO import real data models
+require('../models/StonesData'); 
 
 async function configDatabase() {
-    //TODO set database name
-    const connectionString = 'mongodb://localhost:27017/exam-db';
+    const connectionString = 'mongodb://localhost:27017/earth-treasure';
 
     await mongoose.connect(connectionString);
 

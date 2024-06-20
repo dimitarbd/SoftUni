@@ -4,12 +4,10 @@ const { body, validationResult } = require('express-validator');
 const { isGuest, isUser } = require('../middlewares/guards');
 const { register, login } = require('../services/user');
 
-const { getRecent } = require('../services/stoneData');
+const { getRecent, likeStone } = require('../services/stoneData');
 const { parseError } = require('../util');
 const { createToken } = require('../services/jwt');
 const { getById, create, update, deleteById } = require('../services/stoneData');
-
-// TODO replace with real router according to exam description
 
 const stoneRouter = Router();
 
@@ -96,22 +94,32 @@ stoneRouter.post('/edit/:id', isUser(),
     }
 );
 
+stoneRouter.get('/like/:id', isUser(), async (req, res) => {
+    const stoneId = req.params.id;
+    const userId = req.user._id;
+    try {
+        const result = await likeStone(stoneId, userId);
+
+        res.redirect('/catalog/' + stoneId );
+        
+    } catch (err) {
+        res.redirect('/');
+    }
+
+
+}
+);
+
 stoneRouter.get('/delete/:id', isUser(), async (req, res) => {
         const stoneId = req.params.id;
         const userId = req.user._id;
         try {
-            const validation = validationResult(req);
+            const result = await deleteById(stoneId, userId);
 
-            if (validation.errors.length) {
-                throw validation.errors;
-            }
-
-            const result = await update(stoneId, req.body, userId);
-
-            res.redirect('/catalog/' + stoneId);
+            res.redirect('/');
 
         } catch (err) {
-            res.render('edit', { data: req.body, errors: parseError(err).errors });
+            res.redirect('/catalog/' + stoneId );
         }
 
 

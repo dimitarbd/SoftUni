@@ -8,7 +8,6 @@ function configRoutes(app) {
     app.use(homeRouter);
     app.use(userRouter);
     app.use(stoneRouter);
-    //TODO register routers
 }
 
 module.exports = { configRoutes };

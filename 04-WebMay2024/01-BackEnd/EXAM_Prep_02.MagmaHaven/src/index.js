@@ -3,6 +3,7 @@ const { configDatabase } = require('./config/configDatabase');
 const { configHbs } = require('./config/configHbs');
 const { configExpress } = require('./config/configExpress');
 const { configRoutes } = require('./config/configRoutes');
+
 const { register, login } = require('./services/user');
 const { createToken, verifyToken } = require('./services/jwt');
 

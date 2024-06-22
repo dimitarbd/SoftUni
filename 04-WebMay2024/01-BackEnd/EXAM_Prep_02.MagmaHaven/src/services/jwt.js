@@ -6,6 +6,7 @@ const secret = 'super secret';
 function createToken(userData) {
     const payload = {
         email: userData.email,
+        username: userData.username,
         _id: userData._id
     };
 

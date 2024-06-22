@@ -16,7 +16,13 @@ async function register(identity, username, password) {
         password: await bcrypt.hash(password, 10)
     });
 
+try {
     await user.save();
+} catch (err) {
+    if(err.code == 11000) {
+        throw new Error('This username is already in use');
+    }
+}
 
     return user;
 }

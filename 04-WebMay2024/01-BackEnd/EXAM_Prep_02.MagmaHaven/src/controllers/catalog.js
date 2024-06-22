@@ -30,13 +30,7 @@ catalogRouter.get('/catalog/:id', async (req, res) => {
 catalogRouter.get('/search', async (req, res) => {
     const { name, typeVolcano } = req.query;
 
-    let volcanoes = [];
-
-    if(name || (typeVolcano && typeVolcano != '---')) {
-        volcanoes = await searchVolcanoes(name, typeVolcano);
-    } else {
-        volcanoes = await getAll();
-    }
+    const volcanoes = await searchVolcanoes(name, typeVolcano);
 
     res.render('search', { data: { name, typeVolcano }, volcanoes });
 });

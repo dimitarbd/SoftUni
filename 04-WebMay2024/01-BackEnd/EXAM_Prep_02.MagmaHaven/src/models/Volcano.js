@@ -6,38 +6,31 @@ const volcanoSchema = new Schema({
     name: {
         type: String,
         required: true,
-        
     },
     location: {
         type: String,
         required: true,
-        
     },
     elevation: {
-        type: String,
-        required: true,
-        
+        type: Number,
+        required: true,        
     },
     lastErruption: {
-        type: String,
-        required: true,
-        
+        type: Number,
+        required: true,        
     },
     image: {
         type: String,
-        required: true,
-        
+        required: true,        
     },
     typeVolcano: {
         type: String,
         enum: [ 'Supervolcanoes', 'Submarine', 'Subglacial', 'Mud', 'Stratovolcanoes', 'Shield' ],
-        required: true,
-        
+        required: true,        
     },
     description: {
         type: String,
-        required: true,
-        
+        required: true,        
     },
     voteList: {
         type: [Types.ObjectId],
@@ -49,6 +42,7 @@ const volcanoSchema = new Schema({
         ref: 'User'
     }
 });
+
 
 const Volcano = model('Volcano', volcanoSchema);
 

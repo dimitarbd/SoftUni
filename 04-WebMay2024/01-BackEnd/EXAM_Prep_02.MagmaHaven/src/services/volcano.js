@@ -5,6 +5,8 @@ async function getAll() {
     return Volcano.find().lean();
 } 
 
+//TODO add search method
+
 async function getById(id) {
     return Volcano.findById(id).lean();
 }
@@ -63,7 +65,13 @@ async function addVote(volcanoId, userId) {
         throw new Error('Cannot vote for your own publication');
     }
 
+    if (record.voteList.find(v => v.toString() == userId)) {
+        throw new Error('Only one vote is allowed per volcano');
+    }
+
     record.voteList.push(userId);
+
+    await record.save();
 
     return record;
 }

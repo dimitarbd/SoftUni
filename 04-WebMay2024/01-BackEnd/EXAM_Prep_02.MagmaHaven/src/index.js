@@ -22,15 +22,15 @@ async function start() {
 
     app.listen(3000, () => {
         console.log('Server started http://localhost:3000');
-        test();
+        // test();
     });
 
     async function test() {
         try {
             //Register user
-            const result = await register('test1@abv.bg', 'Test1', '1234');
-            const token = createToken(result);
-            console.log(token);
+            // const result = await register('test1@abv.bg', 'Test1', '1234');
+            // const token = createToken(result);
+            // console.log(token);
 
             // Create Record
             // const result = await api.create({

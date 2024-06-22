@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { getAll, getById, update, deleteById } = require('../services/volcano');
+const { getAll, getById, update, deleteById, addVote } = require('../services/volcano');
 const { isUser } = require('../middlewares/guards');
 const { body, validationResult } = require('express-validator');
 const { register } = require('../services/user');
@@ -78,7 +78,7 @@ volcanoRouter.post('/create', isUser(),
     
                 const result = await update(volcanoId, req.body, userId);
     
-                res.redirect('/catalog' + volcanoId);
+                res.redirect('/catalog/' + volcanoId);
     
             } catch (err) {
                 res.render('edit', { data: req.body, errors: parseError(err).errors });
@@ -90,13 +90,28 @@ volcanoRouter.post('/create', isUser(),
     
             try {
                 await deleteById(id, req.user._id);
-                res.redirect('/catalog');
-    
             } catch (err) {
+                if(err.message == 'Access denied'){
+                    res.redirect('/login');
+                    return;
+                }
                 res.render('edit', { data: req.body, errors: parseError(err).errors });
             }
+            res.redirect('/catalog');
+        });
+
+        volcanoRouter.get('/vote/:volcanoId', isUser(), async (req, res) => {
+            const volcanoId = req.params.volcanoId;
+            const userId = req.user._id;
     
-           
+            try {   
+                const result = await addVote(volcanoId, userId);
+    
+                res.redirect('/catalog/' + volcanoId);
+    
+            } catch (err) {
+                res.render('details', { errors: parseError(err).errors });
+            }
         });
 
 module.exports = { volcanoRouter };

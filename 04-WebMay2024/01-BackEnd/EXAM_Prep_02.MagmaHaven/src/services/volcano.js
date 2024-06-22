@@ -6,6 +6,20 @@ async function getAll() {
 } 
 
 //TODO add search method
+async function searchVolcanoes(name, typeVolcano) {
+    const query = {};
+
+    if(name) {
+        query.name = new RegExp(name, 'i');
+    }
+
+    if (typeVolcano && typeVolcano != '---') {
+       query.typeVolcano = typeVolcano; 
+    }
+
+    return Volcano.find(query).lean();
+
+}
 
 async function getById(id) {
     return Volcano.findById(id).lean();
@@ -39,7 +53,6 @@ async function update(id, data, userId) {
         throw new Error('Access denied');
     }
 
-    //TODO replace with real properties
         record.name = data.name,
         record.location = data.location,
         record.elevation = data.elevation,
@@ -96,5 +109,6 @@ module.exports = {
     update,
     deleteById,
     create,
-    addVote
+    addVote,
+    searchVolcanoes
 };

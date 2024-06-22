@@ -27,9 +27,10 @@ async function start() {
 
     async function test() {
         try {
-            // const result = await login('john@abv.bg', '123');
-            // const token = createToken(result);
-            // console.log(token);
+            //Register user
+            const result = await register('test1@abv.bg', 'Test1', '1234');
+            const token = createToken(result);
+            console.log(token);
 
             // Create Record
             // const result = await api.create({
@@ -40,28 +41,41 @@ async function start() {
             //     image: 'http://localhost:3000/static/images/hunga-tonga.jpg',
             //     typeVolcano: 'Submarine',
             //     description: 'Hunga Tonga-Hunga is a submarine volcano in the South Pacific located about 30 km south of the submarine volcano of Fonuafo\'ou and 65 km north of Tongatapu, Tonga\'s main island. It is part of the highly active Kermadec-Tonga subduction zone and its associated volcanic arc, which extends from New Zealand north-northeast to Fiji, and is formed by the subduction of the Pacific Plate under the Indo-Australian Plate. It lies about 100 km above a very active seismic zone.',
-            //     author: '667689c96d2ac4e489d6bdab'
-            // });
+            // }, '667689c96d2ac4e489d6bdab');
 
             // const data = await api.getAll();
             // console.log(data);
 
             // Edit Record
-            // const dataId = '6676b30fff80eb8efcacb8e2';
+            // const dataId = '6676c3fe0e93e8902d8595a5';
             // const formData = {
             //     name: 'Hunga Tonga',
             //     location: 'Tonga Islands',
             //     elevation: 114,
-            //     lastErruption: 2024,
+            //     lastErruption: 2027,
             //     image: 'http://localhost:3000/static/images/hunga-tonga.jpg',
             //     typeVolcano: 'Submarine',
             //     description: 'Hunga Tonga-Hunga is a submarine volcano in the South Pacific located about 30 km south of the submarine volcano of Fonuafo\'ou and 65 km north of Tongatapu, Tonga\'s main island. It is part of the highly active Kermadec-Tonga subduction zone and its associated volcanic arc, which extends from New Zealand north-northeast to Fiji, and is formed by the subduction of the Pacific Plate under the Indo-Australian Plate. It lies about 100 km above a very active seismic zone.',
                 
             // };
-            // const userId = '667689c96d2ac4e489d6bdab';
+            // const userId = '667689c96d2ac4e489d6bda';
 
             // const result = await api.update(dataId, formData, userId);
 
+            //Delete Record
+            // const userId = '667689c96d2ac4e489d6bdab';
+            // const dataId = '6676c3fe0e93e8902d8595a5';
+
+            // await api.deleteById(dataId, userId);
+
+            //ADD Vote
+            
+            // const userId = '667689c96d2ac4e489d6bdab';
+            // const dataId = '6676c6c1588f69b052978339';
+
+            // const result = await api.addVote(dataId, userId);
+
+            // console.log(result);
 
         } catch (err) {
             console.log('Caught error');

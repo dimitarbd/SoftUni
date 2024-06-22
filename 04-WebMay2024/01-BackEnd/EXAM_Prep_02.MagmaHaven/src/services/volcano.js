@@ -51,7 +51,22 @@ async function update(id, data, userId) {
     return record;
 }
 
-//TODO add voting method
+
+async function addVote(volcanoId, userId) {
+    const record = await Volcano.findById(volcanoId);
+
+    if (!record) {
+        throw new ReferenceError('Record not found ' + volcanoId);
+    }
+
+    if (record.author.toString() == userId) {
+        throw new Error('Cannot vote for your own publication');
+    }
+
+    record.voteList.push(userId);
+
+    return record;
+}
 
 async function deleteById(id, userId) {
     const record = await Volcano.findById(id);
@@ -72,5 +87,6 @@ module.exports = {
     getById,
     update,
     deleteById,
-    create
+    create,
+    addVote
 };

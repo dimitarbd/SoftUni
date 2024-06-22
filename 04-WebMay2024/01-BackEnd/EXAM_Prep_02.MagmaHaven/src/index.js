@@ -34,13 +34,13 @@ async function start() {
 
             // Create Record
             // const result = await api.create({
-            //     name: 'Hunga Tonga',
-            //     location: 'Tonga Islands',
-            //     elevation: 114,
-            //     lastErruption: 2022,
-            //     image: 'http://localhost:3000/static/images/hunga-tonga.jpg',
-            //     typeVolcano: 'Submarine',
-            //     description: 'Hunga Tonga-Hunga is a submarine volcano in the South Pacific located about 30 km south of the submarine volcano of Fonuafo\'ou and 65 km north of Tongatapu, Tonga\'s main island. It is part of the highly active Kermadec-Tonga subduction zone and its associated volcanic arc, which extends from New Zealand north-northeast to Fiji, and is formed by the subduction of the Pacific Plate under the Indo-Australian Plate. It lies about 100 km above a very active seismic zone.',
+            //     name: 'Mount Etna',
+            //     location: 'Sicily Italy',
+            //     elevation: 250,
+            //     lastErruption: 2021,
+            //     image: 'http://localhost:3000/static/images/etna.jpg',
+            //     typeVolcano: 'Stratovolcanoes',
+            //     description: 'Mount Etna lorem ipsum dolor sit amet=',
             // }, '667689c96d2ac4e489d6bdab');
 
             // const data = await api.getAll();

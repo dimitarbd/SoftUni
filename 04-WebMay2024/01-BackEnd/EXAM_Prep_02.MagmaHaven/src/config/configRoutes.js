@@ -1,15 +1,18 @@
-//TODO import routers
-
 const { homeRouter } = require('../controllers/home');
 const { catalogRouter } = require('../controllers/catalog');
 const { userRouter } = require('../controllers/user');
+const { volcanoRouter } = require('../controllers/volcano');
 
 function configRoutes(app) {
     app.use(homeRouter);
     app.use(catalogRouter);
     app.use(userRouter);
+    app.use(volcanoRouter);
 
-    //TODO register routers
+    app.get('*', (req, res) => {
+        res.render('404');
+    });
+
 }
 
 module.exports = { configRoutes };

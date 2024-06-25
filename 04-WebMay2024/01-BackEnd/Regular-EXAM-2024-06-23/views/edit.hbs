@@ -1,8 +1,8 @@
         <section class="form-container">
             <h2>Edit Recipe</h2>
-            <form action="#">
+            <form method="post">
                 <label for="title">Recipe Title:</label>
-                <input type="text" id="title" name="text" {{#if data.title}}value="{{data.title}}"{{/if}}>
+                <input type="text" id="title" name="title" {{#if data.title}}value="{{data.title}}"{{/if}}>
 
                 <label for="description">Description:</label>
                 <textarea id="description" name="description">{{#if data.description}}{{data.description}}{{/if}}</textarea>

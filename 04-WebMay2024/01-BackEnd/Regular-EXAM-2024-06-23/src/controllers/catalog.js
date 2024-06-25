@@ -19,20 +19,20 @@ catalogRouter.get('/catalog/:id', async (req, res) => {
         return;
     }
 
-    recipe.votes = recipe.voteList.length;
+    // recipe.votes = recipe.voteList.length;
     recipe.hasUser = res.locals.hasUser;
     recipe.isAuthor = req.user?._id == recipe.author.toString();
     recipe.hasRecommend = Boolean(recipe.recommendList.find(v => v.toString() == req.user?._id));
 
-    res.render('details', { recipe });
+    res.render('details', { recipe } );
 });
 
 catalogRouter.get('/search', async (req, res) => {
-    const { name, typeRecipe } = req.query;
+    const { search } = req.query;
 
-    const recipes = await searchRecipes(name, typeRecipe);
+    const recipes = await searchRecipes(search);
 
-    res.render('search', { data: { name, typeRecipe }, recipes });
+    res.render('search', { data: { search }, recipes });
 });
 
 module.exports = { catalogRouter };

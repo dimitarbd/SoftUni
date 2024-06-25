@@ -25,7 +25,7 @@ recipeRouter.post('/create', isUser(),
         const { title, ingredients, instructions, description, image } = req.body;
 
         try {
-            const validation = validationResult();
+            const validation = validationResult(req);
 
             if (validation.errors.length) {
                 throw validation.errors;
@@ -36,6 +36,7 @@ recipeRouter.post('/create', isUser(),
             res.redirect('/catalog');
 
         } catch (err) {
+            console.log(err);
             res.render('create', { data: req.body, errors: parseError(err).errors });
         }
     });

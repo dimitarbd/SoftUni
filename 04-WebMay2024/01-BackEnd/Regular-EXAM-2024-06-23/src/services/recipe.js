@@ -10,11 +10,11 @@ async function getRecent() {
 }
 
 //TODO add search method
-async function searchRecipes(name, typeRecipe) {
+async function searchRecipes(name) {
     const query = {};
 
     if (name) {
-        query.name = new RegExp(name, 'i');
+        query.title = new RegExp(name, 'i');
     }
 
     // if (typeRecipe && typeRecipe != '---') {
@@ -57,7 +57,7 @@ async function update(id, data, userId) {
         throw new Error('Access denied');
     }
 
-    record.title = data.title,
+        record.title = data.title,
         record.ingredients = data.ingredients,
         record.instructions = data.instructions,
         record.description = data.description,

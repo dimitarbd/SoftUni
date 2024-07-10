@@ -1,5 +1,6 @@
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
+import UserSection from './components/user-section/UserSection';
 import './index.css';
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 
      <main  className="main">
 
-    UserLi
+    <UserSection />
 
      </main>
 

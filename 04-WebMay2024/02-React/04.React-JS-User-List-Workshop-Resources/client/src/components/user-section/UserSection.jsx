@@ -10,11 +10,15 @@ export default function UserSection(props) {
 
     useEffect(() => {
         (async function getUsers() {
+            try {
             const response = await fetch(`${baseUrl}/users`);
             const result = await response.json();
             const users = Object.values(result);
 
             setUsers(users);
+        } catch (error) {
+            alert(error.message);
+        }
         })();
     }, []);
 
@@ -23,7 +27,7 @@ export default function UserSection(props) {
 
             <Search />
             
-            <UserList />
+            <UserList users={users} />
 
             < button className="btn-add btn" > Add new user</button >
 

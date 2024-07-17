@@ -1,9 +1,8 @@
 import UserListItem from '../user-list item/UserListItem';
 
 export default function UserList({ 
-    // eslint-disable-next-line react/prop-types
-    users,
-}) {
+    users, 
+}) {    
   return (
     <div className="table-wrapper">
 

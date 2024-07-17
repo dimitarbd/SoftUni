@@ -5,6 +5,7 @@ import UserList from './user-list/UserList';
 
 const baseUrl = 'http://localhost:3030/jsonstore';
 
+// eslint-disable-next-line no-unused-vars
 export default function UserSection(props) {
     const [users, setUsers] = useState([]);
 

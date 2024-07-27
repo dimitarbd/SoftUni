@@ -15,8 +15,8 @@
         Preloader
     --------------------*/
     $(window).on('load', function () {
-        $(".loader").fadeOut();
-        $("#preloder").delay(200).fadeOut("slow");
+        $('.loader').fadeOut();
+        $('#preloder').delay(200).fadeOut('slow');
 
         /*------------------
             Gallery filter
@@ -41,22 +41,22 @@
     });
 
     //Humberger Menu
-    $(".humberger__open").on('click', function () {
-        $(".humberger__menu__wrapper").addClass("show__humberger__menu__wrapper");
-        $(".humberger__menu__overlay").addClass("active");
-        $("body").addClass("over_hid");
+    $('.humberger__open').on('click', function () {
+        $('.humberger__menu__wrapper').addClass('show__humberger__menu__wrapper');
+        $('.humberger__menu__overlay').addClass('active');
+        $('body').addClass('over_hid');
     });
 
-    $(".humberger__menu__overlay").on('click', function () {
-        $(".humberger__menu__wrapper").removeClass("show__humberger__menu__wrapper");
-        $(".humberger__menu__overlay").removeClass("active");
-        $("body").removeClass("over_hid");
+    $('.humberger__menu__overlay').on('click', function () {
+        $('.humberger__menu__wrapper').removeClass('show__humberger__menu__wrapper');
+        $('.humberger__menu__overlay').removeClass('active');
+        $('body').removeClass('over_hid');
     });
 
     /*------------------
 		Navigation
 	--------------------*/
-    $(".mobile-menu").slicknav({
+    $('.mobile-menu').slicknav({
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
@@ -64,13 +64,13 @@
     /*-----------------------
         Categories Slider
     ------------------------*/
-    $(".categories__slider").owlCarousel({
+    $('.categories__slider').owlCarousel({
         loop: true,
         margin: 0,
         items: 4,
         dots: false,
         nav: true,
-        navText: ["<span class='fa fa-angle-left'><span/>", "<span class='fa fa-angle-right'><span/>"],
+        navText: ['<span class=\'fa fa-angle-left\'><span/>', '<span class=\'fa fa-angle-right\'><span/>'],
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
         smartSpeed: 1200,
@@ -104,13 +104,13 @@
     /*--------------------------
         Latest Product Slider
     ----------------------------*/
-    $(".latest-product__slider").owlCarousel({
+    $('.latest-product__slider').owlCarousel({
         loop: true,
         margin: 0,
         items: 1,
         dots: false,
         nav: true,
-        navText: ["<span class='fa fa-angle-left'><span/>", "<span class='fa fa-angle-right'><span/>"],
+        navText: ['<span class=\'fa fa-angle-left\'><span/>', '<span class=\'fa fa-angle-right\'><span/>'],
         smartSpeed: 1200,
         autoHeight: false,
         autoplay: true
@@ -119,7 +119,7 @@
     /*-----------------------------
         Product Discount Slider
     -------------------------------*/
-    $(".product__discount__slider").owlCarousel({
+    $('.product__discount__slider').owlCarousel({
         loop: true,
         margin: 0,
         items: 3,
@@ -150,7 +150,7 @@
     /*---------------------------------
         Product Details Pic Slider
     ----------------------------------*/
-    $(".product__details__pic__slider").owlCarousel({
+    $('.product__details__pic__slider').owlCarousel({
         loop: true,
         margin: 20,
         items: 4,
@@ -163,9 +163,9 @@
     /*-----------------------
 		Price Range Slider
 	------------------------ */
-    var rangeSlider = $(".price-range"),
-        minamount = $("#minamount"),
-        maxamount = $("#maxamount"),
+    var rangeSlider = $('.price-range'),
+        minamount = $('#minamount'),
+        maxamount = $('#maxamount'),
         minPrice = rangeSlider.data('min'),
         maxPrice = rangeSlider.data('max');
     rangeSlider.slider({
@@ -178,13 +178,13 @@
             maxamount.val('$' + ui.values[1]);
         }
     });
-    minamount.val('$' + rangeSlider.slider("values", 0));
-    maxamount.val('$' + rangeSlider.slider("values", 1));
+    minamount.val('$' + rangeSlider.slider('values', 0));
+    maxamount.val('$' + rangeSlider.slider('values', 1));
 
     /*--------------------------
         Select
     ----------------------------*/
-    $("select").niceSelect();
+    $('select').niceSelect();
 
     /*------------------
 		Single Product

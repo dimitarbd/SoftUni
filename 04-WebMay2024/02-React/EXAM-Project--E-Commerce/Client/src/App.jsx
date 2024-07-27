@@ -4,9 +4,9 @@ import Categories from './components/categories/Categories';
 import Featured from './components/featured/Featured';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
-import LatestProduct from './components/latest-product/LatestProduct';
 import Offer from './components/offer/Offer';
 import PagePreloader from './components/page-preloader/PagePreloader';
+import CategorizedProducts from './components/categorized-products/CategorizedProducts';
 
 function App() {
 
@@ -18,11 +18,9 @@ function App() {
       <Categories />
       <Featured />
       <BannerBottom />
-      <LatestProduct />
+      <CategorizedProducts />
       <BlogSection />
       <Footer />
-
-      
     </>
   );
 }

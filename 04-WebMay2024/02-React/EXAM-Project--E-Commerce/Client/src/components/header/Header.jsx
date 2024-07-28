@@ -1,3 +1,4 @@
+
 export default function Header() {
   return (
     <header className="header">
@@ -41,13 +42,13 @@ export default function Header() {
         <div className="row">
             <div className="col-lg-3">
                 <div className="header__logo">
-                    <a href="./index.html"><img src="img/logo.png" alt=""/></a>
+                    <a href="/"><img src="img/logo.png" alt=""/></a>
                 </div>
             </div>
             <div className="col-lg-6">
                 <nav className="header__menu">
                     <ul>
-                        <li className="active"><a href="./index.html">Home</a></li>
+                        <li className="active"><a href="/">Home</a></li>
                         <li><a href="/catalog">Shop</a></li>
                         <li><a href="#">Pages</a>
                             <ul className="header__menu__dropdown">

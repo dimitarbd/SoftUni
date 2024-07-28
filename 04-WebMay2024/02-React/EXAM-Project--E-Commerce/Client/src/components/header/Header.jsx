@@ -30,7 +30,7 @@ export default function Header() {
                             </ul>
                         </div>
                         <div className="header__top__right__auth">
-                            <a href="#"><i className="fa fa-user"></i> Login</a>
+                            <a href="/login"><i className="fa fa-user"></i> Login</a>
                         </div>
                     </div>
                 </div>
@@ -48,13 +48,13 @@ export default function Header() {
                 <nav className="header__menu">
                     <ul>
                         <li className="active"><a href="./index.html">Home</a></li>
-                        <li><a href="./shop-grid.html">Shop</a></li>
+                        <li><a href="/catalog">Shop</a></li>
                         <li><a href="#">Pages</a>
                             <ul className="header__menu__dropdown">
-                                <li><a href="./shop-details.html">Shop Details</a></li>
-                                <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                <li><a href="./checkout.html">Check Out</a></li>
-                                <li><a href="./blog-details.html">Blog Details</a></li>
+                                <li><a href="/details">Shop Details</a></li>
+                                <li><a href="/shoping-cart.html">Shoping Cart</a></li>
+                                <li><a href="/checkout.html">Check Out</a></li>
+                                <li><a href="/blog-details.html">Blog Details</a></li>
                             </ul>
                         </li>
                         <li><a href="./blog.html">Blog</a></li>

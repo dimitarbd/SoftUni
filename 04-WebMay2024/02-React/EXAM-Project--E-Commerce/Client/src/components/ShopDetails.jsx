@@ -5,7 +5,7 @@ import Footer from './footer/Footer';
 import Header from './header/Header';
 import PagePreloader from './page-preloader/PagePreloader';
 
-export default function Details() {
+export default function ShopDetails() {
   return (
       <>
       <PagePreloader />

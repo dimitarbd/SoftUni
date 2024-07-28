@@ -4,7 +4,7 @@ import GridProductSection from './grid-product-section/GridProductSection';
 import Header from './header/Header';
 import PagePreloader from './page-preloader/PagePreloader';
 
-export default function Grid() {
+export default function ShopCatalog() {
   return (
       <>
       <PagePreloader />

@@ -1,9 +1,11 @@
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
 import { Helmet } from 'react-helmet';
+import { BrowserRouter } from 'react-router-dom';
+
+import App from './App.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <>
+  <BrowserRouter>
     <App />
     <Helmet>
       <script src="js/jquery-3.3.1.min.js"></script>
@@ -15,5 +17,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <script src="js/owl.carousel.min.js"></script>
       <script src="js/main.js"></script>
     </Helmet>
-  </>
+  </BrowserRouter>
 );

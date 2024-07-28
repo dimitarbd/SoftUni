@@ -1,16 +1,18 @@
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
-import PagePreloader from './components/page-preloader/PagePreloader';
+
+import Details from './components/Details';
+import Grid from './components/Grid';
 import Home from './components/Home';
+import LoginRegister from './components/login-register/LoginRegister';
 
 function App() {
 
   return (
     <>
-      <PagePreloader />
-      <Header />
-      <Home />
-      <Footer />
+     
+      {/* <Home /> */}
+      {/* <Grid /> */}
+      {/* <Details /> */}
+      <LoginRegister />
     </>
   );
 }

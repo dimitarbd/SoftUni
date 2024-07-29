@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -31,7 +32,7 @@ export default function Header() {
                             </ul>
                         </div>
                         <div className="header__top__right__auth">
-                            <a href="/login"><i className="fa fa-user"></i> Login</a>
+                            <Link to="/login"><i className="fa fa-user"></i> Login</Link>
                         </div>
                     </div>
                 </div>
@@ -52,7 +53,7 @@ export default function Header() {
                         <li><a href="/catalog">Shop</a></li>
                         <li><a href="#">Pages</a>
                             <ul className="header__menu__dropdown">
-                                <li><a href="/details">Shop Details</a></li>
+                                <li><Link to="/details">Shop Details</Link></li>
                                 <li><a href="/shoping-cart.html">Shoping Cart</a></li>
                                 <li><a href="/checkout.html">Check Out</a></li>
                                 <li><a href="/blog-details.html">Blog Details</a></li>

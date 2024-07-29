@@ -9,9 +9,6 @@ export default function ProductList() {
         productsAPI.getAll()
         .then(result => setProducts(result));
     }, []);
-}
-
-export default function GridProductSection() {
 
     return (
         <section className="product spad">

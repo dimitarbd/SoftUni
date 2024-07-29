@@ -1,4 +1,6 @@
+
 export default function GridProductSection() {
+
     return (
         <section className="product spad">
         <div className="container">

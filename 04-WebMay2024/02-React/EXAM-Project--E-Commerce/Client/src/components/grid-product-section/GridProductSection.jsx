@@ -1,3 +1,15 @@
+import { useEffect, useState } from 'react';
+
+import * as productsAPI from '../../../api/product-api.js';
+
+export default function ProductList() {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        productsAPI.getAll()
+        .then(result => setProducts(result));
+    }, []);
+}
 
 export default function GridProductSection() {
 

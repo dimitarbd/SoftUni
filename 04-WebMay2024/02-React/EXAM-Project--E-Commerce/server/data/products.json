@@ -1,0 +1,20 @@
+{
+    "455bf2d6-e4b7-452b-8c5c-642130ee3d89": {
+        "title": "Oranges",
+        "category": "Fruits & Nut Gifts",
+        "price": "1.39",
+        "quantity": "11",
+        "description": "Oranges are citrus fruits with fragrant, leathery skin and juicy flesh. The most common types are the sweet (or common) orange, the sour (or Seville) orange, and the mandarin orange. The sweet orange is the most widely grown citrus fruit in the world.",
+        "imageUrl": "img/categories/cat-1.jpg",
+        "_id": "455bf2d6-e4b7-452b-8c5c-642130ee3d89"
+    },
+    "754eb7e1-05e0-4212-9011-bc174b9e39ed": {
+        "title": "Dried Fruits",
+        "category": "Fruits & Nut Gifts",
+        "price": "2.39",
+        "quantity": "21",
+        "description": "Fruit, Nut And Seed Mix 400g. Made from a blend of golden raisins, almonds, pumpkin and sunflower seeds for a satisfying healthy snack.",
+        "imageUrl": "img/categories/cat-2.jpg",
+        "_id": "754eb7e1-05e0-4212-9011-bc174b9e39ed"
+    }
+}

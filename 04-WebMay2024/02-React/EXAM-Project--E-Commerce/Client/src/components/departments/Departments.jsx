@@ -3,7 +3,7 @@ export default function Departments() {
         <div className="hero__categories">
             <div className="hero__categories__all">
                 <i className="fa fa-bars"></i>
-                <span>All departments</span>
+                <span>All categories</span>
             </div>
             <ul>
                 <li><a href="#">Fresh Meat</a></li>

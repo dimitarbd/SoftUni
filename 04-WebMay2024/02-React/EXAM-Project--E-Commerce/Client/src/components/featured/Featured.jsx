@@ -1,6 +1,18 @@
 import FeaturedProduct from './featured-product/FeaturedProduct';
 
+import { useEffect, useState } from 'react';
+
+import * as productsAPI from '../../../api/product-api.js';
+
+
 export default function Featured() {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        productsAPI.getAll()
+        .then(result => setProducts(result));
+    }, []);
+
   return (
     <section className="featured spad">
     <div className="container">
@@ -12,7 +24,7 @@ export default function Featured() {
                 <div className="featured__controls">
                     <ul>
                         <li className="active" data-filter="*">All</li>
-                        <li data-filter=".oranges">Oranges</li>
+                        <li data-filter=".fruit">Fruit & Nut Gifts</li>
                         <li data-filter=".fresh-meat">Fresh Meat</li>
                         <li data-filter=".vegetables">Vegetables</li>
                         <li data-filter=".fastfood">Fastfood</li>
@@ -20,12 +32,11 @@ export default function Featured() {
                 </div>
             </div>
         </div>
-        <div className="row featured__filter">
-            <FeaturedProduct />
-            <FeaturedProduct />
-            <FeaturedProduct />
-            <FeaturedProduct />
-            <FeaturedProduct />
+        <div className="section-title">
+            {products.length > 0
+                ? products.map(product => <FeaturedProduct key={product._id} {...product} /> ) 
+                : <h3 className="row featured__filter">No products in storage</h3>
+            }            
         </div>
     </div>
 </section>

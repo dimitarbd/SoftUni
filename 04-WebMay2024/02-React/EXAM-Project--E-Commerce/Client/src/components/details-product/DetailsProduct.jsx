@@ -1,15 +1,29 @@
+import { useEffect, useState } from 'react';
+
 import DetailsProductPic from './details-product-pic/DetailsProductPic';
+import productsAPI from '../../../api/product-api';
 
 export default function DetailsProduct() {
+    const [product, setProduct] = useState({});
+
+    useEffect(() => {
+        (async () => {
+            const result = await productsAPI.getOne();
+
+            setProduct(result);
+        });
+    });
+
     return (
         <section className="product-details spad">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6 col-md-6">
+                    <div className="col-lProductcol-md-6">
                         <div className="product__details__pic">
                             <div className="product__details__pic__item">
                                 <img className="product__details__pic__item--large"
-                                    src="img/product/details/product-details-1.jpg" alt="" />
+                                    src={product.imageUrl} alt="" />
+
                             </div>
                             <div className="product__details__pic__slider owl-carousel">
                                 <DetailsProductPic />
@@ -19,21 +33,11 @@ export default function DetailsProduct() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-6">
+                    <div className="col-lProductcol-md-6">
                         <div className="product__details__text">
-                            <h3>Vetgetable’s Package</h3>
-                            <div className="product__details__rating">
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star"></i>
-                                <i className="fa fa-star-half-o"></i>
-                                <span>(18 reviews)</span>
-                            </div>
-                            <div className="product__details__price">$50.00</div>
-                            <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam
-                                vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet
-                                quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p>
+                            <h3>{product.title}</h3>
+                            <div className="product__details__price">{product.price}</div>
+                            <p>{product.description}</p>
                             <div className="product__details__quantity">
                                 <div className="quantity">
                                     <div className="pro-qty">
@@ -42,9 +46,8 @@ export default function DetailsProduct() {
                                 </div>
                             </div>
                             <a href="#" className="primary-btn">ADD TO CARD</a>
-                            <a href="#" className="heart-icon"><span className="icon_heart_alt"></span></a>
                             <ul>
-                                <li><b>Availability</b> <span>In Stock</span></li>
+                                <li><b>Quantity</b> <span>{product.quantity}</span></li>
                                 <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
                                 <li><b>Weight</b> <span>0.5 kg</span></li>
                                 <li><b>Share on</b>
@@ -57,7 +60,7 @@ export default function DetailsProduct() {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-lg-12">
+                    <div className="col-lProduct">
                         <div className="product__details__tab">
                             <ul className="nav nav-tabs" role="tablist">
                                 <li className="nav-item">
@@ -78,67 +81,67 @@ export default function DetailsProduct() {
                                     <div className="product__details__tab__desc">
                                         <h6>Products Infomation</h6>
                                         <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                                            Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Vivamus
-                                            suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam
-                                            vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada.
-                                            Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat,
+                                            Pellentesque in ipsum id orci porta dapibus. Proin eProducttortor risus. Vivamus
+                                            suscipit tortor eProductfelis porttitor volutpat. Vestibulum ac diam sit amet quam
+                                            vehicula elementum sed sit amet dui. Donec rutrum conProductleo eProductmalesuada.
+                                            Vivamus suscipit tortor eProductfelis porttitor volutpat. Curabitur arcu erat,
                                             accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a
-                                            pellentesque nec, egestas non nisi. Vestibulum ac diam sit amet quam vehicula
+                                            pellentesque nec, eProductas non nisi. Vestibulum ac diam sit amet quam vehicula
                                             elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus
                                             et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
-                                            vel, ullamcorper sit amet ligula. Proin eget tortor risus.</p>
-                                        <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem
-                                            ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet
-                                            elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum
-                                            porta. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus
-                                            nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                                            vel, ullamcorper sit amet liProduct. Proin eProducttortor risus.</p>
+                                        <p>Praesent sapien massa, convallis a pellentesque nec, eProductas non nisi. Lorem
+                                            ipsum dolor sit amet, consectetur adipiscinProductit. Mauris blandit aliquet
+                                            elit, eProducttincidunt nibh pulvinar a. Cras ultricies liProduct sed maProductdictum
+                                            porta. Cras ultricies liProduct sed maProductdictum porta. Sed porttitor lectus
+                                            nibh. Mauris blandit aliquet elit, eProducttincidunt nibh pulvinar a.
                                             Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed
                                             porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum
-                                            sed sit amet dui. Proin eget tortor risus.</p>
+                                            sed sit amet dui. Proin eProducttortor risus.</p>
                                     </div>
                                 </div>
                                 <div className="tab-pane" id="tabs-2" role="tabpanel">
                                     <div className="product__details__tab__desc">
                                         <h6>Products Infomation</h6>
                                         <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                                            Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.
-                                            Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam
-                                            sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo
-                                            eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.
+                                            Pellentesque in ipsum id orci porta dapibus. Proin eProducttortor risus.
+                                            Vivamus suscipit tortor eProductfelis porttitor volutpat. Vestibulum ac diam
+                                            sit amet quam vehicula elementum sed sit amet dui. Donec rutrum conProductleo
+                                            eProductmalesuada. Vivamus suscipit tortor eProductfelis porttitor volutpat.
                                             Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent
-                                            sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac
+                                            sapien massa, convallis a pellentesque nec, eProductas non nisi. Vestibulum ac
                                             diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante
                                             ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                                            Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                                            Proin eget tortor risus.</p>
-                                        <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem
-                                            ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet
-                                            elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum
-                                            porta. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus
-                                            nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+                                            Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet liProduct.
+                                            Proin eProducttortor risus.</p>
+                                        <p>Praesent sapien massa, convallis a pellentesque nec, eProductas non nisi. Lorem
+                                            ipsum dolor sit amet, consectetur adipiscinProductit. Mauris blandit aliquet
+                                            elit, eProducttincidunt nibh pulvinar a. Cras ultricies liProduct sed maProductdictum
+                                            porta. Cras ultricies liProduct sed maProductdictum porta. Sed porttitor lectus
+                                            nibh. Mauris blandit aliquet elit, eProducttincidunt nibh pulvinar a.</p>
                                     </div>
                                 </div>
                                 <div className="tab-pane" id="tabs-3" role="tabpanel">
                                     <div className="product__details__tab__desc">
                                         <h6>Products Infomation</h6>
                                         <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                                            Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.
-                                            Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam
-                                            sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo
-                                            eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.
+                                            Pellentesque in ipsum id orci porta dapibus. Proin eProducttortor risus.
+                                            Vivamus suscipit tortor eProductfelis porttitor volutpat. Vestibulum ac diam
+                                            sit amet quam vehicula elementum sed sit amet dui. Donec rutrum conProductleo
+                                            eProductmalesuada. Vivamus suscipit tortor eProductfelis porttitor volutpat.
                                             Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent
-                                            sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac
+                                            sapien massa, convallis a pellentesque nec, eProductas non nisi. Vestibulum ac
                                             diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante
                                             ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                                            Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                                            Proin eget tortor risus.</p>
+                                            Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet liProduct.
+                                            Proin eProducttortor risus.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </div >
+            </div >
+        </section >
     );
 }

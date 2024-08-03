@@ -1,23 +1,14 @@
-import { useEffect, useState } from 'react';
 
+import { useGetOneProducts } from '../../hooks/useProducts';
 import DetailsProductPic from './details-product-pic/DetailsProductPic';
-import productsAPI from '../../../api/product-api';
 import { useParams } from 'react-router-dom';
 
 export default function DetailsProduct() {
-    const [product, setProduct] = useState({});
     const { productId } = useParams();
+    const [product] = useGetOneProducts(productId);
+
 
     console.log(productId);
-
-
-    useEffect((productId) => {
-        (async () => {
-            const result = await productsAPI.getOne(productId);
-
-            setProduct(result);
-        })();
-    }, []);
 
     return (
         <section className="product-details spad">

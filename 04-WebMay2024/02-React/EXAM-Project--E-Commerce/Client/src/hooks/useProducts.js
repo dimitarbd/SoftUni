@@ -17,3 +17,20 @@ export function useGetAllProducts() {
 
     return [products, setProducts];
 }
+
+export function useGetOneProducts(productId) {
+    const [product, setProduct] = useState({});
+
+    useEffect((productId) => {
+        (async () => {
+            const result = await productsAPI.getOne(productId);
+
+            setProduct(result);
+        })();
+    }, [productId]);
+
+    return [
+        product,
+        setProduct,
+    ]
+}

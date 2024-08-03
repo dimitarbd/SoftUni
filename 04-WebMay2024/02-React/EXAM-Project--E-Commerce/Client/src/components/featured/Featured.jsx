@@ -1,6 +1,6 @@
 import FeaturedProduct from './featured-product/FeaturedProduct';
 
-import * as productsAPI from '../../../api/product-api.js';
+import * as productsAPI from '../../api/product-api.js';
 
 import { useEffect, useState } from 'react';
 

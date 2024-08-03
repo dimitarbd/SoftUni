@@ -12,11 +12,16 @@ async function requester(method, url, data) {
         options.body = JSON.stringify(data);
     }
 
-    const response = await fetch(url, options);
 
-    const result = response.json();
+    const response = await fetch(url, options);
+    const result = await response.json();
+
+    if (!response.ok) {
+        throw result;
+    }
 
     return result;
+
 }
 
 export const get = requester.bind(null, 'GET');

@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 
-import productsAPI from '../../api/product-api';
+import productsAPI from '../api/product-api';
 
 export function useGetAllProducts() {
     // eslint-disable-next-line no-unused-vars

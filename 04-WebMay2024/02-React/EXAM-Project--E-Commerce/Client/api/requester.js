@@ -1,4 +1,4 @@
- async function requester(method, url, data) {
+async function requester(method, url, data) {
     const options = {};
 
     if (method != 'GET') {
@@ -7,12 +7,12 @@
 
     if (data) {
         options.headers = {
-            'Content-Type':'application/json'
+            'Content-Type': 'application/json',
         };
         options.body = JSON.stringify(data);
     }
 
-    const response = await fetch(url, options );
+    const response = await fetch(url, options);
 
     const result = response.json();
 

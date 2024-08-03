@@ -1,14 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useGetAllProducts } from '../../hooks/useProducts';
 
-import * as productsAPI from '../../../api/product-api.js';
 
 export default function ProductList() {
-    const [products, setProducts] = useState([]);
+    // eslint-disable-next-line no-unused-vars
+    const [products] = useGetAllProducts([]);
 
-    useEffect(() => {
-        productsAPI.getAll()
-        .then(result => setProducts(result));
-    }, []);
+
 
     return (
         <section className="product spad">

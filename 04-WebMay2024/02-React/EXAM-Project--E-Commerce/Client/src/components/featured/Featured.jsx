@@ -10,7 +10,7 @@ export default function Featured() {
 
     useEffect(() => {
         productsAPI.getAll()
-            .then(result => setProducts(result));
+            .then(result => setProducts(result.slice(8)));
     }, []);
 
     return (
@@ -33,10 +33,13 @@ export default function Featured() {
                     </div>
                 </div>
                 <div className="section-title">
+                <div className="row featured__filter">
                     {products.length > 0
                         ? products.map(product => <FeaturedProduct key={product._id} {...product} />)
-                        : <h3 className="row featured__filter">No products in storage</h3>
+                        : <h3>No products in storage</h3>
                     }
+                </div>
+
                 </div>
             </div>
         </section>

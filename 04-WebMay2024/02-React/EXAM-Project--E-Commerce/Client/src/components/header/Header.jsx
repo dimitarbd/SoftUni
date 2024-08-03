@@ -41,7 +41,6 @@ export default function Header() {
                             <ul>
                                 <li className="active"><Link to="/">Home</Link></li>
                                 <li><Link to="/catalog">Catalog</Link></li>
-                                <li><Link to="/details">Shop Details</Link></li>
                                 <li><Link to="/shoping-cart.html">Shoping Cart</Link></li>
                                 <li><Link to="/checkout.html">Check Out</Link></li>
                                 <li><Link to="/contact">Contact</Link></li>

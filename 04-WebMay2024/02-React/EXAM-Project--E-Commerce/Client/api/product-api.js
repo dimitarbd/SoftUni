@@ -7,12 +7,12 @@ export const getAll = async () => {
 
     const products = Object.values(result);
     
-    console.log(products);
 
     return products;
 };
 
 export const getOne = (productId) => request.get(`${BASE_URL}/${productId}`);
+
 
 const productsAPI = {
     getAll,

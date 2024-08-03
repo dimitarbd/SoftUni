@@ -2,17 +2,22 @@ import { useEffect, useState } from 'react';
 
 import DetailsProductPic from './details-product-pic/DetailsProductPic';
 import productsAPI from '../../../api/product-api';
+import { useParams } from 'react-router-dom';
 
 export default function DetailsProduct() {
     const [product, setProduct] = useState({});
+    const { productId } = useParams();
 
-    useEffect(() => {
+    console.log(productId);
+
+
+    useEffect((productId) => {
         (async () => {
-            const result = await productsAPI.getOne();
+            const result = await productsAPI.getOne(productId);
 
             setProduct(result);
-        });
-    });
+        })();
+    }, []);
 
     return (
         <section className="product-details spad">
@@ -41,15 +46,15 @@ export default function DetailsProduct() {
                             <div className="product__details__quantity">
                                 <div className="quantity">
                                     <div className="pro-qty">
-                                        <input type="text" value="1" />
+                                        {/* <input type="text" value="1" /> */}
                                     </div>
                                 </div>
                             </div>
                             <a href="#" className="primary-btn">ADD TO CARD</a>
                             <ul>
                                 <li><b>Quantity</b> <span>{product.quantity}</span></li>
-                                <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
-                                <li><b>Weight</b> <span>0.5 kg</span></li>
+                                <li><b>Shipping</b> <span>{product.shipping} day shipping. <samp>Free pickup today</samp></span></li>
+                                <li><b>Weight</b> <span>{product.weigth}</span></li>
                                 <li><b>Share on</b>
                                     <div className="share">
                                         <a href="https://www.facebook.com/"><i className="fa fa-facebook"></i></a>

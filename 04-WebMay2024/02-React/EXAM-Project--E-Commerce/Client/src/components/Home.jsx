@@ -1,4 +1,3 @@
-import BannerBottom from './banner-begin/BannerBegin';
 import Categories from './categories/Categories';
 import Featured from './featured/Featured';
 import Footer from './footer/Footer';
@@ -15,7 +14,6 @@ export default function Home() {
       <Offer />
       <Categories />
       <Featured />
-      <BannerBottom />
       <CategorizedProducts />
       <Footer />
     </>

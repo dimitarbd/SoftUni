@@ -7,7 +7,7 @@ export default function LoginRegister() {
             document.getElementById('signup-toggle').style.color = '#fff';
             document.getElementById('login-form').style.display = 'none';
             document.getElementById('signup-form').style.display = 'block';
-        };
+        }
 
     
         function toggleLogin() {
@@ -17,7 +17,7 @@ export default function LoginRegister() {
             document.getElementById('signup-toggle').style.color = '#222';
             document.getElementById('signup-form').style.display = 'none';
             document.getElementById('login-form').style.display = 'block';
-        };
+        }
     
 
     return (
@@ -33,7 +33,7 @@ export default function LoginRegister() {
                     <input type="text" placeholder="Enter email or username" />
                     <input type="password" placeholder="Enter password" />
                     <button type="button" className="btn login">login</button>
-                    <p><a href="#">Forgotten account</a></p>
+                    
                     <hr />
 
                 </form>

@@ -142,17 +142,6 @@
         "imageUrl": "/img/featured/feature-9.jpg",
         "_id": "afa54fb9-ccae-40fa-816b-a86c640ba615"
     },
-    "82548b45-0556-4c2c-b2dc-ed33e297c219": {
-        "title": "Oatmeal",
-        "category": "Oatmeal",
-        "price": "2.29",
-        "quantity": "23",
-        "shipping": "3",
-        "weight": "1",
-        "description": "Oatmeal is a preparation of oats that have been de-husked, steamed, and flattened, or a coarse flour of hulled oat grains (groats) that have either been milled (ground), rolled, or steel-cut. Ground oats are also called white oats. Steel-cut oats are known as coarse oatmeal, Irish oatmeal, or pinhead oats.",
-        "imageUrl": "/img/featured/feature-9.jpg",
-        "_id": "82548b45-0556-4c2c-b2dc-ed33e297c219"
-    },
     "d9ff113a-b98c-4f6b-be1c-86c9b22d6646": {
         "title": "Strawberries",
         "category": "Fresh Berries",

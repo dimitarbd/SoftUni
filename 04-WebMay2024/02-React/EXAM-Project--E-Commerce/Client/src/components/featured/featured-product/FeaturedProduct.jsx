@@ -17,7 +17,7 @@ export default function FeaturedProduct({
                 </div>
                 <div className="featured__item__text">
                     <h6><Link to={`/details/${_id}`}>{title}</Link></h6>
-                    <h5>{price}</h5>
+                    <h5>{price}lv.</h5>
                 </div>
             </div>
         </div>

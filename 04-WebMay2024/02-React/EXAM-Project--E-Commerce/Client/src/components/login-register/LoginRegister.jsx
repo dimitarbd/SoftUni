@@ -5,17 +5,25 @@ import { useForm } from '../../hooks/useForm';
 export default function LoginRegister() {
     const login = useLogin();
     const navigate = useNavigate();
-    const { values, changeHandler, submitHandler } = useForm(
-        { email: '', password: '' },
-        async ({ email, password }) => {
-            try {
-                await login(email, password);
-                navigate('/');
-            } catch (err) {
-                console.log(err.message);
 
-            }
-        });
+
+    const initialValues = { email: '', password: '' };
+
+    const loginHandler = async ({ email, password }) => {
+        try {
+            await login(email, password);
+            navigate('/');
+        } catch (err) {
+            console.log(err.message);
+        }
+    };
+
+    const {
+        values,
+        changeHandler,
+        submitHandler
+    } = useForm(initialValues, loginHandler);
+
 
 
 

@@ -24,6 +24,10 @@ export default function Header() {
                                 <div className="header__top__right__auth">
                                     <Link to="/login"><i className="fa fa-user"></i> Login/Register</Link>
                                 </div>
+                                
+                                <div className="header__top__right__auth">
+                                    <Link to="/login"><i className="fa fa-user"></i> Logout</Link>
+                                </div>
                             </div>
                         </div>
                     </div>

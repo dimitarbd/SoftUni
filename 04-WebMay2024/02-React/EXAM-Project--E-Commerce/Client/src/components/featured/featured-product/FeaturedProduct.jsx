@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function FeaturedProduct({
     _id,
@@ -6,9 +7,14 @@ export default function FeaturedProduct({
     imageUrl,
     price
 }) {
+    const navigate = useNavigate();
+
+    function navDetails(_id) {
+        navigate(`/details/${_id}`);
+    }
     return (
         <div className="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
-            <div className="featured__item">
+            <div className="featured__item mouse_link" onClick={() => {navDetails(_id)}}>
                 <div className="featured__item__pic set-bg" data-setbg={imageUrl}>
                     <img src={imageUrl} />
                     <ul className="featured__item__pic__hover">
@@ -16,7 +22,7 @@ export default function FeaturedProduct({
                     </ul>
                 </div>
                 <div className="featured__item__text">
-                    <h6><Link to={`/details/${_id}`}>{title}</Link></h6>
+                    <h6>{title}</h6>
                     <h5>{price}lv.</h5>
                 </div>
             </div>

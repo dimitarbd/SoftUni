@@ -5,10 +5,12 @@ import { useParams } from 'react-router-dom';
 
 export default function DetailsProduct() {
     const { productId } = useParams();
-    const [product] = useGetOneProducts(productId);
+    // useEffect (productId) {
+        const [product] = useGetOneProducts(productId);
+
+    // }
 
 
-    console.log(productId);
 
     return (
         <section className="product-details spad">

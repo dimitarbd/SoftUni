@@ -3660,3 +3660,7 @@ body{
         display: none!important;
     }
 }
+
+.mouse_link {
+	cursor: pointer;
+}

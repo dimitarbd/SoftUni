@@ -21,10 +21,12 @@ export function useGetAllProducts() {
 export function useGetOneProducts(productId) {
     const [product, setProduct] = useState({});
 
-    useEffect((productId) => {
+    useEffect(() => {
         (async () => {
+            console.log(productId);
+            
             const result = await productsAPI.getOne(productId);
-
+                
             setProduct(result);
         })();
     }, [productId]);

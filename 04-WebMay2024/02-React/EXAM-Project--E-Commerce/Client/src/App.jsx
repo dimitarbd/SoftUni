@@ -1,18 +1,28 @@
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route, useLocation} from 'react-router-dom';
 
 import Home from './components/Home';
 import LoginRegister from './components/login-register/LoginRegister';
 import ShopDetails from './components/ShopDetails';
 import ShopCatalog from './components/ShopCatalog';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AuthContext } from './contexts/AuthContext';
+import Scritps from './components/scripts/Scripts.jsx';
 
 
 function App() {
   const [authState, setAuthstate] = useState({});
+  const [reloadScripts, setReloadScripts] = useState(true);
+  const location = useLocation();
+  
+  useEffect(() => {
+    setReloadScripts(true);
+    console.log('Test');
+    
+  }, [location]);
 
   const changeAuthState = (state) => {
     setAuthstate(state);
+    setReloadScripts(true);
   };
 
   const contextData = {
@@ -23,9 +33,12 @@ function App() {
     changeAuthState,
   };
 
+
+
   return (
     <>
     <AuthContext.Provider value={contextData}>
+    <Scritps reloadScripts={reloadScripts} setReloadScripts={setReloadScripts} />
     <Routes>
       <Route path='/' element={ <Home /> }/>
       <Route path='/catalog' element={ <ShopCatalog /> }/>
@@ -34,6 +47,7 @@ function App() {
     </Routes>
 
     </AuthContext.Provider>     
+    
     </>
   );
 }

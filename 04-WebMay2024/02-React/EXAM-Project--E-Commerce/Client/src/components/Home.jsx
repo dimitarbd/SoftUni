@@ -8,7 +8,7 @@ import PagePreloader from './page-preloader/PagePreloader';
 
 export default function Home() {
   return (
-    <>
+    <>   
       <PagePreloader />
       <Header />
       <Offer />

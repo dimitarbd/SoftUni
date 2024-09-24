@@ -5,7 +5,8 @@ function start() {
 }
 
 function onMessage(data) {
-    console.log('Received from bus:', data);
+    
+    console.log('Received message from bus:', data);
     
 }
 

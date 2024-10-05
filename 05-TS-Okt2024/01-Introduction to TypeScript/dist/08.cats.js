@@ -1,9 +1,6 @@
 function cats(arr) {
     class Cat {
-        name: string;
-        age: number;
-
-        constructor(name: string, age: number) {
+        constructor(name, age) {
             this.name = name;
             this.age = age;
         }
@@ -11,14 +8,11 @@ function cats(arr) {
             console.log(`${this.name}, age ${this.age} says Meow`);
         }
     }
-
     for (let current of arr) {
-        let tokens: string[] = current.split(' ');
-        let name: string = tokens[0];
-        let age: number = Number(tokens[1]);
-
+        let tokens = current.split(' ');
+        let name = tokens[0];
+        let age = Number(tokens[1]);
         let cat = new Cat(name, age);
-
         cat.meow();
     }
 }

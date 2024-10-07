@@ -1,10 +1,16 @@
-function personInfo(firstName, lastName, age) {
-    let person = {
-        firstName: firstName,
-        lastName: lastName,
-        age: age
+function personInfo(firstName: string, lastName: string, age: string) {
+    type person = {
+        firstName: string,
+        lastName: string,
+        age: number
     }
-    return person;
+    const personData: person = {
+        firstName: firstName, 
+        lastName: lastName,
+        age: Number (age)
+    }
+    console.log(personData);
+    ;
 }
 personInfo("Peter",
     "Pan",

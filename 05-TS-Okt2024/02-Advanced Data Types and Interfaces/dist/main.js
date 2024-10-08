@@ -1,9 +1,12 @@
-const arr = ['a', 1, 'b', 2];
-arr.forEach((x) => {
-    if (typeof x == 'string') {
-        console.log('String : ' + x);
+// const arr: (number | string)[] = ['a', 1, 'b', 2];
+class Clock {
+    constructor(h, m) {
+        this.hour = h;
+        this.minute = m;
     }
-    else {
-        console.log(x * 1000);
+    showTime() {
+        return `Current time: ${this.hour}:${this.minute}`;
     }
-});
+}
+const myClock = new Clock(12, 59);
+console.log(myClock.showTime);

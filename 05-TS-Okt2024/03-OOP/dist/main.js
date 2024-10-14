@@ -1,25 +1,69 @@
-const employee = {
-    salary: 30000,
-    overtime: 10,
-    rate: 20,
-    getWage: function () {
-        return this.salary + this.overtime + this.rate;
+// const employee = {
+//     salary: 30000,
+//     overtime: 10,
+//     rate: 20,
+//     getWage: function () {
+//         return this.salary + this.overtime + this.rate;
+//     }
+// };
+class Remote {
+    constructor() {
+        this.channelNumber = 1;
+        this.tvIsOff = true;
     }
-};
-console.log(employee.getWage());
-class Person {
-    /**
-     *
-     */
-    constructor(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    provideSignalToA() {
+        return 'A';
     }
-    getFullName() {
-        return `${this.firstName} ${this.lastName}`;
+    provideSignalToB() {
+        return 'B';
+    }
+    provideSignalToC() {
+        return 'C';
+    }
+    provideSignalToD() {
+        return 'D';
+    }
+    turnOnTV() {
+        console.log('TV is turned ON');
+        this.tvIsOff = !this.tvIsOff;
+    }
+    turnOffTV() {
+        console.log('TV is turned OFF');
+        this.tvIsOff = !this.tvIsOff;
+    }
+    toggleTurnOnTV() {
+        if (this.tvIsOff) {
+            this.turnOnTV();
+        }
+        else {
+            this.turnOffTV();
+        }
+    }
+    switchChannelUp() {
+        const a = this.provideSignalToA();
+        const b = this.provideSignalToB();
+        const d = this.provideSignalToD();
+        const signal = a + b + d;
+        if (signal === 'ABD') {
+            this.channelNumber += 1;
+            console.log('Channel switched to ' + this.channelNumber);
+        }
+    }
+    switchChannelDown() {
+        const b = this.provideSignalToB();
+        const d = this.provideSignalToD();
+        const c = this.provideSignalToC();
+        const signal = b + d + c;
+        if (signal === 'ABD') {
+            this.channelNumber -= 1;
+            console.log('Channel switched to ' + this.channelNumber);
+        }
     }
 }
-const person1 = new Person('Ivan', 'Petrov');
-console.log(person1.getFullName());
-const person2 = new Person('Martin', 'Shopov');
-console.log(person2.getFullName());
+const myRemote = new Remote();
+myRemote.toggleTurnOnTV();
+myRemote.switchChannelUp();
+myRemote.switchChannelUp();
+myRemote.switchChannelUp();
+myRemote.switchChannelDown();
+myRemote.toggleTurnOnTV();

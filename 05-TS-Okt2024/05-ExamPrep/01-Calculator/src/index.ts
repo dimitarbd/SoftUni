@@ -1,3 +1,7 @@
+// type MapType = Record<string, number>;
+type MapType = { [key: string]: number };
+
+
 function solve(first: number, opertator: string, second: number): string {
 
     let result: number = 0;
@@ -16,9 +20,6 @@ function solve(first: number, opertator: string, second: number): string {
     //         result = first * second;
     //         break;
     // }
-
-    // type MapType = Record<string, number>;
-    type MapType = { [key: string]: number};
 
     const CalculatorMap: MapType = {
         "+": first + second,

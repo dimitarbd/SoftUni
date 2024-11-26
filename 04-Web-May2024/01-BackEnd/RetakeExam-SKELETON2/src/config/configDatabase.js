@@ -9,6 +9,9 @@ async function configDatabase() {
         useNewUrlParser: true,
         useUnifieldTopology:true
     });
+
+    console.log('Database connected');
+    
 }
 
 module.exports = { configDatabase };

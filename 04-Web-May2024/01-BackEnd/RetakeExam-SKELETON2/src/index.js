@@ -17,7 +17,7 @@ async function start() {
 
     app.listen(3000, () => {
         console.log('Server started http://localhost:3000');
-        testFunction();
+        // testFunction();
     });
 }
 

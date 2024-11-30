@@ -25,7 +25,7 @@ async function start() {
 
 async function test() {
     try {
-        const result = await register('john@abv.bg', 'Pesho', '123');
+        const result = await register('john@abv.bg', 'John', '123');
         const token = createToken(result);
         console.log(token);
     } catch (err) {

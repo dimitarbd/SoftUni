@@ -21,7 +21,6 @@ async function register(identity, name, password) {
     } catch (err) {
         if (err.code == 11000) {
             throw new Error('This username already exists!');
-
         }
     }
 

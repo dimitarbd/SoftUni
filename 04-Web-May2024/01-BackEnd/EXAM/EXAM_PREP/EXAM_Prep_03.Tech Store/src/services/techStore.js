@@ -60,7 +60,7 @@ async function update(id, data, userId) {
     return record;
 }
 
-//TODO add prefered list
+//TODO add preferred list
 
 async function deleteById(id, userId) {
     const record = await TechStore.findById(id);

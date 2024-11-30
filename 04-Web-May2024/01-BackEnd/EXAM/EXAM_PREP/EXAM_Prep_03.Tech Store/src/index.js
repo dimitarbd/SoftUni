@@ -61,27 +61,39 @@ async function test() {
         // console.log(data);
 
         // EDIT RECORD
-        const dataId = '674b8197e3278f49bd3ddce0';
-        const userId = '674b4fc4a4cf9f4319bb53b7';
-        const formData = {
-            brand: 'Acer',
-            model: 'Nitro 5 AN515-58',
-            hardDisk: '512GB SSD',
-            screenSize: '15.6 inches',
-            ram: '32GB',
-            operatingSystem: 'Windows 10',
-            cpu: 'Intel Core™ i5-12450H',
-            gpu: 'NVIDIA GeForce RTX™ 3050',
-            price: 1499,
-            color: 'Black',
-            weight: '2.5kg',
-            image: 'https://s13emagst.akamaized.net/products/53590/53589192/images/res_790dbf4452932f219ec1268b12fc73a3.jpg?width=720&height=720&hash=933FA37D9229954034F5BBF01C2438FA',
-        }
+        // const dataId = '674b8197e3278f49bd3ddce0';
+        // const userId = '674b4fc4a4cf9f4319bb53b7';
+        // const formData = {
+        //     brand: 'Acer',
+        //     model: 'Nitro 5 AN515-58',
+        //     hardDisk: '512GB SSD',
+        //     screenSize: '15.6 inches',
+        //     ram: '32GB',
+        //     operatingSystem: 'Windows 10',
+        //     cpu: 'Intel Core™ i5-12450H',
+        //     gpu: 'NVIDIA GeForce RTX™ 3050',
+        //     price: 1499,
+        //     color: 'Black',
+        //     weight: '2.5kg',
+        //     image: 'https://s13emagst.akamaized.net/products/53590/53589192/images/res_790dbf4452932f219ec1268b12fc73a3.jpg?width=720&height=720&hash=933FA37D9229954034F5BBF01C2438FA',
+        // }
 
-        const result = await api.update(dataId, formData, userId);
-        console.log(result);
+        // const result = await api.update(dataId, formData, userId);
+        // console.log(result);
 
 
+        // DELETE RECORD
+        // const dataId = '674b8197e3278f49bd3ddce0';
+        // const userId = '674b4fc4a4cf9f4319bb53b7';
+
+        // await api.deleteById(dataId, userId);
+
+        //ADD TO LIST
+        // const dataId = '674b8607e7eab82bd7b3ecd6';
+        // const userId = '674b4fc4a4cf9f4319bb53b7';
+
+        // const result = await api.addToPreferredList(dataId, userId);
+        // console.log(result);
 
     } catch (err) {
         console.log('Caugth error!');

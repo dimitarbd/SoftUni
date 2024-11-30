@@ -53,7 +53,6 @@ async function update(id, data, userId) {
         record.color = data.color,
         record.weight = data.weight,
         record.image = data.image,
-        record.author = authorId
 
     await record.save();
 
@@ -61,6 +60,19 @@ async function update(id, data, userId) {
 }
 
 //TODO add preferred list
+async function addToPreferredList(dataId, userId) {
+    const record = await TechStore.findById(dataId);
+    
+    if (!record) {
+        throw new ReferenceError('Record not found ' + dataId);
+    }
+
+    record.preferredList.push(userId);
+
+    await record.save();
+
+    return record;
+}
 
 async function deleteById(id, userId) {
     const record = await TechStore.findById(id);
@@ -81,5 +93,6 @@ module.exports = {
     getById,
     update,
     deleteById,
-    create
+    create,
+    addToPreferredList
 };

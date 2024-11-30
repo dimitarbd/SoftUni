@@ -9,9 +9,19 @@ async function getById(id) {
 }
 
 async function create(data, authorId) {
-    //TODO extract properties from view model
     const record = new TechStore({
-        prop: data.prop,
+        brand: data.brand,
+        model: data.model,
+        hardDisk: data.hardDisk,
+        screenSize: data.screenSize,
+        ram: data.ram,
+        operatingSystem: data.operatingSystem,
+        cpu: data.cpu,
+        gpu: data.gpu,
+        price: data.price,
+        color: data.color,
+        weight: data.weight,
+        image: data.image,
         author: authorId
     });
 
@@ -31,13 +41,26 @@ async function update(id, data, userId) {
         throw new Error('Access denied');
     }
 
-    //TODO replace with real properties
-    record.prop = data.prop;
+        record.brand = data.brand,
+        record.model = data.model,
+        record.hardDisk = data.hardDisk,
+        record.screenSize = data.screenSize,
+        record.ram = data.ram,
+        record.operatingSystem = data.operatingSystem,
+        record.cpu = data.cpu,
+        record.gpu = data.gpu,
+        record.price = data.price,
+        record.color = data.color,
+        record.weight = data.weight,
+        record.image = data.image,
+        record.author = authorId
 
     await record.save();
 
     return record;
 }
+
+//TODO add prefered list
 
 async function deleteById(id, userId) {
     const record = await TechStore.findById(id);

@@ -1,7 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
 
-//TODO replace with data model from exam description
-
 const techStoreSchema = new Schema({
     brand: {
         type: String,
@@ -15,45 +13,46 @@ const techStoreSchema = new Schema({
         type: String,
         required: true,
     },
-    brand: {
+    screenSize: {
         type: String,
         required: true,
     },
-    brand: {
+    ram: {
         type: String,
         required: true,
     },
-    brand: {
+    operatingSystem: {
         type: String,
         required: true,
     },
-    brand: {
+    cpu: {
         type: String,
         required: true,
     },
-    brand: {
+    gpu: {
         type: String,
         required: true,
     },
-    brand: {
+    price: {
+        type: Number,
+        required: true,
+    },
+    color: {
         type: String,
         required: true,
     },
-    brand: {
+    weight: {
         type: String,
         required: true,
     },
-    brand: {
+    image: {
         type: String,
         required: true,
     },
-    brand: {
-        type: String,
+    preferredList: {
+        type: [Types.ObjectId],
         required: true,
-    },
-    brand: {
-        type: String,
-        required: true,
+        default: []
     },
     author: {
         type: Types.ObjectId,

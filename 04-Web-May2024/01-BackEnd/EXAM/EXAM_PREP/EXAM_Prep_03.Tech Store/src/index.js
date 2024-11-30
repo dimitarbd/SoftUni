@@ -19,6 +19,17 @@ async function start() {
 
     app.listen(3000, () => {
         console.log('Server started http://localhost:3000');
+        test();
     });
 }
 
+async function test() {
+    try {
+        const result = await register('john@abv.bg', 'Pesho', '123');
+        const token = createToken(result);
+        console.log(token);
+    } catch (err) {
+        console.log('Caugth error!');
+        console.error(err.message);        
+    }
+}

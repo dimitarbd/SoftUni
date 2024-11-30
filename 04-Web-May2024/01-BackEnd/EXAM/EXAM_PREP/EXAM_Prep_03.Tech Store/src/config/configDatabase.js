@@ -3,8 +3,7 @@ require('../models/User');
 require('../models/Data'); //TODO import real data models
 
 async function configDatabase() {
-    //TODO set database name
-    const connectionString = 'mongodb://localhost:27017/exam-db';
+    const connectionString = 'mongodb://localhost:27017/tech-store';
 
     await mongoose.connect(connectionString);
 

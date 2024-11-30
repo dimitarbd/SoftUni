@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 require('../models/User');
-require('../models/Data'); //TODO import real data models
+require('../models/TechStore');
 
 async function configDatabase() {
     const connectionString = 'mongodb://localhost:27017/tech-store';

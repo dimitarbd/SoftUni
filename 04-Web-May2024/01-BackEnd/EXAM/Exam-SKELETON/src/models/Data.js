@@ -6,7 +6,6 @@ const dataSchema = new Schema({
     prop: {
         type: String,
         required: true,
-        
     },
     author: {
         type: Types.ObjectId,

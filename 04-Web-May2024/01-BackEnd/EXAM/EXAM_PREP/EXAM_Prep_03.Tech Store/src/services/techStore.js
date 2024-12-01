@@ -59,7 +59,6 @@ async function update(id, data, userId) {
     return record;
 }
 
-//TODO add preferred list
 async function addToPreferredList(dataId, userId) {
     const record = await TechStore.findById(dataId);
     

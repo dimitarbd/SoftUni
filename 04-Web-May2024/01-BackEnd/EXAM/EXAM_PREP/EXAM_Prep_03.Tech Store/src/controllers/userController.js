@@ -14,21 +14,21 @@ userRouter.get('/login', isGuest(), (req, res) => {
 });
 
 userRouter.post('/login', isGuest(),
-    body('eamil').trim(),
+    body('email').trim(),
     body('password').trim(),
     async (req, res) => {
         const { email, password } = req.body;
 
-       try {
-            const result = await login( email, password);
-        const token = createToken(result);
-        res.cookie('token', token);
+        try {
+            const result = await login(email, password);
+            const token = createToken(result);
+            res.cookie('token', token);
 
-        res.redirect('/');
-    } catch (err) {
-        res.render('login', { data: { email}, errors: parseError(err).errors })
+            res.redirect('/');
+        } catch (err) {
+            res.render('login', { data: { email }, errors: parseError(err).errors })
+        }
     }
-}
 );
 
 userRouter.get('/logout', (req, res) => {
@@ -39,5 +39,31 @@ userRouter.get('/logout', (req, res) => {
 userRouter.get('/register', isGuest(), (req, res) => {
     res.render('register');
 })
+
+userRouter.post('/register', isGuest(),
+    body('name').trim().isLength({ min: 2, max: 20 }),
+    body('email').trim().isLength({ min: 10 }).isEmail(),
+    body('password').trim().isLength({ min: 4 }),
+    body('repass').trim().custom((value, { req }) => value == req.body.password).withMessage('Passwords don\'t match'),
+    async (req, res) => {
+        const { email, password } = req.body;
+
+        try {
+            const validation = validationResult(req);
+
+            if ( validation.errors.length) {
+                throw validation.errors;
+                
+            }
+            // const result = await login(email, password);
+            // const token = createToken(result);
+            // res.cookie('token', token);
+
+            // res.redirect('/');
+        } catch (err) {
+            res.render('register', { data: { email, name }, errors: parseError(err).errors })
+        }
+    }
+);
 
 module.exports = { userRouter }

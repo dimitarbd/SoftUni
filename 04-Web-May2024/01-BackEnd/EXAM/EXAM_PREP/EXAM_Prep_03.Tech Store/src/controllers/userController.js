@@ -1,4 +1,5 @@
 const { Router } = require('express');
+
 const { createToken } = require('../services/jwt');
 const { login } = require('../services/user');
 const { isGuest } = require('../middlewares/guards');
@@ -13,3 +14,9 @@ const { isGuest } = require('../middlewares/guards');
     userRouter.get('/login', isGuest(), (req, res) => {
         res.render('login');
     })
+
+    userRouter.get('/register', isGuest(), (req, res) => {
+        res.render('register');
+    })
+
+    module.exports = { userRouter }

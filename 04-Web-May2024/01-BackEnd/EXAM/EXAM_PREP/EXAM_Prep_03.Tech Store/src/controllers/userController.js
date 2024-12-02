@@ -2,7 +2,7 @@ const { Router } = require('express');
 const { body, validationResult } = require('express-validator');
 
 const { createToken } = require('../services/jwt');
-const { login } = require('../services/user');
+const { login, register } = require('../services/user');
 const { isGuest } = require('../middlewares/guards');
 const { parseError } = require('../util');
 
@@ -46,20 +46,20 @@ userRouter.post('/register', isGuest(),
     body('password').trim().isLength({ min: 4 }),
     body('repass').trim().custom((value, { req }) => value == req.body.password).withMessage('Passwords don\'t match'),
     async (req, res) => {
-        const { email, password } = req.body;
+        const { email, name, password } = req.body;
 
         try {
             const validation = validationResult(req);
 
-            if ( validation.errors.length) {
+            if (validation.errors.length) {
                 throw validation.errors;
-                
-            }
-            // const result = await login(email, password);
-            // const token = createToken(result);
-            // res.cookie('token', token);
 
-            // res.redirect('/');
+            }
+            const result = await register(email, name, password);
+            const token = createToken(result);
+            res.cookie('token', token);
+
+            res.redirect('/');
         } catch (err) {
             res.render('register', { data: { email, name }, errors: parseError(err).errors })
         }

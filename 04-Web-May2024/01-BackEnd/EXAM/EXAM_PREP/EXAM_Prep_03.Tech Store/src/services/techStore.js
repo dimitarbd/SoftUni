@@ -4,6 +4,10 @@ async function getAll() {
     return TechStore.find().lean();
 }
 
+async function getByAuthorId(authorId) {
+    return TechStore.find({ author:authorId }).lean();
+}
+
 async function getById(id) {
     return TechStore.findById(id).lean();
 }
@@ -93,5 +97,6 @@ module.exports = {
     update,
     deleteById,
     create,
-    addToPreferredList
+    addToPreferredList,
+    getByAuthorId
 };

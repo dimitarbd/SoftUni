@@ -10,51 +10,51 @@
             <form method="post">
                 <div class="form-group">
                     <label for="brand">Brand:</label>
-                    <input type="text" id="brand" name="brand">
+                    <input type="text" id="brand" name="brand" {{#if data.email}} value="{{data.email}}"{{/if}}>
                 </div>
                 <div class="form-group">
                     <label for="model">Model:</label>
-                    <input type="text" id="model" name="model">
+                    <input type="text" id="model" name="model" {{#if data.model}} value="{{data.model}}"{{/if}}>
                 </div>
                 <div class="form-group">
                     <label for="hard-disk">Hard Disk:</label>
-                    <input type="text" id="hard-disk" name="hardDisk">
+                    <input type="text" id="hard-disk" name="hardDisk" {{#if data.hardDisk}} value="{{data.hardDisk}}"{{/if}}>
                 </div>
                 <div class="form-group">
                     <label for="screen-size">Screen Size:</label>
-                    <input type="text" id="screen-size" name="screenSize">
+                    <input type="text" id="screen-size" name="screenSize" {{#if data.screenSize}} value="{{data.screenSize}}"{{/if}}>
                 </div>
                 <div class="form-group">
                     <label for="ram">RAM:</label>
-                    <input type="text" id="ram" name="ram">
+                    <input type="text" id="ram" name="ram" {{#if data.ram}} value="{{data.ram}}"{{/if}}>
                 </div>
                 <div class="form-group">
                     <label for="operating-system">Operating System:</label>
-                    <input type="text" id="operating-system" name="operatingSystem">
+                    <input type="text" id="operating-system" name="operatingSystem" {{#if data.operatingSystem}} value="{{data.operatingSystem}}"{{/if}}>
                 </div>
                 <div class="form-group">
                     <label for="cpu">CPU:</label>
-                    <input type="text" id="cpu" name="cpu">
+                    <input type="text" id="cpu" name="cpu" {{#if data.cpu}} value="{{data.cpu}}"{{/if}}>
                 </div>
                 <div class="form-group">
                     <label for="gpu">GPU:</label>
-                    <input type="text" id="gpu" name="gpu">
+                    <input type="text" id="gpu" name="gpu" {{#if data.gpu}} value="{{data.gpu}}"{{/if}}>
                 </div>
                 <div class="form-group">
                     <label for="price">Price:</label>
-                    <input type="text" id="price" name="price">
+                    <input type="text" id="price" name="price" {{#if data.price}} value="{{data.price}}"{{/if}}>
                 </div>
                 <div class="form-group">
                     <label for="gpu">Color:</label>
-                    <input type="text" id="color" name="color">
+                    <input type="text" id="color" name="color" {{#if data.color}} value="{{data.color}}"{{/if}}>
                 </div>
                 <div class="form-group">
                     <label for="gpu">Weight:</label>
-                    <input type="text" id="weight" name="weight">
+                    <input type="text" id="weight" name="weight" {{#if data.weight}} value="{{data.weight}}"{{/if}}>
                 </div>
                 <div class="form-group">
                     <label for="image">Image:</label>
-                    <input type="text" id="image" name="image">
+                    <input type="text" id="image" name="image" {{#if data.image}} value="{{data.image}}"{{/if}}>
                 </div>
                 <button type="submit" class="btn">Create Product</button>
             </form>

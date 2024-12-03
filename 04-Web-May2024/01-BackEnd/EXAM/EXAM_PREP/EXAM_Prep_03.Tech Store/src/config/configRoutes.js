@@ -1,5 +1,3 @@
-//TODO import routers
-
 const { catalogRouter } = require('../controllers/catalog');
 const { homeRouter } = require('../controllers/home');
 const { productRouter } = require('../controllers/product');

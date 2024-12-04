@@ -1,4 +1,5 @@
 const { Router } = require('express');
+
 const { getAll, getById } = require('../services/techStore');
 
 const catalogRouter = Router();
@@ -10,7 +11,7 @@ catalogRouter.get('/catalog', async (req, res) => {
 })
 
 catalogRouter.get('/catalog/:id', async (req, res) => {
-    const id =  req.params.id;
+    const id = req.params.id;
 
     const product = await getById(id);
 
@@ -20,7 +21,7 @@ catalogRouter.get('/catalog/:id', async (req, res) => {
     }
 
     product.hasUser = res.locals.hasUser;
-    product.isAuthor = req.user?.id == product.author.toString();
+    product.isAuthor = Boolean(req.user?._id == product.author.toString());
     product.hasPreffered = Boolean(product.preferredList.find(v => v.toString() == req.user?._id));
 
 

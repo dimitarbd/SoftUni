@@ -35,10 +35,10 @@
 
             {{else}}
 
-            {{#if hasVoted}}
+            {{#if hasPreffered}}
             <p class="prefer-message">You've already preferred this device</p>
             {{else}}
-            <button class="btn prefer"><a href="">Prefer</a></button>
+            <button class="btn prefer"><a href="/prefer/{{_id}}">Prefer</a></button>
             {{/if}}
             
             {{/if}}

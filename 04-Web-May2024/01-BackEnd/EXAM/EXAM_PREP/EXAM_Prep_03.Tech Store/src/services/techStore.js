@@ -4,6 +4,10 @@ async function getAll() {
     return TechStore.find().lean();
 }
 
+async function getRecent() {
+    return Stone.find().sort({ $natural: -1 }).limit(3).lean();
+}
+
 async function getByAuthorId(authorId) {
     return TechStore.find({ author:authorId }).lean();
 }
@@ -98,5 +102,6 @@ module.exports = {
     deleteById,
     create,
     addToPreferredList,
-    getByAuthorId
+    getByAuthorId, 
+    getRecent
 };

@@ -5,6 +5,7 @@ const homeRouter = Router();
 
 homeRouter.get('/', async (req, res) => {
     const products = await getRecent();
+    
     res.render('home', { products });
 });
 

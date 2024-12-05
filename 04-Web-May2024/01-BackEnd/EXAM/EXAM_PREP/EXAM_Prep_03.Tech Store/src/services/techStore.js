@@ -5,7 +5,7 @@ async function getAll() {
 }
 
 async function getRecent() {
-    return Stone.find().sort({ $natural: -1 }).limit(3).lean();
+    return TechStore.find().sort({ $natural: -1 }).limit(3).lean();
 }
 
 async function getByAuthorId(authorId) {

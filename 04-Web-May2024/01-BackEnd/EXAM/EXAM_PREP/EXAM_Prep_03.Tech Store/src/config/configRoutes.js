@@ -8,6 +8,7 @@ function configRoutes(app) {
     app.use(catalogRouter);
     app.use(userRouter);
     app.use(productRouter);
+    app.use();
 
     app.get('*', (req, res) => {
         res.render('404');

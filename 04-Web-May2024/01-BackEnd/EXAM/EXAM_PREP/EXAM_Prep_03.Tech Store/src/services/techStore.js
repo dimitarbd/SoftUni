@@ -1,4 +1,5 @@
 const { TechStore } = require('../models/TechStore');
+const { User } = require('../models/User');
 
 async function getAll() {
     return TechStore.find().lean();
@@ -17,11 +18,18 @@ async function getMyPreferred(userId) {
 }
 
 async function getMyCreatedDevices(userId) {
-    return TechStore.find({ owner: userId }).lean();
+    return TechStore.find({ author: userId }).lean();
 }
 
 async function getById(id) {
     return TechStore.findById(id).lean();
+}
+
+async function getUserName(identity) {
+    const user = await User.findOne({ 'email': identity });
+    const name = user.name;
+    
+    return name;
 }
 
 async function create(data, authorId) {
@@ -113,5 +121,6 @@ module.exports = {
     getByAuthorId, 
     getRecent,
     getMyPreferred,
-    getMyCreatedDevices
+    getMyCreatedDevices,
+    getUserName
 };

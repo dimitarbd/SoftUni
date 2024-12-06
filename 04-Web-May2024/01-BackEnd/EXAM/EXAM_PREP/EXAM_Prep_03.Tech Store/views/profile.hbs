@@ -9,9 +9,9 @@
         <div class="container">
             <h3>Created Laptops</h3>
             <div class="laptop-list">
-                {{#if laptops}}
+                {{#if created}}
 
-                {{#each laptops}}
+                {{#each created}}
                 {{> laptop}}
                 {{/each}}
                 
@@ -25,9 +25,9 @@
     <section class="preferred-laptops">
         <div class="container">
             <h3>Preferred Laptops</h3>
-            {{#if laptops}}
+            {{#if prefered}}
 
-                {{#each laptops}}
+                {{#each prefered}}
                 {{> laptop}}
                 {{/each}}
                 

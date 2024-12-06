@@ -12,6 +12,14 @@ async function getByAuthorId(authorId) {
     return TechStore.find({ author:authorId }).lean();
 }
 
+async function getMyPreferred(userId) {
+    return TechStore.find({ preferredList: userId }).lean();
+}
+
+async function getMyCreatedDevices(userId) {
+    return TechStore.find({ owner: userId }).lean();
+}
+
 async function getById(id) {
     return TechStore.findById(id).lean();
 }
@@ -30,7 +38,7 @@ async function create(data, authorId) {
         color: data.color,
         weight: data.weight,
         image: data.image,
-        author: authorId
+        author: authorId,
     });
 
     await record.save();
@@ -103,5 +111,7 @@ module.exports = {
     create,
     addToPreferredList,
     getByAuthorId, 
-    getRecent
+    getRecent,
+    getMyPreferred,
+    getMyCreatedDevices
 };

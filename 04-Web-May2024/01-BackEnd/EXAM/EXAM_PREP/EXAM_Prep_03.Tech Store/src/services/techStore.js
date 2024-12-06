@@ -25,12 +25,12 @@ async function getById(id) {
     return TechStore.findById(id).lean();
 }
 
-async function getUserName(identity) {
-    const user = await User.findOne({ 'email': identity });
-    const name = user.name;
+// async function getUserName(identity) {
+//     const user = await User.findOne({ 'email': identity });
+//     const name = user.name;
     
-    return name;
-}
+//     return name;
+// }
 
 async function create(data, authorId) {
     const record = new TechStore({
@@ -122,5 +122,5 @@ module.exports = {
     getRecent,
     getMyPreferred,
     getMyCreatedDevices,
-    getUserName
+    // getUserName
 };

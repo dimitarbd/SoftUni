@@ -86,5 +86,6 @@ module.exports = {
     getById,
     update,
     deleteById,
-    create
+    create,
+    addToBuyingList
 };

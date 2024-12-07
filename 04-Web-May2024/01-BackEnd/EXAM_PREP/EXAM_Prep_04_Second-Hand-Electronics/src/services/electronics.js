@@ -11,9 +11,15 @@ async function getById(id) {
 }
 
 async function create(data, authorId) {
-    //TODO extract properties from view model
     const record = new Electronics({
-        prop: data.prop,
+        name: data.name,
+        type: data.type,
+        damages: data.damages,
+        image: data.image,
+        description: data.description,
+        production: data.production,
+        exploitation: data.exploitation,
+        price: data.price,
         author: authorId
     });
 
@@ -33,8 +39,14 @@ async function update(id, data, userId) {
         throw new Error('Access denied');
     }
 
-    //TODO replace with real properties
-    record.prop = data.prop;
+    record.name = data.name;
+    record.type = data.type;
+    record.damages = data.damages;
+    record.image = data.image;
+    record.description = data.description;
+    record.production = data.production;
+    record.exploitation = data.exploitation;
+    record.price = data.price;
 
     await record.save();
 

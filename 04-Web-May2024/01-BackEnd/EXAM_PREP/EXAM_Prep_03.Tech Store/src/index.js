@@ -41,24 +41,24 @@ async function test() {
         // console.log(token);
 
         // CREATE RECORD
-        const result = await api.create({
-            brand: 'ASUS',
-            model: 'X515 A516KA',
-            hardDisk: '512GB SSD',
-            screenSize: '15.6 inches',
-            ram: '16GB',
-            operatingSystem: 'Windows 10',
-            cpu: 'Intel® Celeron® N4500',
-            gpu: 'Intel® UHD Graphics',
-            price: 479,
-            color: 'Gray',
-            weight: '2.3kg',
-            image: 'https://s13emagst.akamaized.net/products/64569/64568941/images/res_ac4397f66b6bf611b6fc061c57ca43c4.jpg?width=720&height=720&hash=598B793C3197B9217276CB79C2937E80',
-        }, '674b4fc4a4cf9f4319bb53b7');
-        console.log(result);
+        // const result = await api.create({
+        //     brand: 'ASUS',
+        //     model: 'X515 A516KA',
+        //     hardDisk: '512GB SSD',
+        //     screenSize: '15.6 inches',
+        //     ram: '16GB',
+        //     operatingSystem: 'Windows 10',
+        //     cpu: 'Intel® Celeron® N4500',
+        //     gpu: 'Intel® UHD Graphics',
+        //     price: 479,
+        //     color: 'Gray',
+        //     weight: '2.3kg',
+        //     image: 'https://s13emagst.akamaized.net/products/64569/64568941/images/res_ac4397f66b6bf611b6fc061c57ca43c4.jpg?width=720&height=720&hash=598B793C3197B9217276CB79C2937E80',
+        // }, '674b4fc4a4cf9f4319bb53b7');
+        // console.log(result);
 
-        const data = await api.getById('674b72597f13d36d07b9dc5e');
-        console.log(data);
+        // const data = await api.getById('674b72597f13d36d07b9dc5e');
+        // console.log(data);
 
         // EDIT RECORD
         // const dataId = '674b8197e3278f49bd3ddce0';

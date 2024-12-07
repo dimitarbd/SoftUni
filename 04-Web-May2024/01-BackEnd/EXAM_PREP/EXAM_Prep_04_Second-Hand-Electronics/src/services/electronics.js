@@ -53,6 +53,20 @@ async function update(id, data, userId) {
     return record;
 }
 
+async function addToBuyingList(dataId, userId) {
+    const record = await Electronics.findById(dataId);
+    
+    if (!record) {
+        throw new ReferenceError('Product not found ' + dataId);
+    }
+
+    record.buyingList.push(userId);
+
+    await record.save();
+
+    return record;
+}
+
 async function deleteById(id, userId) {
     const record = await Electronics.findById(id);
 

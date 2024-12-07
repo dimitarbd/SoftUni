@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 require('../models/User');
-require('../models/Data'); //TODO import real data models
+require('../models/Electronics'); //TODO import real data models
 
 async function configDatabase() {
     //TODO set database name
-    const connectionString = 'mongodb://localhost:27017/exam-db';
+    const connectionString = 'mongodb://localhost:27017/second-hand-el';
 
     await mongoose.connect(connectionString);
 

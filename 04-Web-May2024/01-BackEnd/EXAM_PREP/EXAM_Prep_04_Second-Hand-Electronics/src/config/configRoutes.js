@@ -10,6 +10,9 @@ function configRoutes(app) {
     app.use(catalogRouter);
 
     //TODO register routers
+    app.get('*', (req, res) => {
+        res.render('404');
+    });
 }
 
 module.exports = { configRoutes };

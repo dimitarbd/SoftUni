@@ -5,7 +5,6 @@ async function getAll() {
     return Volcano.find().lean();
 } 
 
-//TODO add search method
 async function searchVolcanoes(name, typeVolcano) {
     const query = {};
 

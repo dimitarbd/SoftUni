@@ -7,6 +7,9 @@ const { configRoutes } = require('./config/configRoutes');
 const { register, login } = require('./services/user');
 const { createToken, verifyToken } = require('./services/jwt');
 
+const api = require('./services/electronics');
+
+
 start();
 
 async function start() {
@@ -40,37 +43,38 @@ async function start() {
 
             // Create Record
             // const result = await api.create({
-            //     name: 'Mount Etna',
-            //     location: 'Sicily Italy',
-            //     elevation: 250,
-            //     lastErruption: 2021,
-            //     image: 'http://localhost:3000/static/images/etna.jpg',
-            //     typeVolcano: 'Stratovolcanoes',
-            //     description: 'Mount Etna lorem ipsum dolor sit amet=',
-            // }, '667689c96d2ac4e489d6bdab');
+            //     name: 'HP EliteBook 820 G4',
+            //     type: 'Laptop',
+            //     damages: 'The product has minimal signs of use, not affecting its functionality.',
+            //     image: '/image/laptop.webp',
+            //     description: 'Intel Core i5-7200U (3M, 2.50 GHz, up to 3.10 GHz), 8GB DDR4, 256GB SSD, Intel HD Graphics 620, 12.5 inches (31.75 cm), 1366x768 HD',
+            //     production: 2008,
+            //     exploitation: 12,
+            //     price: 153,
+            // }, '675478f5fc98b950ebef5ad3');
 
             // const data = await api.getAll();
             // console.log(data);
 
             // Edit Record
-            // const dataId = '6676c3fe0e93e8902d8595a5';
+            // const dataId = '67548f0dd4d69619a14d26a9';
             // const formData = {
-            //     name: 'Hunga Tonga',
-            //     location: 'Tonga Islands',
-            //     elevation: 114,
-            //     lastErruption: 2027,
-            //     image: 'http://localhost:3000/static/images/hunga-tonga.jpg',
-            //     typeVolcano: 'Submarine',
-            //     description: 'Hunga Tonga-Hunga is a submarine volcano in the South Pacific located about 30 km south of the submarine volcano of Fonuafo\'ou and 65 km north of Tongatapu, Tonga\'s main island. It is part of the highly active Kermadec-Tonga subduction zone and its associated volcanic arc, which extends from New Zealand north-northeast to Fiji, and is formed by the subduction of the Pacific Plate under the Indo-Australian Plate. It lies about 100 km above a very active seismic zone.',
-
+            //     name: 'HP EliteBook 820 G4',
+            //     type: 'Laptop',
+            //     damages: 'The product has minimal signs of use, not affecting its functionality.',
+            //     image: '/static/image/laptop.webp',
+            //     description: 'Intel Core i5-7200U (3M, 2.50 GHz, up to 3.10 GHz), 8GB DDR4, 256GB SSD, Intel HD Graphics 620, 12.5 inches (31.75 cm), 1366x768 HD',
+            //     production: 2008,
+            //     exploitation: 12,
+            //     price: 250,
             // };
-            // const userId = '667689c96d2ac4e489d6bda';
+            // const userId = '675478f5fc98b950ebef5ad3';
 
             // const result = await api.update(dataId, formData, userId);
 
             //Delete Record
-            // const userId = '667689c96d2ac4e489d6bdab';
-            // const dataId = '6676c3fe0e93e8902d8595a5';
+            // const userId = '675478f5fc98b950ebef5ad3';
+            // const dataId = '67548d12e9d81e515b1f16e3';
 
             // await api.deleteById(dataId, userId);
 

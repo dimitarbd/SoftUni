@@ -20,7 +20,7 @@ async function create(data, authorId) {
         production: data.production,
         exploitation: data.exploitation,
         price: data.price,
-        author: authorId
+        owner: authorId
     });
 
     await record.save();
@@ -35,7 +35,7 @@ async function update(id, data, userId) {
         throw new ReferenceError('Record not found ' + id);
     }
 
-    if (record.author.toString() != userId) {
+    if (record.owner.toString() != userId) {
         throw new Error('Access denied');
     }
 
@@ -60,7 +60,7 @@ async function deleteById(id, userId) {
         throw new ReferenceError('Record not found ' + id);
     }
 
-    if (record.author.toString() != userId) {
+    if (record.owner.toString() != userId) {
         throw new Error('Access denied');
     }
 

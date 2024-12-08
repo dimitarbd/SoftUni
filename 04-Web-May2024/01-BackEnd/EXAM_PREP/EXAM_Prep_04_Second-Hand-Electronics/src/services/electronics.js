@@ -10,6 +10,14 @@ async function getById(id) {
     return Electronics.findById(id).lean();
 }
 
+async function getByAuthorId(authorId) {
+    return Electronics.find({ owner:authorId }).lean();
+}
+
+async function getMyShoppingList(userId) {
+    return Electronics.find({ buyingList: userId }).lean();
+}
+
 async function create(data, authorId) {
     const record = new Electronics({
         name: data.name,
@@ -53,7 +61,7 @@ async function update(id, data, userId) {
     return record;
 }
 
-async function addToBuyingList(dataId, userId) {
+async function addToShoppingList(dataId, userId) {
     const record = await Electronics.findById(dataId);
     
     if (!record) {
@@ -87,5 +95,7 @@ module.exports = {
     update,
     deleteById,
     create,
-    addToBuyingList
+    addToShoppingList,
+    getByAuthorId,
+    getMyShoppingList
 };

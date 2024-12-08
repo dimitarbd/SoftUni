@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const { body, validationResult } = require('express-validator');
 
-const { getById, create, update, deleteById, addToBuyingList } = require('../services/electronics');
+const { getById, create, update, deleteById, addToBuyingList, addToShoppingList } = require('../services/electronics');
 const { isUser } = require('../middlewares/guards');
 const { parseError } = require('../util');
 
@@ -18,9 +18,9 @@ productRouter.post('/create', isUser(),
     body('damages').trim().isLength({ min: 10 }),
     body('image').trim().isURL({ require_tld: false, require_protocol: true }),
     body('description').trim().isLength({ min: 10, max: 200 }),
-    body('production').trim().isLength({ min: 1900, max: 2023 }),
-    body('exploitation').trim().isNumeric({ min: 0 }),
-    body('price').trim().isNumeric({ min: 0 }),
+    body('production').trim().isInt({ min: 1900, max: 2023 }),
+    body('exploitation').trim().isInt({ min: 0 }),
+    body('price').trim().isInt({ min: 0 }),
 
 
     async (req, res) => {
@@ -63,9 +63,9 @@ productRouter.post('/edit/:productId', isUser(),
     body('damages').trim().isLength({ min: 10 }),
     body('image').trim().isURL({ require_tld: false, require_protocol: true }),
     body('description').trim().isLength({ min: 10, max: 200 }),
-    body('production').trim().isLength({ min: 1900, max: 2023 }),
-    body('exploitation').trim().isNumeric({ min: 0 }),
-    body('price').trim().isNumeric({ min: 0 }),
+    body('production').trim().isInt({ min: 1900, max: 2023 }),
+    body('exploitation').trim().isInt({ min: 0 }),
+    body('price').trim().isInt({ min: 0 }),
     async (req, res) => {
         const productId = req.params.productId;
         const userId = req.user._id;
@@ -104,7 +104,7 @@ productRouter.get('/buy/:productId', isUser(), async (req, res) => {
     const userId = req.user._id;
 
     try {
-        const result = await addToPreferredList(productId, userId)
+        const result = await addToShoppingList(productId, userId)
 
         res.redirect('/catalog/' + productId);
     } catch (err) {

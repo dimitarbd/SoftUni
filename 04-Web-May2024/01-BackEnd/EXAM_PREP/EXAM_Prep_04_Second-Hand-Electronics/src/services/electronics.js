@@ -4,14 +4,14 @@ const { Electronics } = require('../models/Electronics');
 
 async function getAll() {
     return Electronics.find().lean();
-} 
+}
 
 async function getById(id) {
     return Electronics.findById(id).lean();
 }
 
 async function getByAuthorId(authorId) {
-    return Electronics.find({ owner:authorId }).lean();
+    return Electronics.find({ owner: authorId }).lean();
 }
 
 async function getMyShoppingList(userId) {
@@ -63,7 +63,7 @@ async function update(id, data, userId) {
 
 async function addToShoppingList(dataId, userId) {
     const record = await Electronics.findById(dataId);
-    
+
     if (!record) {
         throw new ReferenceError('Product not found ' + dataId);
     }
@@ -89,6 +89,22 @@ async function deleteById(id, userId) {
     await Electronics.findByIdAndDelete(id);
 }
 
+async function searchProducts(nameProduct, typeProduct) {
+    const query = {};
+
+    if (nameProduct) {
+        query.name = new RegExp(name, 'i');
+        return Electronics.find(query).lean();
+    }
+
+    if (!nameProduct && typeProduct) {
+        query.typeProduct = typeProduct;
+        return Electronics.find(query).lean();
+    }
+
+
+}
+
 module.exports = {
     getAll,
     getById,
@@ -97,5 +113,6 @@ module.exports = {
     create,
     addToShoppingList,
     getByAuthorId,
-    getMyShoppingList
+    getMyShoppingList,
+    searchProducts
 };

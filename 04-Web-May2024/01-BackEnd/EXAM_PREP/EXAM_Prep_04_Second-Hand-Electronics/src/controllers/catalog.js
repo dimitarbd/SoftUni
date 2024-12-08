@@ -1,6 +1,6 @@
 const { Router } = require('express');
 
-const { getAll, getById } = require('../services/electronics');
+const { getAll, getById, searchProducts } = require('../services/electronics');
 
 const catalogRouter = Router();
 
@@ -26,6 +26,14 @@ catalogRouter.get('/catalog/:id', async (req, res) => {
 
 
     res.render('details', { product });
-})
+});
+
+catalogRouter.get('/search', async (req, res) => {
+    const { nameProduct, typeProduct } = req.query;
+
+    const products = await searchProducts(nameProduct, typeProduct);
+
+    res.render('search', { data: { nameProduct, typeProduct}, products });
+});
 
 module.exports = { catalogRouter };

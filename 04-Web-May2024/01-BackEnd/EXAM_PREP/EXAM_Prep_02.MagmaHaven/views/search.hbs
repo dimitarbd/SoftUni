@@ -2,8 +2,7 @@
     <h1>Search</h1>
 
     <form class="search-form" method="get" name="search-form">
-        <input type="text" class="search-volcano" name="name" placeholder="Search by Name..." {{#if
-            data.name}}value="{{data.name}}" {{/if}}>
+        <input type="text" class="search-volcano" name="name" placeholder="Search by Name..." {{#if data.name}}value="{{data.name}}" {{/if}}>
         <select autocomplete="off" id="type" name="typeVolcano" {{#if data.typeVolcano}}value="{{data.typeVolcano}}"
             selected="{{data.typeVolcano}}" {{/if}}>
             {{#if data.typeVolcano}}

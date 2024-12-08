@@ -99,7 +99,7 @@ async function searchProducts(name, type) {
     if (type) {
         query.type = new RegExp(type, 'i');
     }
-    
+
     return Electronics.find(query).lean();
 
 }

@@ -89,19 +89,18 @@ async function deleteById(id, userId) {
     await Electronics.findByIdAndDelete(id);
 }
 
-async function searchProducts(nameProduct, typeProduct) {
+async function searchProducts(name, type) {
     const query = {};
 
-    if (nameProduct) {
+    if (name) {
         query.name = new RegExp(name, 'i');
-        return Electronics.find(query).lean();
     }
 
-    if (!nameProduct && typeProduct) {
-        query.typeProduct = typeProduct;
-        return Electronics.find(query).lean();
+    if (type) {
+        query.type = new RegExp(type, 'i');
     }
-
+    
+    return Electronics.find(query).lean();
 
 }
 

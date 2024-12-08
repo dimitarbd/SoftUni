@@ -29,11 +29,11 @@ catalogRouter.get('/catalog/:id', async (req, res) => {
 });
 
 catalogRouter.get('/search', async (req, res) => {
-    const { nameProduct, typeProduct } = req.query;
+    const { name, type } = req.query;
 
-    const products = await searchProducts(nameProduct, typeProduct);
+    const products = await searchProducts(name, type);
 
-    res.render('search', { data: { nameProduct, typeProduct}, products });
+    res.render('search', { data: { name, type}, products });
 });
 
 module.exports = { catalogRouter };

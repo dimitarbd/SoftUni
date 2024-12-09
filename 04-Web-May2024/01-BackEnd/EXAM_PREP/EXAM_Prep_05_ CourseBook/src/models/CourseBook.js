@@ -1,6 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
 
-//TODO replace with data model from exam description
 
 const courseSchema = new Schema({
     title: {
@@ -38,6 +37,6 @@ const courseSchema = new Schema({
     }
 });
 
-const Course = model('Course', courseSchema);
+const CourseBook = model('CourseBook', courseSchema);
 
-module.exports = { Course };
+module.exports = { CourseBook };

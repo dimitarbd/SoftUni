@@ -1,20 +1,16 @@
 const { Router } = require('express');
 const { createToken } = require('../services/jwt');
 const { login } = require('../services/user');
+const { getRecent } = require('../services/courseBook');
 
 // TODO replace with real router according to exam description
 
 const homeRouter = Router();
 
 homeRouter.get('/', async (req, res) => {
-    console.log(req.user);
-
-    //This code creates a token and saves it in a cookie
-    // const result = await login('John', '123456');
-    // const token = createToken(result);
-    // res.cookie('token', token);
-
-    res.render('home');
+    const courses = await getRecent();
+    
+    res.render('home', { courses });
 });
 
 module.exports = { homeRouter };

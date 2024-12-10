@@ -23,10 +23,14 @@ async function getById(id) {
 }
 
 async function create(data, authorId) {
-    //TODO extract properties from view model
     const record = new CourseBook({
-        prop: data.prop,
-        author: authorId
+        title: data.title,
+        type: data.type,
+        certificate: data.certificate,
+        image: data.image,
+        description: data.description,
+        price: data.price,
+        owner: authorId
     });
 
     await record.save();
@@ -41,12 +45,30 @@ async function update(id, data, userId) {
         throw new ReferenceError('Record not found ' + id);
     }
 
-    if (record.author.toString() != userId) {
+    if (record.owner.toString() != userId) {
         throw new Error('Access denied');
     }
 
-    //TODO replace with real properties
-    record.prop = data.prop;
+    record.title = data.title;
+    record.type = data.type;
+    record.certificate = data.certificate;
+    record.image = data.image;
+    record.description = data.description;
+    record.price = data.price;
+
+    await record.save();
+
+    return record;
+}
+
+async function addToSignUpList(dataId, userId) {
+    const record = await CourseBook.findById(dataId);
+    
+    if (!record) {
+        throw new ReferenceError('Record not found ' + dataId);
+    }
+
+    record.signUpList.push(userId);
 
     await record.save();
 
@@ -60,11 +82,11 @@ async function deleteById(id, userId) {
         throw new ReferenceError('Record not found ' + id);
     }
 
-    if (record.author.toString() != userId) {
+    if (record.owner.toString() != userId) {
         throw new Error('Access denied');
     }
 
-    await Data.findByIdAndDelete(id);
+    await CourseBook.findByIdAndDelete(id);
 }
 
 module.exports = {
@@ -75,5 +97,6 @@ module.exports = {
     create,
     getRecent,
     getByAuthorId,
-    getMySignUpList
+    getMySignUpList,
+    addToSignUpList
 };

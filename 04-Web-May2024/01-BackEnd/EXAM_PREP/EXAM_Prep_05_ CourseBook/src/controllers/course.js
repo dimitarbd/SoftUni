@@ -1,30 +1,25 @@
 const { Router } = require('express');
 const { body, validationResult } = require('express-validator');
 
-const { getById, create, update, deleteById, addToPreferredList } = require('../services/techStore');
+const { getById, create, update, deleteById, addToSignUpList } = require('../services/courseBook');
 const { isUser } = require('../middlewares/guards');
 const { parseError } = require('../util');
 
 
-const productRouter = Router();
+const courseRouter = Router();
 
-productRouter.get('/create', isUser(), (req, res) => {
+courseRouter.get('/create', isUser(), (req, res) => {
     res.render('create');
 });
 
-productRouter.post('/create', isUser(),
-    body('brand').trim().isLength({ min: 2}),
-    body('model').trim().isLength({ min: 5}),
-    body('hardDisk').trim().isLength({ min: 5}),
-    body('screenSize').trim().isLength({ min: 1}),
-    body('ram').trim().isLength({ min: 2}),
-    body('operatingSystem').trim().isLength({ min: 5, max: 20}),
-    body('cpu').trim().isLength({ min: 10, max: 50 }),
-    body('gpu').trim().isLength({ min: 10, max: 50}),
-    body('price').trim().isNumeric({ min: 0 }),
-    body('color').trim().isLength({ min: 2, max: 10}),
-    body('weight').trim().isLength({ min: 1}),
+courseRouter.post('/create', isUser(),
+    body('title').trim().isLength({ min: 5}),
+    body('type').trim().isLength({ min: 3}),
+    body('certificate').trim().isLength({ min: 2}),
     body('image').trim().isURL({ require_tld: false, require_protocol: true}),
+    body('description').trim().isLength({ min: 10}),
+    body('price').trim().isInt({ min: 0}),
+    
     async (req, res) => {
         const userId= req.user._id;
 
@@ -42,24 +37,24 @@ productRouter.post('/create', isUser(),
         }
     });
 
-    productRouter.get('/edit/:id', isUser(), async (req, res) => {
+    courseRouter.get('/edit/:id', isUser(), async (req, res) => {
         const id = req.params.id;
 
-        const product = await getById(id);
+        const course = await getById(id);
 
-        if (!product) {
+        if (!course) {
             res.status(404).render('404')
             return;
         }
 
-        if (product.author.toString() != req.user._id) {
+        if (course.owner.toString() != req.user._id) {
             res.redirect('/login');
         }
 
-        res.render('edit', { data: product });
+        res.render('edit', { data: course });
     });
     
-    productRouter.post('/edit/:productId', isUser(),
+    courseRouter.post('/edit/:productId', isUser(),
         body('brand').trim().isLength({ min: 2}),
         body('model').trim().isLength({ min: 5}),
         body('hardDisk').trim().isLength({ min: 5}),
@@ -73,7 +68,7 @@ productRouter.post('/create', isUser(),
         body('weight').trim().isLength({ min: 1}),
         body('image').trim().isURL({ require_tld: false, require_protocol: true}),
         async (req, res) => {
-            const productId = req.params.productId;
+            const courseId = req.params.productId;
             const userId= req.user._id;
     
             try {
@@ -82,15 +77,15 @@ productRouter.post('/create', isUser(),
                 if (validation.errors.length) {
                     throw validation.errors;
                 }
-                const result = await update(productId, req.body, userId)
+                const result = await update(courseId, req.body, userId)
     
-                res.redirect('/catalog/' + productId);
+                res.redirect('/catalog/' + courseId);
             } catch (err) {
                 res.render('edit', { data: req.body, errors: parseError(err).errors })
             }
         });
 
-        productRouter.get('/delete/:id', isUser(), async (req, res) => {
+        courseRouter.get('/delete/:id', isUser(), async (req, res) => {
             const id = req.params.id;
             
             try {
@@ -105,17 +100,17 @@ productRouter.post('/create', isUser(),
             res.redirect('/catalog/');
         });
 
-        productRouter.get('/prefer/:productId', isUser(), async (req, res) => {
-            const productId = req.params.productId;
+        courseRouter.get('/signup/:productId', isUser(), async (req, res) => {
+            const courseId = req.params.productId;
             const userId= req.user._id;
     
             try {
-                const result = await addToPreferredList(productId, userId)
+                const result = await addToSignUpList(courseId, userId)
     
-                res.redirect('/catalog/' + productId);
+                res.redirect('/catalog/' + courseId);
             } catch (err) {
                 res.render('/details', { errors: parseError(err).errors })
             }
         });
 
-module.exports = { productRouter }
+module.exports = { courseRouter }

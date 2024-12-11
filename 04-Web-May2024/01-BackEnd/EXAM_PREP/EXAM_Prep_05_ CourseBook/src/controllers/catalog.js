@@ -5,9 +5,9 @@ const { getAll, getById } = require('../services/courseBook');
 const catalogRouter = Router();
 
 catalogRouter.get('/catalog', async (req, res) => {
-    const courses = await getAll();
+    const articles = await getAll();
 
-    res.render('catalog', { courses });
+    res.render('catalog', { articles });
 })
 
 catalogRouter.get('/catalog/:id', async (req, res) => {
@@ -21,7 +21,7 @@ catalogRouter.get('/catalog/:id', async (req, res) => {
     }
 
     courses.hasUser = res.locals.hasUser;
-    courses.isAuthor = Boolean(req.user?._id == product.author.toString());
+    courses.isAuthor = Boolean(req.user?._id == courses.owner.toString());
     courses.hasSignUp = Boolean(courses.signUpList.find(v => v.toString() == req.user?._id));
 
 

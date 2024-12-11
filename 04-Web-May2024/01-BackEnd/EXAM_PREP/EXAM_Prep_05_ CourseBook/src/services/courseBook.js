@@ -1,4 +1,5 @@
 const { CourseBook } = require('../models/CourseBook');
+const { User } = require('../models/User');
 
 //TODO replace with real data service accordin to exam description
 
@@ -20,6 +21,10 @@ async function getMySignUpList(userId) {
 
 async function getById(id) {
     return CourseBook.findById(id).lean();
+}
+
+async function getUserById(id) {
+    return User.findById(id).lean();
 }
 
 async function create(data, authorId) {
@@ -98,5 +103,6 @@ module.exports = {
     getRecent,
     getByAuthorId,
     getMySignUpList,
-    addToSignUpList
+    addToSignUpList,
+    getOneDetailed
 };

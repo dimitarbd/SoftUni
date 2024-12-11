@@ -12,20 +12,21 @@ catalogRouter.get('/catalog', async (req, res) => {
 
 catalogRouter.get('/catalog/:id', async (req, res) => {
     const id = req.params.id;
+    const course = await getById(id);
 
-    const courses = await getById(id);
 
-    if (!courses) {
+
+    if (!course) {
         res.status(404).render('404')
         return;
     }
 
-    courses.hasUser = res.locals.hasUser;
-    courses.isAuthor = Boolean(req.user?._id == courses.owner.toString());
-    courses.hasSignUp = Boolean(courses.signUpList.find(v => v.toString() == req.user?._id));
+    course.hasUser = res.locals.hasUser;
+    course.isAuthor = Boolean(req.user?._id == course.owner.toString());
+    course.hasSignUp = Boolean(course.signUpList.find(v => v.toString() == req.user?._id));
 
 
-    res.render('details', { courses });
+    res.render('details', { course });
 })
 
 module.exports = { catalogRouter };

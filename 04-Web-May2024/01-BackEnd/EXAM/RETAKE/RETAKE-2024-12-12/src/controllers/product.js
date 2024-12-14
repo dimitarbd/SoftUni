@@ -13,13 +13,13 @@ productRouter.get('/create', isUser(), (req, res) => {
 });
 
 productRouter.post('/create', isUser(),
-    body('name').trim().isLength({ min: 2 }).withMessage('Name must be min 2 characterse long'),
-    body('skin').trim().isLength({ min: 10, max: 100 }),
-    body('description').trim().isLength({ min: 20, max: 200 }),
-    body('ingredients').trim().isLength({ min: 2, max: 50 }),
-    body('benefits').trim().isLength({ min: 10, max: 100 }),
-    body('price').trim().isInt({ min: 0 }),
-    body('image').trim().isURL({ require_tld: false, require_protocol: true }),
+    body('name').trim().isLength({ min: 2 }).withMessage('The Name should be at least 2 characters!'),
+    body('skin').trim().isLength({ min: 10, max: 100 }).withMessage('The Skin should be between 10 and 100 characters long!'),
+    body('description').trim().isLength({ min: 20, max: 200 }).withMessage('The Description should be between 20 and 200 characters long!'),
+    body('ingredients').trim().isLength({ min: 2, max: 50 }).withMessage('The Ingredients should be between 2 and 50 characters long!'),
+    body('benefits').trim().isLength({ min: 10, max: 100 }).withMessage('The Benefits should be between 10 and 100 characters long!'),
+    body('price').trim().isInt({ min: 0 }).withMessage('The Price should be a positive number!'),
+    body('image').trim().isURL({ require_tld: false, require_protocol: true }).withMessage('The Image should start with http:// or https:\//!'),
     async (req, res) => {
         const userId = req.user._id;
 

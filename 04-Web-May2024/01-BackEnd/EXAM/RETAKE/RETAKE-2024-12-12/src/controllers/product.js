@@ -13,7 +13,7 @@ productRouter.get('/create', isUser(), (req, res) => {
 });
 
 productRouter.post('/create', isUser(),
-    body('name').trim().isLength({ min: 2 }),
+    body('name').trim().isLength({ min: 2 }).withMessage('Name must be min 2 characterse long'),
     body('skin').trim().isLength({ min: 10, max: 100 }),
     body('description').trim().isLength({ min: 20, max: 200 }),
     body('ingredients').trim().isLength({ min: 2, max: 50 }),

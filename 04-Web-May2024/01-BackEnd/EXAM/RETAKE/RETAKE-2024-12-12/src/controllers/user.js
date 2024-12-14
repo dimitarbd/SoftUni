@@ -35,10 +35,10 @@ userRouter.get('/register', isGuest(), (req, res) => {
 });
 
 userRouter.post('/register', isGuest(),
-    body('email').trim().isLength({ min: 10 }).isEmail().withMessage('Email must be min 10 characters long'),
-    body('name').trim().isLength({ min: 2, max: 20 }).withMessage('Name must be between 2 and 10 characters long'),
-    body('password').trim().isLength({ min: 4 }).withMessage('Password must be min 4 characters long'),
-    body('repass').trim().custom((value, { req }) => value == req.body.password).withMessage('Passwords don\'t match'),
+    body('email').trim().isLength({ min: 10 }).isEmail().withMessage('Email must be min 10 characters long!'),
+    body('name').trim().isLength({ min: 2, max: 20 }).withMessage('Name must be between 2 and 10 characters long!'),
+    body('password').trim().isLength({ min: 4 }).withMessage('Password must be min 4 characters long!'),
+    body('repass').trim().custom((value, { req }) => value == req.body.password).withMessage('Passwords don\'t match!'),
     async (req, res) => {
         const { email, name, password } = req.body;
         try {

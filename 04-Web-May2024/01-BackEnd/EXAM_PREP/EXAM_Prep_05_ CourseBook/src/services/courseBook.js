@@ -23,10 +23,6 @@ async function getById(id) {
     return CourseBook.findById(id).lean();
 }
 
-async function getUserById(id) {
-    return User.findById(id).lean();
-}
-
 async function create(data, authorId) {
     const record = new CourseBook({
         title: data.title,
@@ -103,6 +99,5 @@ module.exports = {
     getRecent,
     getByAuthorId,
     getMySignUpList,
-    addToSignUpList,
-    getOneDetailed
+    addToSignUpList
 };

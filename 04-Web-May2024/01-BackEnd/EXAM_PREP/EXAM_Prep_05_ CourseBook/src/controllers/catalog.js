@@ -16,9 +16,6 @@ catalogRouter.get('/catalog', async (req, res) => {
 catalogRouter.get('/catalog/:id', async (req, res) => {
     const id = req.params.id;
     const course = await courseServices.getOneDetailed(id).lean();
-    // const ownerId = course.owner;
-
-    // const { email } = await User.findOne({ '_id': ownerId });
 
     if (!course) {
         res.status(404).render('404')

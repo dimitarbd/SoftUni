@@ -37,6 +37,14 @@ const courseSchema = new Schema({
     }
 });
 
+courseSchema.method('getSignUp', function () {
+    return this.signUpList.map(x => x._id);
+});
+
+courseSchema.method('getUsername', function () {
+    return this.signUpList.map(x => x.username);
+});
+
 const CourseBook = model('CourseBook', courseSchema);
 
 module.exports = { CourseBook };

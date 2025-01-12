@@ -62,7 +62,8 @@ async function update(id, data, userId) {
     return record;
 }
 
-async function addToSignUpList(dataId, userId) {
+async function 
+addToSignUpList(dataId, userId) {
     const record = await CourseBook.findById(dataId);
     
     if (!record) {

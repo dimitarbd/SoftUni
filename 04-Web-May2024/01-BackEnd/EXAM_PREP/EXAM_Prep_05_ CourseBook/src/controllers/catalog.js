@@ -16,6 +16,8 @@ catalogRouter.get('/catalog', async (req, res) => {
 catalogRouter.get('/catalog/:id', async (req, res) => {
     const id = req.params.id;
     const course = await courseServices.getOneDetailed(id).lean();
+    const courseNotLean = await courseServices.getOneDetailed(id);
+
     console.log(course);
     
     if (!course) {
@@ -26,8 +28,8 @@ catalogRouter.get('/catalog/:id', async (req, res) => {
     course.hasUser = res.locals.hasUser;
     course.isAuthor = req.user?._id == course.owner.toString();
     course.hasSignUp = Boolean(course.signUpList.find(v => v.toString() == req.user?._id));
-    course.sign = course.getSignUp();
-    course.signCount = course.getUsername();
+    course.sign = courseNotLean.getSignUp();
+    course.signCount = courseNotLean.getUsername().join(', ');
 
     res.render('details', { course });
 })

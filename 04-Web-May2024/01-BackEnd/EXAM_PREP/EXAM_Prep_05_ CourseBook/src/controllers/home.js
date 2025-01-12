@@ -13,4 +13,7 @@ homeRouter.get('/', async (req, res) => {
     res.render('home', { courses });
 });
 
+
+
+
 module.exports = { homeRouter };

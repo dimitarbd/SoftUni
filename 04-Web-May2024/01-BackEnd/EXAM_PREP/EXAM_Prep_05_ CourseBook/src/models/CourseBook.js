@@ -29,7 +29,8 @@ const courseSchema = new Schema({
     signUpList: {
         type: [Types.ObjectId],
         required: true,
-        default: []
+        default: [],
+        ref: 'User'
     },
     owner: {
         type: Types.ObjectId,

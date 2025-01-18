@@ -26,7 +26,7 @@ catalogRouter.get('/catalog/:id', async (req, res) => {
 
     course.hasUser = res.locals.hasUser;
     course.isAuthor = req.user?._id == course.owner.toString();
-    course.hasSignUp = Boolean(course.signUpList.find(v => v.toString() == req.user?._id));
+    course.hasSignUp = Boolean(course.signUpList.find(v => v._id== req.user?._id));
     course.sign = courseNotLean.getSignUp();
     course.signCount = courseNotLean.getUsername().join(', ');
 

@@ -4,7 +4,7 @@ const { login } = require('../services/user');
 const { getRecent, getMySignUpList, getMyCreatedCourse, getByAuthorId } = require('../services/courseBook');
 const { isUser } = require('../middlewares/guards');
 
-
+const courseServices = require('../services/courseServices');
 
 const homeRouter = Router();
 
@@ -15,17 +15,15 @@ homeRouter.get('/', async (req, res) => {
 });
 
 homeRouter.use('/profile', isUser(), async (req, res) => {
-    const userId = req.user._id;
-
-    console.log(userId);
+    const userId = req.user._id;    
 
     const signUp = await getMySignUpList(userId);
-    const created = await getByAuthorId(userId);
+    const created = await getByAuthorId(userId);   
+    const email = req.user.email;
 
-    console.log(created);
+    console.log(req.user);
     
-
-    res.render('profile', {signUp, created});
+    res.render('profile', {signUp, created, email});
 });
 
 

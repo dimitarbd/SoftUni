@@ -10,20 +10,18 @@ const homeRouter = Router();
 
 homeRouter.get('/', async (req, res) => {
     const courses = await getRecent();
-    
+
     res.render('home', { courses });
 });
 
 homeRouter.use('/profile', isUser(), async (req, res) => {
-    const userId = req.user._id;    
+    const userId = req.user._id;
 
     const signUp = await getMySignUpList(userId);
-    const created = await getByAuthorId(userId);   
+    const created = await getByAuthorId(userId);
     const email = req.user.email;
 
-    console.log(req.user);
-    
-    res.render('profile', {signUp, created, email});
+    res.render('profile', { signUp, created, email });
 });
 
 

@@ -104,5 +104,6 @@ module.exports = {
     getRecent,
     getByAuthorId,
     getMySignUpList,
-    addToSignUpList
+    addToSignUpList,
+    getMyCreatedCourse
 };

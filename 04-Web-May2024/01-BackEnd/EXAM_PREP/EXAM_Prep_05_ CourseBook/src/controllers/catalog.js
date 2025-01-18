@@ -18,7 +18,6 @@ catalogRouter.get('/catalog/:id', async (req, res) => {
     const course = await courseServices.getOneDetailed(id).lean();
     const courseNotLean = await courseServices.getOneDetailed(id);
 
-    console.log(course);
     
     if (!course) {
         res.status(404).render('404')

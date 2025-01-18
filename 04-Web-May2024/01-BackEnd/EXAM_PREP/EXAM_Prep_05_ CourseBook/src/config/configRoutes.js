@@ -15,7 +15,6 @@ function configRoutes(app) {
     app.get('*', (req, res) => {
         res.render('404');
     });
-    //TODO register routers
 }
 
 module.exports = { configRoutes };

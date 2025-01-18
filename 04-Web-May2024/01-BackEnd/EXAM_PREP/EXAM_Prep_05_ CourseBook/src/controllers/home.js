@@ -1,9 +1,10 @@
 const { Router } = require('express');
 const { createToken } = require('../services/jwt');
 const { login } = require('../services/user');
-const { getRecent } = require('../services/courseBook');
+const { getRecent, getMySignUpList } = require('../services/courseBook');
+const { isUser } = require('../middlewares/guards');
 
-// TODO replace with real router according to exam description
+
 
 const homeRouter = Router();
 
@@ -13,6 +14,13 @@ homeRouter.get('/', async (req, res) => {
     res.render('home', { courses });
 });
 
+homeRouter.use('/profile', isUser, async (req, res) => {
+    const userId = req.user._id;
+    const signUp = await getMySignUpList(userId);
+    const created = await getMyCreatedCourse(userId);
+
+    res.render('profile', {signUp, created});
+});
 
 
 

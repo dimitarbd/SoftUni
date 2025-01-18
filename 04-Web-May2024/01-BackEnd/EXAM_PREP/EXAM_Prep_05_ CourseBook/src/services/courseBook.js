@@ -19,6 +19,10 @@ async function getMySignUpList(userId) {
     return CourseBook.find({ signUpList: userId }).lean();
 }
 
+async function getMyCreatedCourse(userId) {
+    return CourseBook.find({ owner: userId }).lean();
+}
+
 async function getById(id) {
     return CourseBook.findById(id).lean();
 }

@@ -22,7 +22,7 @@ homeRouter.use('/profile', isUser(), async (req, res) => {
     const signUp = await getMySignUpList(userId);
     const created = await getByAuthorId(userId);
 
-    console.log(signUp);
+    console.log(created);
     
 
     res.render('profile', {signUp, created});

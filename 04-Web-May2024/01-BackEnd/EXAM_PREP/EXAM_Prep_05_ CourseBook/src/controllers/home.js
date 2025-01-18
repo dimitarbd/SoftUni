@@ -14,7 +14,7 @@ homeRouter.get('/', async (req, res) => {
     res.render('home', { courses });
 });
 
-homeRouter.use('/profile', isUser, async (req, res) => {
+homeRouter.use('/profile', isUser(), async (req, res) => {
     const userId = req.user._id;
 
     console.log(userId);

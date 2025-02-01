@@ -12,7 +12,7 @@ profileRouter.get('/profile', isUser(), async (req, res) => {
     const email = req.user.email;
 
     const { name } = await User.findOne({ 'email': email });
-    
+
     const prefered = await getMyPreferred(userId);
     const created = await getMyCreatedDevices(userId);
 

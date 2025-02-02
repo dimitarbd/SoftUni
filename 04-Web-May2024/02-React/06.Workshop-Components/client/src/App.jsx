@@ -4,13 +4,17 @@ import './styles.css'
 
 function App() {
 
-  return (
-    <>
-      <Header />
-      
-      <Footer />
-    </>
-  )
+    return (
+        <>
+            <Header />
+
+            <main className="main">
+
+            </main>
+
+            <Footer />
+        </>
+    )
 }
 
 export default App

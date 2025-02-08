@@ -3,9 +3,8 @@ import UserListItem from "./user-list-item/UserListItem";
 export default function UserList() {
     return (
         <div className="table-wrapper">
-            {/* <!-- Overlap components  --> */}
 
-            {/* <div className="loading-shade"> */}
+            <div className="loading-shade">
                 {/* <!-- Loading spinner  --> */}
                 {/* <div className="spinner"></div> */}
                 {/* <!-- No users added yet  --> */}
@@ -70,7 +69,7 @@ export default function UserList() {
                            </svg>
                            <h2>Failed to fetch</h2>
                        </div> */}
-            {/* </div> */}
+            </div>
 
             <table className="table">
                 <thead>

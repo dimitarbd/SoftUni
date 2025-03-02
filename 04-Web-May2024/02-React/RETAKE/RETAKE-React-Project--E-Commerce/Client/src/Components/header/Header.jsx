@@ -7,7 +7,7 @@ export default function Header() {
                 <div className="col-xl-3 col-lg-2 col-md-3 col-sm-5">
                     <div className="header-logo_area">
                         <a href="index.html">
-                            <img src="/images/menu/logo/1.png" alt="Uren's Logo">
+                            <img src="/images/menu/logo/1.png" alt="Uren's Logo" />
                         </a>
                     </div>
                 </div>
@@ -86,7 +86,7 @@ export default function Header() {
                                 <option value="15">Smartwatch</option>
                                 <option value="16">Accessories</option>
                             </select>
-                            <input type="text" placeholder="Enter your search key ...">
+                            <input type="text" placeholder="Enter your search key ..." />
                             <button className="header-search_btn" type="submit"><i
                                 className="ion-ios-search-strong"><span>Search</span></i></button>
                         </form>
@@ -431,10 +431,10 @@ export default function Header() {
                                         <li><a href="javascript:void(0)">$ Us Dollar</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="javascript:void(0)"><span><img src="/images/menu/icon/1.jpg" alt=""></span> <span>Language</span> <i className="fa fa-chevron-down"></i></a>
+                                <li><a href="javascript:void(0)"><span><img src="/images/menu/icon/1.jpg" alt="" /></span> <span>Language</span> <i className="fa fa-chevron-down"></i></a>
                                     <ul className="ht-dropdown">
-                                        <li className="active"><a href="javascript:void(0)"><img src="/images/menu/icon/1.jpg" alt="JB's Language Icon">English</a></li>
-                                        <li><a href="javascript:void(0)"><img src="/images/menu/icon/2.jpg" alt="JB's Language Icon">Français</a>
+                                        <li className="active"><a href="javascript:void(0)"><img src="/images/menu/icon/1.jpg" alt="JB's Language Icon" />English</a></li>
+                                        <li><a href="javascript:void(0)"><img src="/images/menu/icon/2.jpg" alt="JB's Language Icon" />Français</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -523,7 +523,7 @@ export default function Header() {
                                 <option value="15">Smartwatch</option>
                                 <option value="16">Accessories</option>
                             </select>
-                            <input type="text" placeholder="Enter your search key ...">
+                            <input type="text" placeholder="Enter your search key ..." />
                             <button className="header-search_btn" type="submit"><i
                                 className="ion-ios-search-strong"><span>Search</span></i></button>
                         </form>
@@ -662,7 +662,7 @@ export default function Header() {
                 <div className="col-sm-3 d-block d-lg-none">
                     <div className="header-logo_area header-sticky_logo">
                         <a href="index.html">
-                            <img src="/images/menu/logo/1.png" alt="Uren's Logo">
+                            <img src="/images/menu/logo/1.png" alt="Uren's Logo" />
                         </a>
                     </div>
                 </div>
@@ -707,7 +707,7 @@ export default function Header() {
                         <a className="product-item_remove" href="javascript:void(0)"><i
                             className="ion-android-close"></i></a>
                         <div className="product-item_img">
-                            <img src="/images/product/small-size/1.jpg" alt="Uren's Product Image">
+                            <img src="/images/product/small-size/1.jpg" alt="Uren's Product Image" />
                         </div>
                         <div className="product-item_content">
                             <a className="product-item_title" href="shop-left-sidebar.html">Autem ipsa ad</a>
@@ -718,7 +718,7 @@ export default function Header() {
                         <a className="product-item_remove" href="javascript:void(0)"><i
                             className="ion-android-close"></i></a>
                         <div className="product-item_img">
-                            <img src="/images/product/small-size/2.jpg" alt="Uren's Product Image">
+                            <img src="/images/product/small-size/2.jpg" alt="Uren's Product Image" />
                         </div>
                         <div className="product-item_content">
                             <a className="product-item_title" href="shop-left-sidebar.html">Tenetur illum amet</a>
@@ -729,7 +729,7 @@ export default function Header() {
                         <a className="product-item_remove" href="javascript:void(0)"><i
                             className="ion-android-close"></i></a>
                         <div className="product-item_img">
-                            <img src="/images/product/small-size/3.jpg" alt="Uren's Product Image">
+                            <img src="/images/product/small-size/3.jpg" alt="Uren's Product Image"/>
                         </div>
                         <div className="product-item_content">
                             <a className="product-item_title" href="shop-left-sidebar.html">Non doloremque placeat</a>

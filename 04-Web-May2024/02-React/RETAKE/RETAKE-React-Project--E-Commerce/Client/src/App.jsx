@@ -5,6 +5,7 @@ import Brand from "./Components/brand/Brand"
 import FeaturedCategories from "./Components/featuredCategories/FeaturedCategories"
 import Footer from "./Components/footer/Footer"
 import Header from "./Components/header/Header"
+import Modal from "./Components/modal/Modal"
 import Product from "./Components/product/Product"
 import Shipping from "./Components/shipping/Shipping"
 import Slider from "./Components/slider/Slider"
@@ -27,6 +28,9 @@ function App() {
                 <BestSellingProduct />
                 <FeaturedCategories />
                 <Brand />
+                <Blog />
+                <Modal />
+                
 
                 <Footer />
             </div>

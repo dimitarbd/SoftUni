@@ -1,4 +1,5 @@
 import Banner from "./Components/banner/Banner"
+import BannerTwo from "./Components/bannerTwo/BannerTwo"
 import Footer from "./Components/footer/Footer"
 import Header from "./Components/header/Header"
 import Product from "./Components/product/Product"
@@ -19,6 +20,7 @@ function App() {
                 <SpecialProduct />
                 <Banner />
                 <Product />
+                <BannerTwo />
 
                 <Footer />
             </div>

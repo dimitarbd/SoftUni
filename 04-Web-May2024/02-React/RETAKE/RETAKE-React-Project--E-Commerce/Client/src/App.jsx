@@ -1,6 +1,7 @@
 import Banner from "./Components/banner/Banner"
 import Footer from "./Components/footer/Footer"
 import Header from "./Components/header/Header"
+import Product from "./Components/product/Product"
 import Shipping from "./Components/shipping/Shipping"
 import Slider from "./Components/slider/Slider"
 import SpecialProduct from "./Components/specialProduct/SpecialProduct"
@@ -17,6 +18,7 @@ function App() {
                 <Shipping />
                 <SpecialProduct />
                 <Banner />
+                <Product />
 
                 <Footer />
             </div>

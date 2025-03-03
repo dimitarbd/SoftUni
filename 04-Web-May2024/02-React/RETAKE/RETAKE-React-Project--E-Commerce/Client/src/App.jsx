@@ -1,5 +1,6 @@
 import Footer from "./Components/footer/Footer"
 import Header from "./Components/header/Header"
+import Shipping from "./Components/shipping/Shipping"
 import Slider from "./Components/slider/Slider"
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
                 <Header />
 
                 <Slider />
+                <Shipping />
 
                 <Footer />
             </div>

@@ -1,6 +1,7 @@
 import Banner from "./Components/banner/Banner"
 import BannerTwo from "./Components/bannerTwo/BannerTwo"
 import BestSellingProduct from "./Components/bestSellingProduct/BestSellingProduct"
+import Brand from "./Components/brand/Brand"
 import FeaturedCategories from "./Components/featuredCategories/FeaturedCategories"
 import Footer from "./Components/footer/Footer"
 import Header from "./Components/header/Header"
@@ -25,6 +26,7 @@ function App() {
                 <BannerTwo />
                 <BestSellingProduct />
                 <FeaturedCategories />
+                <Brand />
 
                 <Footer />
             </div>

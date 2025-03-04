@@ -1,6 +1,7 @@
 import Banner from "./Components/banner/Banner"
 import BannerTwo from "./Components/bannerTwo/BannerTwo"
 import BestSellingProduct from "./Components/bestSellingProduct/BestSellingProduct"
+import Blog from "./Components/blog/Blog"
 import Brand from "./Components/brand/Brand"
 import FeaturedCategories from "./Components/featuredCategories/FeaturedCategories"
 import Footer from "./Components/footer/Footer"
@@ -14,28 +15,28 @@ import SpecialProduct from "./Components/specialProduct/SpecialProduct"
 function App() {
 
     return (
-        <body class="template-color-1">
+        // <body class="template-color-1">
+<>
+// <div class="main-wrapper">
+    <Header />
 
-            <div class="main-wrapper">
-                <Header />
+    <Slider />
+    <Shipping />
+    <SpecialProduct />
+    <Banner />
+    <Product />
+    <BannerTwo />
+    <BestSellingProduct />
+    <FeaturedCategories />
+    <Brand />
+    <Blog />
+    <Modal />
+    
+    <Footer />
+// </div>
+</>
 
-                <Slider />
-                <Shipping />
-                <SpecialProduct />
-                <Banner />
-                <Product />
-                <BannerTwo />
-                <BestSellingProduct />
-                <FeaturedCategories />
-                <Brand />
-                <Blog />
-                <Modal />
-                
-
-                <Footer />
-            </div>
-
-        </body>
+        // </body>
 
     )
 }

@@ -133,7 +133,7 @@ export default function Modal() {
                             <div className="quantity">
                                 <label>Quantity</label>
                                 <div className="cart-plus-minus">
-                                    <input className="cart-plus-minus-box" value="" type="text" />
+                                    <input className="cart-plus-minus-box" defaultValue="" type="text" />
                                     <div className="dec qtybutton"><i className="fa fa-angle-down"></i></div>
                                     <div className="inc qtybutton"><i className="fa fa-angle-up"></i></div>
                                 </div>

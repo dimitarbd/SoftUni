@@ -38,8 +38,11 @@ export default function Product() {
                                             <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                     className="ion-android-options"></i></a>
                                             </li>
-                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
-                                                    className="ion-android-open"></i></a></li>
+                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                                                <a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View">
+                                                    <i className="ion-android-open"></i>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -84,8 +87,11 @@ export default function Product() {
                                             <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                     className="ion-android-options"></i></a>
                                             </li>
-                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
-                                                    className="ion-android-open"></i></a></li>
+                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                                                <a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View">
+                                                    <i className="ion-android-open"></i>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -128,8 +134,11 @@ export default function Product() {
                                             <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                     className="ion-android-options"></i></a>
                                             </li>
-                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
-                                                    className="ion-android-open"></i></a></li>
+                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                                                <a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View">
+                                                    <i className="ion-android-open"></i>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -174,8 +183,11 @@ export default function Product() {
                                             <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                     className="ion-android-options"></i></a>
                                             </li>
-                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
-                                                    className="ion-android-open"></i></a></li>
+                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                                                <a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View">
+                                                    <i className="ion-android-open"></i>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -218,8 +230,11 @@ export default function Product() {
                                             <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                     className="ion-android-options"></i></a>
                                             </li>
-                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
-                                                    className="ion-android-open"></i></a></li>
+                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                                                <a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View">
+                                                    <i className="ion-android-open"></i>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -264,8 +279,11 @@ export default function Product() {
                                             <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                     className="ion-android-options"></i></a>
                                             </li>
-                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
-                                                    className="ion-android-open"></i></a></li>
+                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                                                <a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View">
+                                                    <i className="ion-android-open"></i>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -308,8 +326,11 @@ export default function Product() {
                                             <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                     className="ion-android-options"></i></a>
                                             </li>
-                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
-                                                    className="ion-android-open"></i></a></li>
+                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                                                <a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View">
+                                                    <i className="ion-android-open"></i>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -351,8 +372,11 @@ export default function Product() {
                                             <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                     className="ion-android-options"></i></a>
                                             </li>
-                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
-                                                    className="ion-android-open"></i></a></li>
+                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                                                <a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View">
+                                                    <i className="ion-android-open"></i>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>

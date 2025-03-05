@@ -73,7 +73,11 @@ export default function SpecialProduct() {
                                                 </li>
                                                 <li><a className="uren-wishlist" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i className="ion-android-favorite-outline"></i></a>
                                                 </li>
-                                                <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i className="ion-android-open"></i></a></li>
+                                                <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                                                    <a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View">
+                                                        <i className="ion-android-open"></i>
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -140,7 +144,11 @@ export default function SpecialProduct() {
                                                 </li>
                                                 <li><a className="uren-wishlist" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i className="ion-android-favorite-outline"></i></a>
                                                 </li>
-                                                <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i className="ion-android-open"></i></a></li>
+                                                <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                                                    <a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View">
+                                                        <i className="ion-android-open"></i>
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -207,7 +215,11 @@ export default function SpecialProduct() {
                                                 </li>
                                                 <li><a className="uren-wishlist" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i className="ion-android-favorite-outline"></i></a>
                                                 </li>
-                                                <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i className="ion-android-open"></i></a></li>
+                                                <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                                                    <a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View">
+                                                        <i className="ion-android-open"></i>
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>

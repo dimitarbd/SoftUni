@@ -112,19 +112,19 @@ export default function Modal() {
                                         <span className="burnt-orange_color"></span>
                                         <span className="color-text">Orange (+$170)</span>
                                     </a>
-                                    <a href="javascript:void(0)" className="single-color" data-swatch-color="brown">
+                                    <a href="#" onClick={(e) => e.preventDefault()} className="single-color" data-swatch-color="brown">
                                         <span className="brown_color"></span>
                                         <span className="color-text">Brown (+$120)</span>
                                     </a>
-                                    <a href="javascript:void(0)" className="single-color" data-swatch-color="umber">
+                                    <a href="#" onClick={(e) => e.preventDefault()} className="single-color" data-swatch-color="umber">
                                         <span className="raw-umber_color"></span>
                                         <span className="color-text">Umber (+$125)</span>
                                     </a>
-                                    <a href="javascript:void(0)" className="single-color" data-swatch-color="black">
+                                    <a href="#" onClick={(e) => e.preventDefault()} className="single-color" data-swatch-color="black">
                                         <span className="black_color"></span>
                                         <span className="color-text">Black (+$125)</span>
                                     </a>
-                                    <a href="javascript:void(0)" className="single-color" data-swatch-color="golden">
+                                    <a href="#" onClick={(e) => e.preventDefault()} className="single-color" data-swatch-color="golden">
                                         <span className="golden_color"></span>
                                         <span className="color-text">Golden (+$125)</span>
                                     </a>

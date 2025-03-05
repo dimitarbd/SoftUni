@@ -362,8 +362,8 @@ export default function Header() {
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="javascript:void(0)">Specials</a></li>
-                                <li className=""><a href="javascript:void(0)">Pages <i
+                                <li><a href="#" onClick={(e) => e.preventDefault()}>Specials</a></li>
+                                <li className=""><a href="#" onClick={(e) => e.preventDefault()}>Pages <i
                                         className="ion-ios-arrow-down"></i></a>
                                     <ul className="hm-dropdown">
                                         <li><a href="my-account.html">My Account</a></li>
@@ -424,24 +424,23 @@ export default function Header() {
                     <div className="ht-right_area">
                         <div className="ht-menu">
                             <ul>
-                                <li><a href="javascript:void(0)"><span>$</span> <span>Currency</span><i className="fa fa-chevron-down"></i></a>
+                                <li><a href="#" onClick={(e) => e.preventDefault()}><span>$</span> <span>Currency</span><i className="fa fa-chevron-down"></i></a>
                                     <ul className="ht-dropdown ht-currency">
-                                        <li><a href="javascript:void(0)">€ EUR</a></li>
-                                        <li className="active"><a href="javascript:void(0)">£ Pound Sterling</a></li>
-                                        <li><a href="javascript:void(0)">$ Us Dollar</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>€ EUR</a></li>
+                                        <li className="active"><a href="#" onClick={(e) => e.preventDefault()}>£ Pound Sterling</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>$ Us Dollar</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="javascript:void(0)"><span><img src="/images/menu/icon/1.jpg" alt="" /></span> <span>Language</span> <i className="fa fa-chevron-down"></i></a>
+                                <li><a href="#" onClick={(e) => e.preventDefault()}><span><img src="/images/menu/icon/1.jpg" alt="" /></span> <span>Language</span> <i className="fa fa-chevron-down"></i></a>
                                     <ul className="ht-dropdown">
-                                        <li className="active"><a href="javascript:void(0)"><img src="/images/menu/icon/1.jpg" alt="JB's Language Icon" />English</a></li>
-                                        <li><a href="javascript:void(0)"><img src="/images/menu/icon/2.jpg" alt="JB's Language Icon" />Français</a>
-                                        </li>
+                                        <li className="active"><a href="#" onClick={(e) => e.preventDefault()}>English</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Français</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="my-account.html"><span className="fa fa-user"></span> <span>My Account</span><i className="fa fa-chevron-down"></i></a>
                                     <ul className="ht-dropdown ht-my_account">
-                                        <li><a href="javascript:void(0)">Register</a></li>
-                                        <li className="active"><a href="javascript:void(0)">Login</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Register</a></li>
+                                        <li className="active"><a href="#" onClick={(e) => e.preventDefault()}>Login</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -601,8 +600,8 @@ export default function Header() {
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="javascript:void(0)">Specials</a></li>
-                                <li className=""><a href="javascript:void(0)">Pages <i
+                                <li><a href="#" onClick={(e) => e.preventDefault()}>Specials</a></li>
+                                <li className=""><a href="#" onClick={(e) => e.preventDefault()}>Pages <i
                                         className="ion-ios-arrow-down"></i></a>
                                     <ul className="hm-dropdown">
                                         <li><a href="my-account.html">My Account</a></li>
@@ -704,7 +703,7 @@ export default function Header() {
                 </div>
                 <ul className="minicart-list">
                     <li className="minicart-product">
-                        <a className="product-item_remove" href="javascript:void(0)"><i
+                        <a className="product-item_remove" href="#" onClick={(e) => e.preventDefault()}><i
                             className="ion-android-close"></i></a>
                         <div className="product-item_img">
                             <img src="/images/product/small-size/1.jpg" alt="Uren's Product Image" />
@@ -715,7 +714,7 @@ export default function Header() {
                         </div>
                     </li>
                     <li className="minicart-product">
-                        <a className="product-item_remove" href="javascript:void(0)"><i
+                        <a className="product-item_remove" href="#" onClick={(e) => e.preventDefault()}><i
                             className="ion-android-close"></i></a>
                         <div className="product-item_img">
                             <img src="/images/product/small-size/2.jpg" alt="Uren's Product Image" />
@@ -726,7 +725,7 @@ export default function Header() {
                         </div>
                     </li>
                     <li className="minicart-product">
-                        <a className="product-item_remove" href="javascript:void(0)"><i
+                        <a className="product-item_remove" href="#" onClick={(e) => e.preventDefault()}><i
                             className="ion-android-close"></i></a>
                         <div className="product-item_img">
                             <img src="/images/product/small-size/3.jpg" alt="Uren's Product Image"/>
@@ -753,158 +752,158 @@ export default function Header() {
     <div className="mobile-menu_wrapper" id="mobileMenu">
         <div className="offcanvas-menu-inner">
             <div className="container">
-                <a href="#" className="btn-close"><i className="ion-android-close"></i></a>
+                <a href="#" className="btn-close" onClick={(e) => e.preventDefault()}><i className="ion-android-close"></i></a>
                 <div className="offcanvas-inner_search">
                     <form action="#" className="inner-searchbox">
                         <input type="text" placeholder="Search for item..." />
-                        <button className="search_btn" type="submit"><i className="ion-ios-search-strong"></i></button>
+                        <button className="search_btn" type="submit" onClick={(e) => e.preventDefault()}><i className="ion-ios-search-strong"></i></button>
                     </form>
                 </div>
                 <nav className="offcanvas-navigation">
                     <ul className="mobile-menu">
-                        <li className="menu-item-has-children active"><a href="index.html"><span
+                        <li className="menu-item-has-children active"><a href="index.html" onClick={(e) => e.preventDefault()}><span
                                 className="mm-text">Home</span></a>
                             <ul className="sub-menu">
                                 <li>
-                                    <a href="index.html">
+                                    <a href="index.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Home One</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="index-2.html">
+                                    <a href="index-2.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Home Two</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="index-3.html">
+                                    <a href="index-3.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Home Three</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li className="menu-item-has-children">
-                            <a href="shop-left-sidebar.html">
+                            <a href="shop-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                 <span className="mm-text">Shop</span>
                             </a>
                             <ul className="sub-menu">
                                 <li className="menu-item-has-children">
-                                    <a href="shop-left-sidebar.html">
+                                    <a href="shop-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Grid View</span>
                                     </a>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="shop-grid-fullwidth.html">
+                                            <a href="shop-grid-fullwidth.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Column Three</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="shop-4-column.html">
+                                            <a href="shop-4-column.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Column Four</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="shop-left-sidebar.html">
+                                            <a href="shop-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Left Sidebar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="shop-right-sidebar.html">
+                                            <a href="shop-right-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Right Sidebar</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className="menu-item-has-children">
-                                    <a href="shop-list-left-sidebar.html">
+                                    <a href="shop-list-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Shop List</span>
                                     </a>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="shop-list-fullwidth.html">
+                                            <a href="shop-list-fullwidth.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Full Width</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="shop-list-left-sidebar.html">
+                                            <a href="shop-list-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Left Sidebar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="shop-list-right-sidebar.html">
+                                            <a href="shop-list-right-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Right Sidebar</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className="menu-item-has-children">
-                                    <a href="single-product-gallery-left.html">
+                                    <a href="single-product-gallery-left.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Single Product Style</span>
                                     </a>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="single-product-gallery-left.html">
+                                            <a href="single-product-gallery-left.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Gallery Left</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="single-product-gallery-right.html">
+                                            <a href="single-product-gallery-right.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Gallery Right</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="single-product-tab-style-left.html">
+                                            <a href="single-product-tab-style-left.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Tab Style Left</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="single-product-tab-style-right.html">
+                                            <a href="single-product-tab-style-right.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Tab Style Right</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="single-product-sticky-left.html">
+                                            <a href="single-product-sticky-left.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Sticky Left</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="single-product-sticky-right.html">
+                                            <a href="single-product-sticky-right.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Sticky Right</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className="menu-item-has-children">
-                                    <a href="single-product.html">
+                                    <a href="single-product.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Single Product Type</span>
                                     </a>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="single-product.html">
+                                            <a href="single-product.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Single Product</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="single-product-sale.html">
+                                            <a href="single-product-sale.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Single Product Sale</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="single-product-group.html">
+                                            <a href="single-product-group.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Single Product Group</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="single-product-variable.html">
+                                            <a href="single-product-variable.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Single Product Variable</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="single-product-affiliate.html">
+                                            <a href="single-product-affiliate.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Single Product Affiliate</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="single-product-slider.html">
+                                            <a href="single-product-slider.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Single Product Slider</span>
                                             </a>
                                         </li>
@@ -913,93 +912,93 @@ export default function Header() {
                             </ul>
                         </li>
                         <li className="menu-item-has-children">
-                            <a href="blog-left-sidebar.html">
+                            <a href="blog-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                 <span className="mm-text">Blog</span>
                             </a>
                             <ul className="sub-menu">
                                 <li className="menu-item-has-children has-children">
-                                    <a href="blog-left-sidebar.html">
+                                    <a href="blog-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Grid View</span>
                                     </a>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="blog-2-column.html">
+                                            <a href="blog-2-column.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Column Two</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-3-column.html">
+                                            <a href="blog-3-column.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Column Three</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-left-sidebar.html">
+                                            <a href="blog-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Left Sidebar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-right-sidebar.html">
+                                            <a href="blog-right-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Right Sidebar</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className="menu-item-has-children has-children">
-                                    <a href="blog-list-left-sidebar.html">
+                                    <a href="blog-list-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">List View</span>
                                     </a>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="blog-list-fullwidth.html">
+                                            <a href="blog-list-fullwidth.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">List Fullwidth</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-list-left-sidebar.html">
+                                            <a href="blog-list-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">List Left Sidebar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-list-right-sidebar.html">
+                                            <a href="blog-list-right-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">List Right Sidebar</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className="menu-item-has-children has-children">
-                                    <a href="blog-details-left-sidebar.html">
+                                    <a href="blog-details-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Blog Details</span>
                                     </a>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="blog-details-left-sidebar.html">
+                                            <a href="blog-details-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Left Sidebar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-details-right-sidebar.html">
+                                            <a href="blog-details-right-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Right Sidebar</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className="menu-item-has-children has-children">
-                                    <a href="blog-gallery-format.html">
+                                    <a href="blog-gallery-format.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Blog Format</span>
                                     </a>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="blog-gallery-format.html">
+                                            <a href="blog-gallery-format.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Gallery Format</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-audio-format.html">
+                                            <a href="blog-audio-format.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Audio Format</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-video-format.html">
+                                            <a href="blog-video-format.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Video Format</span>
                                             </a>
                                         </li>
@@ -1008,47 +1007,47 @@ export default function Header() {
                             </ul>
                         </li>
                         <li className="menu-item-has-children">
-                            <a href="index.html">
+                            <a href="index.html" onClick={(e) => e.preventDefault()}>
                                 <span className="mm-text">Pages</span>
                             </a>
                             <ul className="sub-menu">
                                 <li>
-                                    <a href="my-account.html">
+                                    <a href="my-account.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">My Account</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="login-register.html">
+                                    <a href="login-register.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Login | Register</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="wishlist.html">
+                                    <a href="wishlist.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Wishlist</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="cart.html">
+                                    <a href="cart.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Cart</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="checkout.html">
+                                    <a href="checkout.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Checkout</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="compare.html">
+                                    <a href="compare.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Compare</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="faq.html">
+                                    <a href="faq.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">FAQ</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="404.html">
+                                    <a href="404.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Error 404</span>
                                     </a>
                                 </li>
@@ -1058,57 +1057,57 @@ export default function Header() {
                 </nav>
                 <nav className="offcanvas-navigation user-setting_area">
                     <ul className="mobile-menu">
-                        <li className="menu-item-has-children active"><a href="javascript:void(0)"><span
+                        <li className="menu-item-has-children active"><a href="#" onClick={(e) => e.preventDefault()}><span
                                 className="mm-text">User
                                 Setting</span></a>
                             <ul className="sub-menu">
                                 <li>
-                                    <a href="my-account.html">
+                                    <a href="my-account.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">My Account</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="login-register.html">
+                                    <a href="login-register.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Login | Register</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li className="menu-item-has-children"><a href="javascript:void(0)"><span
+                        <li className="menu-item-has-children"><a href="#" onClick={(e) => e.preventDefault()}><span
                                 className="mm-text">Currency</span></a>
                             <ul className="sub-menu">
                                 <li>
-                                    <a href="javascript:void(0)">
+                                    <a href="#" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">EUR €</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)">
+                                    <a href="#" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">USD $</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li className="menu-item-has-children"><a href="javascript:void(0)"><span
+                        <li className="menu-item-has-children"><a href="#" onClick={(e) => e.preventDefault()}><span
                                 className="mm-text">Language</span></a>
                             <ul className="sub-menu">
                                 <li>
-                                    <a href="javascript:void(0)">
+                                    <a href="#" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">English</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)">
+                                    <a href="#" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Français</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)">
+                                    <a href="#" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Romanian</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)">
+                                    <a href="#" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Japanese</span>
                                     </a>
                                 </li>

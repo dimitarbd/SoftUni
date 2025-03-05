@@ -17,7 +17,7 @@ function App() {
     return (
         // <body class="template-color-1">
 <>
-// <div class="main-wrapper">
+{/* // <div class="main-wrapper"> */}
     <Header />
 
     <Slider />
@@ -33,7 +33,7 @@ function App() {
     <Modal />
     
     <Footer />
-// </div>
+{/* // </div> */}
 </>
 
         // </body>

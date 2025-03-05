@@ -20,7 +20,7 @@ export default function Brand() {
                     <div className="slide-item">
                         <div className="inner-slide">
                             <div className="single-product">
-                                <a href="javascript:void(0)">
+                                <a href="#" onClick={(e) => e.preventDefault()}>
                                     <img src="/images/brand/1.jpg" alt="Uren's Brand Image"/>
                                 </a>
                             </div>
@@ -29,7 +29,7 @@ export default function Brand() {
                     <div className="slide-item">
                         <div className="inner-slide">
                             <div className="single-product">
-                                <a href="javascript:void(0)">
+                                <a href="#" onClick={(e) => e.preventDefault()}>
                                     <img src="/images/brand/2.jpg" alt="Uren's Brand Image"/>
                                 </a>
                             </div>
@@ -38,7 +38,7 @@ export default function Brand() {
                     <div className="slide-item">
                         <div className="inner-slide">
                             <div className="single-product">
-                                <a href="javascript:void(0)">
+                                <a href="#" onClick={(e) => e.preventDefault()}>
                                     <img src="/images/brand/3.jpg" alt="Uren's Brand Image"/>
                                 </a>
                             </div>
@@ -47,7 +47,7 @@ export default function Brand() {
                     <div className="slide-item">
                         <div className="inner-slide">
                             <div className="single-product">
-                                <a href="javascript:void(0)">
+                                <a href="#" onClick={(e) => e.preventDefault()}>
                                     <img src="/images/brand/4.jpg" alt="Uren's Brand Image"/>
                                 </a>
                             </div>
@@ -56,7 +56,7 @@ export default function Brand() {
                     <div className="slide-item">
                         <div className="inner-slide">
                             <div className="single-product">
-                                <a href="javascript:void(0)">
+                                <a href="#" onClick={(e) => e.preventDefault()}>
                                     <img src="/images/brand/5.jpg" alt="Uren's Brand Image"/>
                                 </a>
                             </div>
@@ -65,7 +65,7 @@ export default function Brand() {
                     <div className="slide-item">
                         <div className="inner-slide">
                             <div className="single-product">
-                                <a href="javascript:void(0)">
+                                <a href="#" onClick={(e) => e.preventDefault()}>
                                     <img src="/images/brand/6.jpg" alt="Uren's Brand Image"/>
                                 </a>
                             </div>
@@ -74,7 +74,7 @@ export default function Brand() {
                     <div className="slide-item">
                         <div className="inner-slide">
                             <div className="single-product">
-                                <a href="javascript:void(0)">
+                                <a href="#" onClick={(e) => e.preventDefault()}>
                                     <img src="/images/brand/1.jpg" alt="Uren's Brand Image"/>
                                 </a>
                             </div>
@@ -83,7 +83,7 @@ export default function Brand() {
                     <div className="slide-item">
                         <div className="inner-slide">
                             <div className="single-product">
-                                <a href="javascript:void(0)">
+                                <a href="#" onClick={(e) => e.preventDefault()}>
                                     <img src="/images/brand/7.jpg" alt="Uren's Brand Image"/>
                                 </a>
                             </div>
@@ -92,7 +92,7 @@ export default function Brand() {
                     <div className="slide-item">
                         <div className="inner-slide">
                             <div className="single-product">
-                                <a href="javascript:void(0)">
+                                <a href="#" onClick={(e) => e.preventDefault()}>
                                     <img src="/images/brand/2.jpg" alt="Uren's Brand Image"/>
                                 </a>
                             </div>

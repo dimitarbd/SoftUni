@@ -9,10 +9,10 @@ export default function Footer() {
                         <h3 className="title">Join Our Newsletter Now</h3>
                         <p className="short-desc">Get E-mail updates about our latest shop and special offers.</p>
                         <div className="newsletter-form_wrap">
-                            <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="newsletters-form validate" target="_blank" novalidate>
+                            <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="newsletters-form validate" target="_blank" noValidate>
                                 <div id="mc_embed_signup_scroll">
                                     <div id="mc-form" className="mc-form subscribe-form">
-                                        <input id="mc-email" className="newsletter-input" type="email" autocomplete="off" placeholder="Enter your email" />
+                                        <input id="mc-email" className="newsletter-input" type="email" autoComplete="off" placeholder="Enter your email" />
                                         <button className="newsletter-btn" id="mc-submit">Subscribe</button>
                                     </div>
                                 </div>
@@ -85,10 +85,10 @@ export default function Footer() {
                                 </div>
                                 <div className="footer-widgets">
                                     <ul>
-                                        <li><a href="javascript:void(0)">About Us</a></li>
-                                        <li><a href="javascript:void(0)">Delivery Information</a></li>
-                                        <li><a href="javascript:void(0)">Privacy Policy</a></li>
-                                        <li><a href="javascript:void(0)">Terms & Conditions</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>About Us</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Delivery Information</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Privacy Policy</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Terms & Conditions</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -98,9 +98,9 @@ export default function Footer() {
                                 </div>
                                 <div className="footer-widgets">
                                     <ul>
-                                        <li><a href="javascript:void(0)">Contact Us</a></li>
-                                        <li><a href="javascript:void(0)">Returns</a></li>
-                                        <li><a href="javascript:void(0)">Site Map</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Contact Us</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Returns</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Site Map</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -110,10 +110,10 @@ export default function Footer() {
                                 </div>
                                 <div className="footer-widgets">
                                     <ul>
-                                        <li><a href="javascript:void(0)">About Us</a></li>
-                                        <li><a href="javascript:void(0)">Delivery Information</a></li>
-                                        <li><a href="javascript:void(0)">Privacy Policy</a></li>
-                                        <li><a href="javascript:void(0)">Terms & Conditions</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>About Us</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Delivery Information</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Privacy Policy</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Terms & Conditions</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -123,10 +123,10 @@ export default function Footer() {
                                 </div>
                                 <div className="footer-widgets">
                                     <ul>
-                                        <li><a href="javascript:void(0)">My Account</a></li>
-                                        <li><a href="javascript:void(0)">Order History</a></li>
-                                        <li><a href="javascript:void(0)">Wish List</a></li>
-                                        <li><a href="javascript:void(0)">Newsletter</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>My Account</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Order History</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Wish List</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Newsletter</a></li>
                                     </ul>
                                 </div>
                             </div>

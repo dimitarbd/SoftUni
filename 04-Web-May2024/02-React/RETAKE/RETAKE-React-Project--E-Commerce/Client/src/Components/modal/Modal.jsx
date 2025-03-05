@@ -90,12 +90,12 @@ export default function Modal() {
                             </div>
                             <div className="sp-essential_stuff">
                                 <ul>
-                                    <li>Brands <a href="javascript:void(0)">Buxton</a></li>
-                                    <li>Product Code: <a href="javascript:void(0)">Product 16</a></li>
-                                    <li>Reward Points: <a href="javascript:void(0)">100</a></li>
-                                    <li>Availability: <a href="javascript:void(0)">In Stock</a></li>
-                                    <li>EX Tax: <a href="javascript:void(0)"><span>$453.35</span></a></li>
-                                    <li>Price in reward points: <a href="javascript:void(0)">400</a></li>
+                                    <li>Brands <a href="#" onClick={(e) => e.preventDefault()}>Buxton</a></li>
+                                    <li>Product Code: <a href="#" onClick={(e) => e.preventDefault()}>Product 16</a></li>
+                                    <li>Reward Points: <a href="#" onClick={(e) => e.preventDefault()}>100</a></li>
+                                    <li>Availability: <a href="#" onClick={(e) => e.preventDefault()}>In Stock</a></li>
+                                    <li>EX Tax: <a href="#" onClick={(e) => e.preventDefault()}><span>$453.35</span></a></li>
+                                    <li>Price in reward points: <a href="#" onClick={(e) => e.preventDefault()}>400</a></li>
                                 </ul>
                             </div>
                             <div className="color-list_area">
@@ -104,11 +104,11 @@ export default function Modal() {
                                 </div>
                                 <span className="sub-title">Color</span>
                                 <div className="color-list">
-                                    <a href="javascript:void(0)" className="single-color active" data-swatch-color="red">
+                                    <a href="#" className="single-color active" data-swatch-color="red" onClick={(e) => e.preventDefault()}>
                                         <span className="bg-red_color"></span>
                                         <span className="color-text">Red (+$150)</span>
                                     </a>
-                                    <a href="javascript:void(0)" className="single-color" data-swatch-color="orange">
+                                    <a href="#" onClick={(e) => e.preventDefault()} className="single-color" data-swatch-color="orange">
                                         <span className="burnt-orange_color"></span>
                                         <span className="color-text">Orange (+$170)</span>
                                     </a>
@@ -133,7 +133,7 @@ export default function Modal() {
                             <div className="quantity">
                                 <label>Quantity</label>
                                 <div className="cart-plus-minus">
-                                    <input className="cart-plus-minus-box" value="1" type="text" />
+                                    <input className="cart-plus-minus-box" value="" type="text" />
                                     <div className="dec qtybutton"><i className="fa fa-angle-down"></i></div>
                                     <div className="inc qtybutton"><i className="fa fa-angle-up"></i></div>
                                 </div>
@@ -147,9 +147,9 @@ export default function Modal() {
                             </div>
                             <div className="uren-tag-line">
                                 <h6>Tags:</h6>
-                                <a href="javascript:void(0)">Ring</a>,
-                                <a href="javascript:void(0)">Necklaces</a>,
-                                <a href="javascript:void(0)">Braid</a>
+                                <a href="#" onClick={(e) => e.preventDefault()}>Ring</a>,
+                                <a href="#" onClick={(e) => e.preventDefault()}>Necklaces</a>,
+                                <a href="#" onClick={(e) => e.preventDefault()}>Braid</a>
                             </div>
                             <div className="uren-social_link">
                                 <ul>

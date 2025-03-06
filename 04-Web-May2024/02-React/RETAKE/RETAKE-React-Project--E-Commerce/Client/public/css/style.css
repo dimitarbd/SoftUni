@@ -2320,38 +2320,6 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 /* ---Category Menu--- */
-.category-menu-list {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    z-index: 999;
-    background-color: #ffffff;
-    border: 1px solid #e5e5e5;
-    border-top: none;
-    width: 100%;
-  }
-  
-  .category-menu-list.open {
-    display: block;
-  }
-  
-  .categories-toggle {
-    cursor: pointer;
-    padding: 15px;
-    background-color: #ffc400;
-    color: #ffffff;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .categories-toggle:hover {
-    background-color: #e6b000;
-  }
-
 .category-menu {
   position: relative;
 }

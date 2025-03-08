@@ -309,11 +309,9 @@ export default function Header() {
                                         <li><a href="shop-left-sidebar.html">Body Parts</a></li>
                                         <li><a href="shop-left-sidebar.html">Interior</a></li>
                                         <li><a href="shop-left-sidebar.html">Audio</a></li>
-                                        <li><a href="shop-left-sidebar.html">End Tables</a></li>
                                         <li className="rx-child"><a href="shop-left-sidebar.html">Uncategorized</a></li>
                                         <li className="rx-child"><a href="shop-left-sidebar.html">Appliances</a></li>
                                         <li className="rx-parent">
-                                            <a className="rx-default">More Categories</a>
                                             <a className="rx-show">Collapse</a>
                                         </li>
                                     </ul>
@@ -402,44 +400,6 @@ export default function Header() {
                                         </li>
                                         <li className=""><a href="about-us.html">About Us</a></li>
                                         <li className=""><a href="contact.html">Contact</a></li>
-                                        <li className=""><a href="blog-left-sidebar.html">Blog <i
-                                            className="ion-ios-arrow-down"></i></a>
-                                            <ul className="hm-dropdown">
-                                                <li><a href="blog-left-sidebar.html">Grid View</a>
-                                                    <ul className="hm-dropdown hm-sub_dropdown">
-                                                        <li><a href="blog-2-column.html">Column Two</a></li>
-                                                        <li><a href="blog-3-column.html">Column Three</a></li>
-                                                        <li><a href="blog-left-sidebar.html">Left Sidebar</a></li>
-                                                        <li><a href="blog-right-sidebar.html">Right Sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="blog-list-left-sidebar.html">List View</a>
-                                                    <ul className="hm-dropdown hm-sub_dropdown">
-                                                        <li><a href="blog-list-fullwidth.html">List Fullwidth</a></li>
-                                                        <li><a href="blog-list-left-sidebar.html">List Left Sidebar</a>
-                                                        </li>
-                                                        <li><a href="blog-list-right-sidebar.html">List Right
-                                                            Sidebar</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="blog-details-left-sidebar.html">Blog Details</a>
-                                                    <ul className="hm-dropdown hm-sub_dropdown">
-                                                        <li><a href="blog-details-left-sidebar.html">Left Sidebar</a>
-                                                        </li>
-                                                        <li><a href="blog-details-right-sidebar.html">Right Sidebar</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="blog-gallery-format.html">Blog Format</a>
-                                                    <ul className="hm-dropdown hm-sub_dropdown">
-                                                        <li><a href="blog-gallery-format.html">Gallery Format</a></li>
-                                                        <li><a href="blog-audio-format.html">Audio Format</a></li>
-                                                        <li><a href="blog-video-format.html">Video Format</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
                                     </ul>
                                 </nav>
                             </div>
@@ -627,44 +587,6 @@ export default function Header() {
                                         </li>
                                         <li className=""><a href="about-us.html">About Us</a></li>
                                         <li className=""><a href="contact.html">Contact</a></li>
-                                        <li className=""><a href="blog-left-sidebar.html">Blog <i
-                                            className="ion-ios-arrow-down"></i></a>
-                                            <ul className="hm-dropdown">
-                                                <li><a href="blog-left-sidebar.html">Grid View</a>
-                                                    <ul className="hm-dropdown hm-sub_dropdown">
-                                                        <li><a href="blog-2-column.html">Column Two</a></li>
-                                                        <li><a href="blog-3-column.html">Column Three</a></li>
-                                                        <li><a href="blog-left-sidebar.html">Left Sidebar</a></li>
-                                                        <li><a href="blog-right-sidebar.html">Right Sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="blog-list-left-sidebar.html">List View</a>
-                                                    <ul className="hm-dropdown hm-sub_dropdown">
-                                                        <li><a href="blog-list-fullwidth.html">List Fullwidth</a></li>
-                                                        <li><a href="blog-list-left-sidebar.html">List Left Sidebar</a>
-                                                        </li>
-                                                        <li><a href="blog-list-right-sidebar.html">List Right
-                                                            Sidebar</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="blog-details-left-sidebar.html">Blog Details</a>
-                                                    <ul className="hm-dropdown hm-sub_dropdown">
-                                                        <li><a href="blog-details-left-sidebar.html">Left Sidebar</a>
-                                                        </li>
-                                                        <li><a href="blog-details-right-sidebar.html">Right Sidebar</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="blog-gallery-format.html">Blog Format</a>
-                                                    <ul className="hm-dropdown hm-sub_dropdown">
-                                                        <li><a href="blog-gallery-format.html">Gallery Format</a></li>
-                                                        <li><a href="blog-audio-format.html">Audio Format</a></li>
-                                                        <li><a href="blog-video-format.html">Video Format</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
                                     </ul>
                                 </nav>
                             </div>

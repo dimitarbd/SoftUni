@@ -156,7 +156,7 @@ export default function Header() {
                                         <span>Department</span>
                                     </h2>
                                 </div>
-                                <div id="cate-toggle" className="category-menu-list" style={{display: 'none'}}>
+                                <div id="cate-toggle" className="category-menu-list" style={{ display: 'none' }}>
                                     <ul>
                                         <li className="right-menu"><a href="shop-left-sidebar.html">Car Parts</a>
                                             <ul className="cat-mega-menu">
@@ -190,7 +190,7 @@ export default function Header() {
                                             </ul>
                                         </li>
                                         <li className="right-menu"><a href="shop-left-sidebar.html">Tools &amp;
-                                                Accessories</a>
+                                            Accessories</a>
                                             <ul className="cat-mega-menu cat-mega-menu-2">
                                                 <li className="right-menu cat-mega-title">
                                                     <a href="shop-left-sidebar.html">Drills</a>
@@ -332,7 +332,7 @@ export default function Header() {
                                             </ul>
                                         </li>
                                         <li className="megamenu-holder "><a href="shop-left-sidebar.html">Shop <i
-                                                className="ion-ios-arrow-down"></i></a>
+                                            className="ion-ios-arrow-down"></i></a>
                                             <ul className="hm-megamenu">
                                                 <li><span className="megamenu-title">Shop Page Layout</span>
                                                     <ul>
@@ -343,7 +343,7 @@ export default function Header() {
                                                         <li><a href="shop-list-left-sidebar.html">List Left Sidebar</a>
                                                         </li>
                                                         <li><a href="shop-list-right-sidebar.html">List Right
-                                                                Sidebar</a>
+                                                            Sidebar</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -352,13 +352,13 @@ export default function Header() {
                                                         <li><a href="single-product-gallery-left.html">Gallery Left</a>
                                                         </li>
                                                         <li><a href="single-product-gallery-right.html">Gallery
-                                                                Right</a>
+                                                            Right</a>
                                                         </li>
                                                         <li><a href="single-product-tab-style-left.html">Tab Style
-                                                                Left</a>
+                                                            Left</a>
                                                         </li>
                                                         <li><a href="single-product-tab-style-right.html">Tab Style
-                                                                Right</a>
+                                                            Right</a>
                                                         </li>
                                                         <li><a href="single-product-sticky-left.html">Sticky Left</a>
                                                         </li>
@@ -374,13 +374,13 @@ export default function Header() {
                                                         <li><a href="single-product-group.html">Single Product Group</a>
                                                         </li>
                                                         <li><a href="single-product-variable.html">Single Product
-                                                                Variable</a>
+                                                            Variable</a>
                                                         </li>
                                                         <li><a href="single-product-affiliate.html">Single Product
-                                                                Affiliate</a>
+                                                            Affiliate</a>
                                                         </li>
                                                         <li><a href="single-product-slider.html">Single Product
-                                                                Slider</a>
+                                                            Slider</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -388,7 +388,7 @@ export default function Header() {
                                         </li>
                                         <li><a href="#" onClick={(e) => e.preventDefault()}>Specials</a></li>
                                         <li className=""><a href="#" onClick={(e) => e.preventDefault()}>Pages <i
-                                                className="ion-ios-arrow-down"></i></a>
+                                            className="ion-ios-arrow-down"></i></a>
                                             <ul className="hm-dropdown">
                                                 <li><a href="my-account.html">My Account</a></li>
                                                 <li><a href="login-register.html">Login | Register</a></li>
@@ -403,7 +403,7 @@ export default function Header() {
                                         <li className=""><a href="about-us.html">About Us</a></li>
                                         <li className=""><a href="contact.html">Contact</a></li>
                                         <li className=""><a href="blog-left-sidebar.html">Blog <i
-                                                className="ion-ios-arrow-down"></i></a>
+                                            className="ion-ios-arrow-down"></i></a>
                                             <ul className="hm-dropdown">
                                                 <li><a href="blog-left-sidebar.html">Grid View</a>
                                                     <ul className="hm-dropdown hm-sub_dropdown">
@@ -419,7 +419,7 @@ export default function Header() {
                                                         <li><a href="blog-list-left-sidebar.html">List Left Sidebar</a>
                                                         </li>
                                                         <li><a href="blog-list-right-sidebar.html">List Right
-                                                                Sidebar</a>
+                                                            Sidebar</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -448,19 +448,6 @@ export default function Header() {
                             <div className="ht-right_area">
                                 <div className="ht-menu">
                                     <ul>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}><span>$</span> <span>Currency</span><i className="fa fa-chevron-down"></i></a>
-                                            <ul className="ht-dropdown ht-currency">
-                                                <li><a href="#" onClick={(e) => e.preventDefault()}>€ EUR</a></li>
-                                                <li className="active"><a href="#" onClick={(e) => e.preventDefault()}>£ Pound Sterling</a></li>
-                                                <li><a href="#" onClick={(e) => e.preventDefault()}>$ Us Dollar</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}><span><img src="/images/menu/icon/1.jpg" alt="" /></span> <span>Language</span> <i className="fa fa-chevron-down"></i></a>
-                                            <ul className="ht-dropdown">
-                                                <li className="active"><a href="#" onClick={(e) => e.preventDefault()}>English</a></li>
-                                                <li><a href="#" onClick={(e) => e.preventDefault()}>Français</a></li>
-                                            </ul>
-                                        </li>
                                         <li><a href="my-account.html"><span className="fa fa-user"></span> <span>My Account</span><i className="fa fa-chevron-down"></i></a>
                                             <ul className="ht-dropdown ht-my_account">
                                                 <li><a href="#" onClick={(e) => e.preventDefault()}>Register</a></li>
@@ -570,7 +557,7 @@ export default function Header() {
                                             </ul>
                                         </li>
                                         <li className="megamenu-holder "><a href="shop-left-sidebar.html">Shop
-                                                <i className="ion-ios-arrow-down"></i></a>
+                                            <i className="ion-ios-arrow-down"></i></a>
                                             <ul className="hm-megamenu">
                                                 <li><span className="megamenu-title">Shop Page Layout</span>
                                                     <ul>
@@ -581,7 +568,7 @@ export default function Header() {
                                                         <li><a href="shop-list-left-sidebar.html">List Left Sidebar</a>
                                                         </li>
                                                         <li><a href="shop-list-right-sidebar.html">List Right
-                                                                Sidebar</a>
+                                                            Sidebar</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -590,13 +577,13 @@ export default function Header() {
                                                         <li><a href="single-product-gallery-left.html">Gallery Left</a>
                                                         </li>
                                                         <li><a href="single-product-gallery-right.html">Gallery
-                                                                Right</a>
+                                                            Right</a>
                                                         </li>
                                                         <li><a href="single-product-tab-style-left.html">Tab Style
-                                                                Left</a>
+                                                            Left</a>
                                                         </li>
                                                         <li><a href="single-product-tab-style-right.html">Tab Style
-                                                                Right</a>
+                                                            Right</a>
                                                         </li>
                                                         <li><a href="single-product-sticky-left.html">Sticky Left</a>
                                                         </li>
@@ -612,13 +599,13 @@ export default function Header() {
                                                         <li><a href="single-product-group.html">Single Product Group</a>
                                                         </li>
                                                         <li><a href="single-product-variable.html">Single Product
-                                                                Variable</a>
+                                                            Variable</a>
                                                         </li>
                                                         <li><a href="single-product-affiliate.html">Single Product
-                                                                Affiliate</a>
+                                                            Affiliate</a>
                                                         </li>
                                                         <li><a href="single-product-slider.html">Single Product
-                                                                Slider</a>
+                                                            Slider</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -626,7 +613,7 @@ export default function Header() {
                                         </li>
                                         <li><a href="#" onClick={(e) => e.preventDefault()}>Specials</a></li>
                                         <li className=""><a href="#" onClick={(e) => e.preventDefault()}>Pages <i
-                                                className="ion-ios-arrow-down"></i></a>
+                                            className="ion-ios-arrow-down"></i></a>
                                             <ul className="hm-dropdown">
                                                 <li><a href="my-account.html">My Account</a></li>
                                                 <li><a href="login-register.html">Login | Register</a></li>
@@ -641,7 +628,7 @@ export default function Header() {
                                         <li className=""><a href="about-us.html">About Us</a></li>
                                         <li className=""><a href="contact.html">Contact</a></li>
                                         <li className=""><a href="blog-left-sidebar.html">Blog <i
-                                                className="ion-ios-arrow-down"></i></a>
+                                            className="ion-ios-arrow-down"></i></a>
                                             <ul className="hm-dropdown">
                                                 <li><a href="blog-left-sidebar.html">Grid View</a>
                                                     <ul className="hm-dropdown hm-sub_dropdown">
@@ -657,7 +644,7 @@ export default function Header() {
                                                         <li><a href="blog-list-left-sidebar.html">List Left Sidebar</a>
                                                         </li>
                                                         <li><a href="blog-list-right-sidebar.html">List Right
-                                                                Sidebar</a>
+                                                            Sidebar</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -752,7 +739,7 @@ export default function Header() {
                                 <a className="product-item_remove" href="#" onClick={(e) => e.preventDefault()}><i
                                     className="ion-android-close"></i></a>
                                 <div className="product-item_img">
-                                    <img src="/images/product/small-size/3.jpg" alt="Uren's Product Image"/>
+                                    <img src="/images/product/small-size/3.jpg" alt="Uren's Product Image" />
                                 </div>
                                 <div className="product-item_content">
                                     <a className="product-item_title" href="shop-left-sidebar.html">Non doloremque placeat</a>
@@ -786,7 +773,7 @@ export default function Header() {
                         <nav className="offcanvas-navigation">
                             <ul className="mobile-menu">
                                 <li className="menu-item-has-children active"><a href="index.html" onClick={(e) => e.preventDefault()}><span
-                                        className="mm-text">Home</span></a>
+                                    className="mm-text">Home</span></a>
                                     <ul className="sub-menu">
                                         <li>
                                             <a href="index.html" onClick={(e) => e.preventDefault()}>
@@ -1082,8 +1069,8 @@ export default function Header() {
                         <nav className="offcanvas-navigation user-setting_area">
                             <ul className="mobile-menu">
                                 <li className="menu-item-has-children active"><a href="#" onClick={(e) => e.preventDefault()}><span
-                                        className="mm-text">User
-                                        Setting</span></a>
+                                    className="mm-text">User
+                                    Setting</span></a>
                                     <ul className="sub-menu">
                                         <li>
                                             <a href="my-account.html" onClick={(e) => e.preventDefault()}>
@@ -1098,7 +1085,7 @@ export default function Header() {
                                     </ul>
                                 </li>
                                 <li className="menu-item-has-children"><a href="#" onClick={(e) => e.preventDefault()}><span
-                                        className="mm-text">Currency</span></a>
+                                    className="mm-text">Currency</span></a>
                                     <ul className="sub-menu">
                                         <li>
                                             <a href="#" onClick={(e) => e.preventDefault()}>
@@ -1113,7 +1100,7 @@ export default function Header() {
                                     </ul>
                                 </li>
                                 <li className="menu-item-has-children"><a href="#" onClick={(e) => e.preventDefault()}><span
-                                        className="mm-text">Language</span></a>
+                                    className="mm-text">Language</span></a>
                                     <ul className="sub-menu">
                                         <li>
                                             <a href="#" onClick={(e) => e.preventDefault()}>

@@ -331,22 +331,12 @@ export default function Header() {
                                         </li>
                                         <li className="megamenu-holder "><a href="shop-left-sidebar.html">Catalog</a>
                                         </li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Specials</a></li>
-                                        <li className=""><a href="#" onClick={(e) => e.preventDefault()}>Pages <i
-                                            className="ion-ios-arrow-down"></i></a>
-                                            <ul className="hm-dropdown">
-                                                <li><a href="my-account.html">My Account</a></li>
-                                                <li><a href="login-register.html">Login | Register</a></li>
-                                                <li><a href="wishlist.html">Wishlist</a></li>
-                                                <li><a href="cart.html">Cart</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="compare.html">Compare</a></li>
-                                                <li><a href="faq.html">FAQ</a></li>
-                                                <li><a href="404.html">404 Error</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Create Offer</a></li>
                                         <li className=""><a href="about-us.html">About Us</a></li>
                                         <li className=""><a href="contact.html">Contact</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Login</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Register</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Logout</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -466,22 +456,12 @@ export default function Header() {
                                         <li className="megamenu-holder ">
                                             <a href="shop-left-sidebar.html">Catalog</a>
                                         </li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Specials</a></li>
-                                        <li className=""><a href="#" onClick={(e) => e.preventDefault()}>Pages <i
-                                            className="ion-ios-arrow-down"></i></a>
-                                            <ul className="hm-dropdown">
-                                                <li><a href="my-account.html">My Account</a></li>
-                                                <li><a href="login-register.html">Login | Register</a></li>
-                                                <li><a href="wishlist.html">Wishlist</a></li>
-                                                <li><a href="cart.html">Cart</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="compare.html">Compare</a></li>
-                                                <li><a href="faq.html">FAQ</a></li>
-                                                <li><a href="404.html">404 Error</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Create Offer</a></li>
                                         <li className=""><a href="about-us.html">About Us</a></li>
                                         <li className=""><a href="contact.html">Contact</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Login</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Register</a></li>
+                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Logout</a></li>
                                     </ul>
                                 </nav>
                             </div>

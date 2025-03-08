@@ -329,60 +329,7 @@ export default function Header() {
                                                 <li><a href="index-3.html">Home Three</a></li>
                                             </ul>
                                         </li>
-                                        <li className="megamenu-holder "><a href="shop-left-sidebar.html">Shop <i
-                                            className="ion-ios-arrow-down"></i></a>
-                                            <ul className="hm-megamenu">
-                                                <li><span className="megamenu-title">Shop Page Layout</span>
-                                                    <ul>
-                                                        <li><a href="shop-grid-fullwidth.html">Grid Fullwidth</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Left Sidebar</a></li>
-                                                        <li><a href="shop-right-sidebar.html">Right Sidebar</a></li>
-                                                        <li><a href="shop-list-fullwidth.html">List Fullwidth</a></li>
-                                                        <li><a href="shop-list-left-sidebar.html">List Left Sidebar</a>
-                                                        </li>
-                                                        <li><a href="shop-list-right-sidebar.html">List Right
-                                                            Sidebar</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li><span className="megamenu-title">Single Product Style</span>
-                                                    <ul>
-                                                        <li><a href="single-product-gallery-left.html">Gallery Left</a>
-                                                        </li>
-                                                        <li><a href="single-product-gallery-right.html">Gallery
-                                                            Right</a>
-                                                        </li>
-                                                        <li><a href="single-product-tab-style-left.html">Tab Style
-                                                            Left</a>
-                                                        </li>
-                                                        <li><a href="single-product-tab-style-right.html">Tab Style
-                                                            Right</a>
-                                                        </li>
-                                                        <li><a href="single-product-sticky-left.html">Sticky Left</a>
-                                                        </li>
-                                                        <li><a href="single-product-sticky-right.html">Sticky Right</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li><span className="megamenu-title">Single Product Type</span>
-                                                    <ul>
-                                                        <li><a href="single-product.html">Single Product</a></li>
-                                                        <li><a href="single-product-sale.html">Single Product Sale</a>
-                                                        </li>
-                                                        <li><a href="single-product-group.html">Single Product Group</a>
-                                                        </li>
-                                                        <li><a href="single-product-variable.html">Single Product
-                                                            Variable</a>
-                                                        </li>
-                                                        <li><a href="single-product-affiliate.html">Single Product
-                                                            Affiliate</a>
-                                                        </li>
-                                                        <li><a href="single-product-slider.html">Single Product
-                                                            Slider</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                        <li className="megamenu-holder "><a href="shop-left-sidebar.html">Catalog</a>
                                         </li>
                                         <li><a href="#" onClick={(e) => e.preventDefault()}>Specials</a></li>
                                         <li className=""><a href="#" onClick={(e) => e.preventDefault()}>Pages <i
@@ -516,60 +463,8 @@ export default function Header() {
                                                 <li><a href="index-3.html">Home Three</a></li>
                                             </ul>
                                         </li>
-                                        <li className="megamenu-holder "><a href="shop-left-sidebar.html">Shop
-                                            <i className="ion-ios-arrow-down"></i></a>
-                                            <ul className="hm-megamenu">
-                                                <li><span className="megamenu-title">Shop Page Layout</span>
-                                                    <ul>
-                                                        <li><a href="shop-grid-fullwidth.html">Grid Fullwidth</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Left Sidebar</a></li>
-                                                        <li><a href="shop-right-sidebar.html">Right Sidebar</a></li>
-                                                        <li><a href="shop-list-fullwidth.html">List Fullwidth</a></li>
-                                                        <li><a href="shop-list-left-sidebar.html">List Left Sidebar</a>
-                                                        </li>
-                                                        <li><a href="shop-list-right-sidebar.html">List Right
-                                                            Sidebar</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li><span className="megamenu-title">Single Product Style</span>
-                                                    <ul>
-                                                        <li><a href="single-product-gallery-left.html">Gallery Left</a>
-                                                        </li>
-                                                        <li><a href="single-product-gallery-right.html">Gallery
-                                                            Right</a>
-                                                        </li>
-                                                        <li><a href="single-product-tab-style-left.html">Tab Style
-                                                            Left</a>
-                                                        </li>
-                                                        <li><a href="single-product-tab-style-right.html">Tab Style
-                                                            Right</a>
-                                                        </li>
-                                                        <li><a href="single-product-sticky-left.html">Sticky Left</a>
-                                                        </li>
-                                                        <li><a href="single-product-sticky-right.html">Sticky Right</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li><span className="megamenu-title">Single Product Type</span>
-                                                    <ul>
-                                                        <li><a href="single-product.html">Single Product</a></li>
-                                                        <li><a href="single-product-sale.html">Single Product Sale</a>
-                                                        </li>
-                                                        <li><a href="single-product-group.html">Single Product Group</a>
-                                                        </li>
-                                                        <li><a href="single-product-variable.html">Single Product
-                                                            Variable</a>
-                                                        </li>
-                                                        <li><a href="single-product-affiliate.html">Single Product
-                                                            Affiliate</a>
-                                                        </li>
-                                                        <li><a href="single-product-slider.html">Single Product
-                                                            Slider</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                        <li className="megamenu-holder ">
+                                            <a href="shop-left-sidebar.html">Catalog</a>
                                         </li>
                                         <li><a href="#" onClick={(e) => e.preventDefault()}>Specials</a></li>
                                         <li className=""><a href="#" onClick={(e) => e.preventDefault()}>Pages <i

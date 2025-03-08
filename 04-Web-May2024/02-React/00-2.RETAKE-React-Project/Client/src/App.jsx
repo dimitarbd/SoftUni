@@ -22,7 +22,7 @@ function App() {
 
     <Slider />
     <Shipping />
-    <SpecialProduct />
+    {/* <SpecialProduct /> */}  //TODO delete SpecialProduct
     <Banner />
     <Product />
     <BannerTwo />

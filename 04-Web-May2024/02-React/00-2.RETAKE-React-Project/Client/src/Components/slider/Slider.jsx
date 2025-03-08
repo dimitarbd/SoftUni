@@ -1,4 +1,22 @@
+import { useEffect } from 'react';
+import $ from 'jquery';
+import 'slick-carousel/slick/slick';
+
 export default function Slider() {
+   useEffect(() => {
+     // Initialize slick slider
+     $('.main-slider').slick({
+       autoplay: true,
+       autoplaySpeed: 5000,
+       speed: 1000,
+       dots: true,
+       fade: true,
+       arrows: true,
+       prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+       nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
+     });
+   }, []);
+
    return (
     <div className="uren-slider_area uren-slider_area-2">
     <div className="container-fluid">
@@ -18,7 +36,7 @@ export default function Slider() {
                     </div>
                     {/* <!-- Single Slide Area End Here --> */}
                     {/* <!-- Begin Single Slide Area --> */}
-                    {/* <div className="single-slide animation-style-02 bg-4">
+                    <div className="single-slide animation-style-02 bg-4">
                         <div className="slider-content slider-content-2">
                             <span className="primary-text_color">Car, Truck, CUV &amp; SUV Tires</span>
                             <h3>Wheels &amp; Tires</h3>
@@ -27,7 +45,7 @@ export default function Slider() {
                                 <a className="uren-btn" href="shop-left-sidebar.html">Read More</a>
                             </div>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
             </div>
             <div className="col-xl-3 col-lg-4">

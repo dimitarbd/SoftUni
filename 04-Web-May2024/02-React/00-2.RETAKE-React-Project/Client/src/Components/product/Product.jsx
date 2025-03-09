@@ -1,5 +1,25 @@
+import { useEffect } from 'react';
+import $ from 'jquery';
+import 'slick-carousel';
+
 export default function Product() {
-   return (
+  useEffect(() => {
+    // Initialize slick slider
+    $('.uren-slick-slider').each(function() {
+      let $this = $(this);
+      let $slickOptions = $this.data('slick-options');
+      let $slickResponsive = $this.data('slick-responsive');
+      
+      if ($slickOptions) {
+        $this.slick({
+          ...$slickOptions,
+          responsive: $slickResponsive
+        });
+      }
+    });
+  }, []);
+
+  return (
     <div className="uren-product_area">
     <div className="container-fluid">
         <div className="row">
@@ -8,23 +28,16 @@ export default function Product() {
                     <span>Top New On This Week</span>
                     <h3>New Arrivals Products</h3>
                 </div>
-                <div className="product-slider uren-slick-slider slick-gutter-30 slider-navigation_style-1 img-hover-effect_area" 
-                    data-slick-options='{
-                        "slidesToShow": 6,
-                        "slidesToScroll": 1,
-                        "arrows": true,
-                        "infinite": true,
-                        "rows": 1,
-                        "prevArrow": "<button class=\"slick-prev\"><i class=\"ion-ios-arrow-back\"></i></button>",
-                        "nextArrow": "<button class=\"slick-next\"><i class=\"ion-ios-arrow-forward\"></i></button>"
-                    }'
-                    data-slick-responsive='[
-                        {"breakpoint":1501, "settings": {"slidesToShow": 4}},
-                        {"breakpoint":1200, "settings": {"slidesToShow": 3}},
-                        {"breakpoint":992, "settings": {"slidesToShow": 2}},
-                        {"breakpoint":767, "settings": {"slidesToShow": 1}},
-                        {"breakpoint":480, "settings": {"slidesToShow": 1}}
-                    ]'>
+                <div className="product-slider uren-slick-slider slider-navigation_style-1 img-hover-effect_area" data-slick-options='{
+                "slidesToShow": 6,
+                "arrows" : true
+                }' data-slick-responsive='[
+                                        {"breakpoint":1501, "settings": {"slidesToShow": 4}},
+                                        {"breakpoint":1200, "settings": {"slidesToShow": 3}},
+                                        {"breakpoint":992, "settings": {"slidesToShow": 2}},
+                                        {"breakpoint":767, "settings": {"slidesToShow": 1}},
+                                        {"breakpoint":480, "settings": {"slidesToShow": 1}}
+                                    ]'>
                     <div className="product-slide_item">
                         <div className="inner-slide">
                             <div className="single-product">

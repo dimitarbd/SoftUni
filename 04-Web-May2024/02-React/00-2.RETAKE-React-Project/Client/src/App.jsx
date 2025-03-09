@@ -1,3 +1,6 @@
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import Banner from "./Components/banner/Banner"
 import BannerTwo from "./Components/bannerTwo/BannerTwo"
 import BestSellingProduct from "./Components/bestSellingProduct/BestSellingProduct"
@@ -30,7 +33,7 @@ function App() {
     {/* <FeaturedCategories /> //TODO delete */}
     {/* <Brand /> //TODO delete */}
     {/* <Blog /> //TODO delete */}
-    {/* <Modal /> */}
+    {/* <Modal /> //TODO delete*/}
     
     <Footer />
 {/* // </div> */}

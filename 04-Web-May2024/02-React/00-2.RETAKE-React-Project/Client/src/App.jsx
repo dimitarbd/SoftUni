@@ -24,12 +24,12 @@ function App() {
     <Shipping />
     {/* <SpecialProduct /> */}  //TODO delete SpecialProduct
     <Banner />
-    <Product />
+    <Product /> 
     <BannerTwo />
-    <BestSellingProduct />
-    <FeaturedCategories />
-    <Brand />
-    <Blog />
+    {/* <BestSellingProduct /> */} //TODO delete
+    {/* <FeaturedCategories /> */} //TODO delete
+    {/* <Brand /> */} //TODO delete
+    {/* <Blog /> */} //TODO delete
     <Modal />
     
     <Footer />

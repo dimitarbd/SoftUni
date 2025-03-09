@@ -26,9 +26,9 @@ function App() {
     <Slider />
     <Shipping />
     {/* <SpecialProduct />  //TODO delete SpecialProduct */}
-    <Banner />
+    {/* <Banner /> //TODO delete */}
     <Product /> 
-    <BannerTwo />
+    {/* <BannerTwo /> //TODO delete */}
     {/* <BestSellingProduct /> //TODO delete */}
     {/* <FeaturedCategories /> //TODO delete */}
     {/* <Brand /> //TODO delete */}

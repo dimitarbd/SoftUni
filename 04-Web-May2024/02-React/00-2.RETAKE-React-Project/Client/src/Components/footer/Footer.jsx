@@ -1,7 +1,7 @@
 export default function Footer() {
    return (
     <div className="uren-footer_area">
-    <div className="footer-top_area">
+    {/* <div className="footer-top_area">
         <div className="container-fluid">
             <div className="row">
                 <div className="col-lg-12">
@@ -22,7 +22,7 @@ export default function Footer() {
                 </div>
             </div>
         </div>
-    </div>
+    </div> */}
     <div className="footer-middle_area">
         <div className="container-fluid">
             <div className="row">

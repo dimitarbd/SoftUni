@@ -1,29 +1,7 @@
 export default function Footer() {
    return (
     <div className="uren-footer_area">
-    {/* <div className="footer-top_area">
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-lg-12">
-                    <div className="newsletter-area">
-                        <h3 className="title">Join Our Newsletter Now</h3>
-                        <p className="short-desc">Get E-mail updates about our latest shop and special offers.</p>
-                        <div className="newsletter-form_wrap">
-                            <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="newsletters-form validate" target="_blank" noValidate>
-                                <div id="mc_embed_signup_scroll">
-                                    <div id="mc-form" className="mc-form subscribe-form">
-                                        <input id="mc-email" className="newsletter-input" type="email" autoComplete="off" placeholder="Enter your email" />
-                                        <button className="newsletter-btn" id="mc-submit">Subscribe</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> */}
-    <div className="footer-middle_area">
+       <div className="footer-middle_area">
         <div className="container-fluid">
             <div className="row">
                 <div className="col-lg-4">

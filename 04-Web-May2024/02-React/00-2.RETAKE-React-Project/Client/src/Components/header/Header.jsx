@@ -40,75 +40,16 @@ export default function Header() {
                                 <form action="#" className="hm-searchbox">
                                     <select className="nice-select select-search-category">
                                         <option defaultValue="">All Categories</option>
-                                        <option defaultValue="">Laptops</option>
-                                        <option defaultValue="">Prime Video</option>
-                                        <option defaultValue="">All Videos</option>
-                                        <option defaultValue="">Blouses</option>
-                                        <option defaultValue="">Evening Dresses</option>
-                                        <option defaultValue="">Summer Dresses</option>
-                                        <option defaultValue="">T-shirts</option>
-                                        <option defaultValue="">Rent or Buy</option>
-                                        <option defaultValue="">Your Watchlist</option>
-                                        <option defaultValue="">Watch Anywhere</option>
-                                        <option defaultValue="">Getting Started</option>
-                                        <option defaultValue="">Computers</option>
-                                        <option defaultValue="">More to Explore</option>
-                                        <option defaultValue="">TV &amp; Video</option>
-                                        <option defaultValue="">Audio &amp; Theater</option>
-                                        <option defaultValue="">Camera, Photo </option>
-                                        <option defaultValue="">Cell Phones</option>
-                                        <option defaultValue="">Headphones</option>
-                                        <option defaultValue="">Video Games</option>
-                                        <option defaultValue="">Wireless Speakers</option>
-                                        <option defaultValue="">Electronics</option>
-                                        <option defaultValue="">Amazon Home</option>
-                                        <option defaultValue="">Kitchen &amp; Dining</option>
-                                        <option defaultValue="">Furniture</option>
-                                        <option defaultValue="">Bed &amp; Bath</option>
-                                        <option defaultValue="">Appliances</option>
-                                        <option defaultValue="">TV &amp; Audio</option>
-                                        <option defaultValue="">Chamcham</option>
-                                        <option defaultValue="">Office</option>
-                                        <option defaultValue="">Gaming</option>
-                                        <option defaultValue="">Chromebook</option>
-                                        <option defaultValue="">Refurbished</option>
-                                        <option defaultValue="">Touchscreen</option>
-                                        <option defaultValue="">Ultrabooks</option>
-                                        <option defaultValue="">Blouses</option>
-                                        <option defaultValue="">Sanai</option>
-                                        <option defaultValue="">Hard Drives</option>
-                                        <option defaultValue="">Graphic Cards</option>
-                                        <option defaultValue="">Processors (CPU)</option>
-                                        <option defaultValue="">Memory</option>
-                                        <option defaultValue="">Motherboards</option>
-                                        <option defaultValue="">Fans &amp; Cooling</option>
-                                        <option defaultValue="">CD/DVD Drives</option>
-                                        <option defaultValue="">Meito</option>
-                                        <option defaultValue="">Sound Cards</option>
-                                        <option defaultValue="">Cases &amp; Towers</option>
-                                        <option defaultValue="">Casual Dresses</option>
-                                        <option defaultValue="">Evening Dresses</option>
-                                        <option defaultValue="">T-shirts</option>
-                                        <option defaultValue="">Tops</option>
-                                        <option defaultValue="">Smartphone</option>
-                                        <option defaultValue="">Camera Accessories</option>
-                                        <option defaultValue="">Octa Core</option>
-                                        <option defaultValue="">Quad Core</option>
-                                        <option defaultValue="">Dual Core</option>
-                                        <option defaultValue="">7.0 Screen</option>
-                                        <option defaultValue="">9.0 Screen</option>
-                                        <option defaultValue="">Bags &amp; Cases</option>
-                                        <option defaultValue="">XailStation</option>
-                                        <option defaultValue="">Batteries</option>
-                                        <option defaultValue="">Microphones</option>
-                                        <option defaultValue="">Stabilizers</option>
-                                        <option defaultValue="">Video Tapes</option>
-                                        <option defaultValue="">Memory Card Readers</option>
-                                        <option defaultValue="">Tripods</option>
-                                        <option defaultValue="">Cameras</option>
-                                        <option defaultValue="">headphone</option>
-                                        <option defaultValue="">Smartwatch</option>
-                                        <option defaultValue="">Accessories</option>
+                                        <option defaultValue="">Car Parts</option>
+                                        <option defaultValue="">Tools &amp; Accessories</option>
+                                        <option defaultValue="">Suspension Systems</option>
+                                        <option defaultValue="">Turbo System</option>
+                                        <option defaultValue="">Oils & Fluids</option>
+                                        <option defaultValue="">Exterior</option>
+                                        <option defaultValue="">Body Parts</option>
+                                        <option defaultValue="">Interior</option>
+                                        <option defaultValue="">Audio</option>
+                                        
                                     </select>
                                     <input type="text" placeholder="Enter your search key ..." />
                                     <button className="header-search_btn" type="submit"><i
@@ -323,11 +264,6 @@ export default function Header() {
                                 <nav className="main-nav">
                                     <ul>
                                         <li className="dropdown-holder active"><a href="index.html">Home</a>
-                                            <ul className="hm-dropdown">
-                                                <li><a href="index.html">Home One</a></li>
-                                                <li><a href="index-2.html">Home Two</a></li>
-                                                <li><a href="index-3.html">Home Three</a></li>
-                                            </ul>
                                         </li>
                                         <li className="megamenu-holder "><a href="shop-left-sidebar.html">Catalog</a>
                                         </li>
@@ -360,75 +296,15 @@ export default function Header() {
                                 <form action="#" className="hm-searchbox">
                                     <select className="nice-select select-search-category">
                                         <option alue="">All Categories</option>
-                                        <option alue="">Laptops</option>
-                                        <option alue="">Prime Video</option>
-                                        <option alue="">All Videos</option>
-                                        <option alue="">Blouses</option>
-                                        <option alue="">Evening Dresses</option>
-                                        <option alue="">Summer Dresses</option>
-                                        <option alue="">T-shirts</option>
-                                        <option alue="">Rent or Buy</option>
-                                        <option alue="">Your Watchlist</option>
-                                        <option alue="">Watch Anywhere</option>
-                                        <option alue="">Getting Started</option>
-                                        <option alue="">Computers</option>
-                                        <option alue="">More to Explore</option>
-                                        <option alue="">TV &amp; Video</option>
-                                        <option alue="">Audio &amp; Theater</option>
-                                        <option alue="">Camera, Photo </option>
-                                        <option alue="">Cell Phones</option>
-                                        <option alue="">Headphones</option>
-                                        <option alue="">Video Games</option>
-                                        <option alue="">Wireless Speakers</option>
-                                        <option alue="">Electronics</option>
-                                        <option alue="">Amazon Home</option>
-                                        <option alue="">Kitchen &amp; Dining</option>
-                                        <option alue="">Furniture</option>
-                                        <option alue="">Bed &amp; Bath</option>
-                                        <option alue="">Appliances</option>
-                                        <option alue="">TV &amp; Audio</option>
-                                        <option alue="">Chamcham</option>
-                                        <option alue="">Office</option>
-                                        <option alue="">Gaming</option>
-                                        <option alue="">Chromebook</option>
-                                        <option alue="">Refurbished</option>
-                                        <option alue="">Touchscreen</option>
-                                        <option alue="">Ultrabooks</option>
-                                        <option alue="">Blouses</option>
-                                        <option alue="">Sanai</option>
-                                        <option alue="">Hard Drives</option>
-                                        <option alue="">Graphic Cards</option>
-                                        <option alue="">Processors (CPU)</option>
-                                        <option alue="">Memory</option>
-                                        <option alue="">Motherboards</option>
-                                        <option alue="">Fans &amp; Cooling</option>
-                                        <option alue="">CD/DVD Drives</option>
-                                        <option alue="">Meito</option>
-                                        <option alue="">Sound Cards</option>
-                                        <option alue="">Cases &amp; Towers</option>
-                                        <option alue="">Casual Dresses</option>
-                                        <option alue="">Evening Dresses</option>
-                                        <option alue="">T-shirts</option>
-                                        <option alue="">Tops</option>
-                                        <option alue="">Smartphone</option>
-                                        <option alue="">Camera Accessories</option>
-                                        <option alue="">Octa Core</option>
-                                        <option alue="">Quad Core</option>
-                                        <option alue="">Dual Core</option>
-                                        <option alue="">7.0 Screen</option>
-                                        <option alue="">9.0 Screen</option>
-                                        <option alue="">Bags &amp; Cases</option>
-                                        <option alue="">XailStation</option>
-                                        <option alue="">Batteries</option>
-                                        <option alue="">Microphones</option>
-                                        <option alue="">Stabilizers</option>
-                                        <option alue="">Video Tapes</option>
-                                        <option alue="">Memory Card Readers</option>
-                                        <option alue="">Tripods</option>
-                                        <option alue="">Cameras</option>
-                                        <option alue="">headphone</option>
-                                        <option alue="">Smartwatch</option>
-                                        <option alue="">Accessories</option>
+                                        <option alue="">Car Parts</option>
+                                        <option alue="">Tools &amp; Accessories</option>
+                                        <option alue="">Suspension Systems</option>
+                                        <option alue="">Turbo System</option>
+                                        <option alue="">Oils & Fluids</option>
+                                        <option alue="">Exterior</option>
+                                        <option alue="">Body Parts</option>
+                                        <option alue="">Interior</option>
+                                        <option alue="">Audio</option>
                                     </select>
                                     <input type="text" placeholder="Enter your search key ..." />
                                     <button className="header-search_btn" type="submit"><i
@@ -447,11 +323,6 @@ export default function Header() {
                                 <nav className="main-nav">
                                     <ul>
                                         <li className="dropdown-holder active"><a href="index.html">Home</a>
-                                            <ul className="hm-dropdown">
-                                                <li><a href="index.html">Home One</a></li>
-                                                <li><a href="index-2.html">Home Two</a></li>
-                                                <li><a href="index-3.html">Home Three</a></li>
-                                            </ul>
                                         </li>
                                         <li className="megamenu-holder ">
                                             <a href="shop-left-sidebar.html">Catalog</a>

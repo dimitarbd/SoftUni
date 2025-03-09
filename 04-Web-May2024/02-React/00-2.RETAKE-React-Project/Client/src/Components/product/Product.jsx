@@ -14,8 +14,8 @@ export default function Product() {
         $this.slick({
           ...$slickOptions,
           responsive: $slickResponsive,
-          prevArrow: '<button class="slick-prev"><i class="ion-ios-arrow-back"></i></button>',
-          nextArrow: '<button class="slick-next"><i class="ion-ios-arrow-forward"></i></button>'
+          prevArrow: '<button class="slick-prev" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: flex-end; padding-right: 17px;"><i class="ion-ios-arrow-back" style="font-size: 40px;"></i></button>',
+          nextArrow: '<button class="slick-next" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: flex-start; padding-left: 0px;"><i class="ion-ios-arrow-forward" style="font-size: 40px;"></i></button>'
         });
       }
     });

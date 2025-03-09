@@ -13,7 +13,9 @@ export default function Product() {
       if ($slickOptions) {
         $this.slick({
           ...$slickOptions,
-          responsive: $slickResponsive
+          responsive: $slickResponsive,
+          prevArrow: '<button class="slick-prev"><i class="ion-ios-arrow-back"></i></button>',
+          nextArrow: '<button class="slick-next"><i class="ion-ios-arrow-forward"></i></button>'
         });
       }
     });

@@ -22,15 +22,15 @@ function App() {
 
     <Slider />
     <Shipping />
-    {/* <SpecialProduct /> */}  //TODO delete SpecialProduct
+    {/* <SpecialProduct />  //TODO delete SpecialProduct */}
     <Banner />
     <Product /> 
     <BannerTwo />
-    {/* <BestSellingProduct /> */} //TODO delete
-    {/* <FeaturedCategories /> */} //TODO delete
-    {/* <Brand /> */} //TODO delete
-    {/* <Blog /> */} //TODO delete
-    <Modal />
+    {/* <BestSellingProduct /> //TODO delete */}
+    {/* <FeaturedCategories /> //TODO delete */}
+    {/* <Brand /> //TODO delete */}
+    {/* <Blog /> //TODO delete */}
+    {/* <Modal /> */}
     
     <Footer />
 {/* // </div> */}

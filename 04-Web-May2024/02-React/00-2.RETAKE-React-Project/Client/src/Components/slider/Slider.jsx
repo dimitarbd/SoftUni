@@ -12,8 +12,8 @@ export default function Slider() {
        dots: true,
        fade: true,
        arrows: true,
-       prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
-       nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
+       prevArrow: '<button type="button" class="custom-arrow custom-prev"><i class="fa fa-angle-left"></i></button>',
+       nextArrow: '<button type="button" class="custom-arrow custom-next"><i class="fa fa-angle-right"></i></button>'
      });
    }, []);
 

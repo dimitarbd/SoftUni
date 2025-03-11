@@ -12,8 +12,8 @@ export default function Slider() {
        dots: true,
        fade: true,
        arrows: true,
-       prevArrow: '<button type="button" class="custom-arrow custom-prev"><i class="fa fa-angle-left"></i></button>',
-       nextArrow: '<button type="button" class="custom-arrow custom-next"><i class="fa fa-angle-right"></i></button>'
+       prevArrow: '<button type="button" style="border: none; background: none; outline: none;"><i class="fa fa-angle-left" style="margin-left: 0px;"></i></button>',
+       nextArrow: '<button type="button" style="border: none; background: none; outline: none;"><i class="fa fa-angle-right" style="margin-left: 20px;"></i></button>'
      });
    }, []);
 

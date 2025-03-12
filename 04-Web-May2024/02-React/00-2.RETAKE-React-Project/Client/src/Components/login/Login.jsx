@@ -1,6 +1,6 @@
 export default function Login() {
    return (
-   
+    <>
     {/* <!-- Begin Uren's Breadcrumb Area --> */}
     <div className="breadcrumb-area">
         <div className="container">
@@ -26,15 +26,15 @@ export default function Login() {
                             <div className="row">
                                 <div className="col-md-12 col-12">
                                     <label>Email Address*</label>
-                                    <input type="email" placeholder="Email Address">
+                                    <input type="email" placeholder="Email Address"/>
                                 </div>
                                 <div className="col-12 mb--20">
                                     <label>Password</label>
-                                    <input type="password" placeholder="Password">
+                                    <input type="password" placeholder="Password"/>
                                 </div>
                                 <div className="col-md-8">
                                     <div className="check-box">
-                                        <input type="checkbox" id="remember_me">
+                                        <input type="checkbox" id="remember_me"/>
                                         <label for="remember_me">Remember me</label>
                                     </div>
                                 </div>
@@ -57,23 +57,23 @@ export default function Login() {
                             <div className="row">
                                 <div className="col-md-6 col-12 mb--20">
                                     <label>First Name</label>
-                                    <input type="text" placeholder="First Name">
+                                    <input type="text" placeholder="First Name"/>
                                 </div>
                                 <div className="col-md-6 col-12 mb--20">
                                     <label>Last Name</label>
-                                    <input type="text" placeholder="Last Name">
+                                    <input type="text" placeholder="Last Name"/>
                                 </div>
                                 <div className="col-md-12">
                                     <label>Email Address*</label>
-                                    <input type="email" placeholder="Email Address">
+                                    <input type="email" placeholder="Email Address"/>
                                 </div>
                                 <div className="col-md-6">
                                     <label>Password</label>
-                                    <input type="password" placeholder="Password">
+                                    <input type="password" placeholder="Password"/>
                                 </div>
                                 <div className="col-md-6">
                                     <label>Confirm Password</label>
-                                    <input type="password" placeholder="Confirm Password">
+                                    <input type="password" placeholder="Confirm Password"/>
                                 </div>
                                 <div className="col-12">
                                     <button className="uren-register_btn">Register</button>
@@ -85,6 +85,7 @@ export default function Login() {
             </div>
         </div>
     </div>
-    <!-- Uren's Login Register Area  End Here -->
+    {/* <!-- Uren's Login Register Area  End Here --> */}    
+    </>
    );
 }

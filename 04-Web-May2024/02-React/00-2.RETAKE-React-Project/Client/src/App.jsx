@@ -6,16 +6,20 @@ import Header from "./Components/header/Header"
 import Product from "./Components/product/Product"
 import Shipping from "./Components/shipping/Shipping"
 import Slider from "./Components/slider/Slider"
-
+import Register from "./Components/register/Register"
+import Login from "./Components/login/Login"
 function App() {
 
     return (
         <>
             <Header />
 
-            {/* <Slider />
+            <Slider />
             <Shipping />
-            <Product /> */}
+            <Product /> 
+
+            {/* <Register /> */}
+            {/* <Login /> */}
 
             <Footer />
         </>

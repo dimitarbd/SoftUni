@@ -269,7 +269,6 @@ export default function Header() {
                                         </li>
                                         <li><a href="#" onClick={(e) => e.preventDefault()}>Create Offer</a></li>
                                         <li className=""><a href="about-us.html">About Us</a></li>
-                                        <li className=""><a href="contact.html">Contact</a></li>
                                         <li><a href="#" onClick={(e) => e.preventDefault()}>Login</a></li>
                                         <li><a href="#" onClick={(e) => e.preventDefault()}>Register</a></li>
                                         <li><a href="#" onClick={(e) => e.preventDefault()}>Logout</a></li>
@@ -329,7 +328,6 @@ export default function Header() {
                                         </li>
                                         <li><a href="#" onClick={(e) => e.preventDefault()}>Create Offer</a></li>
                                         <li className=""><a href="about-us.html">About Us</a></li>
-                                        <li className=""><a href="contact.html">Contact</a></li>
                                         <li><a href="#" onClick={(e) => e.preventDefault()}>Login</a></li>
                                         <li><a href="#" onClick={(e) => e.preventDefault()}>Register</a></li>
                                         <li><a href="#" onClick={(e) => e.preventDefault()}>Logout</a></li>

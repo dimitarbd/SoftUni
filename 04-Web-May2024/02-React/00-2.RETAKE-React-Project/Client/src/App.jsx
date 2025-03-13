@@ -11,7 +11,6 @@ import Home from "./Home"
 import Catalog from "./Components/catalog/Catalog"
 import Details from "./Components/details/Details"
 import About from "./Components/about/About"
-// import Contact from "./Components/contact/Contact"
 
 
 function App() {
@@ -28,7 +27,6 @@ function App() {
                 <Route path="/catalog" element={<Catalog />} />
                 <Route path="/details" element={<Details />} />
                 <Route path="/about" element={<About />} />
-                {/* <Route path="/contact" element={<Contact />} /> */}
             </Routes>
 
 

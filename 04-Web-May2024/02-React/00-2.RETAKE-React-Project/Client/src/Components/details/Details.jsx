@@ -99,27 +99,27 @@ export default function Details() {
                                 </div>
                                 <div className="sp-essential_stuff">
                                     <ul>
-                                        <li>Brands <a href="javascript:void(0)">Buxton</a></li>
-                                        <li>Product Code: <a href="javascript:void(0)">Product 16</a></li>
-                                        <li>Reward Points: <a href="javascript:void(0)">100</a></li>
-                                        <li>Availability: <a href="javascript:void(0)">In Stock</a></li>
-                                        <li>EX Tax: <a href="javascript:void(0)"><span>$453.35</span></a></li>
-                                        <li>Price in reward points: <a href="javascript:void(0)">400</a></li>
+                                        <li>Brands <button className="btn-link">Buxton</button></li>
+                                        <li>Product Code: <button className="btn-link">Product 16</button></li>
+                                        <li>Reward Points: <button className="btn-link">100</button></li>
+                                        <li>Availability: <button className="btn-link">In Stock</button></li>
+                                        <li>EX Tax: <button className="btn-link"><span>$453.35</span></button></li>
+                                        <li>Price in reward points: <button className="btn-link">400</button></li>
                                     </ul>
                                 </div>
                                 <div className="product-size_box">
                                     <span>Size</span>
                                     <select className="myniceselect nice-select">
-                                        <option value="1">S</option>
-                                        <option value="2">M</option>
-                                        <option value="3">L</option>
-                                        <option value="4">XL</option>
+                                        <option defaultValue="1">S</option>
+                                        <option defaultValue="2">M</option>
+                                        <option defaultValue="3">L</option>
+                                        <option defaultValue="4">XL</option>
                                     </select>
                                 </div>
                                 <div className="quantity">
                                     <label>Quantity</label>
                                     <div className="cart-plus-minus">
-                                        <input className="cart-plus-minus-box" value="1" type="text" />
+                                        <input className="cart-plus-minus-box" defaultValue="1" type="text" />
                                         <div className="dec qtybutton"><i className="fa fa-angle-down"></i></div>
                                         <div className="inc qtybutton"><i className="fa fa-angle-up"></i></div>
                                     </div>
@@ -134,9 +134,9 @@ export default function Details() {
                                 </div>
                                 <div className="uren-tag-line">
                                     <h6>Tags:</h6>
-                                    <a href="javascript:void(0)">vehicle</a>,
-                                    <a href="javascript:void(0)">car</a>,
-                                    <a href="javascript:void(0)">bike</a>
+                                    <a href="#" onClick={(e) => e.preventDefault()}>vehicle</a>,
+                                    <a href="#" onClick={(e) => e.preventDefault()}>car</a>,
+                                    <a href="#" onClick={(e) => e.preventDefault()}>bike</a>
                                 </div>
                                 <div className="uren-social_link">
                                     <ul>
@@ -217,7 +217,7 @@ export default function Details() {
                                     <table className="table table-bordered specification-inner_stuff">
                                         <tbody>
                                             <tr>
-                                                <td colspan="2"><strong>Memory</strong></td>
+                                                <td colSpan="2"><strong>Memory</strong></td>
                                             </tr>
                                         </tbody>
                                         <tbody>
@@ -228,7 +228,7 @@ export default function Details() {
                                         </tbody>
                                         <tbody>
                                             <tr>
-                                                <td colspan="2"><strong>Processor</strong></td>
+                                                <td colSpan="2"><strong>Processor</strong></td>
                                             </tr>
                                         </tbody>
                                         <tbody>
@@ -250,7 +250,7 @@ export default function Details() {
                                                             <td className="text-right">15/09/20</td>
                                                         </tr>
                                                         <tr>
-                                                            <td colspan="2">
+                                                            <td colSpan="2">
                                                                 <p>Good product! Thank you very much</p>
                                                                 <div className="rating-box">
                                                                     <ul>
@@ -287,11 +287,11 @@ export default function Details() {
                                                         <label>Your Rating</label>
                                                         <span>
                                                     <select className="star-rating">
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
+                                                        <option defaultValue="1">1</option>
+                                                        <option defaultValue="2">2</option>
+                                                        <option defaultValue="3">3</option>
+                                                        <option defaultValue="4">4</option>
+                                                        <option defaultValue="5">5</option>
                                                     </select>
                                                 </span>
                                                     </div>
@@ -350,7 +350,7 @@ export default function Details() {
                                                     <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></a>
                                                     </li>
-                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></a></li>
                                                 </ul>
                                             </div>
@@ -396,7 +396,7 @@ export default function Details() {
                                                     <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></a>
                                                     </li>
-                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></a></li>
                                                 </ul>
                                             </div>
@@ -440,7 +440,7 @@ export default function Details() {
                                                     <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></a>
                                                     </li>
-                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></a></li>
                                                 </ul>
                                             </div>
@@ -486,7 +486,7 @@ export default function Details() {
                                                     <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></a>
                                                     </li>
-                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></a></li>
                                                 </ul>
                                             </div>
@@ -530,7 +530,7 @@ export default function Details() {
                                                     <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></a>
                                                     </li>
-                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></a></li>
                                                 </ul>
                                             </div>
@@ -576,7 +576,7 @@ export default function Details() {
                                                     <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></a>
                                                     </li>
-                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></a></li>
                                                 </ul>
                                             </div>
@@ -620,7 +620,7 @@ export default function Details() {
                                                     <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></a>
                                                     </li>
-                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></a></li>
                                                 </ul>
                                             </div>
@@ -663,7 +663,7 @@ export default function Details() {
                                                     <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></a>
                                                     </li>
-                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                    <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></a></li>
                                                 </ul>
                                             </div>
@@ -716,81 +716,81 @@ export default function Details() {
                             <div className="slide-item">
                                 <div className="inner-slide">
                                     <div className="single-product">
-                                        <a href="javascript:void(0)">
+                                        <button className="brand-btn">
                                             <img src="assets/images/brand/1.jpg" alt="Uren's Brand Image" />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div className="slide-item">
                                 <div className="inner-slide">
                                     <div className="single-product">
-                                        <a href="javascript:void(0)">
+                                        <button className="brand-btn">
                                             <img src="assets/images/brand/2.jpg" alt="Uren's Brand Image" />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div className="slide-item">
                                 <div className="inner-slide">
                                     <div className="single-product">
-                                        <a href="javascript:void(0)">
+                                        <button className="brand-btn">
                                             <img src="assets/images/brand/3.jpg" alt="Uren's Brand Image" />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div className="slide-item">
                                 <div className="inner-slide">
                                     <div className="single-product">
-                                        <a href="javascript:void(0)">
+                                        <button className="brand-btn">
                                             <img src="assets/images/brand/4.jpg" alt="Uren's Brand Image" />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div className="slide-item">
                                 <div className="inner-slide">
                                     <div className="single-product">
-                                        <a href="javascript:void(0)">
+                                        <button className="brand-btn">
                                             <img src="assets/images/brand/5.jpg" alt="Uren's Brand Image" />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div className="slide-item">
                                 <div className="inner-slide">
                                     <div className="single-product">
-                                        <a href="javascript:void(0)">
+                                        <button className="brand-btn">
                                             <img src="assets/images/brand/6.jpg" alt="Uren's Brand Image" />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div className="slide-item">
                                 <div className="inner-slide">
                                     <div className="single-product">
-                                        <a href="javascript:void(0)">
+                                        <button className="brand-btn">
                                             <img src="assets/images/brand/1.jpg" alt="Uren's Brand Image" />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div className="slide-item">
                                 <div className="inner-slide">
                                     <div className="single-product">
-                                        <a href="javascript:void(0)">
+                                        <button className="brand-btn">
                                             <img src="assets/images/brand/7.jpg" alt="Uren's Brand Image" />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div className="slide-item">
                                 <div className="inner-slide">
                                     <div className="single-product">
-                                        <a href="javascript:void(0)">
+                                        <button className="brand-btn">
                                             <img src="assets/images/brand/2.jpg" alt="Uren's Brand Image" />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

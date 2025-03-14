@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Catalog() {
     return (
         <>
@@ -7,7 +9,7 @@ export default function Catalog() {
                     <div className="breadcrumb-content">
                         <h2>Shop</h2>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
+                            <li><Link to="/home">Home</Link></li>
                             <li className="active">Shop Left Sidebar</li>
                         </ul>
                     </div>

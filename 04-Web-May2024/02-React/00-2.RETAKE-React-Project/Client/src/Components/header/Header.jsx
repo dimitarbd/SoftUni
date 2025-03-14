@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';    
 
 export default function Header() {
     useEffect(() => {
@@ -30,9 +31,9 @@ export default function Header() {
                     <div className="row">
                         <div className="col-xl-3 col-lg-2 col-md-3 col-sm-5">
                             <div className="header-logo_area">
-                                <a href="index.html">
+                                <Link to="/">
                                     <img src="/images/menu/logo/1.png" alt="Uren's Logo" />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-xl-5 col-lg-6 d-none d-lg-block">
@@ -61,12 +62,12 @@ export default function Header() {
                             <div className="header-right_area">
                                 <ul>
                                     <li className="mobile-menu_wrap d-flex d-lg-none">
-                                        <a href="#mobileMenu" className="mobile-menu_btn toolbar-btn color--white">
+                                        <Link to="#mobileMenu" className="mobile-menu_btn toolbar-btn color--white">
                                             <i className="ion-navicon"></i>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li className="minicart-wrap">
-                                        <a href="#miniCart" className="minicart-btn toolbar-btn">
+                                        <Link to="#miniCart" className="minicart-btn toolbar-btn">
                                             <div className="minicart-count_area">
                                                 <span className="item-count">3</span>
                                                 <i className="ion-bag"></i>
@@ -75,10 +76,10 @@ export default function Header() {
                                                 <span>Cart:</span>
                                                 <span className="total-price">462.4</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li className="contact-us_wrap">
-                                        <a href="tel://+123123321345"><i className="ion-android-call"></i>+123 321 345</a>
+                                        <Link to="tel://+123123321345"><i className="ion-android-call"></i>+123 321 345</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -99,161 +100,161 @@ export default function Header() {
                                 </div>
                                 <div id="cate-toggle" className="category-menu-list" style={{ display: 'none' }}>
                                     <ul>
-                                        <li className="right-menu"><a href="shop-left-sidebar.html">Car Parts</a>
+                                        <li className="right-menu"><Link to="shop-left-sidebar.html">Car Parts</Link>
                                             <ul className="cat-mega-menu">
                                                 <li className="right-menu cat-mega-title">
-                                                    <a href="shop-left-sidebar.html">Active body control</a>
+                                                    <Link to="shop-left-sidebar.html">Active body control</Link>
                                                     <ul>
-                                                        <li><a href="shop-left-sidebar.html">Aluminum Nonstick</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Calphalon</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Contemporary</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Hard-Anodized</a></li>
+                                                        <li><Link to="shop-left-sidebar.html">Aluminum Nonstick</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Calphalon</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Contemporary</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Hard-Anodized</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className="right-menu cat-mega-title">
-                                                    <a href="shop-left-sidebar.html">Battery Indicator</a>
+                                                    <Link to="shop-left-sidebar.html">Battery Indicator</Link>
                                                     <ul>
-                                                        <li><a href="shop-left-sidebar.html">Sanai laptops</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Byteflight</a></li>
-                                                        <li><a href="shop-left-sidebar.html">EXcaliberPC</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Gaming Laptops</a></li>
+                                                        <li><Link to="shop-left-sidebar.html">Sanai laptops</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Byteflight</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">EXcaliberPC</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Gaming Laptops</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className="right-menu cat-mega-title">
-                                                    <a href="shop-left-sidebar.html">Remote Starter</a>
+                                                    <Link to="shop-left-sidebar.html">Remote Starter</Link>
                                                     <ul>
-                                                        <li><a href="shop-left-sidebar.html">Dual Core</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Gaming Monitors</a></li>
-                                                        <li><a href="shop-left-sidebar.html">GPS Monitors</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Heat Shield</a></li>
+                                                        <li><Link to="shop-left-sidebar.html">Dual Core</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Gaming Monitors</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">GPS Monitors</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Heat Shield</Link></li>
                                                     </ul>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li className="right-menu"><a href="shop-left-sidebar.html">Tools &amp;
-                                            Accessories</a>
+                                        <li className="right-menu"><Link to="shop-left-sidebar.html">Tools &amp;
+                                            Accessories</Link>
                                             <ul className="cat-mega-menu cat-mega-menu-2">
                                                 <li className="right-menu cat-mega-title">
-                                                    <a href="shop-left-sidebar.html">Drills</a>
+                                                    <Link to="shop-left-sidebar.html">Drills</Link>
                                                     <ul>
-                                                        <li><a href="shop-left-sidebar.html">Angle Drills</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Combi Drills</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Drill Drivers</a></li>
-                                                        <li><a href="shop-left-sidebar.html">PercussionDrills</a></li>
+                                                        <li><Link to="shop-left-sidebar.html">Angle Drills</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Combi Drills</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Drill Drivers</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">PercussionDrills</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className="right-menu cat-mega-title">
-                                                    <a href="shop-left-sidebar.html">Nail Guns</a>
+                                                    <Link to="shop-left-sidebar.html">Nail Guns</Link>
                                                     <ul>
-                                                        <li><a href="shop-left-sidebar.html">Air Nail Guns</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Cordless Nail Guns</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Electric Nail Guns</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Gas Nail Guns</a></li>
+                                                        <li><Link to="shop-left-sidebar.html">Air Nail Guns</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Cordless Nail Guns</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Electric Nail Guns</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Gas Nail Guns</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className="right-menu cat-mega-title">
-                                                    <a href="shop-left-sidebar.html">Sanders</a>
+                                                    <Link to="shop-left-sidebar.html">Sanders</Link>
                                                     <ul>
-                                                        <li><a href="shop-left-sidebar.html">1/2 Sheet Sanders</a></li>
-                                                        <li><a href="shop-left-sidebar.html">1/4 Sheet Sanders</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Belt Sanders</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Drywall Sanders</a></li>
+                                                        <li><Link to="shop-left-sidebar.html">1/2 Sheet Sanders</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">1/4 Sheet Sanders</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Belt Sanders</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Drywall Sanders</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className="right-menu cat-mega-title">
-                                                    <a href="shop-left-sidebar.html">Saws</a>
+                                                    <Link to="shop-left-sidebar.html">Saws</Link>
                                                     <ul>
-                                                        <li><a href="shop-left-sidebar.html">Circular Saws</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Jigsaws</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Mitre Saws</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Reciprocating Saws</a></li>
+                                                        <li><Link to="shop-left-sidebar.html">Circular Saws</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Jigsaws</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Mitre Saws</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Reciprocating Saws</Link></li>
                                                     </ul>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li className="right-menu"><a href="shop-left-sidebar.html">Suspension Systems</a>
+                                        <li className="right-menu"><Link to="shop-left-sidebar.html">Suspension Systems</Link>
                                             <ul className="cat-mega-menu cat-mega-menu-3">
                                                 <li className="right-menu cat-mega-title">
-                                                    <a href="shop-left-sidebar.html">Clothing</a>
+                                                    <Link to="shop-left-sidebar.html">Clothing</Link>
                                                     <ul>
-                                                        <li><a href="shop-left-sidebar.html">Cuisinart</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Homeinart</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Kettle Stainless</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Steel Stovetop</a></li>
+                                                        <li><Link to="shop-left-sidebar.html">Cuisinart</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Homeinart</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Kettle Stainless</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Steel Stovetop</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className="right-menu cat-mega-title">
-                                                    <a href="shop-left-sidebar.html">Jewelry</a>
+                                                    <Link to="shop-left-sidebar.html">Jewelry</Link>
                                                     <ul>
-                                                        <li><a href="shop-left-sidebar.html">Hard Anodized</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Scratch Resistant</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Thermo-Spot</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Ultimate</a></li>
+                                                        <li><Link to="shop-left-sidebar.html">Hard Anodized</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Scratch Resistant</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Thermo-Spot</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Ultimate</Link></li>
                                                     </ul>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li className="right-menu"><a href="shop-left-sidebar.html">Turbo System</a>
+                                        <li className="right-menu"><Link to="shop-left-sidebar.html">Turbo System</Link>
                                             <ul className="cat-mega-menu">
                                                 <li className="right-menu cat-mega-title">
-                                                    <a href="shop-left-sidebar.html">BMW</a>
+                                                    <Link to="shop-left-sidebar.html">BMW</Link>
                                                     <ul>
-                                                        <li><a href="shop-left-sidebar.html">Dining Chairs</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Dining Tables</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Gramophone</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Sideboards</a></li>
+                                                        <li><Link to="shop-left-sidebar.html">Dining Chairs</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Dining Tables</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Gramophone</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Sideboards</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className="right-menu cat-mega-title">
-                                                    <a href="shop-left-sidebar.html">FORD</a>
+                                                    <Link to="shop-left-sidebar.html">FORD</Link>
                                                     <ul>
-                                                        <li><a href="shop-left-sidebar.html">Chairs & Sofas</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Chest</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Loungers</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Sets</a></li>
+                                                        <li><Link to="shop-left-sidebar.html">Chairs & Sofas</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Chest</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Loungers</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Sets</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className="right-menu cat-mega-title">
-                                                    <a href="shop-left-sidebar.html">POSCHER</a>
+                                                    <Link to="shop-left-sidebar.html">POSCHER</Link>
                                                     <ul>
-                                                        <li><a href="shop-left-sidebar.html">Bed</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Daybed</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Futon</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Hammock</a></li>
+                                                        <li><Link to="shop-left-sidebar.html">Bed</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Daybed</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Futon</Link></li>
+                                                        <li><Link to="shop-left-sidebar.html">Hammock</Link></li>
                                                     </ul>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li className="right-menu"><a href="shop-left-sidebar.html">Oils & Fluids</a>
+                                        <li className="right-menu"><Link to="shop-left-sidebar.html">Oils & Fluids</Link>
                                             <ul className="cat-dropdown">
                                                 <li>
-                                                    <a href="shop-left-sidebar.html">Daylesford</a>
-                                                    <a href="shop-left-sidebar.html">Delaware</a>
-                                                    <a href="shop-left-sidebar.html">Fayence</a>
-                                                    <a href="shop-left-sidebar.html">Franzea</a>
-                                                    <a href="shop-left-sidebar.html">Mable</a>
-                                                    <a href="shop-left-sidebar.html">Mobo</a>
-                                                    <a href="shop-left-sidebar.html">Pippins</a>
+                                                    <Link to="shop-left-sidebar.html">Daylesford</Link>
+                                                    <Link to="shop-left-sidebar.html">Delaware</Link>
+                                                    <Link to="shop-left-sidebar.html">Fayence</Link>
+                                                    <Link to="shop-left-sidebar.html">Franzea</Link>
+                                                    <Link to="shop-left-sidebar.html">Mable</Link>
+                                                    <Link to="shop-left-sidebar.html">Mobo</Link>
+                                                    <Link to="shop-left-sidebar.html">Pippins</Link>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li className="right-menu"><a href="shop-left-sidebar.html">Exterior</a>
+                                        <li className="right-menu"><Link to="shop-left-sidebar.html">Exterior</Link>
                                             <ul className="cat-dropdown cat-dropdown-2">
                                                 <li>
-                                                    <a href="shop-left-sidebar.html">Coffee & side tables</a>
-                                                    <a href="shop-left-sidebar.html">Living room lighting</a>
-                                                    <a href="shop-left-sidebar.html">Living room storage</a>
-                                                    <a href="shop-left-sidebar.html">Living room textiles & rugs</a>
+                                                    <Link to="shop-left-sidebar.html">Coffee & side tables</Link>
+                                                    <Link to="shop-left-sidebar.html">Living room lighting</Link>
+                                                    <Link to="shop-left-sidebar.html">Living room storage</Link>
+                                                    <Link to="shop-left-sidebar.html">Living room textiles & rugs</Link>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="shop-left-sidebar.html">Body Parts</a></li>
-                                        <li><a href="shop-left-sidebar.html">Interior</a></li>
-                                        <li><a href="shop-left-sidebar.html">Audio</a></li>
-                                        <li className="rx-child"><a href="shop-left-sidebar.html">Uncategorized</a></li>
-                                        <li className="rx-child"><a href="shop-left-sidebar.html">Appliances</a></li>
+                                        <li><Link to="shop-left-sidebar.html">Body Parts</Link></li>
+                                        <li><Link to="shop-left-sidebar.html">Interior</Link></li>
+                                        <li><Link to="shop-left-sidebar.html">Audio</Link></li>
+                                        <li className="rx-child"><Link to="shop-left-sidebar.html">Uncategorized</Link></li>
+                                        <li className="rx-child"><Link to="shop-left-sidebar.html">Appliances</Link></li>
                                         <li className="rx-parent">
-                                            <a className="rx-show">Collapse</a>
+                                            <Link className="rx-show">Collapse</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -263,15 +264,15 @@ export default function Header() {
                             <div className="main-menu_area position-relative">
                                 <nav className="main-nav">
                                     <ul>
-                                        <li className="dropdown-holder active"><a href="index.html">Home</a>
+                                        <li className="dropdown-holder active"><Link to="index.html">Home</Link>
                                         </li>
-                                        <li className="megamenu-holder "><a href="shop-left-sidebar.html">Catalog</a>
+                                        <li className="megamenu-holder "><Link to="shop-left-sidebar.html">Catalog</Link>
                                         </li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Create Offer</a></li>
-                                        <li className=""><a href="about-us.html">About Us</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Login</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Register</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Logout</a></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Create Offer</Link></li>
+                                        <li className=""><Link to="about-us.html">About Us</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Login</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Register</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Logout</Link></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -280,10 +281,10 @@ export default function Header() {
                             <div className="ht-right_area">
                                 <div className="ht-menu">
                                     <ul>
-                                        <li><a href="my-account.html"><span className="fa fa-user"></span> <span>My Account</span><i className="fa fa-chevron-down"></i></a>
+                                        <li><Link to="my-account.html"><span className="fa fa-user"></span> <span>My Account</span><i className="fa fa-chevron-down"></i></Link>
                                             <ul className="ht-dropdown ht-my_account">
-                                                <li><a href="#" onClick={(e) => e.preventDefault()}>Register</a></li>
-                                                <li className="active"><a href="#" onClick={(e) => e.preventDefault()}>Login</a></li>
+                                                <li><Link to="#" onClick={(e) => e.preventDefault()}>Register</Link></li>
+                                                <li className="active"><Link to="#" onClick={(e) => e.preventDefault()}>Login</Link></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -321,37 +322,37 @@ export default function Header() {
                             <div className="main-menu_area position-relative">
                                 <nav className="main-nav">
                                     <ul>
-                                        <li className="dropdown-holder active"><a href="index.html">Home</a>
+                                        <li className="dropdown-holder active"><Link to="index.html">Home</Link>
                                         </li>
                                         <li className="megamenu-holder ">
-                                            <a href="shop-left-sidebar.html">Catalog</a>
+                                            <Link to="shop-left-sidebar.html">Catalog</Link>
                                         </li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Create Offer</a></li>
-                                        <li className=""><a href="about-us.html">About Us</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Login</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Register</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Logout</a></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Create Offer</Link></li>
+                                        <li className=""><Link to="about-us.html">About Us</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Login</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Register</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Logout</Link></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <div className="col-sm-3 d-block d-lg-none">
                             <div className="header-logo_area header-sticky_logo">
-                                <a href="index.html">
+                                <Link to="index.html">
                                     <img src="/images/menu/logo/1.png" alt="Uren's Logo" />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-xl-4 col-lg-5 col-sm-9">
                             <div className="header-right_area">
                                 <ul>
                                     <li className="mobile-menu_wrap d-flex d-lg-none">
-                                        <a href="#mobileMenu" className="mobile-menu_btn toolbar-btn color--white">
+                                        <Link to="#mobileMenu" className="mobile-menu_btn toolbar-btn color--white">
                                             <i className="ion-navicon"></i>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li className="minicart-wrap">
-                                        <a href="#miniCart" className="minicart-btn toolbar-btn">
+                                        <Link to="#miniCart" className="minicart-btn toolbar-btn">
                                             <div className="minicart-count_area">
                                                 <span className="item-count">3</span>
                                                 <i className="ion-bag"></i>
@@ -360,10 +361,10 @@ export default function Header() {
                                                 <span>Cart:</span>
                                                 <span className="total-price">462.4</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li className="contact-us_wrap">
-                                        <a href="tel://+123123321345"><i className="ion-android-call"></i>+123 321 345</a>
+                                        <Link to="tel://+123123321345"><i className="ion-android-call"></i>+123 321 345</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -373,42 +374,42 @@ export default function Header() {
             </div>
             <div className="offcanvas-minicart_wrapper" id="miniCart">
                 <div className="offcanvas-menu-inner">
-                    <a href="#" className="btn-close"><i className="ion-android-close"></i></a>
+                    <Link to="#" className="btn-close"><i className="ion-android-close"></i></Link>
                     <div className="minicart-content">
                         <div className="minicart-heading">
                             <h4>Shopping Cart</h4>
                         </div>
                         <ul className="minicart-list">
                             <li className="minicart-product">
-                                <a className="product-item_remove" href="#" onClick={(e) => e.preventDefault()}><i
-                                    className="ion-android-close"></i></a>
+                                <Link className="product-item_remove" to="#" onClick={(e) => e.preventDefault()}><i
+                                    className="ion-android-close"></i></Link>
                                 <div className="product-item_img">
                                     <img src="/images/product/small-size/1.jpg" alt="Uren's Product Image" />
                                 </div>
                                 <div className="product-item_content">
-                                    <a className="product-item_title" href="shop-left-sidebar.html">Autem ipsa ad</a>
+                                    <Link className="product-item_title" to="shop-left-sidebar.html">Autem ipsa ad</Link>
                                     <span className="product-item_quantity">1 x $145.80</span>
                                 </div>
                             </li>
                             <li className="minicart-product">
-                                <a className="product-item_remove" href="#" onClick={(e) => e.preventDefault()}><i
-                                    className="ion-android-close"></i></a>
+                                <Link className="product-item_remove" to="#" onClick={(e) => e.preventDefault()}><i
+                                    className="ion-android-close"></i></Link>
                                 <div className="product-item_img">
                                     <img src="/images/product/small-size/2.jpg" alt="Uren's Product Image" />
                                 </div>
                                 <div className="product-item_content">
-                                    <a className="product-item_title" href="shop-left-sidebar.html">Tenetur illum amet</a>
+                                    <Link className="product-item_title" to="shop-left-sidebar.html">Tenetur illum amet</Link>
                                     <span className="product-item_quantity">1 x $150.80</span>
                                 </div>
                             </li>
                             <li className="minicart-product">
-                                <a className="product-item_remove" href="#" onClick={(e) => e.preventDefault()}><i
-                                    className="ion-android-close"></i></a>
+                                <Link className="product-item_remove" to="#" onClick={(e) => e.preventDefault()}><i
+                                    className="ion-android-close"></i></Link>
                                 <div className="product-item_img">
                                     <img src="/images/product/small-size/3.jpg" alt="Uren's Product Image" />
                                 </div>
                                 <div className="product-item_content">
-                                    <a className="product-item_title" href="shop-left-sidebar.html">Non doloremque placeat</a>
+                                    <Link className="product-item_title" to="shop-left-sidebar.html">Non doloremque placeat</Link>
                                     <span className="product-item_quantity">1 x $165.80</span>
                                 </div>
                             </li>
@@ -419,17 +420,17 @@ export default function Header() {
                         <span className="ammount">$462.40</span>
                     </div>
                     <div className="minicart-btn_area">
-                        <a href="cart.html" className="uren-btn uren-btn_dark uren-btn_fullwidth">Minicart</a>
+                        <Link to="cart.html" className="uren-btn uren-btn_dark uren-btn_fullwidth">Minicart</Link>
                     </div>
                     <div className="minicart-btn_area">
-                        <a href="checkout.html" className="uren-btn uren-btn_dark uren-btn_fullwidth">Checkout</a>
+                        <Link to="checkout.html" className="uren-btn uren-btn_dark uren-btn_fullwidth">Checkout</Link>
                     </div>
                 </div>
             </div>
             <div className="mobile-menu_wrapper" id="mobileMenu">
                 <div className="offcanvas-menu-inner">
                     <div className="container">
-                        <a href="#" className="btn-close" onClick={(e) => e.preventDefault()}><i className="ion-android-close"></i></a>
+                        <Link to="#" className="btn-close" onClick={(e) => e.preventDefault()}><i className="ion-android-close"></i></Link>
                         <div className="offcanvas-inner_search">
                             <form action="#" className="inner-searchbox">
                                 <input type="text" placeholder="Search for item..." />
@@ -438,295 +439,295 @@ export default function Header() {
                         </div>
                         <nav className="offcanvas-navigation">
                             <ul className="mobile-menu">
-                                <li className="menu-item-has-children active"><a href="index.html" onClick={(e) => e.preventDefault()}><span
-                                    className="mm-text">Home</span></a>
+                                <li className="menu-item-has-children active"><Link to="index.html" onClick={(e) => e.preventDefault()}><span
+                                    className="mm-text">Home</span></Link>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="index.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="index.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Home One</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="index-2.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="index-2.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Home Two</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="index-3.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="index-3.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Home Three</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className="menu-item-has-children">
-                                    <a href="shop-left-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                    <Link to="shop-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Shop</span>
-                                    </a>
+                                    </Link>
                                     <ul className="sub-menu">
                                         <li className="menu-item-has-children">
-                                            <a href="shop-left-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="shop-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Grid View</span>
-                                            </a>
+                                            </Link>
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <a href="shop-grid-fullwidth.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="shop-grid-fullwidth.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Column Three</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="shop-4-column.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="shop-4-column.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Column Four</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="shop-left-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="shop-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Left Sidebar</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="shop-right-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="shop-right-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Right Sidebar</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li className="menu-item-has-children">
-                                            <a href="shop-list-left-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="shop-list-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Shop List</span>
-                                            </a>
+                                            </Link>
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <a href="shop-list-fullwidth.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="shop-list-fullwidth.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Full Width</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="shop-list-left-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="shop-list-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Left Sidebar</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="shop-list-right-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="shop-list-right-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Right Sidebar</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li className="menu-item-has-children">
-                                            <a href="single-product-gallery-left.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="single-product-gallery-left.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Single Product Style</span>
-                                            </a>
+                                            </Link>
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <a href="single-product-gallery-left.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="single-product-gallery-left.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Gallery Left</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="single-product-gallery-right.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="single-product-gallery-right.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Gallery Right</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="single-product-tab-style-left.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="single-product-tab-style-left.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Tab Style Left</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="single-product-tab-style-right.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="single-product-tab-style-right.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Tab Style Right</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="single-product-sticky-left.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="single-product-sticky-left.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Sticky Left</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="single-product-sticky-right.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="single-product-sticky-right.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Sticky Right</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li className="menu-item-has-children">
-                                            <a href="single-product.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="single-product.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Single Product Type</span>
-                                            </a>
+                                            </Link>
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <a href="single-product.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="single-product.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Single Product</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="single-product-sale.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="single-product-sale.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Single Product Sale</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="single-product-group.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="single-product-group.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Single Product Group</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="single-product-variable.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="single-product-variable.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Single Product Variable</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="single-product-affiliate.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="single-product-affiliate.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Single Product Affiliate</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="single-product-slider.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="single-product-slider.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Single Product Slider</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className="menu-item-has-children">
-                                    <a href="blog-left-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                    <Link to="blog-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Blog</span>
-                                    </a>
+                                    </Link>
                                     <ul className="sub-menu">
                                         <li className="menu-item-has-children has-children">
-                                            <a href="blog-left-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="blog-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Grid View</span>
-                                            </a>
+                                            </Link>
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <a href="blog-2-column.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="blog-2-column.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Column Two</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="blog-3-column.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="blog-3-column.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Column Three</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="blog-left-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="blog-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Left Sidebar</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="blog-right-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="blog-right-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Right Sidebar</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li className="menu-item-has-children has-children">
-                                            <a href="blog-list-left-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="blog-list-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">List View</span>
-                                            </a>
+                                            </Link>
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <a href="blog-list-fullwidth.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="blog-list-fullwidth.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">List Fullwidth</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="blog-list-left-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="blog-list-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">List Left Sidebar</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="blog-list-right-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="blog-list-right-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">List Right Sidebar</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li className="menu-item-has-children has-children">
-                                            <a href="blog-details-left-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="blog-details-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Blog Details</span>
-                                            </a>
+                                            </Link>
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <a href="blog-details-left-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="blog-details-left-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Left Sidebar</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="blog-details-right-sidebar.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="blog-details-right-sidebar.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Right Sidebar</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li className="menu-item-has-children has-children">
-                                            <a href="blog-gallery-format.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="blog-gallery-format.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Blog Format</span>
-                                            </a>
+                                            </Link>
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <a href="blog-gallery-format.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="blog-gallery-format.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Gallery Format</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="blog-audio-format.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="blog-audio-format.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Audio Format</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="blog-video-format.html" onClick={(e) => e.preventDefault()}>
+                                                    <Link to="blog-video-format.html" onClick={(e) => e.preventDefault()}>
                                                         <span className="mm-text">Video Format</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className="menu-item-has-children">
-                                    <a href="index.html" onClick={(e) => e.preventDefault()}>
+                                    <Link to="index.html" onClick={(e) => e.preventDefault()}>
                                         <span className="mm-text">Pages</span>
-                                    </a>
+                                    </Link>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="my-account.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="my-account.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">My Account</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="login-register.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="login-register.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Login | Register</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="wishlist.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="wishlist.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Wishlist</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="cart.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="cart.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Cart</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="checkout.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="checkout.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Checkout</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="compare.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="compare.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Compare</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="faq.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="faq.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">FAQ</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="404.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="404.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Error 404</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -734,59 +735,59 @@ export default function Header() {
                         </nav>
                         <nav className="offcanvas-navigation user-setting_area">
                             <ul className="mobile-menu">
-                                <li className="menu-item-has-children active"><a href="#" onClick={(e) => e.preventDefault()}><span
+                                <li className="menu-item-has-children active"><Link to="#" onClick={(e) => e.preventDefault()}><span
                                     className="mm-text">User
-                                    Setting</span></a>
+                                    Setting</span></Link>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="my-account.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="my-account.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">My Account</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="login-register.html" onClick={(e) => e.preventDefault()}>
+                                            <Link to="login-register.html" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Login | Register</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </li>
-                                <li className="menu-item-has-children"><a href="#" onClick={(e) => e.preventDefault()}><span
-                                    className="mm-text">Currency</span></a>
+                                <li className="menu-item-has-children"><Link to="#" onClick={(e) => e.preventDefault()}><span
+                                    className="mm-text">Currency</span></Link>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="#" onClick={(e) => e.preventDefault()}>
+                                            <Link to="#" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">EUR €</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="#" onClick={(e) => e.preventDefault()}>
+                                            <Link to="#" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">USD $</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </li>
-                                <li className="menu-item-has-children"><a href="#" onClick={(e) => e.preventDefault()}><span
-                                    className="mm-text">Language</span></a>
+                                <li className="menu-item-has-children"><Link to="#" onClick={(e) => e.preventDefault()}><span
+                                    className="mm-text">Language</span></Link>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="#" onClick={(e) => e.preventDefault()}>
+                                            <Link to="#" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">English</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="#" onClick={(e) => e.preventDefault()}>
+                                            <Link to="#" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Français</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="#" onClick={(e) => e.preventDefault()}>
+                                            <Link to="#" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Romanian</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="#" onClick={(e) => e.preventDefault()}>
+                                            <Link to="#" onClick={(e) => e.preventDefault()}>
                                                 <span className="mm-text">Japanese</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </li>

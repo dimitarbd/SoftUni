@@ -35,7 +35,7 @@ export default function Login() {
                                         <div className="col-md-8">
                                             <div className="check-box">
                                                 <input type="checkbox" id="remember_me" />
-                                                <label for="remember_me">Remember me</label>
+                                                <label htmlFor="remember_me">Remember me</label>
                                             </div>
                                         </div>
                                         <div className="col-md-4">

@@ -121,7 +121,7 @@ export default function Catalog() {
                             <div className="sidebar-banner_area">
                                 <div className="banner-item img-hover_effect">
                                     <a href="javascript:void(0)">
-                                        <img src="assets/images/shop/1.jpg" alt="Uren's Shop Banner Image" />
+                                        <img src="/images/shop/1.jpg" alt="Uren's Shop Banner Image" />
                                     </a>
                                 </div>
                             </div>
@@ -170,8 +170,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/1.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/2.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/1.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/2.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker">
                                                         <span className="sticker">New</span>
@@ -219,8 +219,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/1.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/2.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/1.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/2.jpg" alt="Uren's Product Image" />
                                                 </a>
                                             </div>
                                             <div className="product-content">
@@ -278,8 +278,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/3.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/4.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/3.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/4.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker-area-2">
                                                         <span className="sticker-2">-20%</span>
@@ -327,8 +327,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/3.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/4.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/3.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/4.jpg" alt="Uren's Product Image" />
                                                 </a>
                                                 <div className="sticker-area-2">
                                                     <span className="sticker-2">-20%</span>
@@ -389,8 +389,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/5.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/6.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/5.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/6.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker">
                                                         <span className="sticker">New</span>
@@ -436,8 +436,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/5.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/6.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/5.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/6.jpg" alt="Uren's Product Image" />
                                                 </a>
                                             </div>
                                             <div className="product-content">
@@ -493,8 +493,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/7.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/8.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/7.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/8.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker-area-2">
                                                         <span className="sticker-2">-10%</span>
@@ -542,8 +542,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/7.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/8.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/7.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/8.jpg" alt="Uren's Product Image" />
                                                 </a>
                                             </div>
                                             <div className="product-content">
@@ -600,8 +600,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/9.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/10.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/9.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/10.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker">
                                                         <span className="sticker">New</span>
@@ -647,8 +647,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/9.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/10.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/9.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/10.jpg" alt="Uren's Product Image" />
                                                 </a>
                                             </div>
                                             <div className="product-content">
@@ -704,8 +704,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/1.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/2.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/1.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/2.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker-area-2">
                                                         <span className="sticker-2">-15%</span>
@@ -753,8 +753,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/3.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/4.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/3.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/4.jpg" alt="Uren's Product Image" />
                                                 </a>
                                                 <div className="sticker-area-2">
                                                     <span className="sticker-2">-15%</span>
@@ -815,8 +815,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/6.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/5.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/6.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/5.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker">
                                                         <span className="sticker">New</span>
@@ -862,8 +862,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/6.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/5.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/6.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/5.jpg" alt="Uren's Product Image" />
                                                 </a>
                                             </div>
                                             <div className="product-content">
@@ -919,8 +919,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/9.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/3.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/9.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/3.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker-area-2">
                                                         <span className="sticker-2">-10%</span>
@@ -968,8 +968,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/9.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/3.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/9.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/3.jpg" alt="Uren's Product Image" />
                                                 </a>
                                             </div>
                                             <div className="product-content">
@@ -1026,8 +1026,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/7.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/5.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/7.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/5.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker">
                                                         <span className="sticker">New</span>
@@ -1075,8 +1075,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/7.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/5.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/7.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/5.jpg" alt="Uren's Product Image" />
                                                 </a>
                                             </div>
                                             <div className="product-content">
@@ -1134,8 +1134,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/2.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/4.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/2.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/4.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker-area-2">
                                                         <span className="sticker-2">-20%</span>
@@ -1183,8 +1183,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/2.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/4.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/2.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/4.jpg" alt="Uren's Product Image" />
                                                 </a>
                                                 <div className="sticker-area-2">
                                                     <span className="sticker-2">-20%</span>
@@ -1245,8 +1245,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/5.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/7.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/5.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/7.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker">
                                                         <span className="sticker">New</span>
@@ -1292,8 +1292,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/5.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/7.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/5.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/7.jpg" alt="Uren's Product Image" />
                                                 </a>
                                             </div>
                                             <div className="product-content">
@@ -1349,8 +1349,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/4.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/6.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/4.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/6.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker-area-2">
                                                         <span className="sticker-2">-25%</span>
@@ -1398,8 +1398,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/4.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/6.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/4.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/6.jpg" alt="Uren's Product Image" />
                                                 </a>
                                                 <div className="sticker-area-2">
                                                     <span className="sticker-2">-25%</span>
@@ -1461,8 +1461,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/7.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/2.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/7.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/2.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker">
                                                         <span className="sticker">New</span>
@@ -1508,8 +1508,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/7.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/2.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/7.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/2.jpg" alt="Uren's Product Image" />
                                                 </a>
                                             </div>
                                             <div className="product-content">
@@ -1565,8 +1565,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/9.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/8.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/9.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/8.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker-area-2">
                                                         <span className="sticker-2">-5%</span>
@@ -1614,8 +1614,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/9.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/8.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/9.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/8.jpg" alt="Uren's Product Image" />
                                                 </a>
                                                 <div className="sticker-area-2">
                                                     <span className="sticker-2">-5%</span>
@@ -1677,8 +1677,8 @@ export default function Catalog() {
                                             <div className="single-product">
                                                 <div className="product-img">
                                                     <a href="single-product.html">
-                                                        <img className="primary-img" src="assets/images/product/large-size/3.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="assets/images/product/large-size/5.jpg" alt="Uren's Product Image" />
+                                                        <img className="primary-img" src="/images/product/large-size/3.jpg" alt="Uren's Product Image" />
+                                                        <img className="secondary-img" src="/images/product/large-size/5.jpg" alt="Uren's Product Image" />
                                                     </a>
                                                     <div className="sticker">
                                                         <span className="sticker">New</span>
@@ -1724,8 +1724,8 @@ export default function Catalog() {
                                         <div className="single-product">
                                             <div className="product-img">
                                                 <a href="single-product.html">
-                                                    <img className="primary-img" src="assets/images/product/large-size/3.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="assets/images/product/large-size/5.jpg" alt="Uren's Product Image" />
+                                                    <img className="primary-img" src="/images/product/large-size/3.jpg" alt="Uren's Product Image" />
+                                                    <img className="secondary-img" src="/images/product/large-size/5.jpg" alt="Uren's Product Image" />
                                                 </a>
                                             </div>
                                             <div className="product-content">

@@ -31,22 +31,22 @@ export default function Details() {
                                 "asNavFor": ".sp-img_slider-nav"
                                 }'>
                                     <div className="single-slide red zoom">
-                                        <img src="assets/images/product/large-size/1.jpg" alt="Uren's Product Image" />
+                                        <img src="/images/product/large-size/1.jpg" alt="Uren's Product Image" />
                                     </div>
                                     <div className="single-slide orange zoom">
-                                        <img src="assets/images/product/large-size/2.jpg" alt="Uren's Product Image" />
+                                        <img src="/images/product/large-size/2.jpg" alt="Uren's Product Image" />
                                     </div>
                                     <div className="single-slide brown zoom">
-                                        <img src="assets/images/product/large-size/3.jpg" alt="Uren's Product Image" />
+                                        <img src="/images/product/large-size/3.jpg" alt="Uren's Product Image" />
                                     </div>
                                     <div className="single-slide umber zoom">
-                                        <img src="assets/images/product/large-size/4.jpg" alt="Uren's Product Image" />
+                                        <img src="/images/product/large-size/4.jpg" alt="Uren's Product Image" />
                                     </div>
                                     <div className="single-slide black zoom">
-                                        <img src="assets/images/product/large-size/5.jpg" alt="Uren's Product Image" />
+                                        <img src="/images/product/large-size/5.jpg" alt="Uren's Product Image" />
                                     </div>
                                     <div className="single-slide green zoom">
-                                        <img src="assets/images/product/large-size/6.jpg" alt="Uren's Product Image" />
+                                        <img src="/images/product/large-size/6.jpg" alt="Uren's Product Image" />
                                     </div>
                                 </div>
                                 <div className="sp-img_slider-nav slick-slider-nav uren-slick-slider slider-navigation_style-3" data-slick-options='{
@@ -62,22 +62,22 @@ export default function Details() {
                                         {"breakpoint":575, "settings": {"slidesToShow": 2}}
                                     ]'>
                                     <div className="single-slide red">
-                                        <img src="assets/images/product/small-size/1.jpg" alt="Uren's Product Thumnail" />
+                                        <img src="/images/product/small-size/1.jpg" alt="Uren's Product Thumnail" />
                                     </div>
                                     <div className="single-slide orange">
-                                        <img src="assets/images/product/small-size/2.jpg" alt="Uren's Product Thumnail" />
+                                        <img src="/images/product/small-size/2.jpg" alt="Uren's Product Thumnail" />
                                     </div>
                                     <div className="single-slide brown">
-                                        <img src="assets/images/product/small-size/3.jpg" alt="Uren's Product Thumnail" />
+                                        <img src="/images/product/small-size/3.jpg" alt="Uren's Product Thumnail" />
                                     </div>
                                     <div className="single-slide umber">
-                                        <img src="assets/images/product/small-size/4.jpg" alt="Uren's Product Thumnail" />
+                                        <img src="/images/product/small-size/4.jpg" alt="Uren's Product Thumnail" />
                                     </div>
                                     <div className="single-slide red">
-                                        <img src="assets/images/product/small-size/5.jpg" alt="Uren's Product Thumnail" />
+                                        <img src="/images/product/small-size/5.jpg" alt="Uren's Product Thumnail" />
                                     </div>
                                     <div className="single-slide orange">
-                                        <img src="assets/images/product/small-size/6.jpg" alt="Uren's Product Thumnail" />
+                                        <img src="/images/product/small-size/6.jpg" alt="Uren's Product Thumnail" />
                                     </div>
                                 </div>
                             </div>
@@ -246,7 +246,7 @@ export default function Details() {
                                                 <table className="table table-striped table-bordered">
                                                     <tbody>
                                                         <tr>
-                                                            <td style="width: 50%;"><strong>Customer</strong></td>
+                                                            <td style={{ width: '50%' }}><strong>Customer</strong></td>
                                                             <td className="text-right">15/09/20</td>
                                                         </tr>
                                                         <tr>
@@ -335,8 +335,8 @@ export default function Details() {
                                     <div className="single-product">
                                         <div className="product-img">
                                             <a href="single-product.html">
-                                                <img className="primary-img" src="assets/images/product/medium-size/1-1.jpg" alt="Uren's Product Image" />
-                                                <img className="secondary-img" src="assets/images/product/medium-size/1-2.jpg" alt="Uren's Product Image" />
+                                                <img className="primary-img" src="/images/product/medium-size/1-1.jpg" alt="Uren's Product Image" />
+                                                <img className="secondary-img" src="/images/product/medium-size/1-2.jpg" alt="Uren's Product Image" />
                                             </a>
                                             <div className="sticker">
                                                 <span className="sticker">New</span>
@@ -380,8 +380,8 @@ export default function Details() {
                                     <div className="single-product">
                                         <div className="product-img">
                                             <a href="single-product.html">
-                                                <img className="primary-img" src="assets/images/product/medium-size/2-1.jpg" alt="Uren's Product Image" />
-                                                <img className="secondary-img" src="assets/images/product/medium-size/2-2.jpg" alt="Uren's Product Image" />
+                                                <img className="primary-img" src="/images/product/medium-size/2-1.jpg" alt="Uren's Product Image" />
+                                                <img className="secondary-img" src="/images/product/medium-size/2-2.jpg" alt="Uren's Product Image" />
                                             </a>
                                             <div className="sticker-area-2">
                                                 <span className="sticker-2">-20%</span>
@@ -427,8 +427,8 @@ export default function Details() {
                                     <div className="single-product">
                                         <div className="product-img">
                                             <a href="single-product.html">
-                                                <img className="primary-img" src="assets/images/product/medium-size/3-1.jpg" alt="Uren's Product Image" />
-                                                <img className="secondary-img" src="assets/images/product/medium-size/3-2.jpg" alt="Uren's Product Image" />
+                                                <img className="primary-img" src="/images/product/medium-size/3-1.jpg" alt="Uren's Product Image" />
+                                                <img className="secondary-img" src="/images/product/medium-size/3-2.jpg" alt="Uren's Product Image" />
                                             </a>
                                             <span className="sticker">New</span>
                                             <div className="add-actions">
@@ -470,8 +470,8 @@ export default function Details() {
                                     <div className="single-product">
                                         <div className="product-img">
                                             <a href="single-product.html">
-                                                <img className="primary-img" src="assets/images/product/medium-size/4-1.jpg" alt="Uren's Product Image" />
-                                                <img className="secondary-img" src="assets/images/product/medium-size/4-2.jpg" alt="Uren's Product Image" />
+                                                <img className="primary-img" src="/images/product/medium-size/4-1.jpg" alt="Uren's Product Image" />
+                                                <img className="secondary-img" src="/images/product/medium-size/4-2.jpg" alt="Uren's Product Image" />
                                             </a>
                                             <div className="sticker-area-2">
                                                 <span className="sticker-2">-5%</span>
@@ -517,8 +517,8 @@ export default function Details() {
                                     <div className="single-product">
                                         <div className="product-img">
                                             <a href="single-product.html">
-                                                <img className="primary-img" src="assets/images/product/medium-size/5-1.jpg" alt="Uren's Product Image" />
-                                                <img className="secondary-img" src="assets/images/product/medium-size/5-2.jpg" alt="Uren's Product Image" />
+                                                <img className="primary-img" src="/images/product/medium-size/5-1.jpg" alt="Uren's Product Image" />
+                                                <img className="secondary-img" src="/images/product/medium-size/5-2.jpg" alt="Uren's Product Image" />
                                             </a>
                                             <span className="sticker">New</span>
                                             <div className="add-actions">
@@ -560,8 +560,8 @@ export default function Details() {
                                     <div className="single-product">
                                         <div className="product-img">
                                             <a href="single-product.html">
-                                                <img className="primary-img" src="assets/images/product/medium-size/6-1.jpg" alt="Uren's Product Image" />
-                                                <img className="secondary-img" src="assets/images/product/medium-size/6-2.jpg" alt="Uren's Product Image" />
+                                                <img className="primary-img" src="/images/product/medium-size/6-1.jpg" alt="Uren's Product Image" />
+                                                <img className="secondary-img" src="/images/product/medium-size/6-2.jpg" alt="Uren's Product Image" />
                                             </a>
                                             <div className="sticker-area-2">
                                                 <span className="sticker-2">-15%</span>
@@ -607,8 +607,8 @@ export default function Details() {
                                     <div className="single-product">
                                         <div className="product-img">
                                             <a href="single-product.html">
-                                                <img className="primary-img" src="assets/images/product/medium-size/7-1.jpg" alt="Uren's Product Image" />
-                                                <img className="secondary-img" src="assets/images/product/medium-size/7-2.jpg" alt="Uren's Product Image" />
+                                                <img className="primary-img" src="/images/product/medium-size/7-1.jpg" alt="Uren's Product Image" />
+                                                <img className="secondary-img" src="/images/product/medium-size/7-2.jpg" alt="Uren's Product Image" />
                                             </a>
                                             <span className="sticker">New</span>
                                             <div className="add-actions">
@@ -650,8 +650,8 @@ export default function Details() {
                                     <div className="single-product">
                                         <div className="product-img">
                                             <a href="single-product.html">
-                                                <img className="primary-img" src="assets/images/product/medium-size/8-1.jpg" alt="Uren's Product Image" />
-                                                <img className="secondary-img" src="assets/images/product/medium-size/1-2.jpg" alt="Uren's Product Image" />
+                                                <img className="primary-img" src="/images/product/medium-size/8-1.jpg" alt="Uren's Product Image" />
+                                                <img className="secondary-img" src="/images/product/medium-size/1-2.jpg" alt="Uren's Product Image" />
                                             </a>
                                             <span className="sticker">New</span>
                                             <div className="add-actions">
@@ -717,7 +717,7 @@ export default function Details() {
                                 <div className="inner-slide">
                                     <div className="single-product">
                                         <button className="brand-btn">
-                                            <img src="assets/images/brand/1.jpg" alt="Uren's Brand Image" />
+                                            <img src="/images/brand/1.jpg" alt="Uren's Brand Image" />
                                         </button>
                                     </div>
                                 </div>
@@ -726,7 +726,7 @@ export default function Details() {
                                 <div className="inner-slide">
                                     <div className="single-product">
                                         <button className="brand-btn">
-                                            <img src="assets/images/brand/2.jpg" alt="Uren's Brand Image" />
+                                            <img src="/images/brand/2.jpg" alt="Uren's Brand Image" />
                                         </button>
                                     </div>
                                 </div>
@@ -735,7 +735,7 @@ export default function Details() {
                                 <div className="inner-slide">
                                     <div className="single-product">
                                         <button className="brand-btn">
-                                            <img src="assets/images/brand/3.jpg" alt="Uren's Brand Image" />
+                                            <img src="/images/brand/3.jpg" alt="Uren's Brand Image" />
                                         </button>
                                     </div>
                                 </div>
@@ -744,7 +744,7 @@ export default function Details() {
                                 <div className="inner-slide">
                                     <div className="single-product">
                                         <button className="brand-btn">
-                                            <img src="assets/images/brand/4.jpg" alt="Uren's Brand Image" />
+                                            <img src="/images/brand/4.jpg" alt="Uren's Brand Image" />
                                         </button>
                                     </div>
                                 </div>
@@ -753,7 +753,7 @@ export default function Details() {
                                 <div className="inner-slide">
                                     <div className="single-product">
                                         <button className="brand-btn">
-                                            <img src="assets/images/brand/5.jpg" alt="Uren's Brand Image" />
+                                            <img src="/images/brand/5.jpg" alt="Uren's Brand Image" />
                                         </button>
                                     </div>
                                 </div>
@@ -762,7 +762,7 @@ export default function Details() {
                                 <div className="inner-slide">
                                     <div className="single-product">
                                         <button className="brand-btn">
-                                            <img src="assets/images/brand/6.jpg" alt="Uren's Brand Image" />
+                                            <img src="/images/brand/6.jpg" alt="Uren's Brand Image" />
                                         </button>
                                     </div>
                                 </div>
@@ -771,7 +771,7 @@ export default function Details() {
                                 <div className="inner-slide">
                                     <div className="single-product">
                                         <button className="brand-btn">
-                                            <img src="assets/images/brand/1.jpg" alt="Uren's Brand Image" />
+                                            <img src="/images/brand/1.jpg" alt="Uren's Brand Image" />
                                         </button>
                                     </div>
                                 </div>
@@ -780,7 +780,7 @@ export default function Details() {
                                 <div className="inner-slide">
                                     <div className="single-product">
                                         <button className="brand-btn">
-                                            <img src="assets/images/brand/7.jpg" alt="Uren's Brand Image" />
+                                            <img src="/images/brand/7.jpg" alt="Uren's Brand Image" />
                                         </button>
                                     </div>
                                 </div>
@@ -789,7 +789,7 @@ export default function Details() {
                                 <div className="inner-slide">
                                     <div className="single-product">
                                         <button className="brand-btn">
-                                            <img src="assets/images/brand/2.jpg" alt="Uren's Brand Image" />
+                                            <img src="/images/brand/2.jpg" alt="Uren's Brand Image" />
                                         </button>
                                     </div>
                                 </div>

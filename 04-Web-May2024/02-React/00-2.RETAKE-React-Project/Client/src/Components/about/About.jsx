@@ -206,7 +206,7 @@ export default function About() {
                                 <div className="team-content text-center">
                                     <h3>Edvin Adams</h3>
                                     <p>Content Writer</p>
-                                    <a href="javascript:void(0)">info@example.com</a>
+                                    <a href="#" onClick={(e) => e.preventDefault()}>info@example.com</a>
                                     <div className="uren-social_link">
                                         <ul>
                                             <li className="facebook">

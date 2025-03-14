@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function MyAccount() {
    return (
     <>
@@ -7,7 +9,7 @@ export default function MyAccount() {
             <div className="breadcrumb-content">
                 <h2>Other</h2>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><Link to="/">Home</Link></li>
                     <li className="active">My Account</li>
                 </ul>
             </div>

@@ -1,6 +1,15 @@
 import { Link } from 'react-router-dom';
+import * as partsAPI from '../../api/parts-api';
+import { useEffect, useState } from 'react';
 
 export default function Catalog() {    
+    const [parts, setParts] = useState([]);
+
+    useEffect(() => {
+        partsAPI.getAll()
+        .then(result => setParts(result));
+    },[]);
+    
     return (
         <>
             {/* <!-- Begin Uren's Breadcrumb Area --> */}

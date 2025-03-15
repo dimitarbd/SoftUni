@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';    
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     useEffect(() => {
@@ -50,7 +50,7 @@ export default function Header() {
                                         <option defaultValue="">Body Parts</option>
                                         <option defaultValue="">Interior</option>
                                         <option defaultValue="">Audio</option>
-                                        
+
                                     </select>
                                     <input type="text" placeholder="Enter your search key ..." />
                                     <button className="header-search_btn" type="submit"><i
@@ -264,14 +264,14 @@ export default function Header() {
                             <div className="main-menu_area position-relative">
                                 <nav className="main-nav">
                                     <ul>
-                                        <li className="dropdown-holder active"><Link to="index.html">Home</Link>
+                                        <li className="dropdown-holder active"><Link to="/">Home</Link>
                                         </li>
-                                        <li className="megamenu-holder "><Link to="shop-left-sidebar.html">Catalog</Link>
+                                        <li className="megamenu-holder "><Link to="/catalog">Catalog</Link>
                                         </li>
                                         <li><Link to="#" onClick={(e) => e.preventDefault()}>Create Offer</Link></li>
                                         <li className=""><Link to="about-us.html">About Us</Link></li>
-                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Login</Link></li>
-                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Register</Link></li>
+                                        <li><Link to="/login" >Login</Link></li>
+                                        <li><Link to="/register" >Register</Link></li>
                                         <li><Link to="#" onClick={(e) => e.preventDefault()}>Logout</Link></li>
                                     </ul>
                                 </nav>
@@ -281,11 +281,7 @@ export default function Header() {
                             <div className="ht-right_area">
                                 <div className="ht-menu">
                                     <ul>
-                                        <li><Link to="my-account.html"><span className="fa fa-user"></span> <span>My Account</span><i className="fa fa-chevron-down"></i></Link>
-                                            <ul className="ht-dropdown ht-my_account">
-                                                <li><Link to="#" onClick={(e) => e.preventDefault()}>Register</Link></li>
-                                                <li className="active"><Link to="#" onClick={(e) => e.preventDefault()}>Login</Link></li>
-                                            </ul>
+                                        <li><Link to="/my-account"><span className="fa fa-user"></span> <span>My Account</span><i className="fa fa-chevron-down"></i></Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -295,16 +291,16 @@ export default function Header() {
                             <div className="hm-form_area">
                                 <form action="#" className="hm-searchbox">
                                     <select className="nice-select select-search-category">
-                                        <option alue="">All Categories</option>
-                                        <option alue="">Car Parts</option>
-                                        <option alue="">Tools &amp; Accessories</option>
-                                        <option alue="">Suspension Systems</option>
-                                        <option alue="">Turbo System</option>
-                                        <option alue="">Oils & Fluids</option>
-                                        <option alue="">Exterior</option>
-                                        <option alue="">Body Parts</option>
-                                        <option alue="">Interior</option>
-                                        <option alue="">Audio</option>
+                                        <option formValue="">All Categories</option>
+                                        <option formValue="">Car Parts</option>
+                                        <option formValue="">Tools &amp; Accessories</option>
+                                        <option formValue="">Suspension Systems</option>
+                                        <option formValue="">Turbo System</option>
+                                        <option formValue="">Oils & Fluids</option>
+                                        <option formValue="">Exterior</option>
+                                        <option formValue="">Body Parts</option>
+                                        <option formValue="">Interior</option>
+                                        <option formValue="">Audio</option>
                                     </select>
                                     <input type="text" placeholder="Enter your search key ..." />
                                     <button className="header-search_btn" type="submit"><i

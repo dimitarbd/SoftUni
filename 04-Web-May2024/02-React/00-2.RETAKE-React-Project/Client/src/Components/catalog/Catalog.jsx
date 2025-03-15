@@ -1,6 +1,16 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Catalog() {
+    useEffect(() => {
+        (async () => {
+           const partsResult = await requester('GET', 'http://localhost:3030/jsonstore/car-parts')
+        })();
+
+        console.log(partsResult);
+        
+    })
+
     return (
         <>
             {/* <!-- Begin Uren's Breadcrumb Area --> */}

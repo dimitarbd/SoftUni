@@ -269,7 +269,7 @@ export default function Header() {
                                         <li className="megamenu-holder "><Link to="/catalog">Catalog</Link>
                                         </li>
                                         <li><Link to="#" onClick={(e) => e.preventDefault()}>Create Offer</Link></li>
-                                        <li className=""><Link to="about-us.html">About Us</Link></li>
+                                        <li className=""><Link to="/about">About Us</Link></li>
                                         <li><Link to="/login" >Login</Link></li>
                                         <li><Link to="/register" >Register</Link></li>
                                         <li><Link to="#" onClick={(e) => e.preventDefault()}>Logout</Link></li>

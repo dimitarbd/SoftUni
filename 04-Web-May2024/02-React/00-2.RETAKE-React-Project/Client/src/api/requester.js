@@ -14,4 +14,7 @@ export default async function requester(method, url, data) {
     }
 
     const response = await fetch(url, options);
+    const result = response.json();
+    
+    return result;
 };

@@ -291,16 +291,16 @@ export default function Header() {
                             <div className="hm-form_area">
                                 <form action="#" className="hm-searchbox">
                                     <select className="nice-select select-search-category">
-                                        <option formValue="">All Categories</option>
-                                        <option formValue="">Car Parts</option>
-                                        <option formValue="">Tools &amp; Accessories</option>
-                                        <option formValue="">Suspension Systems</option>
-                                        <option formValue="">Turbo System</option>
-                                        <option formValue="">Oils & Fluids</option>
-                                        <option formValue="">Exterior</option>
-                                        <option formValue="">Body Parts</option>
-                                        <option formValue="">Interior</option>
-                                        <option formValue="">Audio</option>
+                                        <option formvalue="">All Categories</option>
+                                        <option formvalue="">Car Parts</option>
+                                        <option formvalue="">Tools &amp; Accessories</option>
+                                        <option formvalue="">Suspension Systems</option>
+                                        <option formvalue="">Turbo System</option>
+                                        <option formvalue="">Oils & Fluids</option>
+                                        <option formvalue="">Exterior</option>
+                                        <option formvalue="">Body Parts</option>
+                                        <option formvalue="">Interior</option>
+                                        <option formvalue="">Audio</option>
                                     </select>
                                     <input type="text" placeholder="Enter your search key ..." />
                                     <button className="header-search_btn" type="submit"><i

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Footer() {
    return (
     <div className="uren-footer_area">
@@ -7,9 +9,9 @@ export default function Footer() {
                 <div className="col-lg-4">
                     <div className="footer-widgets_info">
                         <div className="footer-widgets_logo">
-                            <a href="#">
+                            <Link to="#">
                                 <img src="/images/menu/logo/1.png" alt="Uren's Footer Logo"/>
-                            </a>
+                            </Link>
                         </div>
                         <div className="widget-short_desc">
                             <p>We are a team of designers and developers that create high quality HTML Template &
@@ -23,32 +25,32 @@ export default function Footer() {
                                     in
                                     Arden B578 5CC, England</li>
                                 <li className="uren-phone"><span>Call
-                                Us:</span> <a href="tel://+123123321345">+123 321 345</a>
+                                Us:</span> <Link to="tel://+123123321345">+123 321 345</Link>
                                 </li>
-                                <li className="uren-email"><span>Email:</span> <a href="mailto://info@yourdomain.com">info@yourdomain.com</a></li>
+                                <li className="uren-email"><span>Email:</span> <Link to="mailto://info@yourdomain.com">info@yourdomain.com</Link></li>
                             </ul>
                         </div>
                         <div className="uren-social_link">
                             <ul>
                                 <li className="facebook">
-                                    <a href="https://www.facebook.com/" data-toggle="tooltip" target="_blank" title="Facebook">
+                                    <Link to="https://www.facebook.com/" data-toggle="tooltip" target="_blank" title="Facebook">
                                         <i className="fab fa-facebook"></i>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="twitter">
-                                    <a href="https://twitter.com/" data-toggle="tooltip" target="_blank" title="Twitter">
+                                    <Link to="https://twitter.com/" data-toggle="tooltip" target="_blank" title="Twitter">
                                         <i className="fab fa-twitter-square"></i>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="google-plus">
-                                    <a href="https://www.plus.google.com/discover" data-toggle="tooltip" target="_blank" title="Google Plus">
+                                    <Link to="https://www.plus.google.com/discover" data-toggle="tooltip" target="_blank" title="Google Plus">
                                         <i className="fab fa-google-plus"></i>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="instagram">
-                                    <a href="https://rss.com/" data-toggle="tooltip" target="_blank" title="Instagram">
+                                    <Link to="https://rss.com/" data-toggle="tooltip" target="_blank" title="Instagram">
                                         <i className="fab fa-instagram"></i>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -63,10 +65,10 @@ export default function Footer() {
                                 </div>
                                 <div className="footer-widgets">
                                     <ul>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>About Us</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Delivery Information</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Privacy Policy</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Terms & Conditions</a></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>About Us</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Delivery Information</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Privacy Policy</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Terms & Conditions</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -76,9 +78,9 @@ export default function Footer() {
                                 </div>
                                 <div className="footer-widgets">
                                     <ul>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Contact Us</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Returns</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Site Map</a></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Contact Us</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Returns</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Site Map</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -88,10 +90,10 @@ export default function Footer() {
                                 </div>
                                 <div className="footer-widgets">
                                     <ul>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>About Us</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Delivery Information</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Privacy Policy</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Terms & Conditions</a></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>About Us</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Delivery Information</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Privacy Policy</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Terms & Conditions</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -101,10 +103,10 @@ export default function Footer() {
                                 </div>
                                 <div className="footer-widgets">
                                     <ul>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>My Account</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Order History</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Wish List</a></li>
-                                        <li><a href="#" onClick={(e) => e.preventDefault()}>Newsletter</a></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>My Account</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Order History</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Wish List</Link></li>
+                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Newsletter</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -120,14 +122,14 @@ export default function Footer() {
                 <div className="row">
                     <div className="col-lg-6 col-md-6">
                         <div className="copyright">
-                            <span><a href="templateshub.net">Templateshub</a></span>
+                            <span><Link to="templateshub.net">Templateshub</Link></span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
                         <div className="payment">
-                            <a href="#">
+                            <Link to="#">
                                 <img src="/images/footer/payment/1.png" alt="Uren's Payment Method"/>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -1654,7 +1654,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
   border-radius: 100%;
 }
 
-.main-slider .slick-dots li button {
+/* .main-slider .slick-dots li button {
   border: none;
 }
 
@@ -1664,7 +1664,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 
 .main-slider .slick-dots li:hover {
   background-color: #ffffff;
-}
+} */
 
 
 

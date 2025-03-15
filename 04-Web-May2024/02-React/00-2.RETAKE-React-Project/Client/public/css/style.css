@@ -131,8 +131,8 @@ img {
 }
 
 .img-full {
-  width: 100%;
-  height: 100%;
+  width: 96%;
+  height: 96%;
   overflow: hidden;
   display: block;
 }
@@ -1471,7 +1471,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 
 @media (max-width: 767px) {
   .uren-slider_area .main-slider .slick-arrow {
-    display: none !important;
+    display: block !important;
   }
 }
 

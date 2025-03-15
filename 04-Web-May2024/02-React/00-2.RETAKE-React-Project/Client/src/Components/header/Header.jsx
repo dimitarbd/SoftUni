@@ -281,7 +281,7 @@ export default function Header() {
                             <div className="ht-right_area">
                                 <div className="ht-menu">
                                     <ul>
-                                        <li><Link to="/my-account"><span className="fa fa-user"></span> <span>My Account</span><i className="fa fa-chevron-down"></i></Link>
+                                        <li><Link to="/my-account"><span className="fa fa-user"></span> <span>My Account</span></Link>
                                         </li>
                                     </ul>
                                 </div>

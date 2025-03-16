@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 import * as partsAPI from '../../api/parts-api';
 import { useEffect, useState } from 'react';
 
-export default function Catalog() {    
+export default function Catalog() {
     const [parts, setParts] = useState([]);
 
     useEffect(() => {
         partsAPI.getAll()
-        .then(parts => setParts(parts));
-    },[]);
-    
+            .then(parts => setParts(parts));
+    }, []);
+
     return (
         <>
             {/* <!-- Begin Uren's Breadcrumb Area --> */}
@@ -182,12 +182,8 @@ export default function Catalog() {
                                                 <div className="product-img">
                                                     <Link to="single-product.html">
                                                         <img className="primary-img" src="/images/product/large-size/1.jpg" alt="Uren's Product Image" />
-                                                        <img className="secondary-img" src="/images/product/large-size/2.jpg" alt="Uren's Product Image" />
-                                                    </Link>
-                                                    <div className="sticker">
-                                                        <span className="sticker">New</span>
-                                                    </div>
-                                                    <div className="add-actions">
+                                                    </Link>                                                    
+                                                    {/* <div className="add-actions">
                                                         <ul>
                                                             <li><Link className="uren-add_cart" to="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i
                                                                 className="ion-bag"></i></Link>
@@ -201,7 +197,7 @@ export default function Catalog() {
                                                             <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
-                                                    </div>
+                                                    </div> */}
                                                 </div>
                                                 <div className="product-content">
                                                     <div className="product-desc_info">
@@ -226,64 +222,8 @@ export default function Catalog() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="list-slide_item">
-                                        <div className="single-product">
-                                            <div className="product-img">
-                                                <Link to="single-product.html">
-                                                    <img className="primary-img" src="/images/product/large-size/1.jpg" alt="Uren's Product Image" />
-                                                    <img className="secondary-img" src="/images/product/large-size/2.jpg" alt="Uren's Product Image" />
-                                                </Link>
-                                            </div>
-                                            <div className="product-content">
-                                                <div className="product-desc_info">
-                                                    <div className="rating-box">
-                                                        <ul>
-                                                            <li><i className="ion-android-star"></i></li>
-                                                            <li><i className="ion-android-star"></i></li>
-                                                            <li><i className="ion-android-star"></i></li>
-                                                            <li className="silver-color"><i className="ion-android-star"></i>
-                                                            </li>
-                                                            <li className="silver-color"><i className="ion-android-star"></i>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <h6><Link className="product-name" to="single-product.html">Veniam officiis
-                                                        voluptates</Link></h6>
-                                                    <div className="price-box">
-                                                        <span className="new-price">$122.00</span>
-                                                    </div>
-                                                    <div className="product-short_desc">
-                                                        <p>The invention relates to an electromechanical brake booster with an
-                                                            electric motor and a helical gearing. The brake booster is used for
-                                                            coupling an auxiliary force via a driver into a piston rod. The
-                                                            invention proposes connecting a spindle of the helical gearing
-                                                            elastically via a spring element to the piston rod such that, in the
-                                                            event of rapid actuation of the brake, the helical gearing and a rotor
-                                                            of the electric motor do not have to be accelerated entirely muscle
-                                                            power. The muscle power required for actuating a brake is reduced as a
-                                                            parts in the event of a rapid actuation of the brake.</p>
-                                                    </div>
-                                                </div>
-                                                <div className="add-actions">
-                                                    <ul>
-                                                        <li><Link className="uren-add_cart" to="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i className="ion-bag"></i></Link>
-                                                        </li>
-                                                        <li><Link className="uren-wishlist" to="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i
-                                                            className="ion-android-favorite-outline"></i></Link>
-                                                        </li>
-                                                        <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
-                                                            className="ion-android-options"></i></Link>
-                                                        </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
-                                                            className="ion-android-open"></i></Link>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
-                                <div className="col-lg-4">
+                                {/* <div className="col-lg-4">
                                     <div className="product-slide_item">
                                         <div className="inner-slide">
                                             <div className="single-product">
@@ -1786,7 +1726,7 @@ export default function Catalog() {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="row">
                                 <div className="col-lg-12">

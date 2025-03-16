@@ -41,15 +41,16 @@ export default function Header() {
                                 <form action="#" className="hm-searchbox">
                                     <select className="nice-select select-search-category">
                                         <option defaultValue="">All Categories</option>
-                                        <option defaultValue="">Car Parts</option>
-                                        <option defaultValue="">Tools &amp; Accessories</option>
-                                        <option defaultValue="">Suspension Systems</option>
-                                        <option defaultValue="">Turbo System</option>
-                                        <option defaultValue="">Oils & Fluids</option>
-                                        <option defaultValue="">Exterior</option>
-                                        <option defaultValue="">Body Parts</option>
-                                        <option defaultValue="">Interior</option>
-                                        <option defaultValue="">Audio</option>
+                                        <option formvalue="">Engine and Drivetrain</option>
+                                        <option formvalue="">Suspension and Steering</option>
+                                        <option formvalue="">Braking System</option>
+                                        <option formvalue="">Electrical System</option>
+                                        <option formvalue="">Exhaust System</option>
+                                        <option formvalue="">Cooling System</option>
+                                        <option formvalue="">Body and Exterior</option>
+                                        <option formvalue="">Interior and Comfort</option>
+                                        <option formvalue="">Wheels and Tires</option>
+                                        <option formvalue="">Fuel System</option>
 
                                     </select>
                                     <input type="text" placeholder="Enter your search key ..." />

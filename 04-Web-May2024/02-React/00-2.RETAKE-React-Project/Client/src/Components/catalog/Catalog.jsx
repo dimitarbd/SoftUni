@@ -19,7 +19,7 @@ export default function Catalog() {
                     <div className="breadcrumb-content">
                         <h2>Shop</h2>
                         <ul>
-                            <li><Link to="/home">Home</Link></li>
+                            <li><Link to="/">Home</Link></li>
                             <li className="active">Shop Left Sidebar</li>
                         </ul>
                     </div>
@@ -40,16 +40,16 @@ export default function Catalog() {
                                     <div className="module-body">
                                         <ul className="module-list_item">
                                             <li>
-                                                <Link to="javascript:void(0)">Engine and Drivetrain <span>(12)</span></Link>
-                                                <Link to="javascript:void(0)">Suspension and Steering <span>(0)</span></Link>
-                                                <Link to="javascript:void(0)">Braking System <span>(0)</span></Link>
-                                                <Link to="javascript:void(0)">Electrical System <span>(0)</span></Link>
-                                                <Link to="javascript:void(0)">Exhaust System <span>(12)</span></Link>
-                                                <Link to="javascript:void(0)">Cooling System <span>(12)</span></Link>
-                                                <Link to="javascript:void(0)">Body and Exterior <span>(16)</span></Link>
-                                                <Link to="javascript:void(0)">Interior and Comfort <span>(2)</span></Link>
-                                                <Link to="javascript:void(0)">Wheels and Tires <span>(0)</span></Link>                                                
-                                                <Link to="javascript:void(0)">Fuel System <span>(9)</span></Link>                                                
+                                                <Link to="#">Engine and Drivetrain <span>(12)</span></Link>
+                                                <Link to="#">Suspension and Steering <span>(0)</span></Link>
+                                                <Link to="#">Braking System <span>(0)</span></Link>
+                                                <Link to="#">Electrical System <span>(0)</span></Link>
+                                                <Link to="#">Exhaust System <span>(12)</span></Link>
+                                                <Link to="#">Cooling System <span>(12)</span></Link>
+                                                <Link to="#">Body and Exterior <span>(16)</span></Link>
+                                                <Link to="#">Interior and Comfort <span>(2)</span></Link>
+                                                <Link to="#">Wheels and Tires <span>(0)</span></Link>                                                
+                                                <Link to="#">Fuel System <span>(9)</span></Link>                                                
                                             </li>
                                         </ul>
                                     </div>
@@ -75,16 +75,16 @@ export default function Catalog() {
                                     </div>
                                     <ul className="sidebar-checkbox_list">
                                         <li>
-                                            <Link to="javascript:void(0)">Black <span>(6)</span></Link>
+                                            <Link to="#">Black <span>(6)</span></Link>
                                         </li>
                                         <li>
-                                            <Link to="javascript:void(0)">Blue <span>(2)</span></Link>
+                                            <Link to="#">Blue <span>(2)</span></Link>
                                         </li>
                                         <li>
-                                            <Link to="javascript:void(0)">Red <span>(3)</span></Link>
+                                            <Link to="#">Red <span>(3)</span></Link>
                                         </li>
                                         <li>
-                                            <Link to="javascript:void(0)">Yellow <span>(0)</span></Link>
+                                            <Link to="#">Yellow <span>(0)</span></Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -94,26 +94,26 @@ export default function Catalog() {
                                     </div>
                                     <ul className="sidebar-checkbox_list">
                                         <li>
-                                            <Link to="javascript:void(0)">Sanai <span>(10)</span></Link>
+                                            <Link to="#">Sanai <span>(10)</span></Link>
                                         </li>
                                         <li>
-                                            <Link to="javascript:void(0)">Xail <span>(2)</span></Link>
+                                            <Link to="#">Xail <span>(2)</span></Link>
                                         </li>
                                         <li>
-                                            <Link to="javascript:void(0)">Chamcham <span>(1)</span></Link>
+                                            <Link to="#">Chamcham <span>(1)</span></Link>
                                         </li>
                                         <li>
-                                            <Link to="javascript:void(0)">Meito <span>(3)</span></Link>
+                                            <Link to="#">Meito <span>(3)</span></Link>
                                         </li>
                                         <li>
-                                            <Link to="javascript:void(0)">Walton <span>(0)</span></Link>
+                                            <Link to="#">Walton <span>(0)</span></Link>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div className="sidebar-banner_area">
                                 <div className="banner-item img-hover_effect">
-                                    <Link to="javascript:void(0)">
+                                    <Link to="#">
                                         <img src="/images/shop/1.jpg" alt="Uren's Shop Banner Image" />
                                     </Link>
                                 </div>
@@ -184,7 +184,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -262,7 +262,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -294,7 +294,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -366,7 +366,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -399,7 +399,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -473,7 +473,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -505,7 +505,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -577,7 +577,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -610,7 +610,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -688,7 +688,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -720,7 +720,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -792,7 +792,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -825,7 +825,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -899,7 +899,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -931,7 +931,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -1007,7 +1007,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -1040,7 +1040,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -1118,7 +1118,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -1150,7 +1150,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -1222,7 +1222,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -1255,7 +1255,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -1334,7 +1334,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -1366,7 +1366,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -1438,7 +1438,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -1471,7 +1471,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -1550,7 +1550,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -1582,7 +1582,7 @@ export default function Catalog() {
                                                             <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                                 className="ion-android-options"></i></Link>
                                                             </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                                 className="ion-android-open"></i></Link></li>
                                                         </ul>
                                                     </div>
@@ -1655,7 +1655,7 @@ export default function Catalog() {
                                                         <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
                                                             className="ion-android-options"></i></Link>
                                                         </li>
-                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
+                                                        <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="#" data-toggle="tooltip" data-placement="top" title="Quick View"><i
                                                             className="ion-android-open"></i></Link>
                                                         </li>
                                                     </ul>
@@ -1671,12 +1671,12 @@ export default function Catalog() {
                                         <div className="row">
                                             <div className="col-lg-12">
                                                 <ul className="uren-pagination-box primary-color">
-                                                    <li className="active"><Link to="javascript:void(0)">1</Link></li>
-                                                    <li><Link to="javascript:void(0)">2</Link></li>
-                                                    <li><Link to="javascript:void(0)">3</Link></li>
-                                                    <li><Link to="javascript:void(0)">4</Link></li>
-                                                    <li><Link to="javascript:void(0)">5</Link></li>
-                                                    <li><Link className="Next" to="javascript:void(0)">Next</Link></li>
+                                                    <li className="active"><Link to="#">1</Link></li>
+                                                    <li><Link to="#">2</Link></li>
+                                                    <li><Link to="#">3</Link></li>
+                                                    <li><Link to="#">4</Link></li>
+                                                    <li><Link to="#">5</Link></li>
+                                                    <li><Link className="Next" to="#">Next</Link></li>
                                                 </ul>
                                             </div>
                                         </div>

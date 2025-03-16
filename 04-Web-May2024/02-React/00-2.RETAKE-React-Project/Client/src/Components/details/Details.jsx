@@ -39,7 +39,7 @@ export default function Details() {
                             <div className="col-lg-8">
                                 <div className="sp-content">
                                     <div className="sp-heading">
-                                        <h5><a href="#">Dolorem odio provident ut nihil</a></h5>
+                                        <h5><a href="#">Aluminum rim</a></h5>
                                     </div>
                                     <div className="rating-box">
                                         <ul>
@@ -53,7 +53,7 @@ export default function Details() {
                                     <div className="sp-essential_stuff">
                                         <ul>
                                             <li>Brands <button className="btn-link">Buxton</button></li>
-                                            <li>Availability: <button className="btn-link">In Stock</button></li>                                            
+                                            <li>Availability: <button className="btn-link">6 pieces</button></li>                                            
                                             <li>Price: <button className="btn-link">400</button></li>
                                         </ul>
                                     </div>

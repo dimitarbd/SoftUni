@@ -100,153 +100,18 @@ export default function Header() {
                                 </div>
                                 <div id="cate-toggle" className="category-menu-list" style={{ display: 'none' }}>
                                     <ul>
-                                        <li className="right-menu"><Link to="shop-left-sidebar.html">Car Parts</Link>
-                                            <ul className="cat-mega-menu">
-                                                <li className="right-menu cat-mega-title">
-                                                    <Link to="shop-left-sidebar.html">Active body control</Link>
-                                                    <ul>
-                                                        <li><Link to="shop-left-sidebar.html">Aluminum Nonstick</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Calphalon</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Contemporary</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Hard-Anodized</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li className="right-menu cat-mega-title">
-                                                    <Link to="shop-left-sidebar.html">Battery Indicator</Link>
-                                                    <ul>
-                                                        <li><Link to="shop-left-sidebar.html">Sanai laptops</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Byteflight</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">EXcaliberPC</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Gaming Laptops</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li className="right-menu cat-mega-title">
-                                                    <Link to="shop-left-sidebar.html">Remote Starter</Link>
-                                                    <ul>
-                                                        <li><Link to="shop-left-sidebar.html">Dual Core</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Gaming Monitors</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">GPS Monitors</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Heat Shield</Link></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                        <li><Link to="shop-left-sidebar.html">Car Parts</Link>                                            
                                         </li>
-                                        <li className="right-menu"><Link to="shop-left-sidebar.html">Tools &amp;
-                                            Accessories</Link>
-                                            <ul className="cat-mega-menu cat-mega-menu-2">
-                                                <li className="right-menu cat-mega-title">
-                                                    <Link to="shop-left-sidebar.html">Drills</Link>
-                                                    <ul>
-                                                        <li><Link to="shop-left-sidebar.html">Angle Drills</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Combi Drills</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Drill Drivers</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">PercussionDrills</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li className="right-menu cat-mega-title">
-                                                    <Link to="shop-left-sidebar.html">Nail Guns</Link>
-                                                    <ul>
-                                                        <li><Link to="shop-left-sidebar.html">Air Nail Guns</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Cordless Nail Guns</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Electric Nail Guns</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Gas Nail Guns</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li className="right-menu cat-mega-title">
-                                                    <Link to="shop-left-sidebar.html">Sanders</Link>
-                                                    <ul>
-                                                        <li><Link to="shop-left-sidebar.html">1/2 Sheet Sanders</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">1/4 Sheet Sanders</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Belt Sanders</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Drywall Sanders</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li className="right-menu cat-mega-title">
-                                                    <Link to="shop-left-sidebar.html">Saws</Link>
-                                                    <ul>
-                                                        <li><Link to="shop-left-sidebar.html">Circular Saws</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Jigsaws</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Mitre Saws</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Reciprocating Saws</Link></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                        <li><Link to="shop-left-sidebar.html">Tools &
+                                            Accessories</Link>                                           
                                         </li>
-                                        <li className="right-menu"><Link to="shop-left-sidebar.html">Suspension Systems</Link>
-                                            <ul className="cat-mega-menu cat-mega-menu-3">
-                                                <li className="right-menu cat-mega-title">
-                                                    <Link to="shop-left-sidebar.html">Clothing</Link>
-                                                    <ul>
-                                                        <li><Link to="shop-left-sidebar.html">Cuisinart</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Homeinart</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Kettle Stainless</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Steel Stovetop</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li className="right-menu cat-mega-title">
-                                                    <Link to="shop-left-sidebar.html">Jewelry</Link>
-                                                    <ul>
-                                                        <li><Link to="shop-left-sidebar.html">Hard Anodized</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Scratch Resistant</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Thermo-Spot</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Ultimate</Link></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                        <li><Link to="shop-left-sidebar.html">Suspension Systems</Link>                                            
                                         </li>
-                                        <li className="right-menu"><Link to="shop-left-sidebar.html">Turbo System</Link>
-                                            <ul className="cat-mega-menu">
-                                                <li className="right-menu cat-mega-title">
-                                                    <Link to="shop-left-sidebar.html">BMW</Link>
-                                                    <ul>
-                                                        <li><Link to="shop-left-sidebar.html">Dining Chairs</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Dining Tables</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Gramophone</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Sideboards</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li className="right-menu cat-mega-title">
-                                                    <Link to="shop-left-sidebar.html">FORD</Link>
-                                                    <ul>
-                                                        <li><Link to="shop-left-sidebar.html">Chairs & Sofas</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Chest</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Loungers</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Sets</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li className="right-menu cat-mega-title">
-                                                    <Link to="shop-left-sidebar.html">POSCHER</Link>
-                                                    <ul>
-                                                        <li><Link to="shop-left-sidebar.html">Bed</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Daybed</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Futon</Link></li>
-                                                        <li><Link to="shop-left-sidebar.html">Hammock</Link></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                        <li><Link to="shop-left-sidebar.html">Turbo System</Link>                                            
                                         </li>
-                                        <li className="right-menu"><Link to="shop-left-sidebar.html">Oils & Fluids</Link>
-                                            <ul className="cat-dropdown">
-                                                <li>
-                                                    <Link to="shop-left-sidebar.html">Daylesford</Link>
-                                                    <Link to="shop-left-sidebar.html">Delaware</Link>
-                                                    <Link to="shop-left-sidebar.html">Fayence</Link>
-                                                    <Link to="shop-left-sidebar.html">Franzea</Link>
-                                                    <Link to="shop-left-sidebar.html">Mable</Link>
-                                                    <Link to="shop-left-sidebar.html">Mobo</Link>
-                                                    <Link to="shop-left-sidebar.html">Pippins</Link>
-                                                </li>
-                                            </ul>
+                                        <li><Link to="shop-left-sidebar.html">Oils & Fluids</Link>                                            
                                         </li>
-                                        <li className="right-menu"><Link to="shop-left-sidebar.html">Exterior</Link>
-                                            <ul className="cat-dropdown cat-dropdown-2">
-                                                <li>
-                                                    <Link to="shop-left-sidebar.html">Coffee & side tables</Link>
-                                                    <Link to="shop-left-sidebar.html">Living room lighting</Link>
-                                                    <Link to="shop-left-sidebar.html">Living room storage</Link>
-                                                    <Link to="shop-left-sidebar.html">Living room textiles & rugs</Link>
-                                                </li>
-                                            </ul>
+                                        <li><Link to="shop-left-sidebar.html">Exterior</Link>                                            
                                         </li>
                                         <li><Link to="shop-left-sidebar.html">Body Parts</Link></li>
                                         <li><Link to="shop-left-sidebar.html">Interior</Link></li>

@@ -7,7 +7,7 @@ export default function Catalog() {
 
     useEffect(() => {
         partsAPI.getAll()
-        .then(result => setParts(result));
+        .then(parts => setParts(parts));
     },[]);
     
     return (
@@ -261,7 +261,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a rotor
                                                             of the electric motor do not have to be accelerated entirely muscle
                                                             power. The muscle power required for actuating a brake is reduced as a
-                                                            result in the event of a rapid actuation of the brake.</p>
+                                                            parts in the event of a rapid actuation of the brake.</p>
                                                     </div>
                                                 </div>
                                                 <div className="add-actions">
@@ -372,7 +372,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a rotor
                                                             of the electric motor do not have to be accelerated entirely muscle
                                                             power. The muscle power required for actuating a brake is reduced as a
-                                                            result in the event of a rapid actuation of the brake.</p>
+                                                            parts in the event of a rapid actuation of the brake.</p>
                                                     </div>
                                                 </div>
                                                 <div className="add-actions">
@@ -476,7 +476,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a rotor
                                                             of the electric motor do not have to be accelerated entirely muscle
                                                             power. The muscle power required for actuating a brake is reduced as a
-                                                            result in the event of a rapid actuation of the brake.</p>
+                                                            parts in the event of a rapid actuation of the brake.</p>
                                                     </div>
                                                 </div>
                                                 <div className="add-actions">
@@ -583,7 +583,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a rotor
                                                             of the electric motor do not have to be accelerated entirely muscle
                                                             power. The muscle power required for actuating a brake is reduced as a
-                                                            result in the event of a rapid actuation of the brake.</p>
+                                                            parts in the event of a rapid actuation of the brake.</p>
                                                     </div>
                                                 </div>
                                                 <div className="add-actions">
@@ -687,7 +687,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a rotor
                                                             of the electric motor do not have to be accelerated entirely muscle
                                                             power. The muscle power required for actuating a brake is reduced as a
-                                                            result in the event of a rapid actuation of the brake.</p>
+                                                            parts in the event of a rapid actuation of the brake.</p>
                                                     </div>
                                                 </div>
                                                 <div className="add-actions">
@@ -798,7 +798,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a rotor
                                                             of the electric motor do not have to be accelerated entirely muscle
                                                             power. The muscle power required for actuating a brake is reduced as a
-                                                            result in the event of a rapid actuation of the brake.</p>
+                                                            parts in the event of a rapid actuation of the brake.</p>
                                                     </div>
                                                 </div>
                                                 <div className="add-actions">
@@ -902,7 +902,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a rotor
                                                             of the electric motor do not have to be accelerated entirely muscle
                                                             power. The muscle power required for actuating a brake is reduced as a
-                                                            result in the event of a rapid actuation of the brake.</p>
+                                                            parts in the event of a rapid actuation of the brake.</p>
                                                     </div>
                                                 </div>
                                                 <div className="add-actions">
@@ -1009,7 +1009,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a rotor
                                                             of the electric motor do not have to be accelerated entirely muscle
                                                             power. The muscle power required for actuating a brake is reduced as a
-                                                            result in the event of a rapid actuation of the brake.</p>
+                                                            parts in the event of a rapid actuation of the brake.</p>
                                                     </div>
                                                 </div>
                                                 <div className="add-actions">
@@ -1117,7 +1117,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a rotor
                                                             of the electric motor do not have to be accelerated entirely muscle
                                                             power. The muscle power required for actuating a brake is reduced as a
-                                                            result in the event of a rapid actuation of the brake.</p>
+                                                            parts in the event of a rapid actuation of the brake.</p>
                                                     </div>
                                                 </div>
                                                 <div className="add-actions">
@@ -1228,7 +1228,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a rotor
                                                             of the electric motor do not have to be accelerated entirely muscle
                                                             power. The muscle power required for actuating a brake is reduced as a
-                                                            result in the event of a rapid actuation of the brake.</p>
+                                                            parts in the event of a rapid actuation of the brake.</p>
                                                     </div>
                                                 </div>
                                                 <div className="add-actions">
@@ -1332,7 +1332,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a rotor
                                                             of the electric motor do not have to be accelerated entirely muscle
                                                             power. The muscle power required for actuating a brake is reduced as a
-                                                            result in the event of a rapid actuation of the brake.</p>
+                                                            parts in the event of a rapid actuation of the brake.</p>
                                                     </div>
                                                 </div>
                                                 <div className="add-actions">
@@ -1443,7 +1443,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a
                                                             rotor of the electric motor do not have to be accelerated entirely
                                                             muscle power. The muscle power required for actuating a brake is
-                                                            reduced as a result in the event of a rapid actuation of the brake.
+                                                            reduced as a parts in the event of a rapid actuation of the brake.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1548,7 +1548,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a rotor
                                                             of the electric motor do not have to be accelerated entirely muscle
                                                             power. The muscle power required for actuating a brake is reduced as a
-                                                            result in the event of a rapid actuation of the brake.</p>
+                                                            parts in the event of a rapid actuation of the brake.</p>
                                                     </div>
                                                 </div>
                                                 <div className="add-actions">
@@ -1659,7 +1659,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a
                                                             rotor of the electric motor do not have to be accelerated entirely
                                                             muscle power. The muscle power required for actuating a brake is
-                                                            reduced as a result in the event of a rapid actuation of the brake.
+                                                            reduced as a parts in the event of a rapid actuation of the brake.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1764,7 +1764,7 @@ export default function Catalog() {
                                                             event of rapid actuation of the brake, the helical gearing and a
                                                             rotor of the electric motor do not have to be accelerated entirely
                                                             muscle power. The muscle power required for actuating a brake is
-                                                            reduced as a result in the event of a rapid actuation of the brake.
+                                                            reduced as a parts in the event of a rapid actuation of the brake.
                                                         </p>
                                                     </div>
                                                 </div>

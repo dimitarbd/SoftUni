@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import * as partsAPI from '../../api/parts-api';
 import { useEffect, useState } from 'react';
+import PartListItem from './part-list/PartListItem';
 
 export default function Catalog() {
     const [parts, setParts] = useState([]);
@@ -175,54 +176,9 @@ export default function Catalog() {
                                 </div>
                             </div>
                             <div className="shop-product-wrap grid gridview-3 img-hover-effect_area row">
-                                <div className="col-lg-4">
-                                    <div className="product-slide_item">
-                                        <div className="inner-slide">
-                                            <div className="single-product">
-                                                <div className="product-img">
-                                                    <Link to="single-product.html">
-                                                        <img className="primary-img" src="/images/product/large-size/1.jpg" alt="Uren's Product Image" />
-                                                    </Link>                                                    
-                                                    {/* <div className="add-actions">
-                                                        <ul>
-                                                            <li><Link className="uren-add_cart" to="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i
-                                                                className="ion-bag"></i></Link>
-                                                            </li>
-                                                            <li><Link className="uren-wishlist" to="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i
-                                                                className="ion-android-favorite-outline"></i></Link>
-                                                            </li>
-                                                            <li><Link className="uren-add_compare" to="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
-                                                                className="ion-android-options"></i></Link>
-                                                            </li>
-                                                            <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><Link to="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
-                                                                className="ion-android-open"></i></Link></li>
-                                                        </ul>
-                                                    </div> */}
-                                                </div>
-                                                <div className="product-content">
-                                                    <div className="product-desc_info">
-                                                        <div className="rating-box">
-                                                            <ul>
-                                                                <li><i className="ion-android-star"></i></li>
-                                                                <li><i className="ion-android-star"></i></li>
-                                                                <li><i className="ion-android-star"></i></li>
-                                                                <li className="silver-color"><i className="ion-android-star"></i>
-                                                                </li>
-                                                                <li className="silver-color"><i className="ion-android-star"></i>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <h6><Link className="product-name" to="single-product.html">Veniam
-                                                            officiis voluptates</Link></h6>
-                                                        <div className="price-box">
-                                                            <span className="new-price">$122.00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
+                                < PartListItem />
+
                                 {/* <div className="col-lg-4">
                                     <div className="product-slide_item">
                                         <div className="inner-slide">

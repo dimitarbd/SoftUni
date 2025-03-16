@@ -100,22 +100,22 @@ export default function Header() {
                                 </div>
                                 <div id="cate-toggle" className="category-menu-list" style={{ display: 'none' }}>
                                     <ul>
-                                        <li><Link to="shop-left-sidebar.html">Car Parts</Link>                                            
+                                        <li><Link to="shop-left-sidebar.html">Engine and Drivetrain</Link>                                            
                                         </li>
-                                        <li><Link to="shop-left-sidebar.html">Tools &
-                                            Accessories</Link>                                           
+                                        <li><Link to="shop-left-sidebar.html">Suspension and Steering</Link>                                           
                                         </li>
-                                        <li><Link to="shop-left-sidebar.html">Suspension Systems</Link>                                            
+                                        <li><Link to="shop-left-sidebar.html">Braking System</Link>                                            
                                         </li>
-                                        <li><Link to="shop-left-sidebar.html">Turbo System</Link>                                            
+                                        <li><Link to="shop-left-sidebar.html">Electrical System</Link>                                            
                                         </li>
-                                        <li><Link to="shop-left-sidebar.html">Oils & Fluids</Link>                                            
+                                        <li><Link to="shop-left-sidebar.html">Exhaust System</Link>                                            
                                         </li>
-                                        <li><Link to="shop-left-sidebar.html">Exterior</Link>                                            
+                                        <li><Link to="shop-left-sidebar.html">Cooling System</Link>                                            
                                         </li>
-                                        <li><Link to="shop-left-sidebar.html">Body Parts</Link></li>
-                                        <li><Link to="shop-left-sidebar.html">Interior</Link></li>
-                                        <li><Link to="shop-left-sidebar.html">Audio</Link></li>
+                                        <li><Link to="shop-left-sidebar.html">Body and Exterior</Link></li>
+                                        <li><Link to="shop-left-sidebar.html">Interior and Comfort</Link></li>
+                                        <li><Link to="shop-left-sidebar.html">Wheels and Tires</Link></li>
+                                        <li><Link to="shop-left-sidebar.html">Fuel System</Link></li>
                                         <li className="rx-child"><Link to="shop-left-sidebar.html">Uncategorized</Link></li>
                                         <li className="rx-child"><Link to="shop-left-sidebar.html">Appliances</Link></li>
                                         <li className="rx-parent">
@@ -157,15 +157,16 @@ export default function Header() {
                                 <form action="#" className="hm-searchbox">
                                     <select className="nice-select select-search-category">
                                         <option formvalue="">All Categories</option>
-                                        <option formvalue="">Car Parts</option>
-                                        <option formvalue="">Tools &amp; Accessories</option>
-                                        <option formvalue="">Suspension Systems</option>
-                                        <option formvalue="">Turbo System</option>
-                                        <option formvalue="">Oils & Fluids</option>
-                                        <option formvalue="">Exterior</option>
-                                        <option formvalue="">Body Parts</option>
-                                        <option formvalue="">Interior</option>
-                                        <option formvalue="">Audio</option>
+                                        <option formvalue="">Engine and Drivetrain</option>
+                                        <option formvalue="">Suspension and Steering</option>
+                                        <option formvalue="">Braking System</option>
+                                        <option formvalue="">Electrical System</option>
+                                        <option formvalue="">Exhaust System</option>
+                                        <option formvalue="">Cooling System</option>
+                                        <option formvalue="">Body and Exterior</option>
+                                        <option formvalue="">Interior and Comfort</option>
+                                        <option formvalue="">Wheels and Tires</option>
+                                        <option formvalue="">Fuel System</option>
                                     </select>
                                     <input type="text" placeholder="Enter your search key ..." />
                                     <button className="header-search_btn" type="submit"><i

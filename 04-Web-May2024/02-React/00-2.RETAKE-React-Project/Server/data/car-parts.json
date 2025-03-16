@@ -1,0 +1,38 @@
+{
+    "dba62041-1269-403c-a717-ea7e14c3a9ec": {
+        "title": "Universal AC Vent Cupholder",
+        "category": "Tools & Accessories",
+        "brand": "TENDYCOCO",
+        "availability": "In Stock",
+        "price": "9",
+        "size": "M",
+        "quantity": "1",
+        "imageUrl": "/images/product/large-size/2.jpg",
+        "rating": "3",
+        "_id": "dba62041-1269-403c-a717-ea7e14c3a9ec"
+    },
+    "dded749d-5a91-4c10-8211-a3af649c43c0": {
+        "title": "Aluminum rim",
+        "category": "Body Parts",
+        "brand": "Buxton",
+        "availability": "In Stock",
+        "price": "400",
+        "size": "S",
+        "quantity": "14",
+        "imageUrl": "/images/product/large-size/1.jpg",
+        "rating": "4",
+        "_id": "dded749d-5a91-4c10-8211-a3af649c43c0"
+    },
+    "76ca2307-0459-41ba-a477-056d3726e5b2": {
+        "title": "Road King Special 107 ABS 2017",
+        "category": "Car Parts",
+        "brand": "Harley Davidson",
+        "availability": "In Stock",
+        "price": "605",
+        "size": "L",
+        "quantity": "8",
+        "imageUrl": "/images/product/large-size/3.jpg",
+        "rating": "5",
+        "_id": "76ca2307-0459-41ba-a477-056d3726e5b2"
+    }
+}

@@ -40,35 +40,16 @@ export default function Catalog() {
                                     <div className="module-body">
                                         <ul className="module-list_item">
                                             <li>
-                                                <Link to="javascript:void(0)">Games & Consoles <span>(12)</span></Link>
-                                                <Link to="javascript:void(0)">Appliances <span>(0)</span></Link>
-                                                <Link to="javascript:void(0)">Audio <span>(0)</span></Link>
-                                                <Link to="javascript:void(0)">Bakeware <span>(0)</span></Link>
-                                                <Link to="javascript:void(0)">Body Parts <span>(12)</span></Link>
-                                                <Link to="javascript:void(0)">Cameras & Camcoders <span>(12)</span></Link>
-                                                <Link to="javascript:void(0)">Car Parts <span>(16)</span></Link>
-                                                <Link to="javascript:void(0)">Cookies & Crackers <span>(2)</span></Link>
-                                                <Link to="javascript:void(0)">Interior <span>(0)</span></Link>
-                                                <Link className="active" to="javascript:void(0)">Shop <span>(18)</span></Link>
-                                                <ul className="module-sub-list_item">
-                                                    <li>
-                                                        <Link to="javascript:void(0)">Brakes & Rotors <span>(8)</span></Link>
-                                                        <Link to="javascript:void(0)">Lighting <span>(8)</span></Link>
-                                                        <Link to="javascript:void(0)">Perfomance <span>(13)</span></Link>
-                                                        <Link to="javascript:void(0)">Wheels & Tires <span>(13)</span></Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <Link to="javascript:void(0)">Smartwatch <span>(9)</span></Link>
-                                                <Link to="javascript:void(0)">Suspension Systems <span>(15)</span></Link>
-                                                <Link to="javascript:void(0)">Tools & Accessories <span>(0)</span></Link>
-                                                <Link to="javascript:void(0)">Turbo System <span>(18)</span></Link>
-                                                <Link to="javascript:void(0)">TV & Audio <span>(0)</span></Link>
-                                                <Link to="javascript:void(0)">Exterior <span>(0)</span></Link>
-                                                <Link to="javascript:void(0)">Oils & Fluids <span>(18)</span></Link>
-                                                <Link to="javascript:void(0)">Accessories <span>(12)</span></Link>
-                                                <Link to="javascript:void(0)">Breakfast <span>(0)</span></Link>
+                                                <Link to="javascript:void(0)">Engine and Drivetrain <span>(12)</span></Link>
+                                                <Link to="javascript:void(0)">Suspension and Steering <span>(0)</span></Link>
+                                                <Link to="javascript:void(0)">Braking System <span>(0)</span></Link>
+                                                <Link to="javascript:void(0)">Electrical System <span>(0)</span></Link>
+                                                <Link to="javascript:void(0)">Exhaust System <span>(12)</span></Link>
+                                                <Link to="javascript:void(0)">Cooling System <span>(12)</span></Link>
+                                                <Link to="javascript:void(0)">Body and Exterior <span>(16)</span></Link>
+                                                <Link to="javascript:void(0)">Interior and Comfort <span>(2)</span></Link>
+                                                <Link to="javascript:void(0)">Wheels and Tires <span>(0)</span></Link>                                                
+                                                <Link to="javascript:void(0)">Fuel System <span>(9)</span></Link>                                                
                                             </li>
                                         </ul>
                                     </div>

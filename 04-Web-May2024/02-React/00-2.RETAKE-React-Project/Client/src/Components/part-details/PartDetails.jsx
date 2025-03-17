@@ -1,4 +1,4 @@
-export default function Details() {
+export default function PartDetails() {
     return (
         <>
             {/* <!-- Begin Uren's Breadcrumb Area --> */}

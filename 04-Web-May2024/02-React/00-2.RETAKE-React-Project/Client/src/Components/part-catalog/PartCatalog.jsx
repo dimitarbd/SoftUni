@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 
 import * as partsAPI from '../../api/parts-api';
 
-import PartListItem from './part-list/PartListItem';
+import PartListItem from './part-list/ParCatalogItem';
 
-export default function Catalog() {
+export default function PartCatalog() {
     const [parts, setParts] = useState([]);
 
     useEffect(() => {

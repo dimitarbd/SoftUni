@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function PartListItem({
+export default function PartCatalogItem({
     _id,
     title,
     price,

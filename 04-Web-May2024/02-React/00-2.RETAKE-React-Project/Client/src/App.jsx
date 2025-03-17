@@ -8,8 +8,8 @@ import Header from "./Components/header/Header"
 import Register from "./Components/register/Register"
 import Login from "./Components/login/Login"
 import Home from "./Home"
-import Catalog from "./Components/catalog/Catalog"
-import Details from "./Components/details/Details"
+import Catalog from "./Components/part-catalog/PartCatalog"
+import Details from "./Components/part-details/PartDetails"
 import About from "./Components/about/About"
 
 
@@ -25,7 +25,7 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/catalog" element={<Catalog />} />
-                <Route path="/catalog/:partsId" element={<Details />} />
+                <Route path="/catalog/:partId" element={<Details />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/my-account" element={<My-Account />} />
             </Routes>

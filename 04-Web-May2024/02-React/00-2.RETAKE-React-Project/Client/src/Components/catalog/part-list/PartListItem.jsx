@@ -25,7 +25,7 @@ export default function PartListItem({
                 <div className="inner-slide">
                     <div className="single-product">
                         <div className="product-img">
-                            <Link to="#">
+                            <Link to={`/catalog/${_id}/details`}>
                                 <img className="primary-img" src={imageUrl} alt="Uren's Product Image" />
                             </Link>
                         </div>
@@ -36,7 +36,7 @@ export default function PartListItem({
                                         {renderRating(rating)}
                                     </ul>
                                 </div>
-                                <h6><Link className="product-name" to="single-product.html">{title}</Link></h6>
+                                <h6><Link className="product-name" to={`/catalog/${_id}/details`}>{title}</Link></h6>
                                 <div className="price-box">
                                     <span className="new-price">${price}</span>
                                 </div>

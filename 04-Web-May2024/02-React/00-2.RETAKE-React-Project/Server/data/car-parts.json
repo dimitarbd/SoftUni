@@ -12,7 +12,7 @@
         "_id": "dba62041-1269-403c-a717-ea7e14c3a9ec"
     },
     "dded749d-5a91-4c10-8211-a3af649c43c0": {
-        "title": "Aluminum rim",
+        "title": "S837 Haze Wheels",
         "category": "Wheels and Tires",
         "brand": "Buxton",
         "availability": "In Stock",
@@ -34,5 +34,17 @@
         "imageUrl": "/images/product/large-size/3.jpg",
         "rating": "5",
         "_id": "76ca2307-0459-41ba-a477-056d3726e5b2"
+    },
+    "5ed18427-b532-40c3-8f4c-c2c069e64967": {
+        "title": "Electromechanical Actuator",
+        "category": "Braking System",
+        "brand": "Brembo",
+        "availability": "In Stock",
+        "price": "355",
+        "size": "M",
+        "quantity": "4",
+        "imageUrl": "/images/product/large-size/4.jpg",
+        "rating": "5",
+        "_id": "5ed18427-b532-40c3-8f4c-c2c069e64967"
     }
 }

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
-import * as partsAPI from '../../api/parts-api';
 import { useEffect, useState } from 'react';
+
+import * as partsAPI from '../../api/parts-api';
+
 import PartListItem from './part-list/PartListItem';
 
 export default function Catalog() {
@@ -158,7 +160,10 @@ export default function Catalog() {
                             </div>
                             <div className="shop-product-wrap grid gridview-3 img-hover-effect_area row">
 
-                                {parts.map(part => <PartListItem key={part._id} {...part} />)}
+                                {parts.length > 0
+                               ? parts.map(part => <PartListItem key={part._id} {...part} />)
+                               :<h3 className="text-center">No parts found</h3>
+                            }
                                 
                             </div>
                             <div className="row">

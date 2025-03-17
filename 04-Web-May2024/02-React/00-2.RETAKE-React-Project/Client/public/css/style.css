@@ -4113,6 +4113,14 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
   display: none;
 }
 
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Adjust as needed to ensure proper centering */
+    text-align: center;
+}
+
 /*----------------------------------------*/
 /*  20 - Components - Modal
 /*----------------------------------------*/

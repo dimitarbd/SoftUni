@@ -9,3 +9,6 @@ export const getAll = async () => {
 
     return parts;
 };
+
+export const getOne = (partId) => requester.get(`${BASE_URL}/${partId}`);
+

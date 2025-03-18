@@ -185,10 +185,10 @@ export default function Header() {
                             <div className="main-menu_area position-relative">
                                 <nav className="main-nav">
                                     <ul>
-                                        <li className="dropdown-holder active"><Link to="index.html">Home</Link>
+                                        <li className="dropdown-holder active"><Link to="/">Home</Link>
                                         </li>
                                         <li className="megamenu-holder ">
-                                            <Link to="shop-left-sidebar.html">Catalog</Link>
+                                            <Link to="/catalog">Catalog</Link>
                                         </li>
                                         <li><Link to="#" onClick={(e) => e.preventDefault()}>Create Offer</Link></li>
                                         <li className=""><Link to="about-us.html">About Us</Link></li>
@@ -302,25 +302,8 @@ export default function Header() {
                         </div>
                         <nav className="offcanvas-navigation">
                             <ul className="mobile-menu">
-                                <li className="menu-item-has-children active"><Link to="index.html" onClick={(e) => e.preventDefault()}><span
-                                    className="mm-text">Home</span></Link>
-                                    <ul className="sub-menu">
-                                        <li>
-                                            <Link to="index.html" onClick={(e) => e.preventDefault()}>
-                                                <span className="mm-text">Home One</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="index-2.html" onClick={(e) => e.preventDefault()}>
-                                                <span className="mm-text">Home Two</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="index-3.html" onClick={(e) => e.preventDefault()}>
-                                                <span className="mm-text">Home Three</span>
-                                            </Link>
-                                        </li>
-                                    </ul>
+                                <li className="menu-item-has-children active"><Link to="/"><span
+                                    className="mm-text">Home</span></Link>                                   
                                 </li>
                                 <li className="menu-item-has-children">
                                     <Link to="shop-left-sidebar.html" onClick={(e) => e.preventDefault()}>

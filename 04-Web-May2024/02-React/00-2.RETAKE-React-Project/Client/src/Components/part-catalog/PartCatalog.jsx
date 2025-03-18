@@ -162,7 +162,7 @@ export default function PartCatalog() {
 
                                 {parts.length > 0
                                ? parts.map(part => <PartCatalogItem key={part._id} {...part} />)
-                               :<h3 className="text-center">No parts found</h3>
+                               :<p>Loading...</p>
                             }
                                 
                             </div>

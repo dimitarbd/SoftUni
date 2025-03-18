@@ -157,43 +157,14 @@ export default function PartDetails() {
                                     <ul className="nav product-menu">
                                         <li><a className="active" data-toggle="tab" href="#description"><span>Description</span></a>
                                         </li>
-                                        <li><a data-toggle="tab" href="#specification"><span>Specification</span></a></li>
                                         <li><a data-toggle="tab" href="#reviews"><span>Reviews (1)</span></a></li>
                                     </ul>
                                 </div>
                                 <div className="tab-content uren-tab_content">
                                     <div id="description" className="tab-pane active show" role="tabpanel">
                                         <div className="product-description">
-                                            <ul>
-                                                <span>{part.description}</span>
-                                            </ul>
+                                            <span>{part.description}</span>
                                         </div>
-                                    </div>
-                                    <div id="specification" className="tab-pane" role="tabpanel">
-                                        <table className="table table-bordered specification-inner_stuff">
-                                            <tbody>
-                                                <tr>
-                                                    <td colSpan="2"><strong>Memory</strong></td>
-                                                </tr>
-                                            </tbody>
-                                            <tbody>
-                                                <tr>
-                                                    <td>test 1</td>
-                                                    <td>8gb</td>
-                                                </tr>
-                                            </tbody>
-                                            <tbody>
-                                                <tr>
-                                                    <td colSpan="2"><strong>Processor</strong></td>
-                                                </tr>
-                                            </tbody>
-                                            <tbody>
-                                                <tr>
-                                                    <td>No. of Cores</td>
-                                                    <td>1</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
                                     </div>
                                     <div id="reviews" className="tab-pane" role="tabpanel">
                                         <div className="tab-pane active" id="tab-review">

@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-import * as partsAPI from '../../api/parts-api';
-import PartCatalogItem from './part-list/ParCatalogItem';
+import partsAPI from '../../api/parts-api';
+import PartCatalogItem from './part-list/PartCatalogItem';
 
 
 export default function PartCatalog() {

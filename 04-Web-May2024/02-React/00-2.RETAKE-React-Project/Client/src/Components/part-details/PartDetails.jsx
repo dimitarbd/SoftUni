@@ -1,16 +1,23 @@
 import { useEffect } from "react";
 import { useState } from "react";
+
 import { Link } from "react-router-dom";
 
-import { getOne } from "../../api/parts-api";
+import partsAPI from "../../api/parts-api";
+
 
 
 export default function PartDetails() {
     const [part, setPart] = useState({});
+    const partId = window.location.pathname.split("/")[2];
 
     useEffect(() => {
         (async () => {
-            const result= await getOne();
+            const result= await partsAPI.getOne(partId);
+
+            console.log(result);
+            
+
             setPart(result);
         })();
     });
@@ -69,7 +76,7 @@ export default function PartDetails() {
                                             <ul>
                                                 <li>Brands <button className="btn-link">{part.brand}</button></li>
                                                 <li>Availability: <button className="btn-link">{part.quantity} pieces</button></li>
-                                                <li>Price: <button className="btn-link">{part.price}</button></li>
+                                                <li>Price: <button className="btn-link">${part.price}</button></li>
                                             </ul>
                                         </div>
                                         <div className="product-size_box">

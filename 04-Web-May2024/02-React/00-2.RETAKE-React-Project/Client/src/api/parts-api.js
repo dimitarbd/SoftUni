@@ -12,3 +12,10 @@ export const getAll = async () => {
 
 export const getOne = (partId) => requester.get(`${BASE_URL}/${partId}`);
 
+const partsAPI = {
+    getAll,
+    getOne
+};
+
+export default partsAPI;
+

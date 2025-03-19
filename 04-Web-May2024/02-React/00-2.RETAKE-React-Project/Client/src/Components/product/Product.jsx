@@ -20,7 +20,7 @@ export default function Product() {
                     return;
                 }
 
-                const latest = result.slice().reverse().slice(0, 6); // Avoid mutating the original array
+                const latest = result.slice().reverse().slice(0, 7); // Avoid mutating the original array
                 setLatestParts(latest);
             } catch (error) {
                 console.error("Error fetching parts:", error);

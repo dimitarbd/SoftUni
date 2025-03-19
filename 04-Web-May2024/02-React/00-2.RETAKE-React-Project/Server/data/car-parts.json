@@ -50,5 +50,44 @@
         "rating": "5",
         "_id": "5ed18427-b532-40c3-8f4c-c2c069e64967",
         "description": "The electromechanical actuator is a device that converts electrical energy into mechanical energy. It is used in various applications, such as robotics, automotive systems, and industrial machinery. The actuator consists of an electric motor, a gearbox, and a control system. The motor generates rotational motion, which is transmitted to the gearbox. The gearbox converts the rotational motion into linear motion, which is used to actuate a mechanism. The control system regulates the speed and position of the actuator, ensuring precise and reliable operation. The actuator is compact, lightweight, and energy-efficient, making it ideal for use in space-constrained applications. It is also durable and reliable, providing long-lasting performance in demanding environments."
+    },
+    "36b52dce-1d28-4031-8e33-4b0e9d246429": {
+        "title": "iBooster",
+        "category": "Braking System",
+        "brand": "Bosch",
+        "availability": "In Stock",
+        "price": "755",
+        "size": "S",
+        "quantity": "10",
+        "imageUrl": "/images/product/large-size/5.jpg",
+        "rating": "5",
+        "description": "The iBooster can be used with all drivetrain configurations and is particularly suited to hybrid and electric vehicles. The generation 2 of the iBooster is characterized by significantly reduced weight.",
+        "_id": "36b52dce-1d28-4031-8e33-4b0e9d246429"
+    },
+    "0af8e76f-3e49-4186-a046-48407933b7e9": {
+        "title": "Power Sport Kit Series",
+        "category": "Braking System",
+        "brand": "Power Sport",
+        "availability": "In Stock",
+        "price": "398",
+        "size": "S",
+        "quantity": "50",
+        "imageUrl": "/images/product/large-size/6.jpg",
+        "rating": "4",
+        "description": "POWERSPORT Series Brake Rotors provide superior braking performance in any driving condition. Perfect for the daily driver or aggressive street driver. Ready to be installed with no modifications required. Upgrade your safety by upgrading your brakes!",
+        "_id": "0af8e76f-3e49-4186-a046-48407933b7e9"
+    },
+    "b75625e4-2a79-4c2b-a2f1-f2c5d9229473": {
+        "title": "VSRacing Gen1 Billet 7875",
+        "category": "Engine and Drivetrain",
+        "brand": "Power Sport",
+        "availability": "In Stock",
+        "price": "555",
+        "size": "M",
+        "quantity": "50",
+        "imageUrl": "/images/product/large-size/7.jpg",
+        "rating": "3",
+        "description": "This turbo is being discontinued by VSRacing. Please check the Next Gen version which is a newer design of this turbo VSR Billet 7875 Gen1 T4 Turbo. Most popular unit for sub 800 hp Setups;Compresor: 78mm 11 Blade Billet Compressor Wheel extended tip for high flow Turbine: GT42 75mm/82 Exducer/Inducer Downpipe: 3″; Compressor Outlet 2.5″ Turbine Housing : .96ar T4 open",
+        "_id": "b75625e4-2a79-4c2b-a2f1-f2c5d9229473"
     }
 }

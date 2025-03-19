@@ -29,7 +29,7 @@ export default function PartDetails() {
                     <div className="breadcrumb-content">
                         <h2>Single Product Type</h2>
                         <ul>
-                            <li><Link href="/">Home</Link></li>
+                            <li><Link to="/">Home</Link></li>
                             <li className="active">Single Product</li>
                         </ul>
                     </div>
@@ -76,7 +76,7 @@ export default function PartDetails() {
                                         <ul>
                                             <li>Brands <button className="btn-link">{part.brand}</button></li>
                                             <li>Availability: <button className="btn-link">{part.quantity} pieces</button></li>
-                                            <li>Price: <button className="btn-link">${part.price}</button></li>
+                                            <li>Price: <button className="btn-link">${Number(part.price).toFixed(2)}</button></li>
                                         </ul>
                                     </div>
                                     <div className="product-size_box">

@@ -38,7 +38,7 @@ export default function PartCatalogItem({
                                 </div>
                                 <h6><Link className="product-name" to={`/catalog/${_id}/details`}>{title}</Link></h6>
                                 <div className="price-box">
-                                    <span className="new-price">${price}</span>
+                                    <span className="new-price">${Number(price).toFixed(2)}</span>
                                 </div>
                             </div>
                         </div>

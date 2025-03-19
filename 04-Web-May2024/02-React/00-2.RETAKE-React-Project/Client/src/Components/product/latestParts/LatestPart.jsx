@@ -1,20 +1,5 @@
 import { Link } from "react-router-dom";
 
-// import PropTypes from "prop-types";
-
-// LatestPart.propTypes = {
-//     _id: PropTypes.string.isRequired,
-//     title: PropTypes.string.isRequired,
-//     price: PropTypes.number.isRequired,
-//     imageUrl: PropTypes.string,
-//     rating: PropTypes.number.isRequired,
-// };
-
-// LatestPart.defaultProps = {
-//     imageUrl: "/path/to/default-image.jpg",
-// };
-
-
 export default function LatestPart({
     _id,
     title,
@@ -45,23 +30,7 @@ export default function LatestPart({
                                 src={imageUrl}
                                 alt="Uren's Product Image"
                             />
-                        </Link>
-                        {/* <div className="add-actions">
-                            <ul>
-                                <li><a className="uren-add_cart" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i className="ion-bag"></i></a>
-                                </li>
-                                <li><a className="uren-wishlist" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i className="ion-android-favorite-outline"></i></a>
-                                </li>
-                                <li><a className="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
-                                    className="ion-android-options"></i></a>
-                                </li>
-                                <li className="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter">
-                                    <a href="#" onClick={(e) => e.preventDefault()} data-toggle="tooltip" data-placement="top" title="Quick View">
-                                        <i className="ion-android-open"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div> */}
+                        </Link>                        
                     </div>
                     <div className="product-content">
                         <div className="product-desc_info">

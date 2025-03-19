@@ -20,7 +20,7 @@ export default function Product() {
                     return;
                 }
 
-                const latest = result.slice().reverse().slice(0, 7); // Avoid mutating the original array
+                const latest = result.slice().reverse().slice(0, 10); // Avoid mutating the original array
                 setLatestParts(latest);
             } catch (error) {
                 console.error("Error fetching parts:", error);
@@ -54,7 +54,7 @@ export default function Product() {
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="section-title_area">
-                            <span>Top New On This Week</span>
+                            <span>Latest 10 Ads</span>
                             <h3>New Arrivals Products</h3>
                         </div>
                         <div className="product-slider uren-slick-slider slider-navigation_style-1 img-hover-effect_area">

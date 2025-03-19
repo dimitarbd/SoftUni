@@ -1,19 +1,52 @@
 import { Link } from "react-router-dom";
 
+// import PropTypes from "prop-types";
 
-export default function LatestPart() {
+// LatestPart.propTypes = {
+//     _id: PropTypes.string.isRequired,
+//     title: PropTypes.string.isRequired,
+//     price: PropTypes.number.isRequired,
+//     imageUrl: PropTypes.string,
+//     rating: PropTypes.number.isRequired,
+// };
+
+// LatestPart.defaultProps = {
+//     imageUrl: "/path/to/default-image.jpg",
+// };
+
+
+export default function LatestPart({
+    _id,
+    title,
+    price,
+    imageUrl,
+    rating
+}) {
+    const renderRating = (rating) => {
+        const stars = [];
+        for (let i = 1; i <= 5; i++) {
+            stars.push(
+                <li key={i} className={i <= rating ? "" : "silver-color"}>
+                    <i className="ion-android-star"></i>
+                </li>
+            );
+        }
+        return stars;
+    };
+
     return (
         <div className="product-slide_item">
             <div className="inner-slide">
                 <div className="single-product">
                     <div className="product-img">
-                        <a href="single-product.html">
-                            <img className="primary-img" src="/images/product/medium-size/1-1.jpg" alt="Uren's Product Image" />
-                        </a>
-                        <div className="sticker">
-                            <span className="sticker">New</span>
-                        </div>
-                        <div className="add-actions">
+                        <Link to={`/catalog/${_id}/details`} className="hover-effect">
+                            <img
+                                className="primary-img"
+                                src={imageUrl}
+                                alt="Uren's Product Image"
+                            />
+                        </Link>
+                        {/* <div className="add-actions">
                             <ul>
                                 <li><a className="uren-add_cart" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i className="ion-bag"></i></a>
                                 </li>
@@ -28,22 +61,18 @@ export default function LatestPart() {
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="product-content">
                         <div className="product-desc_info">
                             <div className="rating-box">
                                 <ul>
-                                    <li><i className="ion-android-star"></i></li>
-                                    <li><i className="ion-android-star"></i></li>
-                                    <li><i className="ion-android-star"></i></li>
-                                    <li className="silver-color"><i className="ion-android-star"></i></li>
-                                    <li className="silver-color"><i className="ion-android-star"></i></li>
+                                    {renderRating(rating)}
                                 </ul>
                             </div>
-                            <h6><a className="product-name" href="single-product.html">Veniam officiis voluptates</a></h6>
+                            <h6><Link className="product-name" to={`/catalog/${_id}/details`}>{title}</Link></h6>
                             <div className="price-box">
-                                <span className="new-price">$122.00</span>
+                                <span className="new-price">${Number(price).toFixed(2)}</span>
                             </div>
                         </div>
                     </div>

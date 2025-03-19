@@ -13,27 +13,36 @@ export default function Product() {
     useEffect(() => {
         (async () => {
             const result = await partsAPI.getAll();
-            setLatestParts(result.reverse().slice(0, 3));
+            console.log(result);
+            setLatestParts(result.reverse().slice(0, 6));
         })();
     }, []);
 
     useEffect(() => {
-        // Initialize slick slider
-        $('.uren-slick-slider').each(function () {
-            let $this = $(this);
-            let $slickOptions = $this.data('slick-options');
-            let $slickResponsive = $this.data('slick-responsive');
+        const $slider = $('.uren-slick-slider');
 
-            if ($slickOptions) {
-                $this.slick({
-                    ...$slickOptions,
-                    responsive: $slickResponsive,
-                    prevArrow: '<button class="slick-prev" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: flex-end; padding-right: 17px;"><i class="ion-ios-arrow-back" style="font-size: 40px;"></i></button>',
-                    nextArrow: '<button class="slick-next" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: flex-start; padding-left: 0px;"><i class="ion-ios-arrow-forward" style="font-size: 40px;"></i></button>'
-                });
-            }
+        // Initialize slick slider
+        $slider.slick({
+            slidesToShow: 6,
+            arrows: true,
+            prevArrow: '<button class="slick-prev" style="..."><i class="ion-ios-arrow-back"></i></button>',
+            nextArrow: '<button class="slick-next" style="..."><i class="ion-ios-arrow-forward"></i></button>',
+            responsive: [
+                { breakpoint: 1501, settings: { slidesToShow: 4 } },
+                { breakpoint: 1200, settings: { slidesToShow: 3 } },
+                { breakpoint: 992, settings: { slidesToShow: 2 } },
+                { breakpoint: 767, settings: { slidesToShow: 1 } },
+                { breakpoint: 480, settings: { slidesToShow: 1 } },
+            ],
         });
-    }, []);
+
+        // Cleanup function to destroy the slider
+        return () => {
+            if ($slider.hasClass('slick-initialized')) {
+                $slider.slick('unslick');
+            }
+        };
+    }, [latestParts]); // Re-run when `latestParts` changes
 
     return (
         <div className="uren-product_area">
@@ -44,20 +53,24 @@ export default function Product() {
                             <span>Top New On This Week</span>
                             <h3>New Arrivals Products</h3>
                         </div>
-                        <div className="product-slider uren-slick-slider slider-navigation_style-1 img-hover-effect_area" data-slick-options='{
-                "slidesToShow": 6,
-                "arrows" : true
-                }' data-slick-responsive='[
-                                        {"breakpoint":1501, "settings": {"slidesToShow": 4}},
-                                        {"breakpoint":1200, "settings": {"slidesToShow": 3}},
-                                        {"breakpoint":992, "settings": {"slidesToShow": 2}},
-                                        {"breakpoint":767, "settings": {"slidesToShow": 1}},
-                                        {"breakpoint":480, "settings": {"slidesToShow": 1}}
-                                    ]'>
+                        <div
+                            className="product-slider uren-slick-slider slider-navigation_style-1 img-hover-effect_area"
+                            data-slick-options='{
+                                "slidesToShow": 6,
+                                "arrows" : true
+                            }'
+                            data-slick-responsive='[
+                                {"breakpoint":1501, "settings": {"slidesToShow": 4}},
+                                {"breakpoint":1200, "settings": {"slidesToShow": 3}},
+                                {"breakpoint":992, "settings": {"slidesToShow": 2}},
+                                {"breakpoint":767, "settings": {"slidesToShow": 1}},
+                                {"breakpoint":480, "settings": {"slidesToShow": 1}}
+                            ]'
+                        >
                             {latestParts.length > 0 
-                            ? latestParts.map(x => <LatestPart key={x._id} {...x} />) 
-                            : <p>Loading...</p>
-                            }                   
+                                ? latestParts.map(part => <LatestPart key={part._id} {...part} />) 
+                                : <p>Loading...</p>
+                            }
                         </div>
                     </div>
                 </div>

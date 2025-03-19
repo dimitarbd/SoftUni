@@ -4,12 +4,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import partsAPI from "../../api/parts-api";
-
+import { useParams } from "react-router";
 
 
 export default function PartDetails() {
     const [part, setPart] = useState({});
-    const partId = window.location.pathname.split("/")[2];
+    const { partId } = useParams();
 
     useEffect(() => {
         (async () => {
@@ -20,7 +20,7 @@ export default function PartDetails() {
 
             setPart(result);
         })();
-    });
+    }, []);
     return (
         <>
             {/* <!-- Begin Uren's Breadcrumb Area --> */}

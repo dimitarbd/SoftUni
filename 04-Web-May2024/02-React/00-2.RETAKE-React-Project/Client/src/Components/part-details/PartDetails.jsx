@@ -11,23 +11,24 @@ export default function PartDetails() {
     const [part, setPart] = useState({});
     const [email, setEmail] = useState('');
     const [comment, setComment] = useState('');
-    const [rating, setRating] = useState(0);
-    
+    const [rating, setRating] = useState(1);
+
     const { partId } = useParams();
 
     useEffect(() => {
         (async () => {
             const result = await partsAPI.getOne(partId);
 
-            console.log(result);
-
-
             setPart(result);
         })();
     }, []);
 
-    const CommentSubmitHandler = (e) => { 
+    const CommentSubmitHandler = (e) => {
         e.preventDefault();
+        console.log("Email: ", email);
+        console.log("Comment: ", comment);
+        console.log("Rating: ", rating);
+        
         console.log('Comment Submit Handler');
     }
 
@@ -115,10 +116,8 @@ export default function PartDetails() {
                                         </ul>
                                     </div>
                                     <div className="uren-tag-line">
-                                        <h6>Tags:</h6>
-                                        <a href="#" onClick={(e) => e.preventDefault()}>vehicle</a>,
-                                        <a href="#" onClick={(e) => e.preventDefault()}>car</a>,
-                                        <a href="#" onClick={(e) => e.preventDefault()}>bike</a>
+                                        <h6>Category:</h6>
+                                        <a href="#" onClick={(e) => e.preventDefault()}>{part.category}</a>                                        
                                     </div>
                                     <div className="uren-social_link">
                                         <ul>
@@ -178,7 +177,7 @@ export default function PartDetails() {
                                     </div>
                                     <div id="reviews" className="tab-pane" role="tabpanel">
                                         <div className="tab-pane active" id="tab-review">
-                                            <form className="form-horizontal" id="form-review">
+                                            <form className="form-horizontal" id="form-review" onSubmit={CommentSubmitHandler}>
                                                 <div id="review">
                                                     <table className="table table-striped table-bordered">
                                                         <tbody>
@@ -204,16 +203,34 @@ export default function PartDetails() {
                                                     </table>
                                                 </div>
                                                 <h2>Write a review</h2>
-                                                <div className="form-group required" onSubmit={CommentSubmitHandler}>
+                                                <div className="form-group required">
                                                     <div className="col-sm-12 p-0">
                                                         <label>Your Email <span className="required">*</span></label>
-                                                        <input className="review-input" type="email" name="con_email" id="con_email" required />
+                                                        <input 
+                                                        className="review-input" 
+                                                        type="email" 
+                                                        name="con_email" 
+                                                        id="con_email" 
+                                                        required 
+                                                        onChange={(e) => setEmail(e.target.value)}
+                                                        value={email}
+                                                        />
                                                     </div>
                                                 </div>
                                                 <div className="form-group required second-child">
                                                     <div className="col-sm-12 p-0">
-                                                        <label className="control-label">Share your opinion</label>
-                                                        <textarea className="review-textarea" name="con_message" id="con_message"></textarea>
+                                                        <label className="control-label">
+                                                            Share your opinion
+                                                        </label>
+
+                                                        <textarea
+                                                            className="review-textarea"
+                                                            name="con_message"
+                                                            id="con_message"
+                                                            onChange={(e) => setComment(e.target.value)}
+                                                            value={comment}
+                                                        ></textarea>
+
                                                         <div className="help-block"><span className="text-danger">Note:</span> HTML is not
                                                             translated!</div>
                                                     </div>
@@ -223,12 +240,16 @@ export default function PartDetails() {
                                                         <div className="your-opinion">
                                                             <label>Your Rating</label>
                                                             <span>
-                                                                <select className="star-rating">
-                                                                    <option defaultValue="1">1</option>
-                                                                    <option defaultValue="2">2</option>
-                                                                    <option defaultValue="3">3</option>
-                                                                    <option defaultValue="4">4</option>
-                                                                    <option defaultValue="5">5</option>
+                                                                <select 
+                                                                    className="star-rating" 
+                                                                    onChange={(e) => setRating(Number(e.target.value))} 
+                                                                    value={rating}
+                                                                >
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5">5</option>
                                                                 </select>
                                                             </span>
                                                         </div>

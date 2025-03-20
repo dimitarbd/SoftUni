@@ -9,6 +9,10 @@ import { useParams } from "react-router";
 
 export default function PartDetails() {
     const [part, setPart] = useState({});
+    const [email, setEmail] = useState('');
+    const [comment, setComment] = useState('');
+    const [rating, setRating] = useState(0);
+    
     const { partId } = useParams();
 
     useEffect(() => {
@@ -21,6 +25,12 @@ export default function PartDetails() {
             setPart(result);
         })();
     }, []);
+
+    const CommentSubmitHandler = (e) => { 
+        e.preventDefault();
+        console.log('Comment Submit Handler');
+    }
+
     return (
         <>
             {/* <!-- Begin Uren's Breadcrumb Area --> */}
@@ -194,7 +204,7 @@ export default function PartDetails() {
                                                     </table>
                                                 </div>
                                                 <h2>Write a review</h2>
-                                                <div className="form-group required">
+                                                <div className="form-group required" onSubmit={CommentSubmitHandler}>
                                                     <div className="col-sm-12 p-0">
                                                         <label>Your Email <span className="required">*</span></label>
                                                         <input className="review-input" type="email" name="con_email" id="con_email" required />

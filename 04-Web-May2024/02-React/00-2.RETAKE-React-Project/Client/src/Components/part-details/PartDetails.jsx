@@ -25,10 +25,7 @@ export default function PartDetails() {
 
     const CommentSubmitHandler = (e) => {
         e.preventDefault();
-        console.log("Email: ", email);
-        console.log("Comment: ", comment);
-        console.log("Rating: ", rating);
-        
+                
         console.log('Comment Submit Handler');
     }
 

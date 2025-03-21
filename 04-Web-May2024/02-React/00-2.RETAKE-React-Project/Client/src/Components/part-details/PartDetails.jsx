@@ -178,7 +178,7 @@ export default function PartDetails() {
                                     <ul className="nav product-menu">
                                         <li><a className="active" data-toggle="tab" href="#description"><span>Description</span></a>
                                         </li>
-                                        <li><a data-toggle="tab" href="#reviews"><span>Reviews (1)</span></a></li>
+                                        <li><a data-toggle="tab" href="#reviews"><span>Reviews ({part.comments ? Object.values(part.comments).length : 0})</span></a></li>
                                     </ul>
                                 </div>
                                 <div className="tab-content uren-tab_content">
@@ -277,7 +277,7 @@ export default function PartDetails() {
                     </div>
                 </div>
             </div>
-            {/* <!-- Uren's Single Product Tab Area End Here --> */}
+            {/* <!-- Uren's Single Product Tab Area End Here --> */}}
 
         </>
     );

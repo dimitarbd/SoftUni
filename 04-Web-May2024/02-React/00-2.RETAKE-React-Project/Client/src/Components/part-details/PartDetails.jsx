@@ -23,10 +23,10 @@ export default function PartDetails() {
         })();
     }, []);
 
-    const CommentSubmitHandler = (e) => {
+    const CommentSubmitHandler = async (e) => {
         e.preventDefault();
-                
-        console.log('Comment Submit Handler');
+
+        await commentsAPI.create(partId, email, comment);                
     }
 
     return (

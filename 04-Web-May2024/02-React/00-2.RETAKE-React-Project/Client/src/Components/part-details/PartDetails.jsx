@@ -27,8 +27,22 @@ export default function PartDetails() {
     const CommentSubmitHandler = async (e) => {
         e.preventDefault();
 
-        await commentsApi.create(partId, email, comment);                
+        const currentDate = new Date().toLocaleDateString('en-GB').split('/').map((part, index) => index === 2 ? part.slice(-2) : part).join('/');
+
+        await commentsApi.create(partId, email, comment, rating, currentDate);
     }
+
+    const renderRating = (rating) => {
+        const stars = [];
+        for (let i = 1; i <= 5; i++) {
+            stars.push(
+                <li key={i} className={i <= rating ? "" : "silver-color"}>
+                    <i className="ion-android-star"></i>
+                </li>
+            );
+        }
+        return stars;
+    };
 
     return (
         <>
@@ -115,7 +129,7 @@ export default function PartDetails() {
                                     </div>
                                     <div className="uren-tag-line">
                                         <h6>Category:</h6>
-                                        <a href="#" onClick={(e) => e.preventDefault()}>{part.category}</a>                                        
+                                        <a href="#" onClick={(e) => e.preventDefault()}>{part.category}</a>
                                     </div>
                                     <div className="uren-social_link">
                                         <ul>
@@ -178,40 +192,38 @@ export default function PartDetails() {
                                             <form className="form-horizontal" id="form-review" onSubmit={CommentSubmitHandler}>
                                                 <div id="review">
                                                     <table className="table table-striped table-bordered">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td style={{ width: '50%' }}><strong>Customer</strong></td>
-                                                                <td className="text-right">15/09/20</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colSpan="2">
-                                                                    <p>Good product! Thank you very much</p>
-                                                                    <div className="rating-box">
-                                                                        <ul>
-                                                                            <li><i className="ion-android-star"></i></li>
-                                                                            <li><i className="ion-android-star"></i></li>
-                                                                            <li><i className="ion-android-star"></i></li>
-                                                                            <li><i className="ion-android-star"></i></li>
-                                                                            <li><i className="ion-android-star"></i></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
+                                                        {part.comments && Object.values(part.comments).map((comment) => (
+                                                            <tbody key={comment._id}>
+                                                                <tr>
+                                                                    <td style={{ width: '50%' }}><strong>{comment.email}</strong></td>
+                                                                    <td className="text-right">{comment.currentDate}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colSpan="2">
+                                                                        <p>{comment.text}</p>
+                                                                        <div className="rating-box">
+                                                                            <ul>
+                                                                                {renderRating(comment.rating)}
+                                                                            </ul>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        ))}                                                 
                                                     </table>
                                                 </div>
                                                 <h2>Write a review</h2>
                                                 <div className="form-group required">
                                                     <div className="col-sm-12 p-0">
                                                         <label>Your Email <span className="required">*</span></label>
-                                                        <input 
-                                                        className="review-input" 
-                                                        type="email" 
-                                                        name="con_email" 
-                                                        id="con_email" 
-                                                        required 
-                                                        onChange={(e) => setEmail(e.target.value)}
-                                                        value={email}
+                                                        <input
+                                                            className="review-input"
+                                                            type="email"
+                                                            name="con_email"
+                                                            id="con_email"
+                                                            required
+                                                            onChange={(e) => setEmail(e.target.value)}
+                                                            value={email}
                                                         />
                                                     </div>
                                                 </div>
@@ -238,9 +250,9 @@ export default function PartDetails() {
                                                         <div className="your-opinion">
                                                             <label>Your Rating</label>
                                                             <span>
-                                                                <select 
-                                                                    className="star-rating" 
-                                                                    onChange={(e) => setRating(Number(e.target.value))} 
+                                                                <select
+                                                                    className="star-rating"
+                                                                    onChange={(e) => setRating(Number(e.target.value))}
                                                                     value={rating}
                                                                 >
                                                                     <option value="1">1</option>

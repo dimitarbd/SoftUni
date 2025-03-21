@@ -29,7 +29,16 @@ export default function PartDetails() {
 
         const currentDate = new Date().toLocaleDateString('en-GB').split('/').map((part, index) => index === 2 ? part.slice(-2) : part).join('/');
 
-        await commentsApi.create(partId, email, comment, rating, currentDate);
+        const newComment = await commentsApi.create(partId, email, comment, rating, currentDate);
+
+        setPart((prevState) => ({
+            ...prevState,
+            comments: {
+                ...prevState.comments,
+                [newComment._id]: newComment
+            }
+        }));
+
     }
 
     const renderRating = (rating) => {
@@ -209,7 +218,7 @@ export default function PartDetails() {
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
-                                                        ))}                                                 
+                                                        ))}
                                                     </table>
                                                 </div>
                                                 <h2>Write a review</h2>
@@ -240,9 +249,6 @@ export default function PartDetails() {
                                                             onChange={(e) => setComment(e.target.value)}
                                                             value={comment}
                                                         ></textarea>
-
-                                                        <div className="help-block"><span className="text-danger">Note:</span> HTML is not
-                                                            translated!</div>
                                                     </div>
                                                 </div>
                                                 <div className="form-group last-child required">
@@ -277,7 +283,7 @@ export default function PartDetails() {
                     </div>
                 </div>
             </div>
-            {/* <!-- Uren's Single Product Tab Area End Here --> */}}
+            {/* <!-- Uren's Single Product Tab Area End Here --> */}
 
         </>
     );

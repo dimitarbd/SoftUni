@@ -30,8 +30,8 @@ SoftUni React Course Project
 - [x] Create service for nested resource `comments`
 - [x] Post comment to server
 - [x] Read comments from server
-- [ ] Add comments in the component
-- [ ] Clear form
+- [x] Add comments in the component
+- [x] Clear form
 ## 6. API Hooks
 - [ ] Form Hook
 - [ ] GameAPI Hooks

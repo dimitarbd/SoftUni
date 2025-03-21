@@ -39,6 +39,9 @@ export default function PartDetails() {
             }
         }));
 
+        setEmail('');
+        setComment('');
+        setRating(1);
     }
 
     const renderRating = (rating) => {
@@ -201,24 +204,31 @@ export default function PartDetails() {
                                             <form className="form-horizontal" id="form-review" onSubmit={CommentSubmitHandler}>
                                                 <div id="review">
                                                     <table className="table table-striped table-bordered">
-                                                        {part.comments && Object.values(part.comments).map((comment) => (
-                                                            <tbody key={comment._id}>
+                                                        {Object.keys(part.comments || {}).length > 0
+                                                            ? Object.values(part.comments).map((comment) => (
+                                                                <tbody key={comment._id}>
+                                                                    <tr>
+                                                                        <td style={{ width: '50%' }}><strong>{comment.email}</strong></td>
+                                                                        <td className="text-right">{comment.currentDate}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colSpan="2">
+                                                                            <p>{comment.text}</p>
+                                                                            <div className="rating-box">
+                                                                                <ul>
+                                                                                    {renderRating(comment.rating)}
+                                                                                </ul>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            ))
+                                                            : <tbody>
                                                                 <tr>
-                                                                    <td style={{ width: '50%' }}><strong>{comment.email}</strong></td>
-                                                                    <td className="text-right">{comment.currentDate}</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td colSpan="2">
-                                                                        <p>{comment.text}</p>
-                                                                        <div className="rating-box">
-                                                                            <ul>
-                                                                                {renderRating(comment.rating)}
-                                                                            </ul>
-                                                                        </div>
-                                                                    </td>
+                                                                    <td colSpan="2">There are no reviews for this product.</td>
                                                                 </tr>
                                                             </tbody>
-                                                        ))}
+                                                        }
                                                     </table>
                                                 </div>
                                                 <h2>Write a review</h2>

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 import partsAPI from "../../api/parts-api";
 import { useParams } from "react-router";
+import commentsApi from "../../api/comments-api";
 
 
 export default function PartDetails() {
@@ -26,7 +27,7 @@ export default function PartDetails() {
     const CommentSubmitHandler = async (e) => {
         e.preventDefault();
 
-        await commentsAPI.create(partId, email, comment);                
+        await commentsApi.create(partId, email, comment);                
     }
 
     return (

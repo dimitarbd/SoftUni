@@ -1,17 +1,11 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useGetAllParts } from '../../hooks/useParts';
 
-import partsAPI from '../../api/parts-api';
-import PartCatalogItem from './part-list/PartCatalogItem';
+import PartCatalogItem from './part-catalog-item/PartCatalogItem';
 
 
 export default function PartCatalog() {
-    const [parts, setParts] = useState([]);
-
-    useEffect(() => {
-        partsAPI.getAll()
-            .then(parts => setParts(parts));
-    }, []);
+    const [parts] = useGetAllParts();
 
     return (
         <>

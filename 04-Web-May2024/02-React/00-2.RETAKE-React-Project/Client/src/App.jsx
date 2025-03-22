@@ -3,11 +3,11 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import { Routes, Route } from 'react-router-dom';
 
+import Home from './Components/home/Home';
 import Footer from "./Components/footer/Footer"
 import Header from "./Components/header/Header"
 import Register from "./Components/register/Register"
 import Login from "./Components/login/Login"
-import Home from "./Home"
 import About from "./Components/about/About"
 import PartDetails from './Components/part-details/PartDetails';
 import PartCatalog from './Components/part-catalog/PartCatalog';

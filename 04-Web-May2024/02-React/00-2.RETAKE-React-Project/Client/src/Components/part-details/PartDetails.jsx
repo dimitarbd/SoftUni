@@ -62,7 +62,7 @@ export default function PartDetails() {
             <div className="breadcrumb-area">
                 <div className="container">
                     <div className="breadcrumb-content">
-                        <h2>Single Product Type</h2>
+                        <h2>Product Details</h2>
                         <ul>
                             <li><Link to="/">Home</Link></li>
                             <li className="active">Single Product</li>

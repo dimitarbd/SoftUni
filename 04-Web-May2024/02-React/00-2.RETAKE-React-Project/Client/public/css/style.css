@@ -8494,6 +8494,13 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
   padding: 80px 0;
 }
 
+/* Center the column div */
+.uren-login-register_area .row {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
 @media (max-width: 991px) {
   [class*="col-"]:first-child form .login-form {
     margin-bottom: 30px;

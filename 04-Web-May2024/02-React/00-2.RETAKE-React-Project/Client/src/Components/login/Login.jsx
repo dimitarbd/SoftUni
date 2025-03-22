@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Login() {
     return (
         <>
@@ -7,7 +9,7 @@ export default function Login() {
                     <div className="breadcrumb-content">
                         <h2>Other</h2>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
+                            <li><Link to="/">Home</Link></li>
                             <li className="active">Login & Register</li>
                         </ul>
                     </div>

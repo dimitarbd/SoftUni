@@ -20,7 +20,7 @@ SoftUni React Course Project
 - [x] Add games api
 - [x] Preseed practice server
 ## 4. Page Implementations
-- [x] Game list
+- [x] Part list
 - [x] Details
   - [x] Details link
   - [x] Details route
@@ -34,7 +34,7 @@ SoftUni React Course Project
 - [x] Clear form
 ## 6. API Hooks
 - [ ] Form Hook
-- [ ] GameAPI Hooks
+- [ ] PartAPI Hooks
 - [ ] Comment Hooks
 ## 7. Authentication
 - [ ] Auth API

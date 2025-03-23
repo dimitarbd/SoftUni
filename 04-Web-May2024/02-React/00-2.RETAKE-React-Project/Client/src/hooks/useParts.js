@@ -14,3 +14,17 @@ export function useGetAllParts() {
 
     return [parts, setParts];
 }
+
+export function useGetOnePart(partId) {
+    const [part, setPart] = useState({});
+
+    useEffect(() => {
+        (async () => {
+            const result = await partsAPI.getOne(partId);
+
+            setPart(result);
+        })();
+    }, [partId]);
+
+    return [part, setPart];
+}

@@ -1,28 +1,22 @@
-import { useEffect } from "react";
 import { useState } from "react";
+import { useParams } from "react-router";
 
 import { Link } from "react-router-dom";
 
-import partsAPI from "../../api/parts-api";
-import { useParams } from "react-router";
 import commentsApi from "../../api/comments-api";
+import { useGetOnePart } from "../../hooks/useParts";
 
 
 export default function PartDetails() {
-    const [part, setPart] = useState({});
+    const { partId } = useParams();
+    
+    const [part, setPart] = useGetOnePart(partId);
     const [email, setEmail] = useState('');
     const [comment, setComment] = useState('');
     const [rating, setRating] = useState(1);
 
-    const { partId } = useParams();
 
-    useEffect(() => {
-        (async () => {
-            const result = await partsAPI.getOne(partId);
 
-            setPart(result);
-        })();
-    }, []);
 
     const CommentSubmitHandler = async (e) => {
         e.preventDefault();

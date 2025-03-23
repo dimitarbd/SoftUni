@@ -34,7 +34,7 @@ SoftUni React Course Project
 - [x] Clear form
 ## 6. API Hooks
 - [x] Form Hook
-- [ ] PartAPI Hooks
+- [x] PartAPI Hooks
 - [ ] Comment Hooks
 ## 7. Authentication
 - [ ] Auth API

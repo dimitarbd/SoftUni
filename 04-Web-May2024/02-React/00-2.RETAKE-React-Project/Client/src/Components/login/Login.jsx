@@ -24,7 +24,7 @@ export default function Login() {
         values,
         changeHandler,
         submitHandler
-    } = useForm (initialValues, loginHandler);
+    } = useForm(initialValues, loginHandler);
 
     return (
         <>

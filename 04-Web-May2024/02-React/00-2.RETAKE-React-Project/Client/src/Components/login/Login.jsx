@@ -1,6 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useForm } from "../../hooks/useForm";
+import { useLogin } from "../../hooks/useAuth";
+
+const initialValues = {
+    email: '',
+    password: ''
+};
 
 export default function Login() {
+    const login = useLogin();
+    const navigate = useNavigate();
+
+    const loginHandler = async (values) => {
+        try {
+            await login.loginHandler(values.email, values.password);
+            navigate('/');
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
+
+    const {
+        values,
+        changeHandler,
+        submitHandler
+    } = useForm (initialValues, loginHandler);
+
     return (
         <>
             {/* <!-- Begin Uren's Breadcrumb Area --> */}
@@ -22,17 +47,29 @@ export default function Login() {
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-xs-12 col-lg-6">
                             {/* <!-- Login Form s--> */}
-                            <form action="#">
+                            <form onSubmit={submitHandler}>
                                 <div className="login-form">
                                     <h4 className="login-title">Login</h4>
                                     <div className="row">
                                         <div className="col-md-12 col-12">
                                             <label>Email Address*</label>
-                                            <input type="email" placeholder="Email Address" />
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                value={values.email}
+                                                onChange={changeHandler}
+                                                placeholder="Email Address"
+                                            />
                                         </div>
                                         <div className="col-12 mb--20">
                                             <label>Password</label>
-                                            <input type="password" placeholder="Password" />
+                                            <input
+                                                type="password"
+                                                name="password"
+                                                value={values.password}
+                                                onChange={changeHandler}
+                                                placeholder="Password"
+                                            />
                                         </div>
                                         <div className="col-md-8">
                                             <div className="check-box">

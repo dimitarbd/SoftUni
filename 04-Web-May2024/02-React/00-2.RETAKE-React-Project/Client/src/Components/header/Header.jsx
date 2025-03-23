@@ -192,8 +192,8 @@ export default function Header() {
                                         </li>
                                         <li><Link to="#" onClick={(e) => e.preventDefault()}>Create Offer</Link></li>
                                         <li className=""><Link to="about-us.html">About Us</Link></li>
-                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Login</Link></li>
-                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Register</Link></li>
+                                        <li><Link to="/login" >Login</Link></li>
+                                        <li><Link to="/register" >Register</Link></li>
                                         <li><Link to="#" onClick={(e) => e.preventDefault()}>Logout</Link></li>
                                     </ul>
                                 </nav>

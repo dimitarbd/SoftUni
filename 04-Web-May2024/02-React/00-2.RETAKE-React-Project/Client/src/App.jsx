@@ -13,7 +13,6 @@ import About from "./Components/about/About"
 import PartDetails from './Components/part-details/PartDetails';
 import PartCatalog from './Components/part-catalog/PartCatalog';
 import { AuthContext } from './contexts/AuthContext';
-import { use } from 'react';
 
 
 function App() {
@@ -32,7 +31,7 @@ function App() {
     };
 
     return (
-        <AuthContext.Provider value={{ contextData }}>
+        <AuthContext.Provider value={{ contextData, changeAuthState }}>
             <div className="main-wrapper">
 
                 <Header />

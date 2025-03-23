@@ -17,7 +17,7 @@ export default function Login() {
             await login(email, password);
             navigate('/');
         } catch (err) {
-            console.log(err.message);
+            console.error(err.message);
         }
     }
 
@@ -48,7 +48,7 @@ export default function Login() {
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-xs-12 col-lg-6">
                             {/* <!-- Login Form s--> */}
-                            <form onSubmit={submitHandler}>
+                            <form action="#" onSubmit={submitHandler}>
                                 <div className="login-form">
                                     <h4 className="login-title">Login</h4>
                                     <div className="row">

@@ -11,7 +11,6 @@ export const useLogin = () => {
         const response = await login(email, password);
 
         changeAuthState(response);
-        console.log(response);
         return response;
     };
     return loginHandler;

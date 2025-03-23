@@ -13,16 +13,18 @@ import About from "./Components/about/About"
 import PartDetails from './Components/part-details/PartDetails';
 import PartCatalog from './Components/part-catalog/PartCatalog';
 import { AuthContext } from './contexts/AuthContext';
+import { use } from 'react';
 
 
 function App() {
     const [authState, setAuthState] = useState({});
 
-    const changeAuthState = (newAuthState) => {
-        setAuthState(newAuthState);
+    const changeAuthState = (state) => {
+        setAuthState(state);
     }
 
     const contextData = {
+        userId: authState._id,
         email: authState.email,
         accessToken: authState.accessToken,
         isAuthenticated: Boolean(authState.email),

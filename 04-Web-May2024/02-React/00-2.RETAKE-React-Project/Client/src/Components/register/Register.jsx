@@ -1,4 +1,25 @@
+import { useNavigate } from "react-router-dom";
+
+import { useRegister } from "../../hooks/useAuth";
+
+const initialValues = {
+    email: '',
+    password: ''
+};
+
 export default function Register() {
+    const register = useRegister();
+    const navigate = useNavigate();
+
+    const registerHandler = async ({email, password}) => {
+        try {
+            await register(email, password);
+            navigate('/');
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
+
    return (
     <>
     {/* <!-- Begin Uren's Breadcrumb Area --> */}

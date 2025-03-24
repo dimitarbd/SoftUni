@@ -8,10 +8,10 @@ export const useLogin = () => {
     const { changeAuthState } = useContext(AuthContext);
 
     const loginHandler = async (email, password) => {
-        const response = await login(email, password);
+        const { password: _, ...rest } = await login(email, password);
 
-        changeAuthState(response);
-        return response;
+        changeAuthState(rest);
+        return rest;
     };
     return loginHandler;
 }
@@ -20,10 +20,10 @@ export const useRegister = () => {
     const { changeAuthState } = useContext(AuthContext);
 
     const registerHandler = async (email, password) => {
-        const response = await register(email, password);
+        const { password: _, ...rest } = await register(email, password);
 
-        changeAuthState(response);
-        return response;
+        changeAuthState(rest);        
+        return rest;
     };
     return registerHandler;
 }

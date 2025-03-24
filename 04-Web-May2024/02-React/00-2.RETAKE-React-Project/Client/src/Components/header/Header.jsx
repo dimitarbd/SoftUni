@@ -1,10 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
+import { AuthContext } from '../../contexts/AuthContext';
+
 export default function Header() {
+    const { isAuthenticated } = useContext(AuthContext);
+    console.log(isAuthenticated);
+    
     useEffect(() => {
         const categoryHeading = document.querySelector('.category-heading');
         const categoryMenuList = document.getElementById('cate-toggle');
+
+        
 
         if (categoryHeading && categoryMenuList) {
             categoryHeading.addEventListener('click', () => {
@@ -134,14 +141,14 @@ export default function Header() {
                                         </li>
                                         <li className="megamenu-holder "><Link to="/catalog">Catalog</Link>
                                         </li>
-                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Create Offer</Link></li>
+                                        { isAuthenticated && <li><Link to="/create" >Create Offer</Link></li> }
+                                        { isAuthenticated && <li><Link to="/logout" >Logout</Link></li> }
+                                        { !isAuthenticated && <li><Link to="/login" >Login</Link></li> }    
+                                        { !isAuthenticated && <li><Link to="/register" >Register</Link></li> }
                                         <li className=""><Link to="/about">About Us</Link></li>
-                                        <li><Link to="/login" >Login</Link></li>
-                                        <li><Link to="/register" >Register</Link></li>
-                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Logout</Link></li>
                                     </ul>
                                 </nav>
-                            </div>
+                            </div>                                        
                         </div>
                         <div className="custom-setting_col col-12 d-none d-lg-block">
                             <div className="ht-right_area">
@@ -190,11 +197,12 @@ export default function Header() {
                                         <li className="megamenu-holder ">
                                             <Link to="/catalog">Catalog</Link>
                                         </li>
-                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Create Offer</Link></li>
-                                        <li className=""><Link to="about-us.html">About Us</Link></li>
-                                        <li><Link to="/login" >Login</Link></li>
-                                        <li><Link to="/register" >Register</Link></li>
-                                        <li><Link to="#" onClick={(e) => e.preventDefault()}>Logout</Link></li>
+                                        { isAuthenticated && <li><Link to="/create" >Create Offer</Link></li> }
+                                        { isAuthenticated && <li><Link to="/logout" >Logout</Link></li> }
+                                        { !isAuthenticated && <li><Link to="/login" >Login</Link></li> }    
+                                        { !isAuthenticated && <li><Link to="/register" >Register</Link></li> }
+                                        
+                                        <li className=""><Link to="/about">About Us</Link></li>
                                     </ul>
                                 </nav>
                             </div>

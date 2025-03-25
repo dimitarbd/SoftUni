@@ -17,6 +17,8 @@ import { AuthContext } from './contexts/AuthContext';
 
 function App() {
     const [authState, setAuthState] = useState({});
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
 
     const changeAuthState = (state) => {
         setAuthState(state);
@@ -31,7 +33,7 @@ function App() {
     };
 
     return (
-        <AuthContext.Provider value={{ contextData, changeAuthState }}>
+        <AuthContext.Provider value={ contextData }>
             <div className="main-wrapper">
 
                 <Header />

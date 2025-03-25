@@ -5,7 +5,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 
 export default function Header() {
     const { isAuthenticated } = useContext(AuthContext);
-    console.log(isAuthenticated);
+    
     
     useEffect(() => {
         const categoryHeading = document.querySelector('.category-heading');

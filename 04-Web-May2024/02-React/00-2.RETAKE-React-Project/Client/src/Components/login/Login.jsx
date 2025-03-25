@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { useForm } from "../../hooks/useForm";
 import { useLogin } from "../../hooks/useAuth";
+import { useState } from "react";
 
 const initialValues = {
     email: '',
@@ -10,14 +11,16 @@ const initialValues = {
 
 export default function Login() {
     const login = useLogin();
-    const navigate = useNavigate();
+    const navigate = useNavigate();    
+    const [error, setError] = useState('');
+    
 
     const loginHandler = async ({email, password}) => {
         try {
             await login(email, password);
             navigate('/');
         } catch (err) {
-            console.error(err.message);
+            setError(err.message);
         }
     }
 
@@ -80,9 +83,12 @@ export default function Login() {
                                         </div>
                                         <div className="col-md-4">
                                             <div className="forgotton-password_info">
-                                                <a href="#"> Forgotten pasward?</a>
+                                                <a href="#"> Forgotten password?</a>
                                             </div>
                                         </div>
+                                        {error && <div className="col-12">
+                                            <p style={{ color: 'red' }}>{error}</p>
+                                        </div>}
                                         <div className="col-md-12">
                                             <button className="uren-login_btn">Login</button>
                                         </div>

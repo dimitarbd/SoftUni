@@ -1,22 +1,19 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useParams } from "react-router";
-
 import { Link } from "react-router-dom";
 
 import commentsApi from "../../api/comments-api";
 import { useGetOnePart } from "../../hooks/useParts";
-
+import { AuthContext } from "../../contexts/AuthContext";
 
 export default function PartDetails() {
     const { partId } = useParams();
+    const { isAuthenticated } = useContext(AuthContext);
     
     const [part, setPart] = useGetOnePart(partId);
     const [email, setEmail] = useState('');
     const [comment, setComment] = useState('');
     const [rating, setRating] = useState(1);
-
-
-
 
     const CommentSubmitHandler = async (e) => {
         e.preventDefault();
@@ -128,6 +125,11 @@ export default function PartDetails() {
                                     <div className="qty-btn_area">
                                         <ul>
                                             <li><a className="qty-cart_btn" href="cart.html">Add To Cart</a></li>
+                                            {isAuthenticated && 
+                                                <li><Link className="qty-edit_btn uren-btn_dark d-flex align-items-center" to={`/catalog/${partId}/edit`}>
+                                                    <i className="fa fa-edit" style={{ marginRight: '5px' }}></i> <span>Edit Part</span>
+                                                </Link></li>
+                                            }
                                             <li><a className="qty-wishlist_btn" href="wishlist.html" data-toggle="tooltip" title="Add To Wishlist"><i className="ion-android-favorite-outline"></i></a>
                                             </li>
                                             <li><a className="qty-compare_btn" href="compare.html" data-toggle="tooltip" title="Compare This Product"><i className="ion-ios-shuffle-strong"></i></a></li>

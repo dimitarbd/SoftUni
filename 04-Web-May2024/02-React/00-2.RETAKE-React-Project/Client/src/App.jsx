@@ -12,6 +12,8 @@ import Login from "./Components/login/Login"
 import About from "./Components/about/About"
 import PartDetails from './Components/part-details/PartDetails';
 import PartCatalog from './Components/part-catalog/PartCatalog';
+import PartImport from './Components/part-import/PartImport';
+import PartEdit from './Components/part-edit/PartEdit';
 import { AuthContext } from './contexts/AuthContext';
 
 
@@ -44,6 +46,8 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/catalog" element={<PartCatalog />} />
                     <Route path="/catalog/:partId/details" element={<PartDetails />} />
+                    <Route path="/catalog/:partId/edit" element={<PartEdit />} />
+                    <Route path="/catalog/import" element={<PartImport />} />
                     <Route path="/about" element={<About />} />
                 </Routes>
 

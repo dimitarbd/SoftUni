@@ -12,9 +12,15 @@ export const getAll = async () => {
 
 export const getOne = (partId) => requester.get(`${BASE_URL}/${partId}`);
 
+export const create = (partData) => requester.post(BASE_URL, partData);
+
+export const update = (partId, partData) => requester.put(`${BASE_URL}/${partId}`, partData);
+
 const partsAPI = {
     getAll,
-    getOne
+    getOne,
+    create,
+    update
 };
 
 export default partsAPI;

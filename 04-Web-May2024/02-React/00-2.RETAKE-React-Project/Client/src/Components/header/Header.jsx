@@ -141,7 +141,7 @@ export default function Header() {
                                         </li>
                                         <li className="megamenu-holder "><Link to="/catalog">Catalog</Link>
                                         </li>
-                                        { isAuthenticated && <li><Link to="/create" >Create Offer</Link></li> }
+                                        { isAuthenticated && <li><Link to="/catalog/import" >Create Offer</Link></li> }
                                         { isAuthenticated && <li><Link to="/logout" >Logout</Link></li> }
                                         { !isAuthenticated && <li><Link to="/login" >Login</Link></li> }    
                                         { !isAuthenticated && <li><Link to="/register" >Register</Link></li> }
@@ -197,7 +197,7 @@ export default function Header() {
                                         <li className="megamenu-holder ">
                                             <Link to="/catalog">Catalog</Link>
                                         </li>
-                                        { isAuthenticated && <li><Link to="/create" >Create Offer</Link></li> }
+                                        { isAuthenticated && <li><Link to="/catalog/import" >Create Offer</Link></li> }
                                         { isAuthenticated && <li><Link to="/logout" >Logout</Link></li> }
                                         { !isAuthenticated && <li><Link to="/login" >Login</Link></li> }    
                                         { !isAuthenticated && <li><Link to="/register" >Register</Link></li> }

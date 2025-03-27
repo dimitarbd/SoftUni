@@ -3,22 +3,18 @@ import { useNavigate, Link } from 'react-router-dom';
 import partsAPI from '../../api/parts-api';
 import { AuthContext } from '../../contexts/AuthContext';
 
-export default function PartImport() {
+export default function PartCreate() {
     const navigate = useNavigate();
     const { isAuthenticated } = useContext(AuthContext);
     const [formData, setFormData] = useState({
-        name: '',
+        title: '',
         price: '',
         description: '',
         imageUrl: '',
         category: '',
-        stock: '',
-        specifications: {
-            brand: '',
-            model: '',
-            year: '',
-            compatibility: ''
-        }
+        quantity: '',
+        brand: '',
+        year: '',                
     });
 
     useEffect(() => {
@@ -94,7 +90,7 @@ export default function PartImport() {
                                                 type="text"
                                                 id="name"
                                                 name="name"
-                                                value={formData.name}
+                                                value={formData.title}
                                                 onChange={handleChange}
                                                 required
                                                 placeholder="Enter part name"
@@ -128,6 +124,7 @@ export default function PartImport() {
                                                 rows="4"
                                                 required
                                                 placeholder="Enter detailed description"
+                                                style={{ width: '100%' }}
                                             />
                                         </div>
                                     </div>
@@ -201,29 +198,13 @@ export default function PartImport() {
                                                 type="text"
                                                 id="specifications.brand"
                                                 name="specifications.brand"
-                                                value={formData.specifications.brand}
+                                                value={formData.brand}
                                                 onChange={handleChange}
                                                 required
                                                 placeholder="Enter brand name"
                                             />
                                         </div>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <div className="input-box">
-                                            <label htmlFor="specifications.model" className="mb-1">Model <span className="required">*</span></label>
-                                            <input
-                                                type="text"
-                                                id="specifications.model"
-                                                name="specifications.model"
-                                                value={formData.specifications.model}
-                                                onChange={handleChange}
-                                                required
-                                                placeholder="Enter model name"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row">
+                                    </div>                          
                                     <div className="col-md-6">
                                         <div className="input-box">
                                             <label htmlFor="specifications.year" className="mb-1">Year <span className="required">*</span></label>
@@ -231,27 +212,13 @@ export default function PartImport() {
                                                 type="number"
                                                 id="specifications.year"
                                                 name="specifications.year"
-                                                value={formData.specifications.year}
+                                                value={formData.year}
                                                 onChange={handleChange}
                                                 required
                                                 placeholder="Enter year (e.g., 2022)"
                                             />
                                         </div>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <div className="input-box">
-                                            <label htmlFor="specifications.compatibility" className="mb-1">Compatibility <span className="required">*</span></label>
-                                            <input
-                                                type="text"
-                                                id="specifications.compatibility"
-                                                name="specifications.compatibility"
-                                                value={formData.specifications.compatibility}
-                                                onChange={handleChange}
-                                                placeholder="e.g., 'All Toyota models 2015-2020'"
-                                                required
-                                            />
-                                        </div>
-                                    </div>
+                                    </div>                                    
                                 </div>
                                 <div className="row mt-4">
                                     <div className="col-12">

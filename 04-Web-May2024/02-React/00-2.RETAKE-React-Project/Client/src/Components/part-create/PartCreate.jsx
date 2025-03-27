@@ -2,7 +2,7 @@ import { useState, useContext, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import partsAPI from '../../api/parts-api';
 import { AuthContext } from '../../contexts/AuthContext';
-import { use } from 'react';
+import { useCreatePart } from '../../hooks/useParts';
 
 export default function PartCreate() {
     const navigate = useNavigate();
@@ -25,9 +25,9 @@ export default function PartCreate() {
     }, [isAuthenticated, navigate]);
 
     const handleChange = (e) => {
-        const { title, value } = e.target;
-        if (title.includes('.')) {
-            const [parent, child] = title.split('.');
+        const { name, value } = e.target;
+        if (name.includes('.')) {
+            const [parent, child] = name.split('.');
             setFormData(prev => ({
                 ...prev,
                 [parent]: {
@@ -38,7 +38,7 @@ export default function PartCreate() {
         } else {
             setFormData(prev => ({
                 ...prev,
-                [title]: value
+                [name]: value
             }));
         }
     };
@@ -46,7 +46,7 @@ export default function PartCreate() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const createPart = useCreatePart();
-        
+
         try {
             await partsAPI.create(formData);
             const { _id: partId } = await createPart(formData);
@@ -66,7 +66,7 @@ export default function PartCreate() {
             <div className="breadcrumb-area">
                 <div className="container">
                     <div className="breadcrumb-content">
-                        <h2>Import New Part</h2>
+                        <h2>Create New Part</h2>
                         <ul>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/catalog">Catalog</Link></li>
@@ -92,8 +92,8 @@ export default function PartCreate() {
                                             <label htmlFor="name" className="mb-1">Part Name <span className="required">*</span></label>
                                             <input
                                                 type="text"
-                                                id="name"
-                                                name="name"
+                                                id="title"
+                                                name="title"
                                                 value={formData.title}
                                                 onChange={handleChange}
                                                 required
@@ -200,8 +200,8 @@ export default function PartCreate() {
                                             <label htmlFor="specifications.brand" className="mb-1">Brand <span className="required">*</span></label>
                                             <input
                                                 type="text"
-                                                id="specifications.brand"
-                                                name="specifications.brand"
+                                                id="brand"
+                                                name="brand"
                                                 value={formData.brand}
                                                 onChange={handleChange}
                                                 required
@@ -214,8 +214,8 @@ export default function PartCreate() {
                                             <label htmlFor="specifications.year" className="mb-1">Year <span className="required">*</span></label>
                                             <input
                                                 type="number"
-                                                id="specifications.year"
-                                                name="specifications.year"
+                                                id="year"
+                                                name="year"
                                                 value={formData.year}
                                                 onChange={handleChange}
                                                 required

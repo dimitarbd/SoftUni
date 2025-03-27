@@ -1,6 +1,6 @@
 import * as requester from './requester';
 
-const BASE_URL = 'http://localhost:3030/jsonstore/car-parts'
+const BASE_URL = 'http://localhost:3030/data/car-parts'
 
 export const getAll = async () => {
     const result = await requester.get(BASE_URL);    

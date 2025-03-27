@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import partsAPI from '../../api/parts-api';
 import { AuthContext } from '../../contexts/AuthContext';
+import { use } from 'react';
 
 export default function PartCreate() {
     const navigate = useNavigate();
@@ -14,7 +15,7 @@ export default function PartCreate() {
         category: '',
         quantity: '',
         brand: '',
-        year: '',                
+        year: '',
     });
 
     useEffect(() => {
@@ -24,9 +25,9 @@ export default function PartCreate() {
     }, [isAuthenticated, navigate]);
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        if (name.includes('.')) {
-            const [parent, child] = name.split('.');
+        const { title, value } = e.target;
+        if (title.includes('.')) {
+            const [parent, child] = title.split('.');
             setFormData(prev => ({
                 ...prev,
                 [parent]: {
@@ -37,16 +38,19 @@ export default function PartCreate() {
         } else {
             setFormData(prev => ({
                 ...prev,
-                [name]: value
+                [title]: value
             }));
         }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const createPart = useCreatePart();
+        
         try {
             await partsAPI.create(formData);
-            navigate('/catalog');
+            const { _id: partId } = await createPart(formData);
+            navigate(`/catalog/${partId}/details`);
         } catch (error) {
             console.error('Error creating part:', error);
         }
@@ -66,7 +70,7 @@ export default function PartCreate() {
                         <ul>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/catalog">Catalog</Link></li>
-                            <li className="active">Import New Part</li>
+                            <li className="active">Create New Part</li>
                         </ul>
                     </div>
                 </div>
@@ -204,7 +208,7 @@ export default function PartCreate() {
                                                 placeholder="Enter brand name"
                                             />
                                         </div>
-                                    </div>                          
+                                    </div>
                                     <div className="col-md-6">
                                         <div className="input-box">
                                             <label htmlFor="specifications.year" className="mb-1">Year <span className="required">*</span></label>
@@ -218,7 +222,7 @@ export default function PartCreate() {
                                                 placeholder="Enter year (e.g., 2022)"
                                             />
                                         </div>
-                                    </div>                                    
+                                    </div>
                                 </div>
                                 <div className="row mt-4">
                                     <div className="col-12">

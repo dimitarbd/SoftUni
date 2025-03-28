@@ -102,7 +102,7 @@ export default function PartDetails() {
                                     <div className="sp-essential_stuff">
                                         <ul>
                                             <li>Brands <button className="btn-link">{part.brand}</button></li>
-                                            <li>Availability: <button className="btn-link">{part.quantity} pieces</button></li>
+                                            <li>Stock: <button className="btn-link">{part.quantity} pieces</button></li>
                                             <li>Price: <button className="btn-link">${Number(part.price).toFixed(2)}</button></li>
                                             <li>Year: <button className="btn-link">{part.year}</button></li>
                                         </ul>

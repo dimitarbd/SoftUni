@@ -126,6 +126,7 @@ export default function PartImport() {
                                                 rows="4"
                                                 required
                                                 placeholder="Enter detailed description"
+                                                style={{ width: '100%' }}
                                             />
                                         </div>
                                     </div>
@@ -189,7 +190,7 @@ export default function PartImport() {
                                 </div>
 
                                 <div className="login-title mt-5">
-                                    <h3>Specifications</h3>
+                                    <h6></h6>
                                 </div>
                                 <div className="row">
                                     <div className="col-md-6">
@@ -205,9 +206,7 @@ export default function PartImport() {
                                                 placeholder="Enter brand name"
                                             />
                                         </div>
-                                    </div>                                    
-                                </div>
-                                <div className="row">
+                                    </div>
                                     <div className="col-md-6">
                                         <div className="input-box">
                                             <label htmlFor="year" className="mb-1">Year <span className="required">*</span></label>
@@ -222,6 +221,8 @@ export default function PartImport() {
                                             />
                                         </div>
                                     </div>
+                                </div>
+                                <div className="row">
                                     <div className="col-md-6">
                                         <div className="input-box">
                                             <label htmlFor="rating" className="mb-1">Rating <span className="required">*</span></label>
@@ -236,7 +237,7 @@ export default function PartImport() {
                                             />
                                         </div>
                                     </div>
-                                   
+
                                 </div>
                                 <div className="row mt-4">
                                     <div className="col-12">

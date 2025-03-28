@@ -2,9 +2,8 @@ import { useState, useContext, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import partsAPI from '../../api/parts-api';
 import { AuthContext } from '../../contexts/AuthContext';
-import { useCreatePart } from '../../hooks/useParts';
 
-export default function PartCreate() {
+export default function PartImport() {
     const navigate = useNavigate();
     const { isAuthenticated } = useContext(AuthContext);
     const [formData, setFormData] = useState({
@@ -15,7 +14,9 @@ export default function PartCreate() {
         category: '',
         quantity: '',
         brand: '',
+        model: '',
         year: '',
+        rating: '',
     });
 
     useEffect(() => {
@@ -45,12 +46,9 @@ export default function PartCreate() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const createPart = useCreatePart();
-
         try {
             await partsAPI.create(formData);
-            const { _id: partId } = await createPart(formData);
-            navigate(`/catalog/${partId}/details`);
+            navigate('/catalog');
         } catch (error) {
             console.error('Error creating part:', error);
         }
@@ -89,12 +87,12 @@ export default function PartCreate() {
                                 <div className="row">
                                     <div className="col-md-6">
                                         <div className="input-box">
-                                            <label htmlFor="name" className="mb-1">Part Name <span className="required">*</span></label>
+                                            <label htmlFor="title" className="mb-1">Part Name <span className="required">*</span></label>
                                             <input
                                                 type="text"
                                                 id="title"
                                                 name="title"
-                                                value={formData.title}
+                                                value={formData.name}
                                                 onChange={handleChange}
                                                 required
                                                 placeholder="Enter part name"
@@ -128,7 +126,6 @@ export default function PartCreate() {
                                                 rows="4"
                                                 required
                                                 placeholder="Enter detailed description"
-                                                style={{ width: '100%' }}
                                             />
                                         </div>
                                     </div>
@@ -150,12 +147,12 @@ export default function PartCreate() {
                                     </div>
                                     <div className="col-md-6">
                                         <div className="input-box">
-                                            <label htmlFor="stock" className="mb-1">Stock Quantity <span className="required">*</span></label>
+                                            <label htmlFor="quantity" className="mb-1">Stock Quantity <span className="required">*</span></label>
                                             <input
                                                 type="number"
-                                                id="stock"
-                                                name="stock"
-                                                value={formData.stock}
+                                                id="quantity"
+                                                name="quantity"
+                                                value={formData.quantity}
                                                 onChange={handleChange}
                                                 required
                                                 placeholder="Enter quantity in stock"
@@ -197,7 +194,7 @@ export default function PartCreate() {
                                 <div className="row">
                                     <div className="col-md-6">
                                         <div className="input-box">
-                                            <label htmlFor="specifications.brand" className="mb-1">Brand <span className="required">*</span></label>
+                                            <label htmlFor="brand" className="mb-1">Brand <span className="required">*</span></label>
                                             <input
                                                 type="text"
                                                 id="brand"
@@ -208,10 +205,12 @@ export default function PartCreate() {
                                                 placeholder="Enter brand name"
                                             />
                                         </div>
-                                    </div>
+                                    </div>                                    
+                                </div>
+                                <div className="row">
                                     <div className="col-md-6">
                                         <div className="input-box">
-                                            <label htmlFor="specifications.year" className="mb-1">Year <span className="required">*</span></label>
+                                            <label htmlFor="year" className="mb-1">Year <span className="required">*</span></label>
                                             <input
                                                 type="number"
                                                 id="year"
@@ -223,6 +222,21 @@ export default function PartCreate() {
                                             />
                                         </div>
                                     </div>
+                                    <div className="col-md-6">
+                                        <div className="input-box">
+                                            <label htmlFor="rating" className="mb-1">Rating <span className="required">*</span></label>
+                                            <input
+                                                type="number"
+                                                id="rating"
+                                                name="rating"
+                                                value={formData.rating}
+                                                onChange={handleChange}
+                                                required
+                                                placeholder="Enter year (e.g., 2022)"
+                                            />
+                                        </div>
+                                    </div>
+                                   
                                 </div>
                                 <div className="row mt-4">
                                     <div className="col-12">

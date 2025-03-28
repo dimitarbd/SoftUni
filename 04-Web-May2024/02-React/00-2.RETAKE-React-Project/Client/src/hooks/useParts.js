@@ -28,11 +28,3 @@ export function useGetOnePart(partId) {
 
     return [part, setPart];
 }
-
-export function useCreatePart() {
-    
-        const partCreateHandler = (partData) => partsAPI.create(partData);
-
-
-    return partCreateHandler;
-}

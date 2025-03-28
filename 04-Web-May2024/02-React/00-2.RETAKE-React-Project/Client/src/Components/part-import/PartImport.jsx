@@ -1,10 +1,11 @@
 import { useState, useContext, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import partsAPI from '../../api/parts-api';
 import { AuthContext } from '../../contexts/AuthContext';
+import { useCreatePart } from '../../hooks/useParts';
 
 export default function PartImport() {
     const navigate = useNavigate();
+    const createPart  = useCreatePart();
     const { isAuthenticated } = useContext(AuthContext);
     const [formData, setFormData] = useState({
         title: '',
@@ -47,8 +48,8 @@ export default function PartImport() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await partsAPI.create(formData);
-            navigate('/catalog');
+            const { _id: partId} = await createPart(formData);
+            navigate(`/catalog/${partId}/details`);
         } catch (error) {
             console.error('Error creating part:', error);
         }

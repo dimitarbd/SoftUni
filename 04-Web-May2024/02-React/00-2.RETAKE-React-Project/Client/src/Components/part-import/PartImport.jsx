@@ -45,10 +45,11 @@ export default function PartImport() {
         }
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (formData) => {
         e.preventDefault();
         try {
             const { _id: partId} = await createPart(formData);
+            
             navigate(`/catalog/${partId}/details`);
         } catch (error) {
             console.error('Error creating part:', error);

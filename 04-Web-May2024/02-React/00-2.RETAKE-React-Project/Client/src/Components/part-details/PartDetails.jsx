@@ -10,6 +10,7 @@ export default function PartDetails() {
     const { partId } = useParams();
     const { isAuthenticated } = useContext(AuthContext);
     
+    
     const [part, setPart] = useGetOnePart(partId);
     const [email, setEmail] = useState('');
     const [comment, setComment] = useState('');
@@ -103,17 +104,9 @@ export default function PartDetails() {
                                             <li>Brands <button className="btn-link">{part.brand}</button></li>
                                             <li>Availability: <button className="btn-link">{part.quantity} pieces</button></li>
                                             <li>Price: <button className="btn-link">${Number(part.price).toFixed(2)}</button></li>
+                                            <li>Year: <button className="btn-link">{part.year}</button></li>
                                         </ul>
-                                    </div>
-                                    <div className="product-size_box">
-                                        <span>Size</span>
-                                        <select className="myniceselect nice-select">
-                                            <option defaultValue="1">S</option>
-                                            <option defaultValue="2">M</option>
-                                            <option defaultValue="3">L</option>
-                                            <option defaultValue="4">XL</option>
-                                        </select>
-                                    </div>
+                                    </div>                                    
                                     <div className="quantity">
                                         <label>Quantity</label>
                                         <div className="cart-plus-minus">

@@ -1,17 +1,17 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import { AuthContext } from '../../contexts/AuthContext';
+import { useAuthcontext } from '../../contexts/AuthContext';
 
 export default function Header() {
-    const { isAuthenticated } = useContext(AuthContext);
-    
-    
+    const { isAuthenticated } = useAuthcontext();
+
+
     useEffect(() => {
         const categoryHeading = document.querySelector('.category-heading');
         const categoryMenuList = document.getElementById('cate-toggle');
 
-        
+
 
         if (categoryHeading && categoryMenuList) {
             categoryHeading.addEventListener('click', () => {
@@ -108,17 +108,17 @@ export default function Header() {
                                 </div>
                                 <div id="cate-toggle" className="category-menu-list" style={{ display: 'none' }}>
                                     <ul>
-                                        <li><Link to="shop-left-sidebar.html">Engine and Drivetrain</Link>                                            
+                                        <li><Link to="shop-left-sidebar.html">Engine and Drivetrain</Link>
                                         </li>
-                                        <li><Link to="shop-left-sidebar.html">Suspension and Steering</Link>                                           
+                                        <li><Link to="shop-left-sidebar.html">Suspension and Steering</Link>
                                         </li>
-                                        <li><Link to="shop-left-sidebar.html">Braking System</Link>                                            
+                                        <li><Link to="shop-left-sidebar.html">Braking System</Link>
                                         </li>
-                                        <li><Link to="shop-left-sidebar.html">Electrical System</Link>                                            
+                                        <li><Link to="shop-left-sidebar.html">Electrical System</Link>
                                         </li>
-                                        <li><Link to="shop-left-sidebar.html">Exhaust System</Link>                                            
+                                        <li><Link to="shop-left-sidebar.html">Exhaust System</Link>
                                         </li>
-                                        <li><Link to="shop-left-sidebar.html">Cooling System</Link>                                            
+                                        <li><Link to="shop-left-sidebar.html">Cooling System</Link>
                                         </li>
                                         <li><Link to="shop-left-sidebar.html">Body and Exterior</Link></li>
                                         <li><Link to="shop-left-sidebar.html">Interior and Comfort</Link></li>
@@ -141,14 +141,14 @@ export default function Header() {
                                         </li>
                                         <li className="megamenu-holder "><Link to="/catalog">Catalog</Link>
                                         </li>
-                                        { isAuthenticated && <li><Link to="/catalog/import" >Create Offer</Link></li> }
-                                        { isAuthenticated && <li><Link to="/logout" >Logout</Link></li> }
-                                        { !isAuthenticated && <li><Link to="/login" >Login</Link></li> }    
-                                        { !isAuthenticated && <li><Link to="/register" >Register</Link></li> }
+                                        {isAuthenticated && <li><Link to="/catalog/import" >Create Offer</Link></li>}
+                                        {isAuthenticated && <li><Link to="/logout" >Logout</Link></li>}
+                                        {!isAuthenticated && <li><Link to="/login" >Login</Link></li>}
+                                        {!isAuthenticated && <li><Link to="/register" >Register</Link></li>}
                                         <li className=""><Link to="/about">About Us</Link></li>
                                     </ul>
                                 </nav>
-                            </div>                                        
+                            </div>
                         </div>
                         <div className="custom-setting_col col-12 d-none d-lg-block">
                             <div className="ht-right_area">
@@ -197,11 +197,11 @@ export default function Header() {
                                         <li className="megamenu-holder ">
                                             <Link to="/catalog">Catalog</Link>
                                         </li>
-                                        { isAuthenticated && <li><Link to="/catalog/import" >Create Offer</Link></li> }
-                                        { isAuthenticated && <li><Link to="/logout" >Logout</Link></li> }
-                                        { !isAuthenticated && <li><Link to="/login" >Login</Link></li> }    
-                                        { !isAuthenticated && <li><Link to="/register" >Register</Link></li> }
-                                        
+                                        {isAuthenticated && <li><Link to="/catalog/import" >Create Offer</Link></li>}
+                                        {isAuthenticated && <li><Link to="/logout" >Logout</Link></li>}
+                                        {!isAuthenticated && <li><Link to="/login" >Login</Link></li>}
+                                        {!isAuthenticated && <li><Link to="/register" >Register</Link></li>}
+
                                         <li className=""><Link to="/about">About Us</Link></li>
                                     </ul>
                                 </nav>
@@ -311,7 +311,7 @@ export default function Header() {
                         <nav className="offcanvas-navigation">
                             <ul className="mobile-menu">
                                 <li className="menu-item-has-children active"><Link to="/"><span
-                                    className="mm-text">Home</span></Link>                                   
+                                    className="mm-text">Home</span></Link>
                                 </li>
                                 <li className="menu-item-has-children">
                                     <Link to="shop-left-sidebar.html" onClick={(e) => e.preventDefault()}>

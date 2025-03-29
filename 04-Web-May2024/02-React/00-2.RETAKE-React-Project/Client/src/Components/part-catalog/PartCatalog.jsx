@@ -16,7 +16,7 @@ export default function PartCatalog() {
                         <h2>Shop</h2>
                         <ul>
                             <li><Link to="/">Home</Link></li>
-                            <li className="active">Shop Left Sidebar</li>
+                            <li className="active">Catalog</li>
                         </ul>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ export default function PartCatalog() {
                                 </div>
                                 <div className="product-item-selection_area">
                                     <div className="product-short">
-                                        <label className="select-label">Short By:</label>
+                                        <label className="select-label">Sort By:</label>
                                         <select className="myniceselect nice-select">
                                             <option value="1">Default</option>
                                             <option value="2">Name, A to Z</option>

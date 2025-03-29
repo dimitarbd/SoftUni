@@ -47,7 +47,7 @@ export default function PartImport() {
         }
     };
 
-    const handleSubmit = async (formData) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const { _id: partId} = await createPart(formData);
@@ -68,11 +68,11 @@ export default function PartImport() {
             <div className="breadcrumb-area">
                 <div className="container">
                     <div className="breadcrumb-content">
-                        <h2>Create New Part</h2>
+                        <h2>Create New Offer</h2>
                         <ul>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/catalog">Catalog</Link></li>
-                            <li className="active">Create New Part</li>
+                            <li className="active">Create New Offer</li>
                         </ul>
                     </div>
                 </div>

@@ -1,10 +1,11 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('http'), require('fs'), require('crypto')) :
-    typeof define === 'function' && define.amd ? define(['http', 'fs', 'crypto'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Server = factory(global.http, global.fs, global.crypto));
-}(this, (function (http, fs, crypto) { 'use strict';
+        typeof define === 'function' && define.amd ? define(['http', 'fs', 'crypto'], factory) :
+            (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Server = factory(global.http, global.fs, global.crypto));
+}(this, (function (http, fs, crypto) {
+    'use strict';
 
-    function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+    function _interopDefaultLegacy(e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
     var http__default = /*#__PURE__*/_interopDefaultLegacy(http);
     var fs__default = /*#__PURE__*/_interopDefaultLegacy(fs);
@@ -13,14 +14,14 @@
     class ServiceError extends Error {
         constructor(message = 'Service Error') {
             super(message);
-            this.name = 'ServiceError'; 
+            this.name = 'ServiceError';
         }
     }
 
     class NotFoundError extends ServiceError {
         constructor(message = 'Resource not found') {
             super(message);
-            this.name = 'NotFoundError'; 
+            this.name = 'NotFoundError';
             this.status = 404;
         }
     }
@@ -28,7 +29,7 @@
     class RequestError extends ServiceError {
         constructor(message = 'Request error') {
             super(message);
-            this.name = 'RequestError'; 
+            this.name = 'RequestError';
             this.status = 400;
         }
     }
@@ -36,7 +37,7 @@
     class ConflictError extends ServiceError {
         constructor(message = 'Resource conflict') {
             super(message);
-            this.name = 'ConflictError'; 
+            this.name = 'ConflictError';
             this.status = 409;
         }
     }
@@ -44,7 +45,7 @@
     class AuthorizationError extends ServiceError {
         constructor(message = 'Unauthorized') {
             super(message);
-            this.name = 'AuthorizationError'; 
+            this.name = 'AuthorizationError';
             this.status = 401;
         }
     }
@@ -52,7 +53,7 @@
     class CredentialError extends ServiceError {
         constructor(message = 'Forbidden') {
             super(message);
-            this.name = 'CredentialError'; 
+            this.name = 'CredentialError';
             this.status = 403;
         }
     }
@@ -563,8 +564,8 @@
             if (query.pageSize) {
                 responseData = responseData.slice(0, pageSize);
             }
-    		
-    		if (query.distinct) {
+
+            if (query.distinct) {
                 const props = query.distinct.split(',').filter(p => p != '');
                 responseData = Object.values(responseData.reduce((distinct, c) => {
                     const key = props.map(p => c[p]).join('::');
@@ -800,7 +801,7 @@
     }
 
     function onRequest(context, tokens, query, body) {
-        Object.entries(body).forEach(([k,v]) => {
+        Object.entries(body).forEach(([k, v]) => {
             console.log(`${k} ${v ? 'enabled' : 'disabled'}`);
             context.util[k] = v;
         });
@@ -938,7 +939,7 @@
          * @param {Object} data Value to store. Shallow merge will be performed!
          * @return {Object} Updated entry.
          */
-         function merge(collection, id, data) {
+        function merge(collection, id, data) {
             if (!collections.has(collection)) {
                 throw new ReferenceError('Collection does not exist: ' + collection);
             }
@@ -1325,359 +1326,445 @@
 
     var identity = "email";
     var protectedData = {
-    	users: {
-    		"35c62d76-8152-4626-8712-eeb96381bea8": {
-    			email: "peter@abv.bg",
-    			username: "Peter",
-    			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
-    		},
-    		"847ec027-f659-4086-8032-5173e2f9c93a": {
-    			email: "george@abv.bg",
-    			username: "George",
-    			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
-    		},
-    		"60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
-    			email: "admin@abv.bg",
-    			username: "Admin",
-    			hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302"
-    		}
-    	},
-    	sessions: {
-    	}
+        users: {
+            "35c62d76-8152-4626-8712-eeb96381bea8": {
+                email: "peter@abv.bg",
+                username: "Peter",
+                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
+            },
+            "847ec027-f659-4086-8032-5173e2f9c93a": {
+                email: "george@abv.bg",
+                username: "George",
+                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
+            },
+            "60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
+                email: "admin@abv.bg",
+                username: "Admin",
+                hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302"
+            }
+        },
+        sessions: {
+        }
     };
     var seedData = {
-    	recipes: {
-    		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Easy Lasagna",
-    			img: "assets/lasagna.jpg",
-    			ingredients: [
-    				"1 tbsp Ingredient 1",
-    				"2 cups Ingredient 2",
-    				"500 g  Ingredient 3",
-    				"25 g Ingredient 4"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551279012
-    		},
-    		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Grilled Duck Fillet",
-    			img: "assets/roast.jpg",
-    			ingredients: [
-    				"500 g  Ingredient 1",
-    				"3 tbsp Ingredient 2",
-    				"2 cups Ingredient 3"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551344360
-    		},
-    		"985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Roast Trout",
-    			img: "assets/fish.jpg",
-    			ingredients: [
-    				"4 cups Ingredient 1",
-    				"1 tbsp Ingredient 2",
-    				"1 tbsp Ingredient 3",
-    				"750 g  Ingredient 4",
-    				"25 g Ingredient 5"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551388703
-    		}
-    	},
-    	comments: {
-    		"0a272c58-b7ea-4e09-a000-7ec988248f66": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			content: "Great recipe!",
-    			recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
-    			_createdOn: 1614260681375,
-    			_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
-    		}
-    	},
-    	records: {
-    		i01: {
-    			name: "John1",
-    			val: 1,
-    			_createdOn: 1613551388703
-    		},
-    		i02: {
-    			name: "John2",
-    			val: 1,
-    			_createdOn: 1613551388713
-    		},
-    		i03: {
-    			name: "John3",
-    			val: 2,
-    			_createdOn: 1613551388723
-    		},
-    		i04: {
-    			name: "John4",
-    			val: 2,
-    			_createdOn: 1613551388733
-    		},
-    		i05: {
-    			name: "John5",
-    			val: 2,
-    			_createdOn: 1613551388743
-    		},
-    		i06: {
-    			name: "John6",
-    			val: 3,
-    			_createdOn: 1613551388753
-    		},
-    		i07: {
-    			name: "John7",
-    			val: 3,
-    			_createdOn: 1613551388763
-    		},
-    		i08: {
-    			name: "John8",
-    			val: 2,
-    			_createdOn: 1613551388773
-    		},
-    		i09: {
-    			name: "John9",
-    			val: 3,
-    			_createdOn: 1613551388783
-    		},
-    		i10: {
-    			name: "John10",
-    			val: 1,
-    			_createdOn: 1613551388793
-    		}
-    	},
-    	catches: {
-    		"07f260f4-466c-4607-9a33-f7273b24f1b4": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			angler: "Paulo Admorim",
-    			weight: 636,
-    			species: "Atlantic Blue Marlin",
-    			location: "Vitoria, Brazil",
-    			bait: "trolled pink",
-    			captureTime: 80,
-    			_createdOn: 1614760714812,
-    			_id: "07f260f4-466c-4607-9a33-f7273b24f1b4"
-    		},
-    		"bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			angler: "John Does",
-    			weight: 554,
-    			species: "Atlantic Blue Marlin",
-    			location: "Buenos Aires, Argentina",
-    			bait: "trolled pink",
-    			captureTime: 120,
-    			_createdOn: 1614760782277,
-    			_id: "bdabf5e9-23be-40a1-9f14-9117b6702a9d"
-    		}
-    	},
-    	furniture: {
-    	},
-    	orders: {
-    	},
-    	movies: {
-    		"1240549d-f0e0-497e-ab99-eb8f703713d7": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Black Widow",
-    			description: "Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Comes on the screens 2020.",
-    			img: "https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg",
-    			_createdOn: 1614935055353,
-    			_id: "1240549d-f0e0-497e-ab99-eb8f703713d7"
-    		},
-    		"143e5265-333e-4150-80e4-16b61de31aa0": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Wonder Woman 1984",
-    			description: "Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient artifact that grants wishes goes missing.",
-    			img: "https://pbs.twimg.com/media/ETINgKwWAAAyA4r.jpg",
-    			_createdOn: 1614935181470,
-    			_id: "143e5265-333e-4150-80e4-16b61de31aa0"
-    		},
-    		"a9bae6d8-793e-46c4-a9db-deb9e3484909": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			title: "Top Gun 2",
-    			description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
-    			img: "https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg",
-    			_createdOn: 1614935268135,
-    			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
-    		}
-    	},
-    	likes: {
-    	},
-    	ideas: {
-    		"833e0e57-71dc-42c0-b387-0ce0caf5225e": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Best Pilates Workout To Do At Home",
-    			description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima possimus eveniet ullam aspernatur corporis tempore quia nesciunt nostrum mollitia consequatur. At ducimus amet aliquid magnam nulla sed totam blanditiis ullam atque facilis corrupti quidem nisi iusto saepe, consectetur culpa possimus quos? Repellendus, dicta pariatur! Delectus, placeat debitis error dignissimos nesciunt magni possimus quo nulla, fuga corporis maxime minus nihil doloremque aliquam quia recusandae harum. Molestias dolorum recusandae commodi velit cum sapiente placeat alias rerum illum repudiandae? Suscipit tempore dolore autem, neque debitis quisquam molestias officia hic nesciunt? Obcaecati optio fugit blanditiis, explicabo odio at dicta asperiores distinctio expedita dolor est aperiam earum! Molestias sequi aliquid molestiae, voluptatum doloremque saepe dignissimos quidem quas harum quo. Eum nemo voluptatem hic corrupti officiis eaque et temporibus error totam numquam sequi nostrum assumenda eius voluptatibus quia sed vel, rerum, excepturi maxime? Pariatur, provident hic? Soluta corrupti aspernatur exercitationem vitae accusantium ut ullam dolor quod!",
-    			img: "./images/best-pilates-youtube-workouts-2__medium_4x3.jpg",
-    			_createdOn: 1615033373504,
-    			_id: "833e0e57-71dc-42c0-b387-0ce0caf5225e"
-    		},
-    		"247efaa7-8a3e-48a7-813f-b5bfdad0f46c": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "4 Eady DIY Idea To Try!",
-    			description: "Similique rem culpa nemo hic recusandae perspiciatis quidem, quia expedita, sapiente est itaque optio enim placeat voluptates sit, fugit dignissimos tenetur temporibus exercitationem in quis magni sunt vel. Corporis officiis ut sapiente exercitationem consectetur debitis suscipit laborum quo enim iusto, labore, quod quam libero aliquid accusantium! Voluptatum quos porro fugit soluta tempore praesentium ratione dolorum impedit sunt dolores quod labore laudantium beatae architecto perspiciatis natus cupiditate, iure quia aliquid, iusto modi esse!",
-    			img: "./images/brightideacropped.jpg",
-    			_createdOn: 1615033452480,
-    			_id: "247efaa7-8a3e-48a7-813f-b5bfdad0f46c"
-    		},
-    		"b8608c22-dd57-4b24-948e-b358f536b958": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			title: "Dinner Recipe",
-    			description: "Consectetur labore et corporis nihil, officiis tempora, hic ex commodi sit aspernatur ad minima? Voluptas nesciunt, blanditiis ex nulla incidunt facere tempora laborum ut aliquid beatae obcaecati quidem reprehenderit consequatur quis iure natus quia totam vel. Amet explicabo quidem repellat unde tempore et totam minima mollitia, adipisci vel autem, enim voluptatem quasi exercitationem dolor cum repudiandae dolores nostrum sit ullam atque dicta, tempora iusto eaque! Rerum debitis voluptate impedit corrupti quibusdam consequatur minima, earum asperiores soluta. A provident reiciendis voluptates et numquam totam eveniet! Dolorum corporis libero dicta laborum illum accusamus ullam?",
-    			img: "./images/dinner.jpg",
-    			_createdOn: 1615033491967,
-    			_id: "b8608c22-dd57-4b24-948e-b358f536b958"
-    		}
-    	},
-    	catalog: {
-    		"53d4dbf5-7f41-47ba-b485-43eccb91cb95": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			make: "Table",
-    			model: "Swedish",
-    			year: 2015,
-    			description: "Medium table",
-    			price: 235,
-    			img: "./images/table.png",
-    			material: "Hardwood",
-    			_createdOn: 1615545143015,
-    			_id: "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
-    		},
-    		"f5929b5c-bca4-4026-8e6e-c09e73908f77": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			make: "Sofa",
-    			model: "ES-549-M",
-    			year: 2018,
-    			description: "Three-person sofa, blue",
-    			price: 1200,
-    			img: "./images/sofa.jpg",
-    			material: "Frame - steel, plastic; Upholstery - fabric",
-    			_createdOn: 1615545572296,
-    			_id: "f5929b5c-bca4-4026-8e6e-c09e73908f77"
-    		},
-    		"c7f51805-242b-45ed-ae3e-80b68605141b": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			make: "Chair",
-    			model: "Bright Dining Collection",
-    			year: 2017,
-    			description: "Dining chair",
-    			price: 180,
-    			img: "./images/chair.jpg",
-    			material: "Wood laminate; leather",
-    			_createdOn: 1615546332126,
-    			_id: "c7f51805-242b-45ed-ae3e-80b68605141b"
-    		}
-    	},
-    	teams: {
-    		"34a1cab1-81f1-47e5-aec3-ab6c9810efe1": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Storm Troopers",
-    			logoUrl: "/assets/atat.png",
-    			description: "These ARE the droids we're looking for",
-    			_createdOn: 1615737591748,
-    			_id: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1"
-    		},
-    		"dc888b1a-400f-47f3-9619-07607966feb8": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Team Rocket",
-    			logoUrl: "/assets/rocket.png",
-    			description: "Gotta catch 'em all!",
-    			_createdOn: 1615737655083,
-    			_id: "dc888b1a-400f-47f3-9619-07607966feb8"
-    		},
-    		"733fa9a1-26b6-490d-b299-21f120b2f53a": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Minions",
-    			logoUrl: "/assets/hydrant.png",
-    			description: "Friendly neighbourhood jelly beans, helping evil-doers succeed.",
-    			_createdOn: 1615737688036,
-    			_id: "733fa9a1-26b6-490d-b299-21f120b2f53a"
-    		}
-    	},
-    	members: {
-    		"cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-    			status: "member",
-    			_createdOn: 1616236790262,
-    			_updatedOn: 1616236792930
-    		},
-    		"61a19986-3b86-4347-8ca4-8c074ed87591": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237188183,
-    			_updatedOn: 1616237189016
-    		},
-    		"8a03aa56-7a82-4a6b-9821-91349fbc552f": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			teamId: "733fa9a1-26b6-490d-b299-21f120b2f53a",
-    			status: "member",
-    			_createdOn: 1616237193355,
-    			_updatedOn: 1616237195145
-    		},
-    		"9be3ac7d-2c6e-4d74-b187-04105ab7e3d6": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237231299,
-    			_updatedOn: 1616237235713
-    		},
-    		"280b4a1a-d0f3-4639-aa54-6d9158365152": {
-    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237257265,
-    			_updatedOn: 1616237278248
-    		},
-    		"e797fa57-bf0a-4749-8028-72dba715e5f8": {
-    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-    			status: "member",
-    			_createdOn: 1616237272948,
-    			_updatedOn: 1616237293676
-    		}
-    	}
+        parts: {
+            "dded749d-5a91-4c10-8211-a3af649c43c0": {
+                "title": "S837 Haze Wheels",
+                "category": "Wheels and Tires",
+                "brand": "Buxton",
+                "price": "400",
+                "year": "2019",
+                "quantity": "14",
+                "imageUrl": "/images/product/large-size/1.jpg",
+                "rating": "4",
+                "description": "The S837 Haze wheels are a stylish and durable option for your vehicle. The wheels are made of high-quality materials, ensuring long-lasting performance and reliability. They are designed to provide a smooth and comfortable ride, while also enhancing the appearance of your vehicle. The wheels are available in a variety of sizes and finishes, allowing you to customize the look of your vehicle to suit your preferences. The S837 Haze wheels are easy to install and maintain, making them a convenient and practical choice for your vehicle. Whether you are looking to upgrade your current wheels or simply want to add a touch of style to your vehicle, the S837 Haze wheels are an excellent choice. They are a great way to enhance the performance and appearance of your vehicle, while also expressing your personal style.",
+                "_id": "dded749d-5a91-4c10-8211-a3af649c43c0"
+            },
+            "dba62041-1269-403c-a717-ea7e14c3a9ec": {
+                "title": "Universal AC Vent Cupholder",
+                "category": "Interior and Comfort",
+                "brand": "TENDYCOCO",
+                "price": "9",
+                "year": "2019",
+                "quantity": "1",
+                "imageUrl": "/images/product/large-size/2.jpg",
+                "rating": "3",
+                "description": "The universal AC vent cupholder is a convenient accessory that allows you to keep your drink within easy reach while driving. The cupholder attaches to the air vent in your vehicle, providing a stable and secure place to hold your cup or bottle. The cupholder is adjustable, allowing it to accommodate different sizes of cups and bottles. It is made of high-quality materials, ensuring durability and long-lasting performance. The cupholder is easy to install and remove, making it a versatile and practical accessory for your vehicle. Whether you are on a long road trip or just running errands around town, the universal AC vent cupholder is a useful addition to your vehicle. It is a great way to stay hydrated and comfortable while on the road.",
+                "_id": "dba62041-1269-403c-a717-ea7e14c3a9ec"
+            },
+            "76ca2307-0459-41ba-a477-056d3726e5b2": {
+                "title": "Road King Special 107 ABS 2017",
+                "category": "Braking System",
+                "brand": "Harley Davidson",
+                "price": "605",
+                "year": "2024",
+                "quantity": "8",
+                "imageUrl": "/images/product/large-size/3.jpg",
+                "rating": "5",
+                "description": "The braking system is a critical component of any vehicle, as it is responsible for slowing down and stopping the vehicle. The system consists of several components, including the brake pads, rotors, calipers, and brake lines. When the driver presses the brake pedal, hydraulic pressure is generated, which forces the brake pads against the rotors, slowing down the vehicle. The ABS system helps prevent the wheels from locking up during hard braking, improving control and stability. The braking system is essential for safe driving, as it allows the driver to stop the vehicle quickly and efficiently. It is important to maintain the braking system in good condition to ensure optimal performance and safety. Regular inspections and maintenance are recommended to keep the system functioning properly.",
+                "_id": "76ca2307-0459-41ba-a477-056d3726e5b2"
+            },
+            "5ed18427-b532-40c3-8f4c-c2c069e64967": {
+                "title": "Electromechanical Actuator",
+                "category": "Braking System",
+                "brand": "Brembo",
+                "price": "355",
+                "year": "2020",
+                "quantity": "4",
+                "imageUrl": "/images/product/large-size/4.jpg",
+                "rating": "5",
+                "description": "The electromechanical actuator is a device that converts electrical energy into mechanical energy. It is used in various applications, such as robotics, automotive systems, and industrial machinery. The actuator consists of an electric motor, a gearbox, and a control system. The motor generates rotational motion, which is transmitted to the gearbox. The gearbox converts the rotational motion into linear motion, which is used to actuate a mechanism. The control system regulates the speed and position of the actuator, ensuring precise and reliable operation. The actuator is compact, lightweight, and energy-efficient, making it ideal for use in space-constrained applications. It is also durable and reliable, providing long-lasting performance in demanding environments.",
+                "_id": "5ed18427-b532-40c3-8f4c-c2c069e64967"
+            },
+            "36b52dce-1d28-4031-8e33-4b0e9d246429": {
+                "title": "iBooster",
+                "category": "Braking System",
+                "brand": "Bosch",
+                "price": "755",
+                "year": "2022",
+                "quantity": "10",
+                "imageUrl": "/images/product/large-size/5.jpg",
+                "rating": "5",
+                "description": "The iBooster can be used with all drivetrain configurations and is particularly suited to hybrid and electric vehicles. The generation 2 of the iBooster is characterized by significantly reduced weight.",
+                "_id": "36b52dce-1d28-4031-8e33-4b0e9d246429"
+            },
+            "0af8e76f-3e49-4186-a046-48407933b7e9": {
+                "title": "Power Sport Kit Series",
+                "category": "Braking System",
+                "brand": "Power Sport",
+                "price": "398",
+                "year": "2023",
+                "quantity": "50",
+                "imageUrl": "/images/product/large-size/6.jpg",
+                "rating": "4",
+                "description": "POWERSPORT Series Brake Rotors provide superior braking performance in any driving condition. Perfect for the daily driver or aggressive street driver. Ready to be installed with no modifications required. Upgrade your safety by upgrading your brakes!",
+                "_id": "0af8e76f-3e49-4186-a046-48407933b7e9"
+            },
+            "b75625e4-2a79-4c2b-a2f1-f2c5d9229473": {
+                "title": "VSRacing Gen1 Billet 7875",
+                "category": "Engine and Drivetrain",
+                "brand": "Power Sport",
+                "price": "555",
+                "year": "2021",
+                "quantity": "50",
+                "imageUrl": "/images/product/large-size/7.jpg",
+                "rating": "3",
+                "description": "This turbo is being discontinued by VSRacing. Please check the Next Gen version which is a newer design of this turbo VSR Billet 7875 Gen1 T4 Turbo. Most popular unit for sub 800 hp Setups;Compresor: 78mm 11 Blade Billet Compressor Wheel extended tip for high flow Turbine: GT42 75mm/82 Exducer/Inducer Downpipe: 3″; Compressor Outlet 2.5″ Turbine Housing : .96ar T4 open",
+                "_id": "b75625e4-2a79-4c2b-a2f1-f2c5d9229473"
+            }
+        },
+        recipes: {
+            "3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Easy Lasagna",
+                img: "assets/lasagna.jpg",
+                ingredients: [
+                    "1 tbsp Ingredient 1",
+                    "2 cups Ingredient 2",
+                    "500 g  Ingredient 3",
+                    "25 g Ingredient 4"
+                ],
+                steps: [
+                    "Prepare ingredients",
+                    "Mix ingredients",
+                    "Cook until done"
+                ],
+                _createdOn: 1613551279012
+            },
+            "8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Grilled Duck Fillet",
+                img: "assets/roast.jpg",
+                ingredients: [
+                    "500 g  Ingredient 1",
+                    "3 tbsp Ingredient 2",
+                    "2 cups Ingredient 3"
+                ],
+                steps: [
+                    "Prepare ingredients",
+                    "Mix ingredients",
+                    "Cook until done"
+                ],
+                _createdOn: 1613551344360
+            },
+            "985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                name: "Roast Trout",
+                img: "assets/fish.jpg",
+                ingredients: [
+                    "4 cups Ingredient 1",
+                    "1 tbsp Ingredient 2",
+                    "1 tbsp Ingredient 3",
+                    "750 g  Ingredient 4",
+                    "25 g Ingredient 5"
+                ],
+                steps: [
+                    "Prepare ingredients",
+                    "Mix ingredients",
+                    "Cook until done"
+                ],
+                _createdOn: 1613551388703
+            }
+        },
+        comments: {
+            "0a272c58-b7ea-4e09-a000-7ec988248f66": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                content: "Great recipe!",
+                recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
+                _createdOn: 1614260681375,
+                _id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
+            }
+        },
+        records: {
+            i01: {
+                name: "John1",
+                val: 1,
+                _createdOn: 1613551388703
+            },
+            i02: {
+                name: "John2",
+                val: 1,
+                _createdOn: 1613551388713
+            },
+            i03: {
+                name: "John3",
+                val: 2,
+                _createdOn: 1613551388723
+            },
+            i04: {
+                name: "John4",
+                val: 2,
+                _createdOn: 1613551388733
+            },
+            i05: {
+                name: "John5",
+                val: 2,
+                _createdOn: 1613551388743
+            },
+            i06: {
+                name: "John6",
+                val: 3,
+                _createdOn: 1613551388753
+            },
+            i07: {
+                name: "John7",
+                val: 3,
+                _createdOn: 1613551388763
+            },
+            i08: {
+                name: "John8",
+                val: 2,
+                _createdOn: 1613551388773
+            },
+            i09: {
+                name: "John9",
+                val: 3,
+                _createdOn: 1613551388783
+            },
+            i10: {
+                name: "John10",
+                val: 1,
+                _createdOn: 1613551388793
+            }
+        },
+        catches: {
+            "07f260f4-466c-4607-9a33-f7273b24f1b4": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                angler: "Paulo Admorim",
+                weight: 636,
+                species: "Atlantic Blue Marlin",
+                location: "Vitoria, Brazil",
+                bait: "trolled pink",
+                captureTime: 80,
+                _createdOn: 1614760714812,
+                _id: "07f260f4-466c-4607-9a33-f7273b24f1b4"
+            },
+            "bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                angler: "John Does",
+                weight: 554,
+                species: "Atlantic Blue Marlin",
+                location: "Buenos Aires, Argentina",
+                bait: "trolled pink",
+                captureTime: 120,
+                _createdOn: 1614760782277,
+                _id: "bdabf5e9-23be-40a1-9f14-9117b6702a9d"
+            }
+        },
+        furniture: {
+        },
+        orders: {
+        },
+        movies: {
+            "1240549d-f0e0-497e-ab99-eb8f703713d7": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Black Widow",
+                description: "Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Comes on the screens 2020.",
+                img: "https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg",
+                _createdOn: 1614935055353,
+                _id: "1240549d-f0e0-497e-ab99-eb8f703713d7"
+            },
+            "143e5265-333e-4150-80e4-16b61de31aa0": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Wonder Woman 1984",
+                description: "Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient artifact that grants wishes goes missing.",
+                img: "https://pbs.twimg.com/media/ETINgKwWAAAyA4r.jpg",
+                _createdOn: 1614935181470,
+                _id: "143e5265-333e-4150-80e4-16b61de31aa0"
+            },
+            "a9bae6d8-793e-46c4-a9db-deb9e3484909": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Top Gun 2",
+                description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
+                img: "https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg",
+                _createdOn: 1614935268135,
+                _id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
+            }
+        },
+        likes: {
+        },
+        ideas: {
+            "833e0e57-71dc-42c0-b387-0ce0caf5225e": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Best Pilates Workout To Do At Home",
+                description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima possimus eveniet ullam aspernatur corporis tempore quia nesciunt nostrum mollitia consequatur. At ducimus amet aliquid magnam nulla sed totam blanditiis ullam atque facilis corrupti quidem nisi iusto saepe, consectetur culpa possimus quos? Repellendus, dicta pariatur! Delectus, placeat debitis error dignissimos nesciunt magni possimus quo nulla, fuga corporis maxime minus nihil doloremque aliquam quia recusandae harum. Molestias dolorum recusandae commodi velit cum sapiente placeat alias rerum illum repudiandae? Suscipit tempore dolore autem, neque debitis quisquam molestias officia hic nesciunt? Obcaecati optio fugit blanditiis, explicabo odio at dicta asperiores distinctio expedita dolor est aperiam earum! Molestias sequi aliquid molestiae, voluptatum doloremque saepe dignissimos quidem quas harum quo. Eum nemo voluptatem hic corrupti officiis eaque et temporibus error totam numquam sequi nostrum assumenda eius voluptatibus quia sed vel, rerum, excepturi maxime? Pariatur, provident hic? Soluta corrupti aspernatur exercitationem vitae accusantium ut ullam dolor quod!",
+                img: "./images/best-pilates-youtube-workouts-2__medium_4x3.jpg",
+                _createdOn: 1615033373504,
+                _id: "833e0e57-71dc-42c0-b387-0ce0caf5225e"
+            },
+            "247efaa7-8a3e-48a7-813f-b5bfdad0f46c": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "4 Eady DIY Idea To Try!",
+                description: "Similique rem culpa nemo hic recusandae perspiciatis quidem, quia expedita, sapiente est itaque optio enim placeat voluptates sit, fugit dignissimos tenetur temporibus exercitationem in quis magni sunt vel. Corporis officiis ut sapiente exercitationem consectetur debitis suscipit laborum quo enim iusto, labore, quod quam libero aliquid accusantium! Voluptatum quos porro fugit soluta tempore praesentium ratione dolorum impedit sunt dolores quod labore laudantium beatae architecto perspiciatis natus cupiditate, iure quia aliquid, iusto modi esse!",
+                img: "./images/brightideacropped.jpg",
+                _createdOn: 1615033452480,
+                _id: "247efaa7-8a3e-48a7-813f-b5bfdad0f46c"
+            },
+            "b8608c22-dd57-4b24-948e-b358f536b958": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Dinner Recipe",
+                description: "Consectetur labore et corporis nihil, officiis tempora, hic ex commodi sit aspernatur ad minima? Voluptas nesciunt, blanditiis ex nulla incidunt facere tempora laborum ut aliquid beatae obcaecati quidem reprehenderit consequatur quis iure natus quia totam vel. Amet explicabo quidem repellat unde tempore et totam minima mollitia, adipisci vel autem, enim voluptatem quasi exercitationem dolor cum repudiandae dolores nostrum sit ullam atque dicta, tempora iusto eaque! Rerum debitis voluptate impedit corrupti quibusdam consequatur minima, earum asperiores soluta. A provident reiciendis voluptates et numquam totam eveniet! Dolorum corporis libero dicta laborum illum accusamus ullam?",
+                img: "./images/dinner.jpg",
+                _createdOn: 1615033491967,
+                _id: "b8608c22-dd57-4b24-948e-b358f536b958"
+            }
+        },
+        catalog: {
+            "53d4dbf5-7f41-47ba-b485-43eccb91cb95": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                make: "Table",
+                model: "Swedish",
+                year: 2015,
+                description: "Medium table",
+                price: 235,
+                img: "./images/table.png",
+                material: "Hardwood",
+                _createdOn: 1615545143015,
+                _id: "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
+            },
+            "f5929b5c-bca4-4026-8e6e-c09e73908f77": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                make: "Sofa",
+                model: "ES-549-M",
+                year: 2018,
+                description: "Three-person sofa, blue",
+                price: 1200,
+                img: "./images/sofa.jpg",
+                material: "Frame - steel, plastic; Upholstery - fabric",
+                _createdOn: 1615545572296,
+                _id: "f5929b5c-bca4-4026-8e6e-c09e73908f77"
+            },
+            "c7f51805-242b-45ed-ae3e-80b68605141b": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                make: "Chair",
+                model: "Bright Dining Collection",
+                year: 2017,
+                description: "Dining chair",
+                price: 180,
+                img: "./images/chair.jpg",
+                material: "Wood laminate; leather",
+                _createdOn: 1615546332126,
+                _id: "c7f51805-242b-45ed-ae3e-80b68605141b"
+            }
+        },
+        teams: {
+            "34a1cab1-81f1-47e5-aec3-ab6c9810efe1": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Storm Troopers",
+                logoUrl: "/assets/atat.png",
+                description: "These ARE the droids we're looking for",
+                _createdOn: 1615737591748,
+                _id: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1"
+            },
+            "dc888b1a-400f-47f3-9619-07607966feb8": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                name: "Team Rocket",
+                logoUrl: "/assets/rocket.png",
+                description: "Gotta catch 'em all!",
+                _createdOn: 1615737655083,
+                _id: "dc888b1a-400f-47f3-9619-07607966feb8"
+            },
+            "733fa9a1-26b6-490d-b299-21f120b2f53a": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                name: "Minions",
+                logoUrl: "/assets/hydrant.png",
+                description: "Friendly neighbourhood jelly beans, helping evil-doers succeed.",
+                _createdOn: 1615737688036,
+                _id: "733fa9a1-26b6-490d-b299-21f120b2f53a"
+            }
+        },
+        members: {
+            "cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
+                status: "member",
+                _createdOn: 1616236790262,
+                _updatedOn: 1616236792930
+            },
+            "61a19986-3b86-4347-8ca4-8c074ed87591": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
+                status: "member",
+                _createdOn: 1616237188183,
+                _updatedOn: 1616237189016
+            },
+            "8a03aa56-7a82-4a6b-9821-91349fbc552f": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                teamId: "733fa9a1-26b6-490d-b299-21f120b2f53a",
+                status: "member",
+                _createdOn: 1616237193355,
+                _updatedOn: 1616237195145
+            },
+            "9be3ac7d-2c6e-4d74-b187-04105ab7e3d6": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
+                status: "member",
+                _createdOn: 1616237231299,
+                _updatedOn: 1616237235713
+            },
+            "280b4a1a-d0f3-4639-aa54-6d9158365152": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
+                status: "member",
+                _createdOn: 1616237257265,
+                _updatedOn: 1616237278248
+            },
+            "e797fa57-bf0a-4749-8028-72dba715e5f8": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
+                status: "member",
+                _createdOn: 1616237272948,
+                _updatedOn: 1616237293676
+            }
+        }
     };
     var rules$1 = {
-    	users: {
-    		".create": false,
-    		".read": [
-    			"Owner"
-    		],
-    		".update": false,
-    		".delete": false
-    	},
-    	members: {
-    		".update": "isOwner(user, get('teams', data.teamId))",
-    		".delete": "isOwner(user, get('teams', data.teamId)) || isOwner(user, data)",
-    		"*": {
-    			teamId: {
-    				".update": "newData.teamId = data.teamId"
-    			},
-    			status: {
-    				".create": "newData.status = 'pending'"
-    			}
-    		}
-    	}
+        users: {
+            ".create": false,
+            ".read": [
+                "Owner"
+            ],
+            ".update": false,
+            ".delete": false
+        },
+        members: {
+            ".update": "isOwner(user, get('teams', data.teamId))",
+            ".delete": "isOwner(user, get('teams', data.teamId)) || isOwner(user, data)",
+            "*": {
+                teamId: {
+                    ".update": "newData.teamId = data.teamId"
+                },
+                status: {
+                    ".create": "newData.status = 'pending'"
+                }
+            }
+        }
     };
     var settings = {
-    	identity: identity,
-    	protectedData: protectedData,
-    	seedData: seedData,
-    	rules: rules$1
+        identity: identity,
+        protectedData: protectedData,
+        seedData: seedData,
+        rules: rules$1
     };
 
     const plugins = [

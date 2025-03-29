@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
+import { Link } from "react-router-dom";
+
 import $ from 'jquery';
 import 'slick-carousel/slick/slick';
+
 
 export default function Slider() {
    useEffect(() => {
@@ -150,10 +153,10 @@ export default function Slider() {
                     <div className="single-slide animation-style-01 bg-3">
                         <div className="slider-content">
                             <span>New thinking new possibilities</span>
-                            <h3>Car interior</h3>
+                            <h3>Interior &amp; Comfort</h3>
                             <h4>Starting at <span>$99.00</span></h4>
                             <div className="uren-btn-ps_left slide-btn">
-                                <a className="uren-btn" href="shop-left-sidebar.html">Read More</a>
+                                <Link className="uren-btn" to="/catalog">Read More</Link>
                             </div>
                         </div>
                     </div>
@@ -165,7 +168,7 @@ export default function Slider() {
                             <h3>Wheels &amp; Tires</h3>
                             <h4>Sale up to 20% off</h4>
                             <div className="uren-btn-ps_left slide-btn">
-                                <a className="uren-btn" href="shop-left-sidebar.html">Read More</a>
+                                <Link className="uren-btn" to="/catalog">Read More</Link>
                             </div>
                         </div>
                     </div>

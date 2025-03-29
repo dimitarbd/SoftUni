@@ -39,25 +39,27 @@ SoftUni React Course Project
 ## 7. Authentication
 - [x] Auth API
   - [x] Login
-  - [ ] Register
+  - [x] Register
   - [ ] Logout
 - [ ] Auth API hook
   - [x] Login
-  - [ ] Register
+  - [x] Register
   - [ ] Logout
 - [x] Auth state & context
 - [x] Token management
 - [x] Login
-- [ ] Register
+- [x] Register
   - [x] Add form validation
 - [ ] Logout
 - [ ] Authorized Requests
 ## 8. UI Implementation 
-- [ ] Dynamic navigation
-- [ ] Create game
-  - [ ] API function
-  - [ ] Hook
+- [x] Dynamic navigation
+- [x] Create game
+  - [x] API function
+  - [x] Hook
 - [ ] Latest games
+## 9. Refactoring
+- [ ] Extract auth state from App component
 
 ## Notes
   1. Latest Games

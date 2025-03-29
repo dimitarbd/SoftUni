@@ -2,7 +2,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
 
 import Home from './Components/home/Home';
 import Footer from "./Components/footer/Footer"
@@ -14,27 +13,13 @@ import PartDetails from './Components/part-details/PartDetails';
 import PartCatalog from './Components/part-catalog/PartCatalog';
 import PartImport from './Components/part-import/PartImport';
 import PartEdit from './Components/part-edit/PartEdit';
-import { AuthContext } from './contexts/AuthContext';
+import { AuthContextProvider } from './contexts/AuthContext';
 
 
 function App() {
-    const [authState, setAuthState] = useState({});
-    
-    const changeAuthState = (state) => {
-        localStorage.setItem('accessToken', state.accessToken);
-        setAuthState(state);
-    }
-
-    const contextData = {
-        userId: authState._id,
-        email: authState.email,
-        accessToken: authState.accessToken,
-        isAuthenticated: Boolean(authState.email),
-        changeAuthState,
-    };
 
     return (
-        <AuthContext.Provider value={ contextData }>
+        <AuthContextProvider>
             <div className="main-wrapper">
 
                 <Header />
@@ -53,7 +38,7 @@ function App() {
                 <Footer />
 
             </div>
-        </AuthContext.Provider>
+        </AuthContextProvider>
     )
 }
 

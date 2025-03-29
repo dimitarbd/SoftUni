@@ -28,7 +28,7 @@ export default function PartImport() {
         }
     }, [isAuthenticated, navigate]);
 
-    const handleChange = (e) => {
+    const changeHandler = (e) => {
         const { name, value } = e.target;
         if (name.includes('.')) {
             const [parent, child] = name.split('.');
@@ -47,7 +47,7 @@ export default function PartImport() {
         }
     };
 
-    const handleSubmit = async (e) => {
+    const createHandler = async (e) => {
         e.preventDefault();
         try {
             const { _id: partId} = await createPart(formData);
@@ -84,7 +84,7 @@ export default function PartImport() {
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-10 offset-lg-1">
-                                        <form onSubmit={handleSubmit} className="login-form">
+                                        <form onSubmit={createHandler} className="login-form">
                                             <div className="login-title">
                                                 <h3>Part Information</h3>
                                             </div>
@@ -97,7 +97,7 @@ export default function PartImport() {
                                                             id="title"
                                                             name="title"
                                                             value={formData.name}
-                                                            onChange={handleChange}
+                                                            onChange={changeHandler}
                                                             required
                                                             placeholder="Enter part name"
                                                         />
@@ -111,7 +111,7 @@ export default function PartImport() {
                                                             id="price"
                                                             name="price"
                                                             value={formData.price}
-                                                            onChange={handleChange}
+                                                            onChange={changeHandler}
                                                             required
                                                             placeholder="Enter price"
                                                         />
@@ -126,7 +126,7 @@ export default function PartImport() {
                                                             id="description"
                                                             name="description"
                                                             value={formData.description}
-                                                            onChange={handleChange}
+                                                            onChange={changeHandler}
                                                             rows="4"
                                                             required
                                                             placeholder="Enter detailed description"
@@ -144,7 +144,7 @@ export default function PartImport() {
                                                             id="imageUrl"
                                                             name="imageUrl"
                                                             value={formData.imageUrl}
-                                                            onChange={handleChange}
+                                                            onChange={changeHandler}
                                                             required
                                                             placeholder="http://example.com/image.jpg"
                                                         />
@@ -158,7 +158,7 @@ export default function PartImport() {
                                                             id="quantity"
                                                             name="quantity"
                                                             value={formData.quantity}
-                                                            onChange={handleChange}
+                                                            onChange={changeHandler}
                                                             required
                                                             placeholder="Enter quantity in stock"
                                                         />
@@ -174,7 +174,7 @@ export default function PartImport() {
                                                             id="category"
                                                             name="category"
                                                             value={formData.category}
-                                                            onChange={handleChange}
+                                                            onChange={changeHandler}
                                                             required
                                                         >
                                                             <option value="">Select a category</option>
@@ -205,7 +205,7 @@ export default function PartImport() {
                                                             id="brand"
                                                             name="brand"
                                                             value={formData.brand}
-                                                            onChange={handleChange}
+                                                            onChange={changeHandler}
                                                             required
                                                             placeholder="Enter brand name"
                                                         />
@@ -227,7 +227,7 @@ export default function PartImport() {
                                                                 } else {
                                                                     setError('');
                                                                 }
-                                                                handleChange(e);
+                                                                changeHandler(e);
                                                             }}
                                                             required
                                                             placeholder="Enter year (e.g., 2022)"
@@ -251,7 +251,7 @@ export default function PartImport() {
                                                                 } else {
                                                                     setError('');
                                                                 }
-                                                                handleChange(e);
+                                                                changeHandler(e);
                                                             }}
                                                             required
                                                             placeholder="Enter rating (between 1 and 5)"

@@ -33,6 +33,6 @@ export const useLogout = () => {
         await logout();
         localLogout();
     };
-    
+
     return logoutHandler;
 }

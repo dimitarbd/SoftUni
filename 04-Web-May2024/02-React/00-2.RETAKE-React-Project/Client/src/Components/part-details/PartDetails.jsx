@@ -1,27 +1,29 @@
-import { useState, useContext } from "react";
+// import { useState, useContext } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 
-import commentsApi from "../../api/comments-api";
 import { useGetOnePart } from "../../hooks/useParts";
-import { AuthContext } from "../../contexts/AuthContext";
+import { useForm } from "../../hooks/useForm";
+
+const initialValues = {
+    email: '',
+    comment: '',
+    rating: 1,
+};
+
 
 export default function PartDetails() {
+    const [part, setPart] = useGetOnePart();
     const { partId } = useParams();
-    const { isAuthenticated } = useContext(AuthContext);
-    
-    
-    const [part, setPart] = useGetOnePart(partId);
-    const [email, setEmail] = useState('');
-    const [comment, setComment] = useState('');
-    const [rating, setRating] = useState(1);
-
-    const CommentSubmitHandler = async (e) => {
-        e.preventDefault();
-
+    const { userId } = useAuthContext();
+    const { 
+        values,
+        changeHandler,
+        submitHandler
+    } = useForm(initialValues, ({ comment })=> {
         const currentDate = new Date().toLocaleDateString('en-GB').split('/').map((part, index) => index === 2 ? part.slice(-2) : part).join('/');
 
-        const newComment = await commentsApi.create(partId, email, comment, rating, currentDate);
+        const newComment = commentsApi.create(partId, values.email, values.comment, values.rating, currentDate);
 
         setPart((prevState) => ({
             ...prevState,
@@ -31,10 +33,36 @@ export default function PartDetails() {
             }
         }));
 
-        setEmail('');
-        setComment('');
-        setRating(1);
+        setValues(initialValues);
     }
+    );
+
+    // const { isAuthenticated } = useContext(AuthContext);    
+
+    // const [part, setPart] = useGetOnePart(partId);
+    // const [email, setEmail] = useState('');
+    // const [comment, setComment] = useState('');
+    // const [rating, setRating] = useState(1);
+
+    // const CommentSubmitHandler = async (e) => {
+    //     e.preventDefault();
+
+    //     const currentDate = new Date().toLocaleDateString('en-GB').split('/').map((part, index) => index === 2 ? part.slice(-2) : part).join('/');
+
+    //     const newComment = await commentsApi.create(partId, email, comment, rating, currentDate);
+
+    //     setPart((prevState) => ({
+    //         ...prevState,
+    //         comments: {
+    //             ...prevState.comments,
+    //             [newComment._id]: newComment
+    //         }
+    //     }));
+
+    //     setEmail('');
+    //     setComment('');
+    //     setRating(1);
+    // }
 
     const renderRating = (rating) => {
         const stars = [];
@@ -106,7 +134,7 @@ export default function PartDetails() {
                                             <li>Price: <button className="btn-link">${Number(part.price).toFixed(2)}</button></li>
                                             <li>Year: <button className="btn-link">{part.year}</button></li>
                                         </ul>
-                                    </div>                                    
+                                    </div>
                                     <div className="quantity">
                                         <label>Quantity</label>
                                         <div className="cart-plus-minus">
@@ -118,7 +146,7 @@ export default function PartDetails() {
                                     <div className="qty-btn_area">
                                         <ul>
                                             <li><a className="qty-cart_btn" href="cart.html">Add To Cart</a></li>
-                                            {isAuthenticated && 
+                                            {isAuthenticated &&
                                                 <li><Link className="qty-edit_btn uren-btn_dark d-flex align-items-center" to={`/catalog/${partId}/edit`}>
                                                     <i className="fa fa-edit" style={{ marginRight: '5px' }}></i> <span>Edit Part</span>
                                                 </Link></li>
@@ -193,7 +221,7 @@ export default function PartDetails() {
                                             <form className="form-horizontal" id="form-review" onSubmit={CommentSubmitHandler}>
                                                 <div id="review">
                                                     <table className="table table-striped table-bordered">
-                                                        {Object.keys(part.comments || {}).length > 0
+                                                        {/* {Object.keys(part.comments || {}).length > 0
                                                             ? Object.values(part.comments).map((comment) => (
                                                                 <tbody key={comment._id}>
                                                                     <tr>
@@ -217,7 +245,7 @@ export default function PartDetails() {
                                                                     <td colSpan="2">There are no reviews for this product.</td>
                                                                 </tr>
                                                             </tbody>
-                                                        }
+                                                        } */}
                                                     </table>
                                                 </div>
                                                 <h2>Write a review</h2>
@@ -230,8 +258,8 @@ export default function PartDetails() {
                                                             name="con_email"
                                                             id="con_email"
                                                             required
-                                                            onChange={(e) => setEmail(e.target.value)}
-                                                            value={email}
+                                                            onChange={changeHandler}
+                                                            value={values.email}
                                                         />
                                                     </div>
                                                 </div>
@@ -245,8 +273,8 @@ export default function PartDetails() {
                                                             className="review-textarea"
                                                             name="con_message"
                                                             id="con_message"
-                                                            onChange={(e) => setComment(e.target.value)}
-                                                            value={comment}
+                                                            onChange={changeHandler}
+                                                            value={values.comment}
                                                         ></textarea>
                                                     </div>
                                                 </div>
@@ -257,8 +285,8 @@ export default function PartDetails() {
                                                             <span>
                                                                 <select
                                                                     className="star-rating"
-                                                                    onChange={(e) => setRating(Number(e.target.value))}
-                                                                    value={rating}
+                                                                    onChange={changeHandler}
+                                                                    value={values.rating}
                                                                 >
                                                                     <option value="1">1</option>
                                                                     <option value="2">2</option>
@@ -270,7 +298,7 @@ export default function PartDetails() {
                                                         </div>
                                                     </div>
                                                     <div className="uren-btn-ps_right">
-                                                        <button className="uren-btn-2">Continue</button>
+                                                        <button className="uren-btn-2" onSubmit={submitHandler}>Continue</button>
                                                     </div>
                                                 </div>
                                             </form>

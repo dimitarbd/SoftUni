@@ -2,6 +2,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import { Routes, Route } from 'react-router-dom';
+import { AuthContextProvider } from './contexts/AuthContext';
 
 import Home from './Components/home/Home';
 import Footer from "./Components/footer/Footer"
@@ -13,7 +14,7 @@ import PartDetails from './Components/part-details/PartDetails';
 import PartCatalog from './Components/part-catalog/PartCatalog';
 import PartImport from './Components/part-import/PartImport';
 import PartEdit from './Components/part-edit/PartEdit';
-import { AuthContextProvider } from './contexts/AuthContext';
+import Logout from './Components/logout/Logout';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/logout" element={<Logout />} />
                     <Route path="/catalog" element={<PartCatalog />} />
                     <Route path="/catalog/:partId/details" element={<PartDetails />} />
                     <Route path="/catalog/:partId/edit" element={<PartEdit />} />

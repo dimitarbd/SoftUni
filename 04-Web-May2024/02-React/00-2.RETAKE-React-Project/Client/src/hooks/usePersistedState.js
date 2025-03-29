@@ -17,7 +17,9 @@ export default function usePersistedState(key, initialState) {
         if (newState === state) {
             return;
         }
+
         localStorage.setItem(key, JSON.stringify(newState));
+
 
         setState(newState);
     };

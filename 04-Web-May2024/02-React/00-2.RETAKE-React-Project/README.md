@@ -59,7 +59,8 @@ SoftUni React Course Project
   - [x] Hook
 - [ ] Latest games
 ## 9. Refactoring
-- [ ] Extract auth state from App component
+- [x] Extract auth state from App component
+- [ ] Persist auth state
 
 ## Notes
   1. Latest Games

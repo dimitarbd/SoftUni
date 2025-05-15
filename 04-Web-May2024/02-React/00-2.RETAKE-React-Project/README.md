@@ -35,7 +35,7 @@ SoftUni React Course Project
 ## 6. API Hooks
 - [x] Form Hook
 - [x] PartAPI Hooks
-- [ ] Comment Hooks
+- [x] Comment Hooks
 ## 7. Authentication
 - [x] Auth API
   - [x] Login
@@ -54,18 +54,21 @@ SoftUni React Course Project
 - [x] Authorized Requests
 ## 8. UI Implementation 
 - [x] Dynamic navigation
-- [x] Create game
+- [x] Create part
   - [x] API function
   - [x] Hook
-- [ ] Latest games
+- [x] Delete part
+- [x] Edit part
+- [ ] Latest part
 ## 9. Refactoring
 - [x] Extract auth state from App component
 - [x] Persist auth state
-- [ ] Comments
+- [x] Comments
+- [ ] Edit and delete ownership rendering
 
 
 ## Notes
-  1. Latest Games
+  1. Latest part
      2. URL `http://localhost:3030/data/games?sortBy=_createdOn%20desc&pageSize=3`
      3. USE URLSearchParams
   2. seedData - line 1341 in server.js

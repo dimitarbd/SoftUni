@@ -1,0 +1,24 @@
+.card {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+    color: black;
+    text-decoration: none;
+    background-color: #fff;
+    box-shadow: 0 0 1cm 0 rgb(0, 0, 0, 0.2);
+    border-radius: 0.3cm;
+    overflow: hidden;
+}
+
+.card span,
+.card strong {
+    display: block;
+}
+
+.card .media {
+margin-bottom: 1cm;
+}
+
+.card .main {
+    
+}

@@ -1,8 +1,7 @@
 .accordion {
     --size-padding-inline: 3em;
     --size-border-width: 2px;
-    --clr-border: red;
-
+    --clr-border: blue;
 
     border: var(--size-border-width) solid var(--clr-border);
 }
@@ -21,8 +20,12 @@
     padding-inline: var(--size-padding-inline);
 }
 
-.accordion details:not(:last-child) summary {
+.accordion details summary {
     border-bottom: var(--size-border-width) solid var(--clr-border);
+}
+
+.accordion details:last-child:not[open] summary {
+    border-bottom: none;
 }
 
 .accordion details[open]::details-content {

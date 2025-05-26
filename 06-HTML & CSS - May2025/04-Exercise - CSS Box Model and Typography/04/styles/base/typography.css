@@ -15,7 +15,7 @@
 html {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: var(--fs-body);
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 body, input, textarea, button, select, option {

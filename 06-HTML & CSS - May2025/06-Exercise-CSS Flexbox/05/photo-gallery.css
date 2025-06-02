@@ -34,8 +34,7 @@ img {
     gap: 2em;
 }
 
-.gallery li,
-.gallery ::before {
+.gallery li {
     flex: 1 1 30ch;
     overflow: hidden;
     display: flex;
@@ -75,7 +74,10 @@ img {
     overflow: hidden;
 }
 
-.gallery::before {
+.gallery:before,
+.gallery::after {
     display: block;
+    flex: 1 1 25ch;
     content: '';
+    order: 9999;
 }

@@ -74,6 +74,7 @@ body {
 
 .keyboard .key.enter {
     border-bottom-right-radius: 0;
+    position: relative;
 }
 
 .keyboard .key.enter::after {
@@ -82,7 +83,7 @@ body {
     width: 5.5ch;
     height: 5.7ch;
     position: absolute;
-    top: calc(100%-1px);
+    top: 100%;
     right: -1px;
     background: inherit;
     border: 1px solid #CCC;
@@ -91,4 +92,8 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     box-shadow: inherit;
+}
+
+.keyboard .row:nth-child(1) .key {
+    padding-block: 0.3em;
 }

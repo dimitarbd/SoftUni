@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+body > * {
+    width: 100%;
+}
+
+.site {
+    background: #fff;
+    padding: 1em;
+    box-shadow: 0 0 2em rgb(0, 0, 0, 0.2);
+    border-radius: 0.3em;
+    max-width: 900px;
+    width: 100%;
+}

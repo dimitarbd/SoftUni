@@ -17,12 +17,12 @@
         hovering when the user performs an inconvenient long tap), or there is no primary pointing input mechanism.</p>
 
     <code><pre>
-    @media (hover: none) {
-        body::before {
-            display: block;
-            content: 'The device does NOT support hover';
-        }
-    }              
+@media (hover: none) {
+    body::before {
+        display: block;
+        content: 'The device does NOT support hover';
+    }
+}              
     </pre></code>
 
 
@@ -30,12 +30,12 @@
     <p>The primary input mechanism can conveniently hover over elements.</p>
 
     <code><pre>
-    @media (hover: hover) {
-        body::before {
-            display: block;
-            content: 'The device does support hover';
-        }
-    }              
+@media (hover: hover) {
+    body::before {
+        display: block;
+        content: 'The device does support hover';
+    }
+}              
 </pre></code>
 
 </body>

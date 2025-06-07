@@ -68,12 +68,12 @@ body>* {
     position: relative;
 }
 
-.timeline>article:nth-of-type(odd)::before {
+.timeline > article:nth-of-type(odd)::before {
     background-color: orange;
 }
 
-.timeline>article .inner {
-    flex: 1 1 auto;
+.timeline > article .inner {
+    flex: 0 1 auto;
     background: #fff;
     border-radius: 0.3rem;
     padding: 0.8rem 0.8rem;

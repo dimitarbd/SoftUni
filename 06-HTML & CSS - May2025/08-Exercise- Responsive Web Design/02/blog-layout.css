@@ -18,7 +18,7 @@ body>* {
     width: 100%;
 }
 
-p {
+p:not(:last-child) {
     padding-bottom: 1.5em;
 }
 
@@ -51,6 +51,7 @@ h6 {
 
 .site-header h1 {
     padding: 1.5em 2rem;
+    margin-bottom: 0;
 }
 
 .site-header h1 a {

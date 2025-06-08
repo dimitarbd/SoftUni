@@ -1,4 +1,5 @@
 .section {
+
 }
 
 .section .inner {
@@ -7,5 +8,5 @@
     box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.1);
     max-width: 120ch;
     margin: 0 auto;
-    padding: var(--fs-heading-1);
+    padding: var(--fs-heading-6) var(--fs-heading-3);
 }

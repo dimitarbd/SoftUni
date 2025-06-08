@@ -29,11 +29,11 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
 }
 
-:where(h1, h2, h3, h4, h5, h6):where(:first-child) {
+:where(h1, h2, h3, h4, h5, h6):where(:not(:first-child)) {
     margin-top: 1em;
 }
 
-section header :is(h1, h2, h3, h4, h5, h6) ~ :is(h1, h2, h3, h4, h5, h6) {
+section header :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6) {
     margin-top: 0;
 }
 

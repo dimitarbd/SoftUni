@@ -1,0 +1,12 @@
+.section.site-header {
+
+}
+
+.section.site-header .inner {
+    display: flex;
+    align-items: center;
+}
+
+.section.site-header .site-header {
+    margin-right: auto;
+}

@@ -10,9 +10,9 @@ html {
 body, input, textarea, button, select, option {
     font: inherit;
 }
-
-p, ul, ol {
-    padding-bottom: 1.5em;
+ 
+:is(p, ul, ol, table):not(:last-child) {
+    margin-bottom: 1.5em;
 }
 
 ul, ol {

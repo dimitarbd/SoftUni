@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body,
+input,
+select,
+textarea,
+option {
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em;
+}
+
+body>* {
+    width: 100%;
+}
+
+form {
+    max-width: 500px;
+    background: #fff;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.1);
+    padding: 2em;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: none;
+    padding: 0.5em 0.8em;
+    background: orange;
+    border-radius: 0.3em;
+    color: #fff;
+    outline: none;
+
+    &:focus {
+        background: darkorange;
+    }
+}
+
+input, button {
+    &:focus-visible {
+        outline: 2px solid orange;
+        outline-offset: 2px;
+    }
+}

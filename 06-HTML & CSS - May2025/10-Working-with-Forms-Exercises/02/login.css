@@ -10,7 +10,11 @@ html {
     font: 14px/1.5 Lato, sans-serif;
 }
 
-body, input, select, textarea, option {
+body,
+input,
+select,
+textarea,
+option {
     font: inherit;
 }
 
@@ -24,7 +28,7 @@ body {
     padding: 4em;
 }
 
-body > * {
+body>* {
     width: 100%;
 }
 
@@ -55,38 +59,63 @@ fieldset {
 }
 
 .field {
+    --clr-error:red;
+    --clr-success:#060;
+
+    --clr-border: #ccc;
+    --clr-input-text: #333;
+    --clr-label-text: #333
+
     padding-bottom: 1.5em;
 
     & > label {
         font-weight: bold;
         display: block;
+        color: var(--clr-label-text);
     }
-    
+
+
     input[type="text"],
     input[type="password"],
     textarea {
-        border: 2px solid #ccc;
+        border: 2px solid var(--clr-border);
         padding: 0.5em 0.8em;
         border-radius: 0.3em;
         display: block;
         width: 100%;
         outline: none;
+        color: var(--clr-input-text);
 
         &:focus {
-            border-color: orange;
+            --clr-border: orange;
         }
     }
 
     &:has(:required) > label {
-        
+
         &::after {
             display: inline-block;
             content: '*';
             margin-left: 0.3em;
-            color: #c00;
+            color: var(--clr-error);
         }
     }
 
+    .info {
+        font-size: 0.9em;
+        font-style: italic;
+        opacity: 0.6;
+    }
+
+    &:has(:user-invalid) {        
+            --clr-label-text: var(--clr-error);     
+            --clr-border: var(--clr-error);        
+    }
+
+    &:has(:user-valid) {        
+        --clr-label-text: var(--clr-success);     
+        --clr-border: var(--clr-success);        
+}
 }
 
 button,
@@ -107,9 +136,32 @@ input[type="submit"] {
     }
 }
 
-input, button {
+input,
+button {
     &:focus-visible {
         outline: 2px solid orange;
         outline-offset: 2px;
+    }
+}
+
+.field.icon {
+    position: relative;
+
+    &::before {
+        display: block;
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: var(--clr-label-text);
+    }
+
+    &:has(#login-email)::before {
+        content: '\f0e0';
+    }
+
+    &:has(#login-password)::before {
+        content: '\f084';
     }
 }

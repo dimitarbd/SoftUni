@@ -29,6 +29,101 @@ form {
     padding-bottom: 1.5em;
     position: relative;
 
+  
+
+    .info {
+        font-size: 0.9em;
+        font-style: italic;
+        opacity: 0.6;
+    }
+
+    &.custom {
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            margin-bottom: 1em;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
+                padding: 0;
+
+            }
+        }
+
+        input[type="radio"] {
+            appearance: none;
+            width: 1.5em;
+            aspect-ratio: 1;
+            border: 2px solid var(--clr-border);
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                display: block;
+                content: '';
+                position: absolute;
+                inset: 0.2em;
+                background: #060;
+                border-radius: inherit;
+                translate: 0 -150%;
+                transition: translate 0.3s ease-in;
+            }
+
+            &:checked::before {
+                translate: 0;
+            }
+        }
+
+        input[type="checkbox"] {
+            appearance: none;
+            width: 3em;
+            aspect-ratio: 3/1.5;
+            border: 2px solid var(--clr-border);
+            border-radius: 1em;
+            position: relative;
+            overflow: hidden;
+            transition: 
+                background-color 0.3s ease-in
+                border-color 0.3s ease-in
+            ;
+
+            &::before {
+                display: block;
+                content: '';
+                position: absolute;
+                width: 1em;
+                aspect-ratio: 1;
+                top: 0.1em;
+                left: 0.1em;
+                background: #ccc;
+                border-radius: inherit;
+                transition: 
+                background-color 0.3s ease-in,
+                left 0.3s ease-in;
+
+            }
+
+            &:checked {
+                background: lightseagreen;
+                border-color: #090;
+
+                &::before {
+                    left: 1.6em;
+                    background-color: #fff;
+                }
+
+            }
+        }
+    }
+
+}
+
+form .field.floating-label {
     &>label {
         display: block;
         font-weight: bold;
@@ -37,6 +132,7 @@ form {
         font-size: 0.9em;
         translate: 0 -50%;
         transition: translate 0.3s ease-in;
+        pointer-events: none;
     }
 
     textarea,
@@ -46,7 +142,7 @@ form {
     input[type="number"] {
         display: block;
         width: 100%;
-        padding: 0.5em 0;
+        padding: 0.5rem 0;
         border: none;
         border-bottom: 2px solid var(--clr-border);
         outline: none;
@@ -56,15 +152,7 @@ form {
         }
     }
 
-    .info {
-        font-size: 0.9em;
-        font-style: italic;
-        opacity: 0.6;
-    }
-
-    &:has(:placeholder-shown) > label {
+    &:has(:placeholder-shown)>label {
         translate: 0;
-        pointer-events: none;
     }
-
 }

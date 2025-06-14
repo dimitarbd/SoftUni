@@ -1,0 +1,70 @@
+form {
+
+    --clr-error: red;
+    --clr-success: #060;
+
+    --clr-border: #DDD;
+    --clr-input-text: #333;
+    --clr-label-text: #333;
+
+    --size-border-radius: 0.3em;
+
+    fieldset {
+        border: 2px solid var(--clr-border);
+        padding-inline: 1.5em;
+        padding-block: 1em;
+        padding-block-end: 1.5em;
+        border-radius: var(--size-border-radius)
+    }
+
+    legend {
+        padding-inline: 0.5em;
+        margin-inline: 1em;
+        font-weight: bold;
+    }
+
+}
+
+.field {
+    padding-bottom: 1.5em;
+    position: relative;
+
+    &>label {
+        display: block;
+        font-weight: bold;
+        position: absolute;
+        padding: 0.5rem 0;
+        font-size: 0.9em;
+        translate: 0 -50%;
+        transition: translate 0.3s ease-in;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"] {
+        display: block;
+        width: 100%;
+        padding: 0.5em 0;
+        border: none;
+        border-bottom: 2px solid var(--clr-border);
+        outline: none;
+
+        &::placeholder {
+            color: transparent;
+        }
+    }
+
+    .info {
+        font-size: 0.9em;
+        font-style: italic;
+        opacity: 0.6;
+    }
+
+    &:has(:placeholder-shown) > label {
+        translate: 0;
+        pointer-events: none;
+    }
+
+}

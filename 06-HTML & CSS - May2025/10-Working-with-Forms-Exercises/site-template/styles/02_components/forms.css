@@ -2,6 +2,7 @@ form {
 
     --clr-error: red;
     --clr-success: #060;
+    --clr-focus: orange;
 
     --clr-border: #DDD;
     --clr-input-text: #333;
@@ -9,12 +10,15 @@ form {
 
     --size-border-radius: 0.3em;
 
+    padding-bottom: 1em;
+
     fieldset {
         border: 2px solid var(--clr-border);
         padding-inline: 1.5em;
         padding-block: 1em;
         padding-block-end: 1.5em;
-        border-radius: var(--size-border-radius)
+        border-radius: var(--size-border-radius);
+        margin-bottom: 1.5em
     }
 
     legend {
@@ -29,7 +33,28 @@ form {
     padding-bottom: 1.5em;
     position: relative;
 
-  
+    &>label {
+        display: block;
+        font-weight: bold;
+        color: var(--clr-label-text);
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"] {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0.8em;
+        border: 2px solid var(--clr-border);
+        border-radius: var(--size-border-radius);
+        outline: none;
+
+        &:focus {
+            --clr-border: var (--clr-focus);
+        }
+    }
 
     .info {
         font-size: 0.9em;
@@ -37,13 +62,14 @@ form {
         opacity: 0.6;
     }
 
-    &.custom {
-
+    .input-wrapper {
         ul {
             display: flex;
             flex-direction: column;
             gap: 0.5em;
-            margin-bottom: 1em;
+            margin-block: 0.5em;
+            margin-top: 0.5em;
+            padding-left: 0;
 
             li {
                 display: flex;
@@ -53,6 +79,45 @@ form {
 
             }
         }
+    }
+
+    &:has(:user-invalid) {
+        --clr-border: var(--clr-error) --clr-label: var(--clr-error)
+    }
+
+    &:has(:user-valid) {
+        --clr-border: var(--clr-success);
+        --clr-label-text: var(--clr-success);
+    }
+
+    &:has(:focus) {
+        --clr-border: var(--clr-focus);
+        --clr-label-text: var(--clr-focus);
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+
+        &:focus+label {
+            font-weight: bold;
+            color: var (--clr-focus);
+        }
+
+        &:checked+label {
+            font-weight: bold;
+            color: var (--clr-success);
+        }
+    }
+
+    .input-wrapper:has(ul input[type="radio"], ul input[type="checkbox"]):not(:focus-whitin) li {
+        opacity: 0.2;
+
+        &:has(:checked) {
+            opacity: 1;
+        }
+    }
+
+    &.custom {
 
         input[type="radio"] {
             appearance: none;
@@ -87,10 +152,8 @@ form {
             border-radius: 1em;
             position: relative;
             overflow: hidden;
-            transition: 
-                background-color 0.3s ease-in
-                border-color 0.3s ease-in
-            ;
+            transition:
+                background-color 0.3s ease-in border-color 0.3s ease-in;
 
             &::before {
                 display: block;
@@ -102,9 +165,9 @@ form {
                 left: 0.1em;
                 background: #ccc;
                 border-radius: inherit;
-                transition: 
-                background-color 0.3s ease-in,
-                left 0.3s ease-in;
+                transition:
+                    background-color 0.3s ease-in,
+                    left 0.3s ease-in;
 
             }
 
@@ -146,6 +209,7 @@ form .field.floating-label {
         border: none;
         border-bottom: 2px solid var(--clr-border);
         outline: none;
+        border-radius: 0;
 
         &::placeholder {
             color: transparent;

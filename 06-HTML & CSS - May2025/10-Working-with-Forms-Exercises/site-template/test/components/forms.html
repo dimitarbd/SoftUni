@@ -24,7 +24,7 @@
                     <div class="field">
                         <label for="login-email">Email</label>
                         <div class="input-wrapper">
-                            <input type="text" name="login-email" id="login-email" placeholder="Email" required>
+                            <input type="text" name="login-email" id="login-email" required>
                         </div>
                         <p class="info">Valid email address</p>
                     </div>
@@ -32,7 +32,7 @@
                     <div class="field">
                         <label for="login-password">Password</label>
                         <div class="input-wrapper">
-                            <input type="password" name="login-password" id="login-password" placeholder="Password"
+                            <input type="password" name="login-password" id="login-password" 
                                 required>
                         </div>
                         <p class="info">Minimum 6 characters ...</p>
@@ -41,7 +41,7 @@
                     <div class="field">
                         <label for="login-message">Message</label>
                         <div class="input-wrapper">
-                            <textarea name="login-message" id="login-message" placeholder="Message"></textarea>
+                            <textarea name="login-message" id="login-message"></textarea>
                         </div>
                         <p class="info">Minimum 6 characters ...</p>
                     </div>
@@ -91,9 +91,32 @@
                         <p class="info">Explain the choice</p>
                     </div>
 
-                    <input type="submit" class="button" value="Login">
 
                 </fieldset>
+
+                <fieldset>
+                    <legend>Floating labels</legend>
+
+                    <div class="field floating-label">
+                        <label for="login-email">Email</label>
+                        <div class="input-wrapper">
+                            <input type="text" name="login-email" id="login-email" required>
+                        </div>
+                        <p class="info">Valid email address</p>
+                    </div>
+
+                    <div class="field floating-label">
+                        <label for="login-password">Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" name="login-password" id="login-password"
+                                required>
+                        </div>
+                        <p class="info">Minimum 6 characters ...</p>
+                    </div>
+                </fieldset>
+
+                <input type="submit" class="button" value="Login">
+
 
             </form>
 

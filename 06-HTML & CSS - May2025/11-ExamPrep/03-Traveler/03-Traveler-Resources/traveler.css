@@ -48,6 +48,19 @@ h6 {
     font-family: 'Cormorant Infant', serif;
 }
 
+.site-title {
+    a {
+        display: block;
+        text-indent: -100vw;
+        background-image: url('images/logo.webp');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+        width: 6em;
+        aspect-ratio: 3/1;
+    }
+}
+
 .section {
 
     &.bgrd-light {
@@ -79,18 +92,7 @@ h6 {
             justify-content: space-between;
         }
 
-        .site-title {
-            a {
-                display: block;
-                text-indent: -100vw;
-                background-image: url('images/logo.webp');
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-position: left center;
-                width: 6em;
-                aspect-ratio: 3/1;
-            }
-        }
+
 
         nav ul {
             display: flex;
@@ -190,7 +192,7 @@ h6 {
                 color: #000;
                 text-decoration: none;
 
-                & + .button {
+                &+.button {
                     margin-top: 2em;
                     margin-inline: auto;
                 }
@@ -205,18 +207,46 @@ h6 {
 
         h2 {
             font-size: 3em;
-            margin: 2rem 0;
+            margin: 2rem 0 4rem;
         }
 
         p {
             max-width: 80ch;
-            margin: 2rem auto;
+            margin: 2rem auto 4rem;
+        }
+
+        .button {
+            display: block;
+            text-decoration: none;
+            color: #000;
+            background: #FAD87A;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 0.5em 1em;
+            border-radius: 2em;
+            margin-bottom: 2rem;
         }
     }
 
     &.section-footer {
         background-color: #35282A;
         color: #FFF;
+
+        .inner {
+
+            .site-title {
+                margin-bottom: 2em;
+            }
+
+            p:not([class]) {
+                max-width: 48ch;
+                margin-bottom: 1.5em;
+            }
+
+            p:last-child {
+                opacity: 0.3;
+            }
+        }
     }
 
 }

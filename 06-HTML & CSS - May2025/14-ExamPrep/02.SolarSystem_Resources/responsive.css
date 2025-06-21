@@ -1,0 +1,34 @@
+@media (width <=600px) {
+
+    header {
+
+        h1 {
+            text-align: center;
+            font-size: 1em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 0.8em;
+        }
+    }
+
+
+
+    main {
+
+        &.pair {
+            display: flex;
+            flex-direction: column;
+            margin-left: 0;
+        }
+
+        &.planet {
+            display: flex;
+            flex-direction: column;
+            margin-left: 0;
+        }
+    }
+}

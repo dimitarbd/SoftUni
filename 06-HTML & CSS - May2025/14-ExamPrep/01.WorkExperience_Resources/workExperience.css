@@ -1,186 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
+
+body {
+    font-family: 'Margarine', cursive;
+}
+
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Margarine', cursive;
-    background-color: #F2E4D8;
-    padding: 60px 80px;
     min-height: 100vh;
-}
-
-.container {
-    max-width: 1370px;
-    margin: 0 auto;
+    background: #eee;
     display: flex;
-    gap: 40px;
-    align-items: stretch;
-}
-
-.sidebar {
-    background: #F2E4D8;
-    border-radius: 15px;
-    box-shadow: 5px 12px 40px rgba(0, 0, 0, 0.4);
-    padding: 40px 35px;
-    width: 440px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.profile-section {
-    margin-bottom: 50px;
-}
-
-.name {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 30px;
-    font-weight: normal;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 17px;
-    color: #666;
-}
-
-.icon {
-    font-size: 20px;
-    width: 25px;
-    color: #4a90e2;
-}
-
-.skills-section {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.skill {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.skill-name {
-    font-size: 17px;
-    color: #333;
-    font-weight: normal;
-}
-
-.skill-bar {
-    height: 28px;
-    background-color: #F2E4D8;
-    border-radius: 14px;
-    overflow: hidden;
-    position: relative;
-}
-
-.skill-progress {
-    height: 100%;
-    background: linear-gradient(90deg, #4a90e2, #357abd);
-    border-radius: 14px;
-    position: relative;
-    transition: width 0.3s ease;
-    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
+    font-family: 15px/1.5 'Margarine', cursive;
+    background-color: #FFF0E4;
 }
 
-.skill-progress[data-width="90"] {
-    width: 90%;
+body>* {
+    width: 100%;
 }
 
-.skill-progress[data-width="80"] {
-    width: 80%;
-}
-
-.skill-progress[data-width="75"] {
-    width: 75%;
-}
-
-.skill-progress[data-width="50"] {
-    width: 50%;
-}
-
-.content {
-    width: 910px;
-    background: #F2E4D8;
-    border-radius: 15px;
-    box-shadow: 5px 12px 50px rgba(0, 0, 0, 0.4);
-    padding: 45px 50px;
-    flex: 1;
+.section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.section-title {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 40px;
-    font-weight: normal;
-    text-align: center;
+.section .inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 1400px;
+    height: 600px;
+    gap: 20px;
 }
 
-.experience-item {
-    margin-bottom: 40px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #e8e8e8;
-}
+.section .inner .left {
+    width: 33%;
+    height: 100%;
+    background-color: #FFF0E4;
+    box-shadow: 
+    -0.5em -0.5em 1em 0 rgba(0, 0, 0, 0.1),
+    0 1em 2em 0.3em rgba(0, 0, 0, 0.5);    
+    padding: 1em;
 
-.experience-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    flex-grow: 1;
-}
-
-.job-title {
-    font-size: 19px;
-    color: #666;
-    margin-bottom: 10px;
-    font-weight: normal;
-}
-
-.job-date {
-    font-size: 17px;
-    color: #4a90e2;
-    margin-bottom: 18px;
-    font-weight: normal;
-}
-
-.job-description {
-    font-size: 15px;
-    color: #666;
-    line-height: 1.7;
-    font-weight: normal;
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        gap: 20px;
+    h1 {
+        font-size: 2em;
+        font-weight: bold;
+        text-align: left;
+        padding-bottom: 1em;
     }
-    
-    .sidebar {
-        width: 100%;
+
+    p {
+        font-size: 1em;
+        font-weight: bold;
+        text-align: left;
+        padding: 0.5em 0;
+
+        i {
+            font-size: 1em;
+            font-weight: bold;
+            text-align: left;
+            padding-right: 1em;
+            color: #2991E6;
+        }
     }
-    
-    body {
-        padding: 20px 10px;
+
+    &.container {
+        padding: 1em;
     }
+
+    hr {
+        margin: 1em 0;
+        border-top: 1px solid #e6e4e4;
+    }
+}
+
+.section .inner .right {
+    width: 67%;
+    height: 100%;
+    background-color: #FFF0E4;
+    box-shadow: 
+    -0.5em -0.5em 1em 0 rgba(0, 0, 0, 0.1),
+    0 1em 2em 0.3em rgba(0, 0, 0, 0.5);    
 }

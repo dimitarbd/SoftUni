@@ -41,10 +41,9 @@ resource "azurerm_linux_web_app" "alwa" {
   service_plan_id     = azurerm_service_plan.asp.id
 
   connection_string {
-    name = "DefaultConnection"
-    type = "SQLAzure"
-    //value = "Data Source=tcp:${fully qualified domain name of the MSSQL server},1433;Initial Catalog=${name of the SQL database};User ID=${username of the MSSQL server administrator};Password=${password of the MSSQL server administrator};Trusted_Connection=False; MultipleActiveResultSets=True;"
-    value = "test"
+    name  = "DefaultConnection"
+    type  = "SQLAzure"
+    value = "Data Source=tcp:${azurerm_mssql_server.sqlserver.fully_qualified_domain_name},1433;Initial Catalog=${azurerm_mssql_database.database.name};User ID=${azurerm_mssql_server.sqlserver.administrator_login};Password=${azurerm_mssql_server.sqlserver.administrator_login_password};Trusted_Connection=False; MultipleActiveResultSets=True;"
   }
 
   site_config {
@@ -65,13 +64,17 @@ resource "azurerm_mssql_server" "sqlserver" {
 }
 
 resource "azurerm_mssql_database" "database" {
-  name         = "database${random_integer.ri.result}"
-  server_id    = azurerm_mssql_server.sqlserver.id
-  collation    = "SQL_Latin1_General_CP1_CI_AS"
-  license_type = "LicenseIncluded"
-  max_size_gb  = 2
-  sku_name     = "S0"
-  
+  name                 = "database${random_integer.ri.result}"
+  server_id            = azurerm_mssql_server.sqlserver.id
+  collation            = "SQL_Latin1_General_CP1_CI_AS"
+  license_type         = "LicenseIncluded"
+  max_size_gb          = 2
+  sku_name             = "S0"
+  zone_redundant       = false
+  geo_backup_enabled   = false
+  storage_account_type = "Local"
+
+
   # prevent the possibility of accidental data loss
   lifecycle {
     prevent_destroy = false
@@ -81,8 +84,8 @@ resource "azurerm_mssql_database" "database" {
 resource "azurerm_mssql_firewall_rule" "FirewallRule1" {
   name             = "FirewallRule1"
   server_id        = azurerm_mssql_server.sqlserver.id
-  start_ip_address = "10.0.17.62"
-  end_ip_address   = "10.0.17.62"
+  start_ip_address = "0.0.0.0"
+  end_ip_address   = "0.0.0.0"
 }
 
 resource "azurerm_app_service_source_control" "github" {

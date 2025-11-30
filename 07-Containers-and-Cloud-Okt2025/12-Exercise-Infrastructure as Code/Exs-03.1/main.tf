@@ -82,7 +82,7 @@ resource "azurerm_mssql_database" "database" {
 }
 
 resource "azurerm_mssql_firewall_rule" "FirewallRule1" {
-  name             = "FirewallRule1"
+  name             = var.firewall_rule_name
   server_id        = azurerm_mssql_server.sqlserver.id
   start_ip_address = "0.0.0.0"
   end_ip_address   = "0.0.0.0"
@@ -90,7 +90,7 @@ resource "azurerm_mssql_firewall_rule" "FirewallRule1" {
 
 resource "azurerm_app_service_source_control" "github" {
   app_id                 = azurerm_linux_web_app.alwa.id
-  repo_url               = "https://github.com/dimitarbd/AzureTaskBoardApp"
+  repo_url               = var.repo_url
   branch                 = "main"
   use_manual_integration = true
 }

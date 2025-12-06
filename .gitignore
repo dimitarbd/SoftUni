@@ -11,6 +11,10 @@
 *.sln.docstates
 *.terraform/
 
+*.install
+_build
+*.merlin
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

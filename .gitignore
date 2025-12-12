@@ -15,6 +15,14 @@
 _build
 *.merlin
 
+# Ignore all executables in subdirectories (if you have a wildcard like this in .gitignore):
+*.exe
+*.out
+*.bin
+*exporter
+*manager
+*prometheus
+
 /operator
 /admission-webhook
 /prometheus-config-reloader

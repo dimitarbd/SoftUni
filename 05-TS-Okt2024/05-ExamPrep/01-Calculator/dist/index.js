@@ -1,5 +1,19 @@
 function solve(first, opertator, second) {
     let result = 0;
+    // switch (opertator) {
+    //     case '+':
+    //         result = first + second;
+    //         break;
+    //     case '-':
+    //         result = first - second;
+    //         break;
+    //     case '/':
+    //         result = first / second;
+    //         break;
+    //     case '*':
+    //         result = first * second;
+    //         break;
+    // }
     const CalculatorMap = {
         "+": first + second,
         "-": first - second,
